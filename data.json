@@ -1,0 +1,753 @@
+{
+ "actualizado": "2026-07-26 18:55",
+ "bot": {
+  "capital_inicial": 100.0,
+  "capital": 96.5159,
+  "meta": 10000.0,
+  "meta_meses": 3,
+  "inicio": "2026-07-21",
+  "reglas": "Toma TODAS las señales del sistema. Riesgo 2%/señal. win=+0.90R, loss=-1R, fees 0.08R. Sin emociones, sin excepciones.",
+  "equity": [
+   {
+    "t": "2026-07-21T15:32",
+    "v": 97.84
+   },
+   {
+    "t": "2026-07-21T16:59",
+    "v": 99.4446
+   },
+   {
+    "t": "2026-07-21T17:08",
+    "v": 101.0755
+   },
+   {
+    "t": "2026-07-21T19:39",
+    "v": 98.8923
+   },
+   {
+    "t": "2026-07-21T19:41",
+    "v": 96.7562
+   },
+   {
+    "t": "2026-07-22T07:58",
+    "v": 94.6663
+   },
+   {
+    "t": "2026-07-22T11:31",
+    "v": 96.2188
+   },
+   {
+    "t": "2026-07-22T12:39",
+    "v": 94.1405
+   },
+   {
+    "t": "2026-07-23T09:00",
+    "v": 95.6844
+   },
+   {
+    "t": "2026-07-23T19:24",
+    "v": 97.2536
+   },
+   {
+    "t": "2026-07-23T20:00",
+    "v": 98.8486
+   },
+   {
+    "t": "2026-07-25T12:29",
+    "v": 98.6904
+   },
+   {
+    "t": "2026-07-25T12:58",
+    "v": 100.3089
+   },
+   {
+    "t": "2026-07-25T13:28",
+    "v": 98.1422
+   },
+   {
+    "t": "2026-07-25T13:59",
+    "v": 96.0223
+   },
+   {
+    "t": "2026-07-25T19:28",
+    "v": 93.9482
+   },
+   {
+    "t": "2026-07-25T19:58",
+    "v": 91.9189
+   },
+   {
+    "t": "2026-07-25T20:28",
+    "v": 93.4264
+   },
+   {
+    "t": "2026-07-25T22:28",
+    "v": 94.9586
+   },
+   {
+    "t": "2026-07-25T22:58",
+    "v": 96.5159
+   }
+  ],
+  "trades": [
+   {
+    "id": "S-020",
+    "activo": "SOL",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T22:58",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5573,
+    "capital": 96.5159
+   },
+   {
+    "id": "S-019",
+    "activo": "SOL",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T22:28",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5322,
+    "capital": 94.9586
+   },
+   {
+    "id": "S-018",
+    "activo": "ETH",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T20:28",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5075,
+    "capital": 93.4264
+   },
+   {
+    "id": "S-017",
+    "activo": "ETH",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T19:58",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.0293,
+    "capital": 91.9189
+   },
+   {
+    "id": "S-016",
+    "activo": "ETH",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T19:28",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.0741,
+    "capital": 93.9482
+   },
+   {
+    "id": "S-015",
+    "activo": "SOL",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T13:59",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.1199,
+    "capital": 96.0223
+   },
+   {
+    "id": "S-014",
+    "activo": "ETH",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T13:28",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.1667,
+    "capital": 98.1422
+   },
+   {
+    "id": "S-013",
+    "activo": "ETH",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T12:58",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.6185,
+    "capital": 100.3089
+   },
+   {
+    "id": "S-012",
+    "activo": "AVAX",
+    "direccion": "LONG",
+    "timestamp": "2026-07-25T12:29",
+    "outcome": "expirada_verde",
+    "r": -0.08,
+    "pnl": -0.1582,
+    "capital": 98.6904
+   },
+   {
+    "id": "S-011",
+    "activo": "LINK",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-23T20:00",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.595,
+    "capital": 98.8486
+   },
+   {
+    "id": "S-010",
+    "activo": "ADA",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-23T19:24",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5692,
+    "capital": 97.2536
+   },
+   {
+    "id": "S-009",
+    "activo": "ADA",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-23T09:00",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5439,
+    "capital": 95.6844
+   },
+   {
+    "id": "S-008",
+    "activo": "ETH",
+    "direccion": "LONG",
+    "timestamp": "2026-07-22T12:39",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.0783,
+    "capital": 94.1405
+   },
+   {
+    "id": "S-007",
+    "activo": "XRP",
+    "direccion": "LONG",
+    "timestamp": "2026-07-22T11:31",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5525,
+    "capital": 96.2188
+   },
+   {
+    "id": "S-006",
+    "activo": "SOL",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-22T07:58",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.0899,
+    "capital": 94.6663
+   },
+   {
+    "id": "S-005",
+    "activo": "BTC",
+    "direccion": "LONG",
+    "timestamp": "2026-07-21T19:41",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.1361,
+    "capital": 96.7562
+   },
+   {
+    "id": "S-004",
+    "activo": "SOL",
+    "direccion": "LONG",
+    "timestamp": "2026-07-21T19:39",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.1832,
+    "capital": 98.8923
+   },
+   {
+    "id": "S-003",
+    "activo": "AVAX",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-21T17:08",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.6309,
+    "capital": 101.0755
+   },
+   {
+    "id": "S-002",
+    "activo": "AVAX",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-21T16:59",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.6046,
+    "capital": 99.4446
+   },
+   {
+    "id": "S-001",
+    "activo": "DOGE",
+    "direccion": "LONG",
+    "timestamp": "2026-07-21T15:32",
+    "outcome": "loss",
+    "r": -1.08,
+    "pnl": -2.16,
+    "capital": 97.84
+   }
+  ]
+ },
+ "senales": {
+  "resueltas": 20,
+  "win_rate": 55.0,
+  "por_bucket": [
+   {
+    "activo": "DOGE",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_rate_pct": 0.0
+   },
+   {
+    "activo": "BTC",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_rate_pct": 0.0
+   },
+   {
+    "activo": "SOL",
+    "direccion": "SHORT",
+    "n": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_rate_pct": 0.0
+   },
+   {
+    "activo": "ETH",
+    "direccion": "LONG",
+    "n": 6,
+    "wins": 2,
+    "losses": 4,
+    "win_rate_pct": 33.3
+   },
+   {
+    "activo": "SOL",
+    "direccion": "LONG",
+    "n": 4,
+    "wins": 2,
+    "losses": 2,
+    "win_rate_pct": 50.0
+   },
+   {
+    "activo": "AVAX",
+    "direccion": "SHORT",
+    "n": 2,
+    "wins": 2,
+    "losses": 0,
+    "win_rate_pct": 100.0
+   },
+   {
+    "activo": "XRP",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
+   },
+   {
+    "activo": "ADA",
+    "direccion": "SHORT",
+    "n": 2,
+    "wins": 2,
+    "losses": 0,
+    "win_rate_pct": 100.0
+   },
+   {
+    "activo": "LINK",
+    "direccion": "SHORT",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
+   },
+   {
+    "activo": "AVAX",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
+   }
+  ],
+  "ultimas": [
+   {
+    "id": "S-020",
+    "activo": "SOL",
+    "dir": "LONG",
+    "ts": "2026-07-25T22:58",
+    "outcome": "win",
+    "entry": 75.01,
+    "sl": 74.852285,
+    "tp1": 75.167715,
+    "tp2": 75.293887,
+    "prob": 72.4
+   },
+   {
+    "id": "S-019",
+    "activo": "SOL",
+    "dir": "LONG",
+    "ts": "2026-07-25T22:28",
+    "outcome": "win",
+    "entry": 74.92,
+    "sl": 74.730572,
+    "tp1": 75.109428,
+    "tp2": 75.26097,
+    "prob": 71.4
+   },
+   {
+    "id": "S-018",
+    "activo": "ETH",
+    "dir": "LONG",
+    "ts": "2026-07-25T20:28",
+    "outcome": "win",
+    "entry": 1879.64,
+    "sl": 1876.464285,
+    "tp1": 1882.815715,
+    "tp2": 1885.356287,
+    "prob": 71.1
+   },
+   {
+    "id": "S-017",
+    "activo": "ETH",
+    "dir": "LONG",
+    "ts": "2026-07-25T19:58",
+    "outcome": "loss",
+    "entry": 1881.4,
+    "sl": 1878.118857,
+    "tp1": 1884.681143,
+    "tp2": 1887.306057,
+    "prob": 76.6
+   },
+   {
+    "id": "S-016",
+    "activo": "ETH",
+    "dir": "LONG",
+    "ts": "2026-07-25T19:28",
+    "outcome": "loss",
+    "entry": 1880.0,
+    "sl": 1876.893715,
+    "tp1": 1883.106285,
+    "tp2": 1885.591313,
+    "prob": 72.6
+   },
+   {
+    "id": "S-015",
+    "activo": "SOL",
+    "dir": "LONG",
+    "ts": "2026-07-25T13:59",
+    "outcome": "loss",
+    "entry": 74.71,
+    "sl": 74.519715,
+    "tp1": 74.900285,
+    "tp2": 75.052513,
+    "prob": 78.2
+   },
+   {
+    "id": "S-014",
+    "activo": "ETH",
+    "dir": "LONG",
+    "ts": "2026-07-25T13:28",
+    "outcome": "loss",
+    "entry": 1875.05,
+    "sl": 1870.859428,
+    "tp1": 1879.240572,
+    "tp2": 1882.59303,
+    "prob": 73.6
+   },
+   {
+    "id": "S-013",
+    "activo": "ETH",
+    "dir": "LONG",
+    "ts": "2026-07-25T12:58",
+    "outcome": "win",
+    "entry": 1872.76,
+    "sl": 1868.789715,
+    "tp1": 1876.730285,
+    "tp2": 1879.906513,
+    "prob": 72.1
+   },
+   {
+    "id": "S-012",
+    "activo": "AVAX",
+    "dir": "LONG",
+    "ts": "2026-07-25T12:29",
+    "outcome": "expirada_verde",
+    "entry": 6.662,
+    "sl": 6.583228,
+    "tp1": 6.740772,
+    "tp2": 6.80379,
+    "prob": 74.8
+   },
+   {
+    "id": "S-011",
+    "activo": "LINK",
+    "dir": "SHORT",
+    "ts": "2026-07-23T20:00",
+    "outcome": "win",
+    "entry": 8.443,
+    "sl": 8.4664,
+    "tp1": 8.4196,
+    "tp2": 8.407,
+    "prob": 70.0
+   },
+   {
+    "id": "S-010",
+    "activo": "ADA",
+    "dir": "SHORT",
+    "ts": "2026-07-23T19:24",
+    "outcome": "win",
+    "entry": 0.1679,
+    "sl": 0.168552,
+    "tp1": 0.167248,
+    "tp2": 0.166726,
+    "prob": 71.4
+   },
+   {
+    "id": "S-009",
+    "activo": "ADA",
+    "dir": "SHORT",
+    "ts": "2026-07-23T09:00",
+    "outcome": "win",
+    "entry": 0.1716,
+    "sl": 0.172775,
+    "tp1": 0.170425,
+    "tp2": 0.169485,
+    "prob": 74.3
+   },
+   {
+    "id": "S-008",
+    "activo": "ETH",
+    "dir": "LONG",
+    "ts": "2026-07-22T12:39",
+    "outcome": "loss",
+    "entry": 1940.97,
+    "sl": 1929.130285,
+    "tp1": 1952.809715,
+    "tp2": 1957.1,
+    "prob": 68.8
+   },
+   {
+    "id": "S-007",
+    "activo": "XRP",
+    "dir": "LONG",
+    "ts": "2026-07-22T11:31",
+    "outcome": "win",
+    "entry": 1.1501,
+    "sl": 1.144195,
+    "tp1": 1.156005,
+    "tp2": 1.160729,
+    "prob": 73.3
+   },
+   {
+    "id": "S-006",
+    "activo": "SOL",
+    "dir": "SHORT",
+    "ts": "2026-07-22T07:58",
+    "outcome": "loss",
+    "entry": 77.24,
+    "sl": 77.466285,
+    "tp1": 77.013715,
+    "tp2": 76.832687,
+    "prob": 67.1
+   },
+   {
+    "id": "S-005",
+    "activo": "BTC",
+    "dir": "LONG",
+    "ts": "2026-07-21T19:41",
+    "outcome": "loss",
+    "entry": 66701.6,
+    "sl": 66583.142857,
+    "tp1": 66820.057143,
+    "tp2": 66914.822857,
+    "prob": 69.3
+   },
+   {
+    "id": "S-004",
+    "activo": "SOL",
+    "dir": "LONG",
+    "ts": "2026-07-21T19:39",
+    "outcome": "loss",
+    "entry": 78.52,
+    "sl": 78.318572,
+    "tp1": 78.721428,
+    "tp2": 78.88257,
+    "prob": 70.1
+   },
+   {
+    "id": "S-003",
+    "activo": "AVAX",
+    "dir": "SHORT",
+    "ts": "2026-07-21T17:08",
+    "outcome": "win",
+    "entry": 6.56,
+    "sl": 6.579972,
+    "tp1": 6.540028,
+    "tp2": 6.52405,
+    "prob": 75.0
+   },
+   {
+    "id": "S-002",
+    "activo": "AVAX",
+    "dir": "SHORT",
+    "ts": "2026-07-21T16:59",
+    "outcome": "win",
+    "entry": 6.565,
+    "sl": 6.585228,
+    "tp1": 6.544772,
+    "tp2": 6.52859,
+    "prob": 77.2
+   },
+   {
+    "id": "S-001",
+    "activo": "DOGE",
+    "dir": "LONG",
+    "ts": "2026-07-21T15:32",
+    "outcome": "loss",
+    "entry": 0.07353,
+    "sl": 0.073319,
+    "tp1": 0.073741,
+    "tp2": 0.07391,
+    "prob": 66.5
+   }
+  ]
+ },
+ "real": {
+  "capital_futures": 341.45,
+  "capital_total": 563.99,
+  "capital_inicial_reto": 563.99,
+  "meta_reto": 10000,
+  "trades": [
+   {
+    "id": "FUERA",
+    "fecha": "2026-07-21",
+    "activo": "UNI",
+    "direccion": "LONG",
+    "outcome": "fuera_de_sistema",
+    "pnl": 73.61
+   },
+   {
+    "id": "T-003",
+    "fecha": "2026-07-21",
+    "activo": "XRP",
+    "direccion": "LONG",
+    "outcome": "loss",
+    "pnl": -19.26
+   },
+   {
+    "id": "P-007",
+    "fecha": "2026-05-20",
+    "activo": "BTC",
+    "direccion": "LONG",
+    "outcome": "manual_verde",
+    "pnl": 1.6
+   },
+   {
+    "id": "P-006",
+    "fecha": "2026-05-19",
+    "activo": "BTC",
+    "direccion": "SHORT",
+    "outcome": "manual_BE",
+    "pnl": 1.9
+   },
+   {
+    "id": "P-005",
+    "fecha": "2026-05-19",
+    "activo": "BTC",
+    "direccion": "LONG",
+    "outcome": "manual_perdida",
+    "pnl": -434.29
+   },
+   {
+    "id": "P-004",
+    "fecha": "2026-05-19",
+    "activo": "SOL",
+    "direccion": "LONG",
+    "outcome": "manual_perdida",
+    "pnl": -70.0
+   },
+   {
+    "id": "P-003",
+    "fecha": "2026-05-17",
+    "activo": "SOL",
+    "direccion": "LONG",
+    "outcome": "manual_verde",
+    "pnl": 26.81
+   },
+   {
+    "id": "P-002",
+    "fecha": "2026-05-17",
+    "activo": "DOGE",
+    "direccion": "LONG",
+    "outcome": "SL",
+    "pnl": -71.0
+   }
+  ],
+  "nota": "Cuenta real de Luis. El decide cual señal toma y reporta el resultado; se registra aqui sin maquillaje: wins, losses y violaciones."
+ },
+ "fuentes": [
+  {
+   "fuente": "MillionTrader_VIP_RETO1k10k",
+   "señales": 1,
+   "wins": 0,
+   "losses": 0,
+   "fabricadas": 1
+  },
+  {
+   "fuente": "S2T_Lennart",
+   "señales": 1,
+   "wins": 0,
+   "losses": 0,
+   "fabricadas": 0
+  },
+  {
+   "fuente": "bot_telegram_VP_MEAN_REVERT",
+   "señales": 2,
+   "wins": 2,
+   "losses": 0,
+   "fabricadas": 0
+  }
+ ],
+ "ext_detalle": [
+  {
+   "id": "EXT-004",
+   "fuente": "MillionTrader_VIP_RETO1k10k",
+   "activo": "NEAR",
+   "dir": "SHORT",
+   "outcome": "FABRICADO",
+   "veredicto_nuestro": null
+  },
+  {
+   "id": "EXT-003",
+   "fuente": "S2T_Lennart",
+   "activo": "AUDUSD",
+   "dir": "SHORT",
+   "outcome": "entry_no_tocado_aun",
+   "veredicto_nuestro": null
+  },
+  {
+   "id": "EXT-002",
+   "fuente": "bot_telegram_VP_MEAN_REVERT",
+   "activo": "NEAR",
+   "dir": "LONG",
+   "outcome": "win_tp1",
+   "veredicto_nuestro": "NO-GO"
+  },
+  {
+   "id": "EXT-001",
+   "fuente": "bot_telegram_VP_MEAN_REVERT",
+   "activo": "AAVE",
+   "dir": "SHORT",
+   "outcome": "win_tp1",
+   "veredicto_nuestro": "NO-GO"
+  }
+ ]
+}

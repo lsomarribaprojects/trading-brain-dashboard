@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Brain — Marcador en vivo</title>
+<style>
+:root{
+  --bg:#0d1117; --surface:#161b22; --border:#30363d;
+  --ink:#e6edf3; --ink2:#9198a1; --ink3:#6e7681;
+  --accent:#6ea8fe; --win:#3fb950; --loss:#f85149; --warn:#d29922;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;padding:16px;max-width:1000px;margin:0 auto}
+h1{font-size:18px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+h1 small{color:var(--ink3);font-weight:400;font-size:12px}
+.tabs{display:flex;gap:4px;margin:14px 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.tab{padding:8px 14px;cursor:pointer;color:var(--ink2);border-bottom:2px solid transparent;font-weight:600}
+.tab.on{color:var(--ink);border-color:var(--accent)}
+.panel{display:none}.panel.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:12px 0}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.tile .k{color:var(--ink2);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:22px;font-weight:700;margin-top:2px}
+.tile .s{color:var(--ink3);font-size:11px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;margin:10px 0;overflow-x:auto}
+.card h3{font-size:13px;color:var(--ink2);margin-bottom:8px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+th{text-align:left;color:var(--ink3);font-size:11px;text-transform:uppercase;letter-spacing:.4px;padding:6px 8px;border-bottom:1px solid var(--border)}
+td{padding:6px 8px;border-bottom:1px solid #21262d;white-space:nowrap}
+.w{color:var(--win);font-weight:600}.l{color:var(--loss);font-weight:600}.p{color:var(--ink3)}.f{color:var(--loss);font-weight:700}
+.num{font-variant-numeric:tabular-nums}
+.note{color:var(--ink3);font-size:12px;margin:8px 0}
+svg text{font:11px -apple-system,Segoe UI,sans-serif}
+.tipbox{position:fixed;pointer-events:none;background:#1c2128;border:1px solid var(--border);border-radius:6px;padding:6px 9px;font-size:12px;display:none;z-index:9}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--ink2);margin:4px 0 0 4px;flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.legend .lb::before{background:var(--accent)}
+.legend .lg::before{background:var(--ink3);height:0;border-top:2px dashed var(--ink3)}
+</style>
+</head>
+<body>
+<h1>📊 Trading Brain <small id="upd">cargando…</small></h1>
+<div class="tabs">
+  <div class="tab on" data-p="bot">🤖 Bot $100</div>
+  <div class="tab" data-p="real">👤 Cuenta real</div>
+  <div class="tab" data-p="sen">📡 Señales</div>
+  <div class="tab" data-p="fue">🔍 Fuentes</div>
+</div>
+
+<div class="panel on" id="p-bot">
+  <div class="tiles" id="bot-tiles"></div>
+  <div class="card"><h3>Equity del bot vs curva exigida por el reto ($100 → $10,000 en 3 meses)</h3>
+    <div id="chart"></div>
+    <div class="legend"><span class="lb">Bot (real simulado)</span><span class="lg">Curva exigida para 10K (+5.1%/dia)</span></div>
+    <p class="note" id="bot-reglas"></p>
+  </div>
+  <div class="card"><h3>Trades del bot (todas las señales, sin excepcion)</h3><div id="bot-trades"></div></div>
+</div>
+
+<div class="panel" id="p-real">
+  <div class="tiles" id="real-tiles"></div>
+  <div class="card"><h3>Trades reales de Luis (reportados y verificados)</h3><div id="real-trades"></div>
+  <p class="note">Aqui va TODO: ganadas, perdidas y violaciones de reglas. Sin maquillaje — esa es la diferencia con los canales.</p></div>
+</div>
+
+<div class="panel" id="p-sen">
+  <div class="tiles" id="sen-tiles"></div>
+  <div class="card"><h3>Ultimas señales del sistema</h3><div id="sen-list"></div></div>
+  <div class="card"><h3>Win rate por activo y direccion</h3><div id="sen-buckets"></div></div>
+</div>
+
+<div class="panel" id="p-fue">
+  <div class="card"><h3>Integridad de fuentes externas (bots y canales de Telegram)</h3><div id="fue-tabla"></div>
+  <p class="note">Cada señal ajena se verifica contra velas reales. "Fabricadas" = publicaron una ganancia que el precio real nunca dio.</p></div>
+  <div class="card"><h3>Detalle de señales externas</h3><div id="fue-det"></div></div>
+</div>
+
+<div class="tipbox" id="tip"></div>
+
+<script>
+const $=q=>document.querySelector(q);
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on'); $('#p-'+t.dataset.p).classList.add('on');
+});
+const fmt=n=>n==null?'—':('$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:2}));
+const cls=o=>o==='win'||o==='win_tp1'?'w':(o==='loss'?'l':(o==='FABRICADO'?'f':'p'));
+const lbl=o=>({win:'✓ win',win_tp1:'✓ win',loss:'✗ loss',FABRICADO:'⚠ FABRICADA',fuera_de_sistema:'fuera de sistema'})[o]||o;
+
+fetch('data.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  $('#upd').textContent='actualizado '+d.actualizado+' (auto cada 15 min)';
+  // ---- BOT ----
+  const b=d.bot, ret=(b.capital/b.capital_inicial-1)*100;
+  $('#bot-tiles').innerHTML=tile('Capital bot',fmt(b.capital),(ret>=0?'+':'')+ret.toFixed(1)+'% desde $'+b.capital_inicial)
+    +tile('Meta',fmt(b.meta),'en '+b.meta_meses+' meses')
+    +tile('Trades',b.trades.length,wl(b.trades))
+    +tile('Inicio',b.inicio,'');
+  $('#bot-reglas').textContent='Reglas del bot: '+b.reglas;
+  drawChart(b);
+  $('#bot-trades').innerHTML=tabla(['ID','Fecha','Activo','Dir','Resultado','PnL','Capital'],
+    b.trades.map(t=>[t.id,t.timestamp,t.activo,t.direccion,`<span class="${cls(t.outcome)}">${lbl(t.outcome)}</span>`,
+      `<span class="num ${t.pnl>=0?'w':'l'}">${t.pnl>=0?'+':''}${t.pnl.toFixed(2)}</span>`,`<span class="num">${fmt(t.capital)}</span>`]));
+  // ---- REAL ----
+  const r=d.real, pnlReal=r.trades.reduce((a,t)=>a+(t.pnl||0),0);
+  $('#real-tiles').innerHTML=tile('Futures',fmt(r.capital_futures),'operable')
+    +tile('Total BloFin',fmt(r.capital_total),'reto → '+fmt(r.meta_reto))
+    +tile('PnL trades reportados',(pnlReal>=0?'+':'')+pnlReal.toFixed(2),'')
+    +tile('Trades',r.trades.length,'');
+  $('#real-trades').innerHTML=tabla(['ID','Fecha','Activo','Dir','Resultado','PnL real'],
+    r.trades.map(t=>[t.id,t.fecha,t.activo||'—',t.direccion||'—',`<span class="${cls(t.outcome)}">${lbl(t.outcome)||'—'}</span>`,
+      t.pnl==null?'—':`<span class="num ${t.pnl>=0?'w':'l'}">${t.pnl>=0?'+':''}${Number(t.pnl).toFixed(2)}</span>`]));
+  // ---- SEÑALES ----
+  const s=d.senales;
+  $('#sen-tiles').innerHTML=tile('Resueltas',s.resueltas,'')+tile('Win rate',s.win_rate+'%','TP1 antes que SL')
+    +tile('Mejor bucket',best(s.por_bucket),'')+tile('Motor','v2 + lecciones','se endurece solo');
+  $('#sen-list').innerHTML=tabla(['ID','Hora','Activo','Dir','Prob','Entry','SL','TP1','Resultado'],
+    s.ultimas.map(x=>[x.id,x.ts,x.activo,x.dir,x.prob+'%',x.entry,x.sl,x.tp1,`<span class="${cls(x.outcome)}">${lbl(x.outcome)}</span>`]));
+  $('#sen-buckets').innerHTML=tabla(['Activo','Dir','N','W','L','WR%'],
+    s.por_bucket.map(x=>[x.activo,x.direccion,x.n,x.wins,x.losses,`<span class="${x.win_rate_pct>=50?'w':'l'}">${x.win_rate_pct}%</span>`]));
+  // ---- FUENTES ----
+  $('#fue-tabla').innerHTML=tabla(['Fuente','Señales','W','L','Fabricadas','Veredicto'],
+    d.fuentes.map(f=>[f.fuente,f.señales,f.wins,f.losses,
+      f.fabricadas?`<span class="f">${f.fabricadas} ⚠</span>`:'0',
+      f.fabricadas?'<span class="f">NO CONFIABLE</span>':(f.wins+f.losses>=3?'midiendo':'muestra chica')]));
+  $('#fue-det').innerHTML=tabla(['ID','Fuente','Activo','Dir','Resultado real','Nuestro juez dijo'],
+    d.ext_detalle.map(e=>[e.id,e.fuente,e.activo,e.dir,`<span class="${cls(e.outcome)}">${lbl(e.outcome)}</span>`,e.veredicto_nuestro||'—']));
+});
+
+function tile(k,v,s){return `<div class="tile"><div class="k">${k}</div><div class="v num">${v}</div><div class="s">${s}</div></div>`}
+function wl(ts){const w=ts.filter(t=>t.outcome==='win').length,l=ts.filter(t=>t.outcome==='loss').length;return w+'W / '+l+'L'}
+function best(bk){const g=bk.filter(x=>x.n>=2&&x.win_rate_pct>=50).sort((a,b)=>b.win_rate_pct-a.win_rate_pct)[0];return g?`${g.activo} ${g.direccion}`:'—'}
+function tabla(hs,rows){return '<table><thead><tr>'+hs.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'
+  +rows.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')+'</tbody></table>'}
+
+function drawChart(b){
+  const W=920,H=260,P={t:12,r:64,b:24,l:8};
+  const eq=[{t:b.inicio+'T00:00',v:b.capital_inicial},...b.equity.map(e=>({t:e.t,v:e.v}))];
+  const t0=new Date(b.inicio).getTime(), t1=Math.max(Date.now(),new Date(eq[eq.length-1].t).getTime());
+  const dias=Math.max(1,(t1-t0)/864e5);
+  // Curva exigida: 100 * (10000/100)^(d/92)
+  const goal=[];for(let d0=0;d0<=dias;d0+=dias/40)goal.push({d:d0,v:100*Math.pow(100,d0/92)});
+  const vmax=Math.max(...eq.map(e=>e.v),...goal.map(g=>g.v))*1.08, vmin=Math.min(...eq.map(e=>e.v),95)*0.97;
+  const X=d0=>P.l+(W-P.l-P.r)*(d0/dias), Y=v=>P.t+(H-P.t-P.b)*(1-(v-vmin)/(vmax-vmin));
+  const dx=e=>X((new Date(e.t).getTime()-t0)/864e5);
+  let g='';goal.forEach((p,i)=>g+=(i?'L':'M')+X(p.d).toFixed(1)+' '+Y(p.v).toFixed(1));
+  let l='';eq.forEach((e,i)=>l+=(i?'L':'M')+dx(e).toFixed(1)+' '+Y(e.v).toFixed(1));
+  const gy=[vmin,(vmin+vmax)/2,vmax];
+  $('#chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%">
+    ${gy.map(v=>`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#21262d"/>
+      <text x="${W-P.r+6}" y="${Y(v)+4}" fill="#6e7681">$${v.toFixed(0)}</text>`).join('')}
+    <path d="${g}" fill="none" stroke="#6e7681" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="${l}" fill="none" stroke="#6ea8fe" stroke-width="2"/>
+    ${eq.map(e=>`<circle cx="${dx(e)}" cy="${Y(e.v)}" r="8" fill="transparent" data-t="${e.t}" data-v="${e.v}" class="pt"/>`).join('')}
+    ${eq.length?`<circle cx="${dx(eq[eq.length-1])}" cy="${Y(eq[eq.length-1].v)}" r="4" fill="#6ea8fe"/>
+    <text x="${dx(eq[eq.length-1])+7}" y="${Y(eq[eq.length-1].v)-6}" fill="#e6edf3" font-weight="700">$${eq[eq.length-1].v.toFixed(2)}</text>`:''}
+  </svg>`;
+  const tip=$('#tip');
+  document.querySelectorAll('.pt').forEach(c=>{
+    c.onmousemove=ev=>{tip.style.display='block';tip.style.left=(ev.clientX+12)+'px';tip.style.top=(ev.clientY-10)+'px';
+      tip.innerHTML=`${c.dataset.t}<br><b>$${Number(c.dataset.v).toFixed(2)}</b>`};
+    c.onmouseout=()=>tip.style.display='none';
+  });
+}
+</script>
+</body>
+</html>
