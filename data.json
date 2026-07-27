@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 10:12",
+ "actualizado": "2026-07-27 10:27",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.6835,
@@ -126,6 +126,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-023",
+    "activo": "NEAR",
+    "dir": "SHORT",
+    "ts": "2026-07-27T10:15",
+    "outcome": "emitida",
+    "entry": 1.783,
+    "sl": 1.798685,
+    "tp1": 1.767315,
+    "tp2": 1.754767,
+    "prob": 79.5
+   },
    {
     "id": "S-022",
     "activo": "AVAX",
