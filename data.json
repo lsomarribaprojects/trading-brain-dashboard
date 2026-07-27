@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 10:42",
+ "actualizado": "2026-07-27 10:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.5272,
@@ -140,6 +140,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-024",
+    "activo": "XRP",
+    "dir": "SHORT",
+    "ts": "2026-07-27T10:44",
+    "outcome": "emitida",
+    "entry": 1.0895,
+    "sl": 1.096315,
+    "tp1": 1.082685,
+    "tp2": 1.077233,
+    "prob": 73.4
+   },
    {
     "id": "S-023",
     "activo": "NEAR",
