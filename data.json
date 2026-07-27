@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-27 09:57",
+ "actualizado": "2026-07-27 10:12",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 97.84,
+  "capital": 97.6835,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -11,9 +11,23 @@
    {
     "t": "2026-07-27T08:43",
     "v": 97.84
+   },
+   {
+    "t": "2026-07-27T09:44",
+    "v": 97.6835
    }
   ],
   "trades": [
+   {
+    "id": "S-022",
+    "activo": "AVAX",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-27T09:44",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1565,
+    "capital": 97.6835
+   },
    {
     "id": "S-021",
     "activo": "SOL",
@@ -117,7 +131,7 @@
     "activo": "AVAX",
     "dir": "SHORT",
     "ts": "2026-07-27T09:44",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 6.517,
     "sl": 6.563628,
     "tp1": 6.470372,
