@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 14:12",
+ "actualizado": "2026-07-27 14:27",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.0599,
@@ -97,8 +97,8 @@
   ]
  },
  "senales": {
-  "resueltas": 25,
-  "win_rate": 52.0,
+  "resueltas": 26,
+  "win_rate": 50.0,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -127,9 +127,9 @@
    {
     "activo": "XRP",
     "direccion": "SHORT",
-    "n": 1,
+    "n": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_rate_pct": 0.0
    },
    {
@@ -203,7 +203,7 @@
     "activo": "XRP",
     "dir": "SHORT",
     "ts": "2026-07-27T13:43",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 1.0883,
     "sl": 1.092808,
     "tp1": 1.083792,
