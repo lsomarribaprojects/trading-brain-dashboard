@@ -44,7 +44,7 @@ svg text{font:11px -apple-system,Segoe UI,sans-serif}
 <div class="tabs">
   <div class="tab on" data-p="bot">🤖 Bot $100</div>
   <div class="tab" data-p="real">👤 Cuenta real</div>
-  <div class="tab" data-p="sen">📡 Señales</div>
+  <div class="tab" data-p="sen">📡 Señales de traders</div>
   <div class="tab" data-p="fue">🔍 Fuentes</div>
 </div>
 
@@ -56,6 +56,8 @@ svg text{font:11px -apple-system,Segoe UI,sans-serif}
     <p class="note" id="bot-reglas"></p>
   </div>
   <div class="card"><h3>Trades del bot (todas las señales, sin excepcion)</h3><div id="bot-trades"></div></div>
+  <div class="card"><h3>Señales del sistema (las que alimentan al bot)</h3><div id="sen-list"></div></div>
+  <div class="card"><h3>Win rate del sistema por activo y direccion</h3><div id="sen-buckets"></div></div>
 </div>
 
 <div class="panel" id="p-real">
@@ -65,9 +67,9 @@ svg text{font:11px -apple-system,Segoe UI,sans-serif}
 </div>
 
 <div class="panel" id="p-sen">
-  <div class="tiles" id="sen-tiles"></div>
-  <div class="card"><h3>Ultimas señales del sistema</h3><div id="sen-list"></div></div>
-  <div class="card"><h3>Win rate por activo y direccion</h3><div id="sen-buckets"></div></div>
+  <div class="card"><h3>Señales de traders externos (BITLOBO, MillionTrader, VIP, bots) — verificadas contra velas reales</h3>
+  <div id="ext-list"></div>
+  <p class="note">Cada señal que Luis recibe de un canal se registra aqui con el resultado REAL del precio y lo que nuestro juez predijo. Nadie puede inventarse un TP alcanzado.</p></div>
 </div>
 
 <div class="panel" id="p-fue">
@@ -104,17 +106,18 @@ fetch('data.json?t='+Date.now()).then(r=>r.json()).then(d=>{
       `<span class="num ${t.pnl>=0?'w':'l'}">${t.pnl>=0?'+':''}${t.pnl.toFixed(2)}</span>`,`<span class="num">${fmt(t.capital)}</span>`]));
   // ---- REAL ----
   const r=d.real, pnlReal=r.trades.reduce((a,t)=>a+(t.pnl||0),0);
-  $('#real-tiles').innerHTML=tile('Futures',fmt(r.capital_futures),'operable')
-    +tile('Total BloFin',fmt(r.capital_total),'reto → '+fmt(r.meta_reto))
-    +tile('PnL trades reportados',(pnlReal>=0?'+':'')+pnlReal.toFixed(2),'')
-    +tile('Trades',r.trades.length,'');
+  $('#real-tiles').innerHTML=tile('Patrimonio cripto',fmt(r.patrimonio),'reto → '+fmt(r.meta_reto))
+    +tile('BloFin',fmt(r.capital_total),'futures: '+fmt(r.capital_futures))
+    +tile('Pionex',fmt(r.pionex),'')
+    +tile('PnL desde el 27-jul',(pnlReal>=0?'+':'')+pnlReal.toFixed(2),r.trades.length+' trades');
   $('#real-trades').innerHTML=tabla(['ID','Fecha','Activo','Dir','Resultado','PnL real'],
     r.trades.map(t=>[t.id,t.fecha,t.activo||'—',t.direccion||'—',`<span class="${cls(t.outcome)}">${lbl(t.outcome)||'—'}</span>`,
       t.pnl==null?'—':`<span class="num ${t.pnl>=0?'w':'l'}">${t.pnl>=0?'+':''}${Number(t.pnl).toFixed(2)}</span>`]));
-  // ---- SEÑALES ----
+  // ---- SEÑALES DE TRADERS (externas) ----
+  $('#ext-list').innerHTML=tabla(['ID','Fuente','Activo','Dir','Resultado real','Nuestro juez dijo'],
+    d.ext_detalle.map(e=>[e.id,e.fuente,e.activo,e.dir,`<span class="${cls(e.outcome)}">${lbl(e.outcome)}</span>`,e.veredicto_nuestro||'—']));
+  // ---- SEÑALES DEL SISTEMA (en pestaña Bot) ----
   const s=d.senales;
-  $('#sen-tiles').innerHTML=tile('Resueltas',s.resueltas,'')+tile('Win rate',s.win_rate+'%','TP1 antes que SL')
-    +tile('Mejor bucket',best(s.por_bucket),'')+tile('Motor','v2 + lecciones','se endurece solo');
   $('#sen-list').innerHTML=tabla(['ID','Hora','Activo','Dir','Prob','Entry','SL','TP1','Resultado'],
     s.ultimas.map(x=>[x.id,x.ts,x.activo,x.dir,x.prob+'%',x.entry,x.sl,x.tp1,`<span class="${cls(x.outcome)}">${lbl(x.outcome)}</span>`]));
   $('#sen-buckets').innerHTML=tabla(['Activo','Dir','N','W','L','WR%'],
