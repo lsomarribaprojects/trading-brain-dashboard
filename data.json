@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 07:57",
+ "actualizado": "2026-07-27 08:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 100.0,
@@ -96,6 +96,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-021",
+    "activo": "SOL",
+    "dir": "LONG",
+    "ts": "2026-07-27T08:43",
+    "outcome": "emitida",
+    "entry": 77.3,
+    "sl": 76.953715,
+    "tp1": 77.646285,
+    "tp2": 77.923313,
+    "prob": 78.6
+   },
    {
     "id": "S-020",
     "activo": "SOL",
