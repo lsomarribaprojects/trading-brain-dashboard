@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-27 13:42",
+ "actualizado": "2026-07-27 14:12",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 97.2154,
+  "capital": 97.0599,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -27,9 +27,23 @@
    {
     "t": "2026-07-27T11:44",
     "v": 97.2154
+   },
+   {
+    "t": "2026-07-27T13:43",
+    "v": 97.0599
    }
   ],
   "trades": [
+   {
+    "id": "S-026",
+    "activo": "XRP",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-27T13:43",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1555,
+    "capital": 97.0599
+   },
    {
     "id": "S-025",
     "activo": "ADA",
@@ -83,8 +97,8 @@
   ]
  },
  "senales": {
-  "resueltas": 24,
-  "win_rate": 50.0,
+  "resueltas": 25,
+  "win_rate": 52.0,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -153,8 +167,8 @@
    {
     "activo": "ADA",
     "direccion": "SHORT",
-    "n": 2,
-    "wins": 2,
+    "n": 3,
+    "wins": 3,
     "losses": 0,
     "win_rate_pct": 100.0
    },
@@ -185,11 +199,23 @@
   ],
   "ultimas": [
    {
+    "id": "S-026",
+    "activo": "XRP",
+    "dir": "SHORT",
+    "ts": "2026-07-27T13:43",
+    "outcome": "abierta",
+    "entry": 1.0883,
+    "sl": 1.092808,
+    "tp1": 1.083792,
+    "tp2": 1.080186,
+    "prob": 73.1
+   },
+   {
     "id": "S-025",
     "activo": "ADA",
     "dir": "SHORT",
     "ts": "2026-07-27T11:44",
-    "outcome": "abierta",
+    "outcome": "expirada_verde",
     "entry": 0.1588,
     "sl": 0.160685,
     "tp1": 0.156915,
