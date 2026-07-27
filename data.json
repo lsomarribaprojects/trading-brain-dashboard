@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-27 10:27",
+ "actualizado": "2026-07-27 10:34",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 97.6835,
+  "capital": 97.5272,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -15,9 +15,23 @@
    {
     "t": "2026-07-27T09:44",
     "v": 97.6835
+   },
+   {
+    "t": "2026-07-27T10:15",
+    "v": 97.5272
    }
   ],
   "trades": [
+   {
+    "id": "S-023",
+    "activo": "NEAR",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-27T10:15",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1563,
+    "capital": 97.5272
+   },
    {
     "id": "S-022",
     "activo": "AVAX",
@@ -41,8 +55,8 @@
   ]
  },
  "senales": {
-  "resueltas": 21,
-  "win_rate": 52.4,
+  "resueltas": 22,
+  "win_rate": 50.0,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -87,10 +101,10 @@
    {
     "activo": "AVAX",
     "direccion": "SHORT",
-    "n": 2,
+    "n": 3,
     "wins": 2,
-    "losses": 0,
-    "win_rate_pct": 100.0
+    "losses": 1,
+    "win_rate_pct": 66.7
    },
    {
     "activo": "XRP",
@@ -131,7 +145,7 @@
     "activo": "NEAR",
     "dir": "SHORT",
     "ts": "2026-07-27T10:15",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 1.783,
     "sl": 1.798685,
     "tp1": 1.767315,
@@ -143,7 +157,7 @@
     "activo": "AVAX",
     "dir": "SHORT",
     "ts": "2026-07-27T09:44",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 6.517,
     "sl": 6.563628,
     "tp1": 6.470372,
@@ -431,13 +445,21 @@
   },
   {
    "fuente": "bot_telegram_VP_MEAN_REVERT",
-   "señales": 2,
+   "señales": 3,
    "wins": 2,
    "losses": 0,
    "fabricadas": 0
   }
  ],
  "ext_detalle": [
+  {
+   "id": "EXT-005",
+   "fuente": "bot_telegram_VP_MEAN_REVERT",
+   "activo": "AAVE",
+   "dir": "SHORT",
+   "outcome": "pendiente",
+   "veredicto_nuestro": "NO-GO"
+  },
   {
    "id": "EXT-004",
    "fuente": "MillionTrader_VIP_RETO1k10k",
