@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 11:42",
+ "actualizado": "2026-07-27 11:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.3712,
@@ -162,6 +162,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-025",
+    "activo": "ADA",
+    "dir": "SHORT",
+    "ts": "2026-07-27T11:44",
+    "outcome": "emitida",
+    "entry": 0.1588,
+    "sl": 0.160685,
+    "tp1": 0.156915,
+    "tp2": 0.155407,
+    "prob": 78.3
+   },
    {
     "id": "S-024",
     "activo": "XRP",
@@ -453,7 +465,7 @@
   ]
  },
  "real": {
-  "capital_futures": 334.76,
+  "capital_futures": 316.36,
   "capital_total": 556.81,
   "pionex": 744.29,
   "patrimonio": 1301.1,
