@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 16:57",
+ "actualizado": "2026-07-28 17:12",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.5521,
@@ -209,8 +209,8 @@
   ]
  },
  "senales": {
-  "resueltas": 33,
-  "win_rate": 54.5,
+  "resueltas": 34,
+  "win_rate": 52.9,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -271,10 +271,10 @@
    {
     "activo": "AAVE",
     "direccion": "LONG",
-    "n": 3,
+    "n": 4,
     "wins": 2,
-    "losses": 1,
-    "win_rate_pct": 66.7
+    "losses": 2,
+    "win_rate_pct": 50.0
    },
    {
     "activo": "XRP",
@@ -363,7 +363,7 @@
     "activo": "AAVE",
     "dir": "LONG",
     "ts": "2026-07-28T14:44",
-    "outcome": "abierta",
+    "outcome": "expirada_roja",
     "entry": 101.34,
     "sl": 100.488,
     "tp1": 102.192,
