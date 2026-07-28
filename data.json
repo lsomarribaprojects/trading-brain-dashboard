@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 13:42",
+ "actualizado": "2026-07-28 13:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.1789,
@@ -153,8 +153,8 @@
   ]
  },
  "senales": {
-  "resueltas": 29,
-  "win_rate": 51.7,
+  "resueltas": 30,
+  "win_rate": 53.3,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -263,19 +263,31 @@
    {
     "activo": "AAVE",
     "direccion": "LONG",
-    "n": 1,
-    "wins": 1,
+    "n": 2,
+    "wins": 2,
     "losses": 0,
     "win_rate_pct": 100.0
    }
   ],
   "ultimas": [
    {
+    "id": "S-031",
+    "activo": "AAVE",
+    "dir": "LONG",
+    "ts": "2026-07-28T13:44",
+    "outcome": "emitida",
+    "entry": 101.32,
+    "sl": 100.330857,
+    "tp1": 102.309143,
+    "tp2": 103.100457,
+    "prob": 74.8
+   },
+   {
     "id": "S-030",
     "activo": "AAVE",
     "dir": "LONG",
     "ts": "2026-07-28T11:37",
-    "outcome": "abierta",
+    "outcome": "expirada_verde",
     "entry": 100.88,
     "sl": 99.814572,
     "tp1": 101.945428,
@@ -617,18 +629,6 @@
     "tp1": 6.544772,
     "tp2": 6.52859,
     "prob": 77.2
-   },
-   {
-    "id": "S-001",
-    "activo": "DOGE",
-    "dir": "LONG",
-    "ts": "2026-07-21T15:32",
-    "outcome": "loss",
-    "entry": 0.07353,
-    "sl": 0.073319,
-    "tp1": 0.073741,
-    "tp2": 0.07391,
-    "prob": 66.5
    }
   ]
  },
