@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 17:42",
+ "actualizado": "2026-07-28 17:58",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.396,
@@ -223,8 +223,8 @@
   ]
  },
  "senales": {
-  "resueltas": 34,
-  "win_rate": 52.9,
+  "resueltas": 35,
+  "win_rate": 51.4,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -256,6 +256,14 @@
     "n": 2,
     "wins": 0,
     "losses": 2,
+    "win_rate_pct": 0.0
+   },
+   {
+    "activo": "LINK",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 0,
+    "losses": 1,
     "win_rate_pct": 0.0
    },
    {
@@ -353,7 +361,7 @@
     "activo": "LINK",
     "dir": "LONG",
     "ts": "2026-07-28T17:13",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 8.438,
     "sl": 8.412628,
     "tp1": 8.463372,
