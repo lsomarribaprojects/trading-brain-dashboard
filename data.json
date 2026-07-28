@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 08:42",
+ "actualizado": "2026-07-28 08:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 96.9046,
@@ -212,6 +212,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-028",
+    "activo": "BTC",
+    "dir": "SHORT",
+    "ts": "2026-07-28T08:42",
+    "outcome": "emitida",
+    "entry": 63003.0,
+    "sl": 63205.217143,
+    "tp1": 62800.782857,
+    "tp2": 62639.009143,
+    "prob": 78.5
+   },
    {
     "id": "S-027",
     "activo": "AVAX",
