@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 11:27",
+ "actualizado": "2026-07-28 11:36",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.3362,
@@ -139,8 +139,8 @@
   ]
  },
  "senales": {
-  "resueltas": 28,
-  "win_rate": 50.0,
+  "resueltas": 29,
+  "win_rate": 51.7,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -245,6 +245,14 @@
     "wins": 1,
     "losses": 0,
     "win_rate_pct": 100.0
+   },
+   {
+    "activo": "AAVE",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
    }
   ],
   "ultimas": [
@@ -253,7 +261,7 @@
     "activo": "AAVE",
     "dir": "LONG",
     "ts": "2026-07-28T10:30",
-    "outcome": "abierta",
+    "outcome": "win",
     "entry": 100.19,
     "sl": 99.215428,
     "tp1": 101.164572,
@@ -599,13 +607,21 @@
   ]
  },
  "real": {
-  "capital_futures": 354.36,
-  "capital_total": 574.36,
+  "capital_futures": 363.24,
+  "capital_total": 583.89,
   "pionex": 744.29,
-  "patrimonio": 1318.65,
+  "patrimonio": 1328.18,
   "capital_inicial_reto": 1301.1,
   "meta_reto": 10000,
   "trades": [
+   {
+    "id": "BF--long",
+    "fecha": "2026-07-28",
+    "activo": "AAVE",
+    "direccion": "LONG",
+    "outcome": "win",
+    "pnl": 7.65
+   },
    {
     "id": "BF--btc2",
     "fecha": "2026-07-27",
