@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 17:58",
+ "actualizado": "2026-07-28 18:33",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.396,
@@ -719,13 +719,37 @@
   ]
  },
  "real": {
-  "capital_futures": 363.24,
-  "capital_total": 583.89,
+  "capital_futures": 350.53,
+  "capital_total": 571.01,
   "pionex": 744.29,
-  "patrimonio": 1328.18,
+  "patrimonio": 1315.3,
   "capital_inicial_reto": 1301.1,
   "meta_reto": 10000,
   "trades": [
+   {
+    "id": "BF-tc-sl",
+    "fecha": "2026-07-28",
+    "activo": "BTC",
+    "direccion": "LONG",
+    "outcome": "loss",
+    "pnl": -6.57
+   },
+   {
+    "id": "BF-ax-tp",
+    "fecha": "2026-07-28",
+    "activo": "AVAX",
+    "direccion": "LONG",
+    "outcome": "win",
+    "pnl": 5.03
+   },
+   {
+    "id": "BF-tc-tp",
+    "fecha": "2026-07-28",
+    "activo": "BTC",
+    "direccion": "LONG",
+    "outcome": "win",
+    "pnl": 6.72
+   },
    {
     "id": "BF--long",
     "fecha": "2026-07-28",
