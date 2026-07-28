@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-28 08:57",
+ "actualizado": "2026-07-28 10:12",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 96.9046,
+  "capital": 98.4938,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -35,9 +35,23 @@
    {
     "t": "2026-07-27T20:15",
     "v": 96.9046
+   },
+   {
+    "t": "2026-07-28T08:42",
+    "v": 98.4938
    }
   ],
   "trades": [
+   {
+    "id": "S-028",
+    "activo": "BTC",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-28T08:42",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5892,
+    "capital": 98.4938
+   },
    {
     "id": "S-027",
     "activo": "AVAX",
@@ -111,8 +125,8 @@
   ]
  },
  "senales": {
-  "resueltas": 27,
-  "win_rate": 48.1,
+  "resueltas": 28,
+  "win_rate": 50.0,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -209,6 +223,14 @@
     "wins": 1,
     "losses": 0,
     "win_rate_pct": 100.0
+   },
+   {
+    "activo": "BTC",
+    "direccion": "SHORT",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
    }
   ],
   "ultimas": [
@@ -217,7 +239,7 @@
     "activo": "BTC",
     "dir": "SHORT",
     "ts": "2026-07-28T08:42",
-    "outcome": "emitida",
+    "outcome": "win",
     "entry": 63003.0,
     "sl": 63205.217143,
     "tp1": 62800.782857,
