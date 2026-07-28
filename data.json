@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-28 15:57",
+ "actualizado": "2026-07-28 16:12",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 97.7084,
+  "capital": 97.5521,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -59,9 +59,23 @@
    {
     "t": "2026-07-28T15:13",
     "v": 97.7084
+   },
+   {
+    "t": "2026-07-28T15:44",
+    "v": 97.5521
    }
   ],
   "trades": [
+   {
+    "id": "S-034",
+    "activo": "ADA",
+    "direccion": "LONG",
+    "timestamp": "2026-07-28T15:44",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1563,
+    "capital": 97.5521
+   },
    {
     "id": "S-033",
     "activo": "AVAX",
@@ -195,8 +209,8 @@
   ]
  },
  "senales": {
-  "resueltas": 30,
-  "win_rate": 53.3,
+  "resueltas": 31,
+  "win_rate": 51.6,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -255,6 +269,14 @@
     "win_rate_pct": 50.0
    },
    {
+    "activo": "AAVE",
+    "direccion": "LONG",
+    "n": 3,
+    "wins": 2,
+    "losses": 1,
+    "win_rate_pct": 66.7
+   },
+   {
     "activo": "XRP",
     "direccion": "LONG",
     "n": 1,
@@ -301,14 +323,6 @@
     "wins": 1,
     "losses": 0,
     "win_rate_pct": 100.0
-   },
-   {
-    "activo": "AAVE",
-    "direccion": "LONG",
-    "n": 2,
-    "wins": 2,
-    "losses": 0,
-    "win_rate_pct": 100.0
    }
   ],
   "ultimas": [
@@ -317,7 +331,7 @@
     "activo": "ADA",
     "dir": "LONG",
     "ts": "2026-07-28T15:44",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 0.1597,
     "sl": 0.159015,
     "tp1": 0.160385,
@@ -353,7 +367,7 @@
     "activo": "AAVE",
     "dir": "LONG",
     "ts": "2026-07-28T13:44",
-    "outcome": "abierta",
+    "outcome": "expirada_roja",
     "entry": 101.32,
     "sl": 100.330857,
     "tp1": 102.309143,
