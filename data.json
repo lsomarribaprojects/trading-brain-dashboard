@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-28 11:42",
+ "actualizado": "2026-07-28 11:57",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 98.3362,
+  "capital": 98.1789,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -43,9 +43,23 @@
    {
     "t": "2026-07-28T10:30",
     "v": 98.3362
+   },
+   {
+    "t": "2026-07-28T11:37",
+    "v": 98.1789
    }
   ],
   "trades": [
+   {
+    "id": "S-030",
+    "activo": "AAVE",
+    "direccion": "LONG",
+    "timestamp": "2026-07-28T11:37",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1573,
+    "capital": 98.1789
+   },
    {
     "id": "S-029",
     "activo": "AAVE",
@@ -261,7 +275,7 @@
     "activo": "AAVE",
     "dir": "LONG",
     "ts": "2026-07-28T11:37",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 100.88,
     "sl": 99.814572,
     "tp1": 101.945428,
