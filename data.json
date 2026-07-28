@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 18:33",
+ "actualizado": "2026-07-28 18:42",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.396,
@@ -357,6 +357,18 @@
   ],
   "ultimas": [
    {
+    "id": "S-036",
+    "activo": "ADA",
+    "dir": "LONG",
+    "ts": "2026-07-28T18:35",
+    "outcome": "emitida",
+    "entry": 0.1615,
+    "sl": 0.16048,
+    "tp1": 0.16252,
+    "tp2": 0.1635,
+    "prob": 74.1
+   },
+   {
     "id": "S-035",
     "activo": "LINK",
     "dir": "LONG",
@@ -703,18 +715,6 @@
     "tp1": 1.156005,
     "tp2": 1.160729,
     "prob": 73.3
-   },
-   {
-    "id": "S-006",
-    "activo": "SOL",
-    "dir": "SHORT",
-    "ts": "2026-07-22T07:58",
-    "outcome": "loss",
-    "entry": 77.24,
-    "sl": 77.466285,
-    "tp1": 77.013715,
-    "tp2": 76.832687,
-    "prob": 67.1
    }
   ]
  },
