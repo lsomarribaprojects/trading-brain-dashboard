@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 21:57",
+ "actualizado": "2026-07-27 22:02",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 96.9046,
@@ -539,13 +539,38 @@
   ]
  },
  "real": {
-  "capital_futures": 316.36,
-  "capital_total": 556.81,
+  "capital_futures": 354.36,
+  "capital_total": 574.36,
   "pionex": 744.29,
-  "patrimonio": 1301.1,
+  "patrimonio": 1318.65,
   "capital_inicial_reto": 1301.1,
   "meta_reto": 10000,
-  "trades": [],
+  "trades": [
+   {
+    "id": "BF--btc2",
+    "fecha": "2026-07-27",
+    "activo": "BTC",
+    "direccion": "SHORT",
+    "outcome": "loss",
+    "pnl": -10.57
+   },
+   {
+    "id": "BF--btc1",
+    "fecha": "2026-07-27",
+    "activo": "BTC",
+    "direccion": "SHORT",
+    "outcome": "win",
+    "pnl": 11.98
+   },
+   {
+    "id": "BF--aave",
+    "fecha": "2026-07-27",
+    "activo": "AAVE",
+    "direccion": "SHORT",
+    "outcome": "win",
+    "pnl": 21.45
+   }
+  ],
   "nota": "Cuenta real de Luis desde 0 (27-jul). El reporta cada entrada y salida; se registra sin maquillaje: wins, losses y violaciones."
  },
  "fuentes": [
