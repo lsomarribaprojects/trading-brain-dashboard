@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 22:28",
+ "actualizado": "2026-07-27 22:42",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 96.9046,
@@ -111,8 +111,8 @@
   ]
  },
  "senales": {
-  "resueltas": 26,
-  "win_rate": 50.0,
+  "resueltas": 27,
+  "win_rate": 48.1,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -165,10 +165,10 @@
    {
     "activo": "AVAX",
     "direccion": "SHORT",
-    "n": 3,
+    "n": 4,
     "wins": 2,
-    "losses": 1,
-    "win_rate_pct": 66.7
+    "losses": 2,
+    "win_rate_pct": 50.0
    },
    {
     "activo": "XRP",
@@ -217,7 +217,7 @@
     "activo": "AVAX",
     "dir": "SHORT",
     "ts": "2026-07-27T20:15",
-    "outcome": "abierta",
+    "outcome": "expirada_roja",
     "entry": 6.402,
     "sl": 6.447857,
     "tp1": 6.356143,
