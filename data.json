@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 10:27",
+ "actualizado": "2026-07-28 10:28",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.4938,
@@ -610,7 +610,7 @@
  "fuentes": [
   {
    "fuente": "MillionTrader_VIP_RETO1k10k",
-   "señales": 1,
+   "señales": 2,
    "wins": 0,
    "losses": 0,
    "fabricadas": 1
@@ -631,6 +631,14 @@
   }
  ],
  "ext_detalle": [
+  {
+   "id": "EXT-006",
+   "fuente": "MillionTrader_VIP_RETO1k10k",
+   "activo": "NEAR",
+   "dir": "SHORT",
+   "outcome": "pendiente",
+   "veredicto_nuestro": "NO-GO"
+  },
   {
    "id": "EXT-005",
    "fuente": "bot_telegram_VP_MEAN_REVERT",
