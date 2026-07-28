@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-27 20:13",
+ "actualizado": "2026-07-27 20:30",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.0599,
@@ -198,6 +198,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-027",
+    "activo": "AVAX",
+    "dir": "SHORT",
+    "ts": "2026-07-27T20:15",
+    "outcome": "emitida",
+    "entry": 6.402,
+    "sl": 6.447857,
+    "tp1": 6.356143,
+    "tp2": 6.319457,
+    "prob": 80.8
+   },
    {
     "id": "S-026",
     "activo": "XRP",
