@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 10:28",
+ "actualizado": "2026-07-28 10:42",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.4938,
@@ -234,6 +234,18 @@
    }
   ],
   "ultimas": [
+   {
+    "id": "S-029",
+    "activo": "AAVE",
+    "dir": "LONG",
+    "ts": "2026-07-28T10:30",
+    "outcome": "emitida",
+    "entry": 100.19,
+    "sl": 99.215428,
+    "tp1": 101.164572,
+    "tp2": 101.94423,
+    "prob": 81.2
+   },
    {
     "id": "S-028",
     "activo": "BTC",
