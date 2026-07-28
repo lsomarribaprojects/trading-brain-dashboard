@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 16:12",
+ "actualizado": "2026-07-28 16:27",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.5521,
@@ -209,8 +209,8 @@
   ]
  },
  "senales": {
-  "resueltas": 31,
-  "win_rate": 51.6,
+  "resueltas": 33,
+  "win_rate": 54.5,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -303,8 +303,8 @@
    {
     "activo": "AVAX",
     "direccion": "LONG",
-    "n": 1,
-    "wins": 1,
+    "n": 2,
+    "wins": 2,
     "losses": 0,
     "win_rate_pct": 100.0
    },
@@ -323,6 +323,14 @@
     "wins": 1,
     "losses": 0,
     "win_rate_pct": 100.0
+   },
+   {
+    "activo": "ADA",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
    }
   ],
   "ultimas": [
@@ -331,7 +339,7 @@
     "activo": "ADA",
     "dir": "LONG",
     "ts": "2026-07-28T15:44",
-    "outcome": "abierta",
+    "outcome": "win",
     "entry": 0.1597,
     "sl": 0.159015,
     "tp1": 0.160385,
@@ -343,7 +351,7 @@
     "activo": "AVAX",
     "dir": "LONG",
     "ts": "2026-07-28T15:13",
-    "outcome": "abierta",
+    "outcome": "win",
     "entry": 6.595,
     "sl": 6.567228,
     "tp1": 6.622772,
