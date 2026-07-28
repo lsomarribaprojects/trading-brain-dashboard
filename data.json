@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-28 15:27",
+ "actualizado": "2026-07-28 15:42",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 97.865,
+  "capital": 97.7084,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -55,9 +55,23 @@
    {
     "t": "2026-07-28T14:44",
     "v": 97.865
+   },
+   {
+    "t": "2026-07-28T15:13",
+    "v": 97.7084
    }
   ],
   "trades": [
+   {
+    "id": "S-033",
+    "activo": "AVAX",
+    "direccion": "LONG",
+    "timestamp": "2026-07-28T15:13",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1566,
+    "capital": 97.7084
+   },
    {
     "id": "S-032",
     "activo": "AAVE",
@@ -303,7 +317,7 @@
     "activo": "AVAX",
     "dir": "LONG",
     "ts": "2026-07-28T15:13",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 6.595,
     "sl": 6.567228,
     "tp1": 6.622772,
