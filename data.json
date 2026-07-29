@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-29 17:12",
+ "actualizado": "2026-07-29 18:13",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.0469,
@@ -321,8 +321,8 @@
   ]
  },
  "senales": {
-  "resueltas": 41,
-  "win_rate": 51.2,
+  "resueltas": 42,
+  "win_rate": 50.0,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -397,6 +397,14 @@
     "win_rate_pct": 50.0
    },
    {
+    "activo": "LINK",
+    "direccion": "SHORT",
+    "n": 2,
+    "wins": 1,
+    "losses": 1,
+    "win_rate_pct": 50.0
+   },
+   {
     "activo": "AAVE",
     "direccion": "LONG",
     "n": 4,
@@ -417,14 +425,6 @@
     "direccion": "SHORT",
     "n": 3,
     "wins": 3,
-    "losses": 0,
-    "win_rate_pct": 100.0
-   },
-   {
-    "activo": "LINK",
-    "direccion": "SHORT",
-    "n": 1,
-    "wins": 1,
     "losses": 0,
     "win_rate_pct": 100.0
    },
@@ -467,7 +467,7 @@
     "activo": "LINK",
     "dir": "SHORT",
     "ts": "2026-07-29T16:02",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 8.193,
     "sl": 8.259943,
     "tp1": 8.126057,
