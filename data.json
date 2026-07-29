@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 22:39",
+ "actualizado": "2026-07-28 22:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 96.7742,
@@ -413,6 +413,18 @@
   ],
   "ultimas": [
    {
+    "id": "S-040",
+    "activo": "NEAR",
+    "dir": "SHORT",
+    "ts": "2026-07-28T22:45",
+    "outcome": "emitida",
+    "entry": 1.613,
+    "sl": 1.624828,
+    "tp1": 1.601172,
+    "tp2": 1.59171,
+    "prob": 80.8
+   },
+   {
     "id": "S-039",
     "activo": "XRP",
     "dir": "LONG",
@@ -759,18 +771,6 @@
     "tp1": 8.4196,
     "tp2": 8.407,
     "prob": 70.0
-   },
-   {
-    "id": "S-010",
-    "activo": "ADA",
-    "dir": "SHORT",
-    "ts": "2026-07-23T19:24",
-    "outcome": "win",
-    "entry": 0.1679,
-    "sl": 0.168552,
-    "tp1": 0.167248,
-    "tp2": 0.166726,
-    "prob": 71.4
    }
   ]
  },
