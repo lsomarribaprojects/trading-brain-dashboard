@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-29 15:12",
+ "actualizado": "2026-07-29 15:27",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 96.6194,
@@ -427,6 +427,18 @@
   ],
   "ultimas": [
    {
+    "id": "S-041",
+    "activo": "AAVE",
+    "dir": "SHORT",
+    "ts": "2026-07-29T15:13",
+    "outcome": "emitida",
+    "entry": 96.92,
+    "sl": 97.859428,
+    "tp1": 95.980572,
+    "tp2": 95.22903,
+    "prob": 74.4
+   },
+   {
     "id": "S-040",
     "activo": "NEAR",
     "dir": "SHORT",
@@ -773,18 +785,6 @@
     "tp1": 6.740772,
     "tp2": 6.80379,
     "prob": 74.8
-   },
-   {
-    "id": "S-011",
-    "activo": "LINK",
-    "dir": "SHORT",
-    "ts": "2026-07-23T20:00",
-    "outcome": "win",
-    "entry": 8.443,
-    "sl": 8.4664,
-    "tp1": 8.4196,
-    "tp2": 8.407,
-    "prob": 70.0
    }
   ]
  },
