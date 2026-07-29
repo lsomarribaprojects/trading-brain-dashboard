@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-29 15:57",
+ "actualizado": "2026-07-29 16:12",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.204,
@@ -449,6 +449,18 @@
   ],
   "ultimas": [
    {
+    "id": "S-042",
+    "activo": "LINK",
+    "dir": "SHORT",
+    "ts": "2026-07-29T16:02",
+    "outcome": "emitida",
+    "entry": 8.193,
+    "sl": 8.259943,
+    "tp1": 8.126057,
+    "tp2": 8.072503,
+    "prob": 77.2
+   },
+   {
     "id": "S-041",
     "activo": "AAVE",
     "dir": "SHORT",
@@ -795,18 +807,6 @@
     "tp1": 1876.730285,
     "tp2": 1879.906513,
     "prob": 72.1
-   },
-   {
-    "id": "S-012",
-    "activo": "AVAX",
-    "dir": "LONG",
-    "ts": "2026-07-25T12:29",
-    "outcome": "expirada_verde",
-    "entry": 6.662,
-    "sl": 6.583228,
-    "tp1": 6.740772,
-    "tp2": 6.80379,
-    "prob": 74.8
    }
   ]
  },
