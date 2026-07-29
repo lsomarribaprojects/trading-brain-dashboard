@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-28 22:27",
+ "actualizado": "2026-07-28 22:39",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 96.7742,
@@ -279,8 +279,8 @@
   ]
  },
  "senales": {
-  "resueltas": 38,
-  "win_rate": 50.0,
+  "resueltas": 39,
+  "win_rate": 48.7,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -323,6 +323,14 @@
     "win_rate_pct": 0.0
    },
    {
+    "activo": "XRP",
+    "direccion": "LONG",
+    "n": 3,
+    "wins": 1,
+    "losses": 2,
+    "win_rate_pct": 33.3
+   },
+   {
     "activo": "ETH",
     "direccion": "LONG",
     "n": 6,
@@ -344,14 +352,6 @@
     "n": 4,
     "wins": 2,
     "losses": 2,
-    "win_rate_pct": 50.0
-   },
-   {
-    "activo": "XRP",
-    "direccion": "LONG",
-    "n": 2,
-    "wins": 1,
-    "losses": 1,
     "win_rate_pct": 50.0
    },
    {
@@ -417,7 +417,7 @@
     "activo": "XRP",
     "dir": "LONG",
     "ts": "2026-07-28T21:43",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 1.0801,
     "sl": 1.074237,
     "tp1": 1.085963,
@@ -775,13 +775,21 @@
   ]
  },
  "real": {
-  "capital_futures": 350.53,
-  "capital_total": 571.01,
+  "capital_futures": 331.39,
+  "capital_total": 552.0,
   "pionex": 744.29,
-  "patrimonio": 1315.3,
+  "patrimonio": 1296.29,
   "capital_inicial_reto": 1301.1,
   "meta_reto": 10000,
   "trades": [
+   {
+    "id": "BF-rp-sl",
+    "fecha": "2026-07-28",
+    "activo": "XRP",
+    "direccion": "SHORT",
+    "outcome": "loss",
+    "pnl": -17.33
+   },
    {
     "id": "BF-tc-sl",
     "fecha": "2026-07-28",
