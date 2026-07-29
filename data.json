@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-07-29 15:27",
+ "actualizado": "2026-07-29 15:42",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 96.6194,
+  "capital": 98.204,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -87,9 +87,23 @@
    {
     "t": "2026-07-28T22:45",
     "v": 96.6194
+   },
+   {
+    "t": "2026-07-29T15:13",
+    "v": 98.204
    }
   ],
   "trades": [
+   {
+    "id": "S-041",
+    "activo": "AAVE",
+    "direccion": "SHORT",
+    "timestamp": "2026-07-29T15:13",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.5846,
+    "capital": 98.204
+   },
    {
     "id": "S-040",
     "activo": "NEAR",
@@ -293,8 +307,8 @@
   ]
  },
  "senales": {
-  "resueltas": 40,
-  "win_rate": 50.0,
+  "resueltas": 41,
+  "win_rate": 51.2,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -423,6 +437,14 @@
     "wins": 1,
     "losses": 0,
     "win_rate_pct": 100.0
+   },
+   {
+    "activo": "AAVE",
+    "direccion": "SHORT",
+    "n": 1,
+    "wins": 1,
+    "losses": 0,
+    "win_rate_pct": 100.0
    }
   ],
   "ultimas": [
@@ -431,7 +453,7 @@
     "activo": "AAVE",
     "dir": "SHORT",
     "ts": "2026-07-29T15:13",
-    "outcome": "emitida",
+    "outcome": "win",
     "entry": 96.92,
     "sl": 97.859428,
     "tp1": 95.980572,
