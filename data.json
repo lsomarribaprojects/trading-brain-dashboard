@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-30 10:42",
+ "actualizado": "2026-07-30 10:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.0469,
@@ -910,8 +910,8 @@
  "fuentes": [
   {
    "fuente": "Crypto_Senales_VIP",
-   "señales": 1,
-   "wins": 0,
+   "señales": 2,
+   "wins": 1,
    "losses": 0,
    "fabricadas": 0
   },
@@ -939,11 +939,19 @@
  ],
  "ext_detalle": [
   {
+   "id": "EXT-008",
+   "fuente": "Crypto_Senales_VIP",
+   "activo": "ETH",
+   "dir": "SHORT",
+   "outcome": "pendiente",
+   "veredicto_nuestro": "NO-GO"
+  },
+  {
    "id": "EXT-007",
    "fuente": "Crypto_Senales_VIP",
    "activo": "XRP",
    "dir": "SHORT",
-   "outcome": "entry_no_tocado_aun",
+   "outcome": "win_tp1",
    "veredicto_nuestro": "NO-GO"
   },
   {
