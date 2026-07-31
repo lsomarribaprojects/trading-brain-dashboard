@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-07-30 21:12",
+ "actualizado": "2026-07-30 21:27",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.0469,
@@ -943,7 +943,7 @@
    "fuente": "Crypto_Senales_VIP",
    "activo": "ETH",
    "dir": "SHORT",
-   "outcome": "pendiente",
+   "outcome": "entry_no_tocado_aun",
    "veredicto_nuestro": "NO-GO"
   },
   {
