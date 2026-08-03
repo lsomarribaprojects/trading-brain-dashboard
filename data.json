@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-03 10:27",
+ "actualizado": "2026-08-03 10:42",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.89,
@@ -335,8 +335,8 @@
   ]
  },
  "senales": {
-  "resueltas": 42,
-  "win_rate": 50.0,
+  "resueltas": 43,
+  "win_rate": 51.2,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -429,10 +429,10 @@
    {
     "activo": "ADA",
     "direccion": "LONG",
-    "n": 3,
-    "wins": 2,
+    "n": 4,
+    "wins": 3,
     "losses": 1,
-    "win_rate_pct": 66.7
+    "win_rate_pct": 75.0
    },
    {
     "activo": "ADA",
@@ -477,11 +477,23 @@
   ],
   "ultimas": [
    {
+    "id": "S-044",
+    "activo": "ADA",
+    "dir": "LONG",
+    "ts": "2026-08-03T10:29",
+    "outcome": "emitida",
+    "entry": 0.1934,
+    "sl": 0.190828,
+    "tp1": 0.195972,
+    "tp2": 0.19803,
+    "prob": 74.2
+   },
+   {
     "id": "S-043",
     "activo": "ADA",
     "dir": "LONG",
     "ts": "2026-08-03T09:59",
-    "outcome": "abierta",
+    "outcome": "win",
     "entry": 0.1901,
     "sl": 0.187768,
     "tp1": 0.192432,
@@ -823,18 +835,6 @@
     "tp1": 74.900285,
     "tp2": 75.052513,
     "prob": 78.2
-   },
-   {
-    "id": "S-014",
-    "activo": "ETH",
-    "dir": "LONG",
-    "ts": "2026-07-25T13:28",
-    "outcome": "loss",
-    "entry": 1875.05,
-    "sl": 1870.859428,
-    "tp1": 1879.240572,
-    "tp2": 1882.59303,
-    "prob": 73.6
    }
   ]
  },
