@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-03 11:27",
+ "actualizado": "2026-08-03 11:42",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 97.577,
@@ -363,8 +363,8 @@
   ]
  },
  "senales": {
-  "resueltas": 44,
-  "win_rate": 52.3,
+  "resueltas": 45,
+  "win_rate": 51.1,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -457,10 +457,10 @@
    {
     "activo": "ADA",
     "direccion": "LONG",
-    "n": 5,
+    "n": 6,
     "wins": 4,
-    "losses": 1,
-    "win_rate_pct": 80.0
+    "losses": 2,
+    "win_rate_pct": 66.7
    },
    {
     "activo": "ADA",
@@ -509,7 +509,7 @@
     "activo": "ADA",
     "dir": "LONG",
     "ts": "2026-08-03T10:59",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 0.1961,
     "sl": 0.193485,
     "tp1": 0.198715,
