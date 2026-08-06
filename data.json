@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-08-06 09:28",
+ "actualizado": "2026-08-06 09:44",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 97.577,
+  "capital": 99.1773,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -107,9 +107,23 @@
    {
     "t": "2026-08-03T10:59",
     "v": 97.577
+   },
+   {
+    "t": "2026-08-06T09:17",
+    "v": 99.1773
    }
   ],
   "trades": [
+   {
+    "id": "S-046",
+    "activo": "ADA",
+    "direccion": "LONG",
+    "timestamp": "2026-08-06T09:17",
+    "outcome": "win",
+    "r": 0.8200000000000001,
+    "pnl": 1.6003,
+    "capital": 99.1773
+   },
    {
     "id": "S-045",
     "activo": "ADA",
@@ -363,8 +377,8 @@
   ]
  },
  "senales": {
-  "resueltas": 45,
-  "win_rate": 51.1,
+  "resueltas": 46,
+  "win_rate": 52.2,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -457,10 +471,10 @@
    {
     "activo": "ADA",
     "direccion": "LONG",
-    "n": 6,
-    "wins": 4,
+    "n": 7,
+    "wins": 5,
     "losses": 2,
-    "win_rate_pct": 66.7
+    "win_rate_pct": 71.4
    },
    {
     "activo": "ADA",
@@ -509,7 +523,7 @@
     "activo": "ADA",
     "dir": "LONG",
     "ts": "2026-08-06T09:17",
-    "outcome": "emitida",
+    "outcome": "win",
     "entry": 0.1951,
     "sl": 0.193515,
     "tp1": 0.196685,
