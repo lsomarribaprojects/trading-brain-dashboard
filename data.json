@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-08-06 11:57",
+ "actualizado": "2026-08-06 12:12",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 99.1773,
+  "capital": 99.0186,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -111,9 +111,23 @@
    {
     "t": "2026-08-06T09:17",
     "v": 99.1773
+   },
+   {
+    "t": "2026-08-06T11:47",
+    "v": 99.0186
    }
   ],
   "trades": [
+   {
+    "id": "S-047",
+    "activo": "ADA",
+    "direccion": "LONG",
+    "timestamp": "2026-08-06T11:47",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1587,
+    "capital": 99.0186
+   },
    {
     "id": "S-046",
     "activo": "ADA",
@@ -523,7 +537,7 @@
     "activo": "ADA",
     "dir": "LONG",
     "ts": "2026-08-06T11:47",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 0.2086,
     "sl": 0.20446,
     "tp1": 0.21274,
