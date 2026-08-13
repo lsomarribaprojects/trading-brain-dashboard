@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-12 15:42",
+ "actualizado": "2026-08-12 22:46",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.8602,
@@ -1002,7 +1002,7 @@
  "fuentes": [
   {
    "fuente": "BITLOBO",
-   "señales": 1,
+   "señales": 2,
    "wins": 0,
    "losses": 0,
    "fabricadas": 0
@@ -1037,6 +1037,14 @@
   }
  ],
  "ext_detalle": [
+  {
+   "id": "EXT-010",
+   "fuente": "BITLOBO",
+   "activo": "BTC",
+   "dir": "LONG",
+   "outcome": "entry_no_tocado_aun",
+   "veredicto_nuestro": "NO-GO"
+  },
   {
    "id": "EXT-009",
    "fuente": "BITLOBO",
