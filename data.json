@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-15 09:42",
+ "actualizado": "2026-08-15 09:57",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 98.8602,
@@ -1042,7 +1042,7 @@
    "fuente": "Crypto_Senales_VIP",
    "activo": "SOL",
    "dir": "SHORT",
-   "outcome": "pendiente",
+   "outcome": "activo_no_soportado",
    "veredicto_nuestro": "GO"
   },
   {
