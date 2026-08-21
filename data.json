@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-08-20 20:27",
+ "actualizado": "2026-08-20 20:42",
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 100.4815,
+  "capital": 100.3207,
   "meta": 10000.0,
   "meta_meses": 3,
   "inicio": "2026-07-27",
@@ -123,9 +123,23 @@
    {
     "t": "2026-08-20T19:43",
     "v": 100.4815
+   },
+   {
+    "t": "2026-08-20T20:13",
+    "v": 100.3207
    }
   ],
   "trades": [
+   {
+    "id": "S-050",
+    "activo": "HYPE",
+    "direccion": "LONG",
+    "timestamp": "2026-08-20T20:13",
+    "outcome": "abierta",
+    "r": -0.08,
+    "pnl": -0.1608,
+    "capital": 100.3207
+   },
    {
     "id": "S-049",
     "activo": "UNI",
@@ -581,7 +595,7 @@
     "activo": "HYPE",
     "dir": "LONG",
     "ts": "2026-08-20T20:13",
-    "outcome": "emitida",
+    "outcome": "abierta",
     "entry": 73.937,
     "sl": 73.161418,
     "tp1": 74.712582,
