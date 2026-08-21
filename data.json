@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-20 22:12",
+ "actualizado": "2026-08-20 22:27",
  "bot": {
   "capital_inicial": 100.0,
   "capital": 100.1602,
@@ -447,8 +447,8 @@
   ]
  },
  "senales": {
-  "resueltas": 50,
-  "win_rate": 52.0,
+  "resueltas": 51,
+  "win_rate": 51.0,
   "por_bucket": [
    {
     "activo": "DOGE",
@@ -492,6 +492,14 @@
    },
    {
     "activo": "NEAR",
+    "direccion": "LONG",
+    "n": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_rate_pct": 0.0
+   },
+   {
+    "activo": "SUI",
     "direccion": "LONG",
     "n": 1,
     "wins": 0,
@@ -617,7 +625,7 @@
     "activo": "SUI",
     "dir": "LONG",
     "ts": "2026-08-20T21:43",
-    "outcome": "abierta",
+    "outcome": "loss",
     "entry": 0.7482,
     "sl": 0.741736,
     "tp1": 0.754664,
