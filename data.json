@@ -1,5 +1,26 @@
 {
- "actualizado": "2026-08-25 21:27",
+ "actualizado": "2026-08-25 21:38",
+ "reversion": {
+  "abiertas": 0,
+  "resueltas": 0,
+  "win": 0,
+  "loss": 0,
+  "hit": 0,
+  "break_even": 54.0,
+  "margen": -54.0,
+  "ic95": 0.0,
+  "significativo": false,
+  "r_trade": 0,
+  "pf": 0,
+  "pnl_4usd": 0,
+  "equity_100": [],
+  "ultimas": [],
+  "esperado": {
+   "hit": 55.0,
+   "r_trade": 0.03,
+   "nota": "backtest 2 ventanas x 90d, 12 alts, fees 0.12%"
+  }
+ },
  "bot": {
   "capital_inicial": 100.0,
   "capital": 100.1602,
