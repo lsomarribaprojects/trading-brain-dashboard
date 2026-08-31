@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-08-31 13:12",
+ "actualizado": "2026-08-31 17:27",
  "reversion": {
-  "abiertas": 0,
+  "abiertas": 1,
   "resueltas": 0,
   "win": 0,
   "loss": 0,
@@ -14,7 +14,37 @@
   "pf": 0,
   "pnl_4usd": 0,
   "equity_100": [],
-  "ultimas": [],
+  "ultimas": [
+   {
+    "activo": "ARB",
+    "precio": 0.094,
+    "vela_ts": 1788195600000,
+    "cierre_vela": 0.09421,
+    "rsi_1h": 76.52,
+    "ret_5h_pct": 9.93,
+    "atr_1h": 0.001636,
+    "bb_up": 0.090755,
+    "bb_lo": 0.082108,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 3.5,
+    "deriva_R": 0.101,
+    "entry": 0.094,
+    "sl": 0.09608569,
+    "tp": 0.09191431,
+    "sl_pct": 2.219,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.054,
+    "size": 1912.891213,
+    "notional": 179.81,
+    "id": "RV-001",
+    "timestamp": "2026-08-31T13:14:10.005481",
+    "emitida": true,
+    "outcome": null
+   }
+  ],
   "esperado": {
    "hit": 55.0,
    "r_trade": 0.03,
