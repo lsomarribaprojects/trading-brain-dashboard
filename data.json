@@ -1,20 +1,54 @@
 {
- "actualizado": "2026-08-31 17:27",
+ "actualizado": "2026-08-31 17:42",
  "reversion": {
   "abiertas": 1,
-  "resueltas": 0,
+  "resueltas": 1,
   "win": 0,
-  "loss": 0,
-  "hit": 0,
-  "break_even": 54.0,
-  "margen": -54.0,
+  "loss": 1,
+  "hit": 0.0,
+  "break_even": 52.7,
+  "margen": -52.7,
   "ic95": 0.0,
-  "significativo": false,
-  "r_trade": 0,
-  "pf": 0,
-  "pnl_4usd": 0,
-  "equity_100": [],
+  "significativo": true,
+  "r_trade": -1.054,
+  "pf": 0.0,
+  "pnl_4usd": -4.22,
+  "equity_100": [
+   {
+    "t": "2026-08-31T13:14:10.005481",
+    "v": 94.73
+   }
+  ],
   "ultimas": [
+   {
+    "activo": "ARB",
+    "precio": 0.10647,
+    "vela_ts": 1788210000000,
+    "cierre_vela": 0.10637,
+    "rsi_1h": 88.84,
+    "ret_5h_pct": 21.29,
+    "atr_1h": 0.002496,
+    "bb_up": 0.101126,
+    "bb_lo": 0.077268,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 14.2,
+    "deriva_R": 0.028,
+    "entry": 0.10647,
+    "sl": 0.1100864,
+    "tp": 0.1028536,
+    "sl_pct": 3.397,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.035,
+    "size": 1103.224819,
+    "notional": 117.46,
+    "id": "RV-002",
+    "timestamp": "2026-08-31T17:32:01.869527",
+    "emitida": true,
+    "outcome": null
+   },
    {
     "activo": "ARB",
     "precio": 0.094,
@@ -42,7 +76,9 @@
     "id": "RV-001",
     "timestamp": "2026-08-31T13:14:10.005481",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-08-31T17:28:13.424290",
+    "r_neto": -1.054
    }
   ],
   "esperado": {
