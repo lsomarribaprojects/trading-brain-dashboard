@@ -1,22 +1,26 @@
 {
- "actualizado": "2026-08-31 19:12",
+ "actualizado": "2026-08-31 19:27",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 1,
+  "abiertas": 0,
+  "resueltas": 2,
   "win": 0,
-  "loss": 1,
+  "loss": 2,
   "hit": 0.0,
-  "break_even": 52.7,
-  "margen": -52.7,
+  "break_even": 52.2,
+  "margen": -52.2,
   "ic95": 0.0,
   "significativo": true,
-  "r_trade": -1.054,
+  "r_trade": -1.0445,
   "pf": 0.0,
-  "pnl_4usd": -4.22,
+  "pnl_4usd": -8.36,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
     "v": 94.73
+   },
+   {
+    "t": "2026-08-31T17:32:01.869527",
+    "v": 89.83
    }
   ],
   "ultimas": [
@@ -47,7 +51,9 @@
     "id": "RV-002",
     "timestamp": "2026-08-31T17:32:01.869527",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-08-31T19:12:55.924168",
+    "r_neto": -1.035
    },
    {
     "activo": "ARB",
