@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04 04:27",
+ "actualizado": "2026-09-04 04:42",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -95,7 +95,7 @@
  },
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 100.463,
+  "capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
@@ -104,9 +104,28 @@
    {
     "t": "2026-09-03T22:01",
     "v": 100.463
+   },
+   {
+    "t": "2026-09-04T04:13",
+    "v": 100.8784
    }
   ],
   "trades": [
+   {
+    "id": "HR-007",
+    "fuente": "hourly",
+    "grado": "C",
+    "activo": "LINK",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-04T04:13",
+    "resuelto": "2026-09-04T04:27",
+    "outcome": "win",
+    "r": 0.827,
+    "riesgo_pct": 0.005,
+    "riesgo_usd": 0.5023,
+    "pnl": 0.4154,
+    "capital": 100.8784
+   },
    {
     "id": "HR-001",
     "fuente": "hourly",
