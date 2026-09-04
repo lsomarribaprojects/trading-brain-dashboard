@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04 17:12",
+ "actualizado": "2026-09-04 17:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -94,8 +94,8 @@
   }
  },
  "hourly": {
-  "emitidas": 17,
-  "abiertas": 5,
+  "emitidas": 18,
+  "abiertas": 6,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -120,7 +120,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 16,
+    "emitidas": 17,
     "resueltas": 12,
     "win": 6,
     "loss": 6,
@@ -132,6 +132,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-018",
+    "hora": "2026-09-04T17:14",
+    "activo": "UNI",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 69.3,
+    "entry": 6.092,
+    "sl": 5.9566,
+    "tp1": 6.2274,
+    "tp2": 6.3222,
+    "tp3": 6.4305,
+    "sl_pct": 2.222,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 44 no extremo"
+   },
    {
     "id": "HR-017",
     "hora": "2026-09-04T16:15",
@@ -450,7 +468,10 @@
   "meta_meses": null,
   "inicio": "2026-09-03",
   "expectativa_r": -0.07,
-  "reglas": "Cuenta paper v2 desde el 03-sep: $100 con meta $1000. Toma TODAS las señales: hora (riesgo A 3.0% / B 0.0% / C 0.0% del capital), reversion 3%, scalps 2%. Resultado con fees, resuelto contra velas de OKX. Sin emociones, sin excepciones.",
+  "hito": 200.0,
+  "modo": "fijo",
+  "riesgo_fijo_usd": 10.0,
+  "reglas": "Cuenta paper v2 desde el 03-sep: $100, primer hito $200, meta $1000. Riesgo FIJO de $10 por operativa (TP1 +10 / SL -10, menos fees) SOLO en grado A y motor de reversion. B y C no llevan dinero (expectativa historica negativa, L-017): se miden. Resultado resuelto contra velas de OKX. Sin emociones, sin excepciones.",
   "equity": [
    {
     "t": "2026-09-03T22:01",

@@ -111,6 +111,7 @@ fetch(SRC+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch('data
   const b=d.bot, ret=(b.capital/b.capital_inicial-1)*100;
   const prog=Math.max(0,Math.min(100,(b.capital-b.capital_inicial)/(b.meta-b.capital_inicial)*100));
   $('#bot-tiles').innerHTML=tile('Capital paper',fmt(b.capital),(ret>=0?'+':'')+ret.toFixed(1)+'% desde $'+b.capital_inicial)
+    +(b.hito?tile('Hito '+fmt(b.hito),Math.max(0,Math.min(100,(b.capital-b.capital_inicial)/(b.hito-b.capital_inicial)*100)).toFixed(1)+'%','riesgo fijo $'+b.riesgo_fijo_usd+'/op'):'')
     +tile('Meta',fmt(b.meta),prog.toFixed(1)+'% del camino')
     +tile('Operativas',b.trades.length,wl(b.trades))
     +tile('Expectativa',b.expectativa_r==null?'—':((b.expectativa_r>=0?'+':'')+b.expectativa_r.toFixed(3)+'R'),b.trades.length<30?'n<30: ruido':'por operativa')
@@ -118,7 +119,7 @@ fetch(SRC+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch('data
   $('#bot-reglas').textContent=b.reglas;
   drawChart(b);
   $('#bot-trades').innerHTML=tabla(['ID','Fecha','Activo','Dir','Grado','Riesgo','Resultado','R','PnL','Capital'],
-    b.trades.map(t=>[t.id,t.timestamp,t.activo,t.direccion,gr(t.grado),t.riesgo_pct!=null?(t.riesgo_pct*100).toFixed(1)+'%':'—',
+    b.trades.map(t=>[t.id,t.timestamp,t.activo,t.direccion,gr(t.grado),t.riesgo_usd!=null?'$'+Number(t.riesgo_usd).toFixed(2):(t.riesgo_pct!=null?(t.riesgo_pct*100).toFixed(1)+'%':'—'),
       `<span class="${cls(t.outcome)}">${lbl(t.outcome)}</span>`,t.r==null?'—':`<span class="num">${t.r>=0?'+':''}${Number(t.r).toFixed(2)}</span>`,
       `<span class="num ${t.pnl>=0?'w':'l'}">${t.pnl>=0?'+':''}${t.pnl.toFixed(2)}</span>`,`<span class="num">${fmt(t.capital)}</span>`]));
   // ---- SEÑAL DE LA HORA ----
