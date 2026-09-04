@@ -42,7 +42,8 @@ svg text{font:11px -apple-system,Segoe UI,sans-serif}
 <body>
 <h1>📊 Trading Brain <small id="upd">cargando…</small></h1>
 <div class="tabs">
-  <div class="tab on" data-p="bot">🤖 Bot $100</div>
+  <div class="tab on" data-p="bot">🤖 Paper $100 → $1000</div>
+  <div class="tab" data-p="hora">🕐 Señal de la hora</div>
   <div class="tab" data-p="real">👤 Cuenta real</div>
   <div class="tab" data-p="sen">📡 Señales de traders</div>
   <div class="tab" data-p="fue">🔍 Fuentes</div>
@@ -50,14 +51,22 @@ svg text{font:11px -apple-system,Segoe UI,sans-serif}
 
 <div class="panel on" id="p-bot">
   <div class="tiles" id="bot-tiles"></div>
-  <div class="card"><h3>Equity del bot vs curva exigida por el reto ($100 → $10,000 en 3 meses)</h3>
+  <div class="card"><h3>Equity de la cuenta paper (cada punto = una operativa resuelta)</h3>
     <div id="chart"></div>
-    <div class="legend"><span class="lb">Bot (real simulado)</span><span class="lg">Curva exigida para 10K (+5.1%/dia)</span></div>
+    <div class="legend"><span class="lb">Paper (simulado con fees)</span><span class="lg">Capital inicial $100</span></div>
     <p class="note" id="bot-reglas"></p>
   </div>
-  <div class="card"><h3>Trades del bot (todas las señales, sin excepcion)</h3><div id="bot-trades"></div></div>
-  <div class="card"><h3>Señales del sistema (las que alimentan al bot)</h3><div id="sen-list"></div></div>
-  <div class="card"><h3>Win rate del sistema por activo y direccion</h3><div id="sen-buckets"></div></div>
+  <div class="card"><h3>Operativas del paper (todas las señales, sin excepcion)</h3><div id="bot-trades"></div></div>
+  <div class="card"><h3>Scalps del sistema (S-XXX, historico)</h3><div id="sen-list"></div></div>
+  <div class="card"><h3>Win rate de scalps por activo y direccion</h3><div id="sen-buckets"></div></div>
+</div>
+
+<div class="panel" id="p-hora">
+  <div class="tiles" id="hora-tiles"></div>
+  <div class="card"><h3>Marcador por grado (lo que decide si B y C valen algo)</h3><div id="hora-grados"></div>
+  <p class="note" id="hora-leyenda"></p></div>
+  <div class="card"><h3>Cards horarias (HR-XXX): niveles, grado y resultado real contra velas</h3><div id="hora-list"></div>
+  <p class="note">Solo el grado A es operable con dinero real. B y C se mandan para ver el mercado y se simulan en paper con riesgo minimo. Break-even de un 1:1 con fees: ~54.5%.</p></div>
 </div>
 
 <div class="panel" id="p-real">
@@ -89,21 +98,39 @@ document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
 });
 const fmt=n=>n==null?'—':('$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:2}));
 const cls=o=>o==='win'||o==='win_tp1'?'w':(o==='loss'?'l':(o==='FABRICADO'?'f':'p'));
-const lbl=o=>({win:'✓ win',win_tp1:'✓ win',loss:'✗ loss',FABRICADO:'⚠ FABRICADA',fuera_de_sistema:'fuera de sistema'})[o]||o;
+const lbl=o=>({win:'✓ win',win_tp1:'✓ win',loss:'✗ loss',FABRICADO:'⚠ FABRICADA',fuera_de_sistema:'fuera de sistema',abierta:'⏳ abierta',expirada:'⌛ expirada'})[o]||o;
+const gr=g=>g==='A'?'<b style="color:var(--win)">A</b>':(g==='B'?'<b style="color:var(--warn)">B</b>':(g==='C'?'<b style="color:var(--ink3)">C</b>':(g||'—')));
 
 fetch('data.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   $('#upd').textContent='actualizado '+d.actualizado+' (auto cada 15 min)';
   // ---- BOT ----
   const b=d.bot, ret=(b.capital/b.capital_inicial-1)*100;
-  $('#bot-tiles').innerHTML=tile('Capital bot',fmt(b.capital),(ret>=0?'+':'')+ret.toFixed(1)+'% desde $'+b.capital_inicial)
-    +tile('Meta',fmt(b.meta),'en '+b.meta_meses+' meses')
-    +tile('Trades',b.trades.length,wl(b.trades))
-    +tile('Inicio',b.inicio,'');
-  $('#bot-reglas').textContent='Reglas del bot: '+b.reglas;
+  const prog=Math.max(0,Math.min(100,(b.capital-b.capital_inicial)/(b.meta-b.capital_inicial)*100));
+  $('#bot-tiles').innerHTML=tile('Capital paper',fmt(b.capital),(ret>=0?'+':'')+ret.toFixed(1)+'% desde $'+b.capital_inicial)
+    +tile('Meta',fmt(b.meta),prog.toFixed(1)+'% del camino')
+    +tile('Operativas',b.trades.length,wl(b.trades))
+    +tile('Expectativa',b.expectativa_r==null?'—':((b.expectativa_r>=0?'+':'')+b.expectativa_r.toFixed(3)+'R'),b.trades.length<30?'n<30: ruido':'por operativa')
+    +tile('Inicio',b.inicio,'v'+b.version);
+  $('#bot-reglas').textContent=b.reglas;
   drawChart(b);
-  $('#bot-trades').innerHTML=tabla(['ID','Fecha','Activo','Dir','Resultado','PnL','Capital'],
-    b.trades.map(t=>[t.id,t.timestamp,t.activo,t.direccion,`<span class="${cls(t.outcome)}">${lbl(t.outcome)}</span>`,
+  $('#bot-trades').innerHTML=tabla(['ID','Fecha','Activo','Dir','Grado','Riesgo','Resultado','R','PnL','Capital'],
+    b.trades.map(t=>[t.id,t.timestamp,t.activo,t.direccion,gr(t.grado),t.riesgo_pct!=null?(t.riesgo_pct*100).toFixed(1)+'%':'—',
+      `<span class="${cls(t.outcome)}">${lbl(t.outcome)}</span>`,t.r==null?'—':`<span class="num">${t.r>=0?'+':''}${Number(t.r).toFixed(2)}</span>`,
       `<span class="num ${t.pnl>=0?'w':'l'}">${t.pnl>=0?'+':''}${t.pnl.toFixed(2)}</span>`,`<span class="num">${fmt(t.capital)}</span>`]));
+  // ---- SEÑAL DE LA HORA ----
+  const h=d.hourly||{emitidas:0,abiertas:0,por_grado:{},ultimas:[]};
+  const pg=h.por_grado||{};
+  $('#hora-tiles').innerHTML=tile('Cards emitidas',h.emitidas,h.abiertas+' abiertas')
+    +['A','B','C'].map(g=>{const x=pg[g]||{};return tile('Grado '+g,x.resueltas?x.hit+'% hit':'—',(x.resueltas||0)+' resueltas'+(x.r_trade!=null?' · '+(x.r_trade>=0?'+':'')+x.r_trade+'R/op':''))}).join('');
+  $('#hora-grados').innerHTML=tabla(['Grado','Emitidas','Resueltas','W','L','Hit','R/op','PF','TP2+ %','Riesgo paper'],
+    ['A','B','C'].map(g=>{const x=pg[g]||{};return [gr(g),x.emitidas||0,x.resueltas||0,x.win||0,x.loss||0,
+      x.hit==null?'—':`<span class="${x.hit>=54.5?'w':'l'}">${x.hit}%</span>`,x.r_trade==null?'—':(x.r_trade>=0?'+':'')+x.r_trade,
+      x.pf==null?'—':x.pf,x.tp2_pct==null?'—':x.tp2_pct+'%',x.riesgo_paper!=null?(x.riesgo_paper*100).toFixed(1)+'%':'—']}));
+  $('#hora-leyenda').textContent=h.leyenda||'';
+  $('#hora-list').innerHTML=tabla(['ID','Hora','Activo','Dir','Grado','Score','Entry','SL','TP1','TP2','TP3','Resultado','R','Llego a','Por que no es A'],
+    h.ultimas.map(x=>[x.id,x.hora,x.activo,x.dir,gr(x.grado),x.score,x.entry,x.sl,x.tp1,x.tp2,x.tp3,
+      `<span class="${cls(x.outcome)}">${lbl(x.outcome)}</span>`,x.r==null?'—':`<span class="num ${x.r>=0?'w':'l'}">${x.r>=0?'+':''}${Number(x.r).toFixed(2)}</span>`,
+      x.tp_max||'—',`<span class="p">${x.fallos||''}</span>`]));
   // ---- REAL ----
   const r=d.real, pnlReal=r.trades.reduce((a,t)=>a+(t.pnl||0),0);
   $('#real-tiles').innerHTML=tile('Patrimonio cripto',fmt(r.patrimonio),'reto → '+fmt(r.meta_reto))
@@ -142,9 +169,9 @@ function drawChart(b){
   const eq=[{t:b.inicio+'T00:00',v:b.capital_inicial},...b.equity.map(e=>({t:e.t,v:e.v}))];
   const t0=new Date(b.inicio).getTime(), t1=Math.max(Date.now(),new Date(eq[eq.length-1].t).getTime());
   const dias=Math.max(1,(t1-t0)/864e5);
-  // Curva exigida: 100 * (10000/100)^(d/92)
-  const goal=[];for(let d0=0;d0<=dias;d0+=dias/40)goal.push({d:d0,v:100*Math.pow(100,d0/92)});
-  const vmax=Math.max(...eq.map(e=>e.v),...goal.map(g=>g.v))*1.08, vmin=Math.min(...eq.map(e=>e.v),95)*0.97;
+  // Linea de referencia: capital inicial (la meta $1000 no tiene fecha; el ritmo lo dice el resumen diario)
+  const goal=[{d:0,v:b.capital_inicial},{d:dias,v:b.capital_inicial}];
+  const vmax=Math.max(...eq.map(e=>e.v),b.capital_inicial*1.1)*1.05, vmin=Math.min(...eq.map(e=>e.v),b.capital_inicial*0.95)*0.97;
   const X=d0=>P.l+(W-P.l-P.r)*(d0/dias), Y=v=>P.t+(H-P.t-P.b)*(1-(v-vmin)/(vmax-vmin));
   const dx=e=>X((new Date(e.t).getTime()-t0)/864e5);
   let g='';goal.forEach((p,i)=>g+=(i?'L':'M')+X(p.d).toFixed(1)+' '+Y(p.v).toFixed(1));
