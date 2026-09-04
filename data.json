@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04 15:27",
+ "actualizado": "2026-09-04 15:42",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -94,7 +94,7 @@
   }
  },
  "hourly": {
-  "emitidas": 15,
+  "emitidas": 16,
   "abiertas": 5,
   "por_grado": {
    "A": {
@@ -109,7 +109,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 0,
+    "emitidas": 1,
     "resueltas": 0,
     "win": 0,
     "loss": 0,
@@ -121,17 +121,35 @@
    },
    "C": {
     "emitidas": 15,
-    "resueltas": 10,
+    "resueltas": 11,
     "win": 5,
-    "loss": 5,
-    "hit": 50.0,
-    "r_trade": -0.072,
-    "pf": 0.86,
-    "tp2_pct": 20,
+    "loss": 6,
+    "hit": 45.5,
+    "r_trade": -0.16,
+    "pf": 0.72,
+    "tp2_pct": 18,
     "riesgo_paper": 0.005
    }
   },
   "ultimas": [
+   {
+    "id": "HR-016",
+    "hora": "2026-09-04T15:30",
+    "activo": "NEAR",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 2.114,
+    "sl": 2.2389,
+    "tp1": 1.9891,
+    "tp2": 1.9016,
+    "tp3": 1.8017,
+    "sl_pct": 5.91,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "deriva 0.42R desde el cierre"
+   },
    {
     "id": "HR-015",
     "hora": "2026-09-04T14:39",
@@ -145,8 +163,8 @@
     "tp2": 2.0357,
     "tp3": 1.9857,
     "sl_pct": 2.919,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.041,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 60 no extremo"
    },
@@ -408,12 +426,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 99.6285,
+  "capital": 99.11,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.072,
+  "expectativa_r": -0.16,
   "reglas": "Cuenta paper v2 desde el 03-sep: $100 con meta $1000. Toma TODAS las señales: hora (riesgo A 3.0% / B 1.5% / C 0.5% del capital), reversion 3%, scalps 2%. Resultado con fees, resuelto contra velas de OKX. Sin emociones, sin excepciones.",
   "equity": [
    {
@@ -455,9 +473,28 @@
    {
     "t": "2026-09-04T07:15",
     "v": 99.6285
+   },
+   {
+    "t": "2026-09-04T14:39",
+    "v": 99.11
    }
   ],
   "trades": [
+   {
+    "id": "HR-015",
+    "fuente": "hourly",
+    "grado": "C",
+    "activo": "NEAR",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-04T14:39",
+    "resuelto": "2026-09-04T15:28",
+    "outcome": "loss",
+    "r": -1.041,
+    "riesgo_pct": 0.005,
+    "riesgo_usd": 0.4981,
+    "pnl": -0.5185,
+    "capital": 99.11
+   },
    {
     "id": "HR-010",
     "fuente": "hourly",
