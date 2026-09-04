@@ -101,7 +101,11 @@ const cls=o=>o==='win'||o==='win_tp1'?'w':(o==='loss'?'l':(o==='FABRICADO'?'f':'
 const lbl=o=>({win:'✓ win',win_tp1:'✓ win',loss:'✗ loss',FABRICADO:'⚠ FABRICADA',fuera_de_sistema:'fuera de sistema',abierta:'⏳ abierta',expirada:'⌛ expirada'})[o]||o;
 const gr=g=>g==='A'?'<b style="color:var(--win)">A</b>':(g==='B'?'<b style="color:var(--warn)">B</b>':(g==='C'?'<b style="color:var(--ink3)">C</b>':(g||'—')));
 
-fetch('data.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+// En Vercel la pagina se despliega una vez; los DATOS viven en GitHub (el ciclo hace
+// push cada 15 min). Asi no se gasta un deploy de Vercel por cada actualizacion.
+const RAW='https://raw.githubusercontent.com/lsomarribaprojects/trading-brain-dashboard/main/data.json';
+const SRC=location.hostname.endsWith('vercel.app')?RAW:'data.json';
+fetch(SRC+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch('data.json?t='+Date.now()).then(x=>x.json())).then(d=>{
   $('#upd').textContent='actualizado '+d.actualizado+' (auto cada 15 min)';
   // ---- BOT ----
   const b=d.bot, ret=(b.capital/b.capital_inicial-1)*100;
