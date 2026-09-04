@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04 00:42",
+ "actualizado": "2026-09-04 00:57",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -95,13 +95,34 @@
  },
  "bot": {
   "capital_inicial": 100.0,
-  "capital": 100.0,
+  "capital": 100.463,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
   "reglas": "Toma TODAS las señales del sistema. Riesgo 2%/señal. win=+0.90R, loss=-1R, fees 0.08R. Sin emociones, sin excepciones.",
-  "equity": [],
-  "trades": []
+  "equity": [
+   {
+    "t": "2026-09-03T22:01",
+    "v": 100.463
+   }
+  ],
+  "trades": [
+   {
+    "id": "HR-001",
+    "fuente": "hourly",
+    "grado": "C",
+    "activo": "ADA",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-03T22:01",
+    "resuelto": "2026-09-04T00:42",
+    "outcome": "win",
+    "r": 0.926,
+    "riesgo_pct": 0.005,
+    "riesgo_usd": 0.5,
+    "pnl": 0.463,
+    "capital": 100.463
+   }
+  ]
  },
  "senales": {
   "resueltas": 51,
