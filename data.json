@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04 17:58",
+ "actualizado": "2026-09-04 23:01",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -94,8 +94,8 @@
   }
  },
  "hourly": {
-  "emitidas": 18,
-  "abiertas": 6,
+  "emitidas": 19,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -110,28 +110,46 @@
    },
    "B": {
     "emitidas": 1,
-    "resueltas": 0,
+    "resueltas": 1,
     "win": 0,
-    "loss": 0,
-    "hit": null,
-    "r_trade": null,
-    "pf": null,
-    "tp2_pct": null,
+    "loss": 1,
+    "hit": 0.0,
+    "r_trade": -1.02,
+    "pf": 0.0,
+    "tp2_pct": 0,
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 17,
-    "resueltas": 12,
-    "win": 6,
-    "loss": 6,
-    "hit": 50.0,
-    "r_trade": -0.07,
-    "pf": 0.87,
-    "tp2_pct": 17,
+    "emitidas": 18,
+    "resueltas": 17,
+    "win": 10,
+    "loss": 7,
+    "hit": 58.8,
+    "r_trade": 0.112,
+    "pf": 1.26,
+    "tp2_pct": 29,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-019",
+    "hora": "2026-09-04T22:48",
+    "activo": "NEAR",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 93.7,
+    "entry": 2.236,
+    "sl": 2.2795,
+    "tp1": 2.1925,
+    "tp2": 2.162,
+    "tp3": 2.1272,
+    "sl_pct": 1.947,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 70 no extremo"
+   },
    {
     "id": "HR-018",
     "hora": "2026-09-04T17:14",
@@ -145,9 +163,9 @@
     "tp2": 6.3222,
     "tp3": 6.4305,
     "sl_pct": 2.222,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.946,
+    "tp_max": "tp2",
     "fallos": "cierre dentro de Bollinger; RSI 44 no extremo"
    },
    {
@@ -163,8 +181,8 @@
     "tp2": 1.9516,
     "tp3": 1.8704,
     "sl_pct": 4.776,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.025,
     "tp_max": null,
     "fallos": "RSI 64 no extremo; mecha 92% (>40%): ya reboto"
    },
@@ -181,8 +199,8 @@
     "tp2": 1.9016,
     "tp3": 1.8017,
     "sl_pct": 5.91,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.02,
     "tp_max": null,
     "fallos": "deriva 0.42R desde el cierre"
    },
@@ -235,9 +253,9 @@
     "tp2": 0.76445,
     "tp3": 0.77403,
     "sl_pct": 1.609,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.925,
+    "tp_max": "tp2",
     "fallos": "cierre dentro de Bollinger; RSI 30 no extremo"
    },
    {
@@ -253,9 +271,9 @@
     "tp2": 0.76967,
     "tp3": 0.78109,
     "sl_pct": 1.915,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.937,
+    "tp_max": "tp2",
     "fallos": "cierre dentro de Bollinger; extension -3.8% en 5h (<4%)"
    },
    {
@@ -271,9 +289,9 @@
     "tp2": 0.78056,
     "tp3": 0.79621,
     "sl_pct": 2.618,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.954,
+    "tp_max": "tp1",
     "fallos": "RSI 31 no extremo"
    },
    {
