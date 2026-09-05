@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05 02:12",
+ "actualizado": "2026-09-05 02:42",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -94,8 +94,8 @@
   }
  },
  "hourly": {
-  "emitidas": 22,
-  "abiertas": 1,
+  "emitidas": 23,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -109,7 +109,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 1,
+    "emitidas": 2,
     "resueltas": 1,
     "win": 0,
     "loss": 1,
@@ -132,6 +132,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-023",
+    "hora": "2026-09-05T02:15",
+    "activo": "ATOM",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 96.2,
+    "entry": 1.555,
+    "sl": 1.572,
+    "tp1": 1.538,
+    "tp2": 1.5262,
+    "tp3": 1.5126,
+    "sl_pct": 1.091,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "extension +3.2% en 5h (<4%)"
+   },
    {
     "id": "HR-022",
     "hora": "2026-09-05T01:14",
