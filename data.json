@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05 03:12",
+ "actualizado": "2026-09-05 03:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -94,7 +94,7 @@
   }
  },
  "hourly": {
-  "emitidas": 23,
+  "emitidas": 24,
   "abiertas": 2,
   "por_grado": {
    "A": {
@@ -109,7 +109,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 2,
+    "emitidas": 3,
     "resueltas": 1,
     "win": 0,
     "loss": 1,
@@ -121,17 +121,35 @@
    },
    "C": {
     "emitidas": 21,
-    "resueltas": 20,
-    "win": 11,
+    "resueltas": 21,
+    "win": 12,
     "loss": 9,
-    "hit": 55.0,
-    "r_trade": 0.029,
-    "pf": 1.06,
-    "tp2_pct": 25,
+    "hit": 57.1,
+    "r_trade": 0.071,
+    "pf": 1.15,
+    "tp2_pct": 24,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-024",
+    "hora": "2026-09-05T03:14",
+    "activo": "SUI",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 98.7,
+    "entry": 0.7865,
+    "sl": 0.80346,
+    "tp1": 0.76954,
+    "tp2": 0.75766,
+    "tp3": 0.74409,
+    "sl_pct": 2.157,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "extension +3.7% en 5h (<4%); deriva 0.41R desde el cierre"
+   },
    {
     "id": "HR-023",
     "hora": "2026-09-05T02:15",
@@ -163,9 +181,9 @@
     "tp2": 0.59631,
     "tp3": 0.59066,
     "sl_pct": 1.16,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.897,
+    "tp_max": "tp1",
     "fallos": "RSI 65 no extremo; deriva 0.34R desde el cierre"
    },
    {
