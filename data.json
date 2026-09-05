@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-05 18:24",
+ "actualizado": "2026-09-05 18:42",
  "reversion": {
   "abiertas": 1,
-  "resueltas": 2,
+  "resueltas": 3,
   "win": 0,
-  "loss": 2,
+  "loss": 3,
   "hit": 0.0,
   "break_even": 52.2,
   "margen": -52.2,
   "ic95": 0.0,
   "significativo": true,
-  "r_trade": -1.0445,
+  "r_trade": -1.0443,
   "pf": 0.0,
-  "pnl_4usd": -8.36,
+  "pnl_4usd": -12.53,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -21,9 +21,42 @@
    {
     "t": "2026-08-31T17:32:01.869527",
     "v": 89.83
+   },
+   {
+    "t": "2026-09-05T12:02:54.377408",
+    "v": 85.14
    }
   ],
   "ultimas": [
+   {
+    "activo": "ARB",
+    "precio": 0.17979,
+    "vela_ts": 1788645600000,
+    "cierre_vela": 0.17906,
+    "rsi_1h": 86.46,
+    "ret_5h_pct": 28.6,
+    "atr_1h": 0.006022,
+    "bb_up": 0.168824,
+    "bb_lo": 0.112077,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 32.1,
+    "deriva_R": 0.078,
+    "entry": 0.17979,
+    "sl": 0.18912204,
+    "tp": 0.17045796,
+    "sl_pct": 5.191,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.023,
+    "size": 427.527025,
+    "notional": 76.87,
+    "id": "RV-004",
+    "timestamp": "2026-09-05T18:27:56.041835",
+    "emitida": true,
+    "outcome": null
+   },
    {
     "activo": "UNI",
     "precio": 6.688,
@@ -51,7 +84,9 @@
     "id": "RV-003",
     "timestamp": "2026-09-05T12:02:54.377408",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-05T18:26:43.775036",
+    "r_neto": -1.044
    },
    {
     "activo": "ARB",
@@ -123,7 +158,7 @@
   }
  },
  "hourly": {
-  "emitidas": 29,
+  "emitidas": 30,
   "abiertas": 1,
   "por_grado": {
    "A": {
@@ -138,13 +173,13 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 4,
-    "resueltas": 3,
+    "emitidas": 5,
+    "resueltas": 4,
     "win": 1,
-    "loss": 2,
-    "hit": 33.3,
-    "r_trade": -0.395,
-    "pf": 0.43,
+    "loss": 3,
+    "hit": 25.0,
+    "r_trade": -0.557,
+    "pf": 0.29,
     "tp2_pct": 0,
     "riesgo_paper": 0.0
    },
@@ -162,6 +197,24 @@
   },
   "ultimas": [
    {
+    "id": "HR-030",
+    "hora": "2026-09-05T18:26",
+    "activo": "ARB",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 0.17799,
+    "sl": 0.18912,
+    "tp1": 0.16686,
+    "tp2": 0.15907,
+    "tp3": 0.15016,
+    "sl_pct": 6.254,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
+   },
+   {
     "id": "HR-029",
     "hora": "2026-09-05T12:13",
     "activo": "UNI",
@@ -174,8 +227,8 @@
     "tp2": 6.3676,
     "tp3": 6.2187,
     "sl_pct": 2.785,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.043,
     "tp_max": null,
     "fallos": "guard rails: SL a 0.19 (0.75×ATR). Mínimo 1.0×ATR (0.25). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
    },
@@ -689,12 +742,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 99.5669,
+  "capital": 89.1269,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.07,
+  "expectativa_r": -0.145,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -747,9 +800,28 @@
    {
     "t": "2026-09-04T13:14",
     "v": 99.5669
+   },
+   {
+    "t": "2026-09-05T12:02",
+    "v": 89.1269
    }
   ],
   "trades": [
+   {
+    "id": "RV-003",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "UNI",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-05T12:02",
+    "resuelto": "2026-09-05T18:26",
+    "outcome": "loss",
+    "r": -1.044,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": -10.44,
+    "capital": 89.1269
+   },
    {
     "id": "HR-014",
     "fuente": "hourly",
