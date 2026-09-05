@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05 06:12",
+ "actualizado": "2026-09-05 06:43",
  "reversion": {
   "abiertas": 0,
   "resueltas": 2,
@@ -94,8 +94,8 @@
   }
  },
  "hourly": {
-  "emitidas": 26,
-  "abiertas": 3,
+  "emitidas": 27,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -120,7 +120,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 23,
+    "emitidas": 24,
     "resueltas": 21,
     "win": 12,
     "loss": 9,
@@ -132,6 +132,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-027",
+    "hora": "2026-09-05T06:17",
+    "activo": "XLM",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 76.2,
+    "entry": 0.18342,
+    "sl": 0.18544,
+    "tp1": 0.1814,
+    "tp2": 0.17998,
+    "tp3": 0.17836,
+    "sl_pct": 1.103,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 62 no extremo"
+   },
    {
     "id": "HR-026",
     "hora": "2026-09-05T05:14",
@@ -1485,9 +1503,9 @@
   },
   {
    "fuente": "MillionTrader_VIP_RETO1k10k",
-   "señales": 2,
-   "wins": 1,
-   "losses": 0,
+   "señales": 4,
+   "wins": 2,
+   "losses": 1,
    "fabricadas": 1
   },
   {
@@ -1506,6 +1524,22 @@
   }
  ],
  "ext_detalle": [
+  {
+   "id": "EXT-013",
+   "fuente": "MillionTrader_VIP_RETO1k10k",
+   "activo": "DOT",
+   "dir": "LONG",
+   "outcome": "loss",
+   "veredicto_nuestro": "NO-GO"
+  },
+  {
+   "id": "EXT-012",
+   "fuente": "MillionTrader_VIP_RETO1k10k",
+   "activo": "INJ",
+   "dir": "SHORT",
+   "outcome": "win_tp1",
+   "veredicto_nuestro": "NO-GO"
+  },
   {
    "id": "EXT-011",
    "fuente": "Crypto_Senales_VIP",
