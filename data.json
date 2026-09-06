@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-05 20:12",
+ "actualizado": "2026-09-05 20:27",
  "reversion": {
-  "abiertas": 0,
+  "abiertas": 1,
   "resueltas": 4,
   "win": 0,
   "loss": 4,
@@ -32,6 +32,35 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "ARB",
+    "precio": 0.19263,
+    "vela_ts": 1788652800000,
+    "cierre_vela": 0.19314,
+    "rsi_1h": 87.22,
+    "ret_5h_pct": 29.21,
+    "atr_1h": 0.006909,
+    "bb_up": 0.184703,
+    "bb_lo": 0.107002,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 15.1,
+    "deriva_R": 0.05,
+    "entry": 0.19263,
+    "sl": 0.20290922,
+    "tp": 0.18235078,
+    "sl_pct": 5.336,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.022,
+    "size": 388.132572,
+    "notional": 74.77,
+    "id": "RV-005",
+    "timestamp": "2026-09-05T20:16:17.883036",
+    "emitida": true,
+    "outcome": null
+   },
    {
     "activo": "ARB",
     "precio": 0.17979,
@@ -164,8 +193,8 @@
   }
  },
  "hourly": {
-  "emitidas": 31,
-  "abiertas": 0,
+  "emitidas": 32,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -179,7 +208,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 6,
+    "emitidas": 7,
     "resueltas": 6,
     "win": 1,
     "loss": 5,
@@ -202,6 +231,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-032",
+    "hora": "2026-09-05T20:15",
+    "activo": "ARB",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 0.19358,
+    "sl": 0.20291,
+    "tp1": 0.18425,
+    "tp2": 0.17772,
+    "tp3": 0.17026,
+    "sl_pct": 4.819,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "guard rails: SL a 0.01 (0.91×ATR). Mínimo 1.0×ATR (0.01). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
+   },
    {
     "id": "HR-031",
     "hora": "2026-09-05T19:08",
