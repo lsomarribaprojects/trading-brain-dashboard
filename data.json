@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-05 20:42",
+ "actualizado": "2026-09-05 20:57",
  "reversion": {
-  "abiertas": 1,
+  "abiertas": 2,
   "resueltas": 4,
   "win": 0,
   "loss": 4,
@@ -32,6 +32,35 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "OP",
+    "precio": 0.11348,
+    "vela_ts": 1788652800000,
+    "cierre_vela": 0.11291,
+    "rsi_1h": 74.64,
+    "ret_5h_pct": 9.49,
+    "atr_1h": 0.002467,
+    "bb_up": 0.111205,
+    "bb_lo": 0.094977,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 13.5,
+    "deriva_R": 0.211,
+    "entry": 0.11348,
+    "sl": 0.11618671,
+    "tp": 0.11077329,
+    "sl_pct": 2.385,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.05,
+    "size": 1474.004804,
+    "notional": 167.27,
+    "id": "RV-006",
+    "timestamp": "2026-09-05T20:43:26.637320",
+    "emitida": false,
+    "outcome": null
+   },
    {
     "activo": "ARB",
     "precio": 0.19263,
