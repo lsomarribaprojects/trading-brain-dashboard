@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 13:12",
+ "actualizado": "2026-09-06 13:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -228,8 +228,8 @@
   }
  },
  "hourly": {
-  "emitidas": 37,
-  "abiertas": 3,
+  "emitidas": 38,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -254,7 +254,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 28,
+    "emitidas": 29,
     "resueltas": 25,
     "win": 15,
     "loss": 10,
@@ -266,6 +266,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-038",
+    "hora": "2026-09-06T13:14",
+    "activo": "XRP",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 64.7,
+    "entry": 1.4123,
+    "sl": 1.397,
+    "tp1": 1.4276,
+    "tp2": 1.4383,
+    "tp3": 1.4505,
+    "sl_pct": 1.081,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
+   },
    {
     "id": "HR-037",
     "hora": "2026-09-06T12:14",
