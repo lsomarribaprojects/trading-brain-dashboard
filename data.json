@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 16:42",
+ "actualizado": "2026-09-06 16:57",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -229,7 +229,7 @@
  },
  "hourly": {
   "emitidas": 41,
-  "abiertas": 5,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -244,13 +244,13 @@
    },
    "B": {
     "emitidas": 10,
-    "resueltas": 9,
-    "win": 2,
+    "resueltas": 10,
+    "win": 3,
     "loss": 7,
-    "hit": 22.2,
-    "r_trade": -0.601,
-    "pf": 0.26,
-    "tp2_pct": 11,
+    "hit": 30.0,
+    "r_trade": -0.45,
+    "pf": 0.38,
+    "tp2_pct": 10,
     "riesgo_paper": 0.0
    },
    "C": {
@@ -279,9 +279,9 @@
     "tp2": 12.816,
     "tp3": 12.665,
     "sl_pct": 1.43,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.916,
+    "tp_max": "tp1",
     "fallos": "guard rails: SL a 0.19 (0.68×ATR). Mínimo 1.0×ATR (0.28). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
    },
    {
