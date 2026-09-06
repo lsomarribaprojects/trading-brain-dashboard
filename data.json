@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 15:12",
+ "actualizado": "2026-09-06 15:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -228,8 +228,8 @@
   }
  },
  "hourly": {
-  "emitidas": 39,
-  "abiertas": 5,
+  "emitidas": 40,
+  "abiertas": 6,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -254,7 +254,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 30,
+    "emitidas": 31,
     "resueltas": 25,
     "win": 15,
     "loss": 10,
@@ -266,6 +266,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-040",
+    "hora": "2026-09-06T15:13",
+    "activo": "LINK",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 71.3,
+    "entry": 12.34,
+    "sl": 12.525,
+    "tp1": 12.155,
+    "tp2": 12.025,
+    "tp3": 11.876,
+    "sl_pct": 1.503,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 62 no extremo"
+   },
    {
     "id": "HR-039",
     "hora": "2026-09-06T14:18",
