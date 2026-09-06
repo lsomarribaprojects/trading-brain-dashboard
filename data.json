@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-05 19:43",
+ "actualizado": "2026-09-05 19:57",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 3,
+  "abiertas": 0,
+  "resueltas": 4,
   "win": 0,
-  "loss": 3,
+  "loss": 4,
   "hit": 0.0,
-  "break_even": 52.2,
-  "margen": -52.2,
+  "break_even": 51.9,
+  "margen": -51.9,
   "ic95": 0.0,
   "significativo": true,
-  "r_trade": -1.0443,
+  "r_trade": -1.039,
   "pf": 0.0,
-  "pnl_4usd": -12.53,
+  "pnl_4usd": -16.62,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -25,6 +25,10 @@
    {
     "t": "2026-09-05T12:02:54.377408",
     "v": 85.14
+   },
+   {
+    "t": "2026-09-05T18:27:56.041835",
+    "v": 80.78
    }
   ],
   "ultimas": [
@@ -55,7 +59,9 @@
     "id": "RV-004",
     "timestamp": "2026-09-05T18:27:56.041835",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-05T19:43:29.345953",
+    "r_neto": -1.023
    },
    {
     "activo": "UNI",
@@ -159,7 +165,7 @@
  },
  "hourly": {
   "emitidas": 31,
-  "abiertas": 1,
+  "abiertas": 0,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -174,12 +180,12 @@
    },
    "B": {
     "emitidas": 6,
-    "resueltas": 5,
+    "resueltas": 6,
     "win": 1,
-    "loss": 4,
-    "hit": 20.0,
-    "r_trade": -0.652,
-    "pf": 0.21,
+    "loss": 5,
+    "hit": 16.7,
+    "r_trade": -0.713,
+    "pf": 0.17,
     "tp2_pct": 0,
     "riesgo_paper": 0.0
    },
@@ -227,8 +233,8 @@
     "tp2": 0.15907,
     "tp3": 0.15016,
     "sl_pct": 6.254,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.019,
     "tp_max": null,
     "fallos": "guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
    },
@@ -760,12 +766,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 89.1269,
+  "capital": 78.8969,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.145,
+  "expectativa_r": -0.208,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -822,9 +828,28 @@
    {
     "t": "2026-09-05T12:02",
     "v": 89.1269
+   },
+   {
+    "t": "2026-09-05T18:27",
+    "v": 78.8969
    }
   ],
   "trades": [
+   {
+    "id": "RV-004",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "ARB",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-05T18:27",
+    "resuelto": "2026-09-05T19:43",
+    "outcome": "loss",
+    "r": -1.023,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": -10.23,
+    "capital": 78.8969
+   },
    {
     "id": "RV-003",
     "fuente": "reversion",
