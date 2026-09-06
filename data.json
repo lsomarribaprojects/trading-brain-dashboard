@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 10:58",
+ "actualizado": "2026-09-06 11:12",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -228,8 +228,8 @@
   }
  },
  "hourly": {
-  "emitidas": 34,
-  "abiertas": 2,
+  "emitidas": 35,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -244,17 +244,17 @@
    },
    "B": {
     "emitidas": 9,
-    "resueltas": 7,
-    "win": 1,
-    "loss": 6,
-    "hit": 14.3,
-    "r_trade": -0.764,
-    "pf": 0.14,
-    "tp2_pct": 0,
+    "resueltas": 9,
+    "win": 2,
+    "loss": 7,
+    "hit": 22.2,
+    "r_trade": -0.601,
+    "pf": 0.26,
+    "tp2_pct": 11,
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 25,
+    "emitidas": 26,
     "resueltas": 25,
     "win": 15,
     "loss": 10,
@@ -266,6 +266,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-035",
+    "hora": "2026-09-06T11:00",
+    "activo": "DOGE",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 71.9,
+    "entry": 0.08893,
+    "sl": 0.08648,
+    "tp1": 0.09138,
+    "tp2": 0.093095,
+    "tp3": 0.095054,
+    "sl_pct": 2.755,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 43 no extremo; extension -1.9% en 5h (<4%)"
+   },
    {
     "id": "HR-034",
     "hora": "2026-09-05T22:13",
@@ -279,9 +297,9 @@
     "tp2": 0.78053,
     "tp3": 0.75928,
     "sl_pct": 3.218,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.963,
+    "tp_max": "tp2",
     "fallos": "deriva 0.30R desde el cierre"
    },
    {
@@ -315,8 +333,8 @@
     "tp2": 0.17772,
     "tp3": 0.17026,
     "sl_pct": 4.819,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.025,
     "tp_max": null,
     "fallos": "guard rails: SL a 0.01 (0.91×ATR). Mínimo 1.0×ATR (0.01). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
    },
