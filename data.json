@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05 19:07",
+ "actualizado": "2026-09-05 19:12",
  "reversion": {
   "abiertas": 1,
   "resueltas": 3,
@@ -158,8 +158,8 @@
   }
  },
  "hourly": {
-  "emitidas": 30,
-  "abiertas": 1,
+  "emitidas": 31,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -173,7 +173,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 5,
+    "emitidas": 6,
     "resueltas": 4,
     "win": 1,
     "loss": 3,
@@ -196,6 +196,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-031",
+    "hora": "2026-09-05T19:08",
+    "activo": "ARB",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 90.8,
+    "entry": 0.17974,
+    "sl": 0.18638,
+    "tp1": 0.1731,
+    "tp2": 0.16844,
+    "tp3": 0.16313,
+    "sl_pct": 3.697,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "mecha 65% (>40%): ya reboto; deriva 0.42R desde el cierre"
+   },
    {
     "id": "HR-030",
     "hora": "2026-09-05T18:26",
