@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 17:12",
+ "actualizado": "2026-09-06 17:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -228,8 +228,8 @@
   }
  },
  "hourly": {
-  "emitidas": 41,
-  "abiertas": 3,
+  "emitidas": 42,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -254,7 +254,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 31,
+    "emitidas": 32,
     "resueltas": 28,
     "win": 15,
     "loss": 13,
@@ -266,6 +266,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-042",
+    "hora": "2026-09-06T17:14",
+    "activo": "LINK",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 84.3,
+    "entry": 12.82,
+    "sl": 13.554,
+    "tp1": 12.086,
+    "tp2": 11.572,
+    "tp3": 10.985,
+    "sl_pct": 5.725,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 69 no extremo; mecha 95% (>40%): ya reboto"
+   },
    {
     "id": "HR-041",
     "hora": "2026-09-06T16:13",
