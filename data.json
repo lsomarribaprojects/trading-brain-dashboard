@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 22:42",
+ "actualizado": "2026-09-06 23:12",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -228,8 +228,8 @@
   }
  },
  "hourly": {
-  "emitidas": 47,
-  "abiertas": 3,
+  "emitidas": 48,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -254,7 +254,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 34,
+    "emitidas": 35,
     "resueltas": 31,
     "win": 18,
     "loss": 13,
@@ -266,6 +266,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-048",
+    "hora": "2026-09-06T23:06",
+    "activo": "ARB",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 85.8,
+    "entry": 0.17698,
+    "sl": 0.16816,
+    "tp1": 0.1858,
+    "tp2": 0.19198,
+    "tp3": 0.19903,
+    "sl_pct": 4.984,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 41 no extremo"
+   },
    {
     "id": "HR-047",
     "hora": "2026-09-06T22:13",
