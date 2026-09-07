@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-07 17:42",
+ "actualizado": "2026-09-07 17:57",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 9,
-  "win": 2,
+  "abiertas": 0,
+  "resueltas": 10,
+  "win": 3,
   "loss": 7,
-  "hit": 22.2,
+  "hit": 30.0,
   "break_even": 51.9,
-  "margen": -29.7,
-  "ic95": 27.2,
-  "significativo": true,
-  "r_trade": -0.5937,
-  "pf": 0.26,
-  "pnl_4usd": -21.37,
+  "margen": -21.9,
+  "ic95": 28.4,
+  "significativo": false,
+  "r_trade": -0.438,
+  "pf": 0.4,
+  "pnl_4usd": -17.52,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -47,8 +47,12 @@
     "v": 72.17
    },
    {
-    "t": "2026-09-07T12:14:27.912216",
+    "t": "2026-09-07T11:14:02.942292",
     "v": 75.65
+   },
+   {
+    "t": "2026-09-07T12:14:27.912216",
+    "v": 79.29
    }
   ],
   "ultimas": [
@@ -100,7 +104,9 @@
     "id": "RV-009",
     "timestamp": "2026-09-07T11:14:02.942292",
     "emitida": false,
-    "outcome": null
+    "outcome": "win",
+    "resuelto": "2026-09-07T17:43:10.940869",
+    "r_neto": 0.963
    },
    {
     "activo": "DOT",
@@ -354,16 +360,16 @@
  },
  "hourly": {
   "emitidas": 65,
-  "abiertas": 7,
+  "abiertas": 6,
   "por_grado": {
    "A": {
     "emitidas": 3,
-    "resueltas": 2,
-    "win": 1,
+    "resueltas": 3,
+    "win": 2,
     "loss": 1,
-    "hit": 50.0,
-    "r_trade": -0.036,
-    "pf": 0.93,
+    "hit": 66.7,
+    "r_trade": 0.297,
+    "pf": 1.86,
     "tp2_pct": 0,
     "riesgo_paper": 0.03
    },
@@ -494,9 +500,9 @@
     "tp2": 1.0181,
     "tp3": 0.9902,
     "sl_pct": 3.234,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.963,
+    "tp_max": "tp1",
     "fallos": ""
    },
    {
@@ -1477,12 +1483,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 67.0269,
+  "capital": 76.6569,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.215,
+  "expectativa_r": -0.157,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -1563,9 +1569,28 @@
    {
     "t": "2026-09-07T12:14",
     "v": 67.0269
+   },
+   {
+    "t": "2026-09-07T11:14",
+    "v": 76.6569
    }
   ],
   "trades": [
+   {
+    "id": "HR-060",
+    "fuente": "hourly",
+    "grado": "A",
+    "activo": "DOT",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-07T11:14",
+    "resuelto": "2026-09-07T17:43",
+    "outcome": "win",
+    "r": 0.963,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": 9.63,
+    "capital": 76.6569
+   },
    {
     "id": "HR-061",
     "fuente": "hourly",
