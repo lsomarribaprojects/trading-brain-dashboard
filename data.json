@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 18:57",
+ "actualizado": "2026-09-06 19:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -228,7 +228,7 @@
   }
  },
  "hourly": {
-  "emitidas": 43,
+  "emitidas": 44,
   "abiertas": 5,
   "por_grado": {
    "A": {
@@ -243,14 +243,14 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 11,
-    "resueltas": 10,
+    "emitidas": 12,
+    "resueltas": 11,
     "win": 3,
-    "loss": 7,
-    "hit": 30.0,
-    "r_trade": -0.45,
-    "pf": 0.38,
-    "tp2_pct": 10,
+    "loss": 8,
+    "hit": 27.3,
+    "r_trade": -0.509,
+    "pf": 0.33,
+    "tp2_pct": 9,
     "riesgo_paper": 0.0
    },
    "C": {
@@ -267,6 +267,24 @@
   },
   "ultimas": [
    {
+    "id": "HR-044",
+    "hora": "2026-09-06T19:20",
+    "activo": "LINK",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 13.264,
+    "sl": 13.48,
+    "tp1": 13.048,
+    "tp2": 12.897,
+    "tp3": 12.724,
+    "sl_pct": 1.628,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "guard rails: SL a 0.22 (0.79×ATR). Mínimo 1.0×ATR (0.28). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
+   },
+   {
     "id": "HR-043",
     "hora": "2026-09-06T18:13",
     "activo": "LINK",
@@ -279,8 +297,8 @@
     "tp2": 12.867,
     "tp3": 12.74,
     "sl_pct": 1.212,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.099,
     "tp_max": null,
     "fallos": "deriva 0.58R desde el cierre"
    },
