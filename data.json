@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-07 11:12",
+ "actualizado": "2026-09-07 11:27",
  "reversion": {
-  "abiertas": 1,
+  "abiertas": 2,
   "resueltas": 7,
   "win": 1,
   "loss": 6,
@@ -44,6 +44,30 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "DOT",
+    "direccion": "SHORT",
+    "precio": 1.0773,
+    "vela_ts": 1788793200000,
+    "cierre_vela": 1.0782,
+    "rsi_1h": 75.4,
+    "ret_5h_pct": 9.44,
+    "atr_1h": 0.02233662,
+    "entry": 1.0773,
+    "sl": 1.1121,
+    "sl_pct": 3.234,
+    "fee_en_R": 0.037,
+    "max_hold_h": 24,
+    "go": true,
+    "tp": 1.0425,
+    "tp_r": 1.0,
+    "razones": [],
+    "origen": "hourly_signal",
+    "id": "RV-009",
+    "timestamp": "2026-09-07T11:14:02.942292",
+    "emitida": false,
+    "outcome": null
+   },
    {
     "activo": "DOT",
     "direccion": "SHORT",
@@ -293,11 +317,11 @@
   }
  },
  "hourly": {
-  "emitidas": 59,
-  "abiertas": 4,
+  "emitidas": 60,
+  "abiertas": 5,
   "por_grado": {
    "A": {
-    "emitidas": 1,
+    "emitidas": 2,
     "resueltas": 0,
     "win": 0,
     "loss": 0,
@@ -331,6 +355,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-060",
+    "hora": "2026-09-07T11:14",
+    "activo": "DOT",
+    "dir": "SHORT",
+    "grado": "A",
+    "score": 100.0,
+    "entry": 1.0773,
+    "sl": 1.1121,
+    "tp1": 1.0425,
+    "tp2": 1.0181,
+    "tp3": 0.9902,
+    "sl_pct": 3.234,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": ""
+   },
    {
     "id": "HR-059",
     "hora": "2026-09-07T10:15",
