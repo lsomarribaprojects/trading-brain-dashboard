@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06 21:42",
+ "actualizado": "2026-09-06 21:57",
  "reversion": {
   "abiertas": 1,
   "resueltas": 5,
@@ -229,7 +229,7 @@
  },
  "hourly": {
   "emitidas": 46,
-  "abiertas": 6,
+  "abiertas": 3,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -255,13 +255,13 @@
    },
    "C": {
     "emitidas": 33,
-    "resueltas": 28,
-    "win": 15,
+    "resueltas": 31,
+    "win": 18,
     "loss": 13,
-    "hit": 53.6,
-    "r_trade": -0.0,
-    "pf": 1.0,
-    "tp2_pct": 18,
+    "hit": 58.1,
+    "r_trade": 0.086,
+    "pf": 1.19,
+    "tp2_pct": 19,
     "riesgo_paper": 0.0
    }
   },
@@ -279,9 +279,9 @@
     "tp2": 1.4215,
     "tp3": 1.4298,
     "sl_pct": 0.738,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.837,
+    "tp_max": "tp3",
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    },
    {
@@ -423,9 +423,9 @@
     "tp2": 1.4383,
     "tp3": 1.4505,
     "sl_pct": 1.081,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.889,
+    "tp_max": "tp1",
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    },
    {
@@ -477,9 +477,9 @@
     "tp2": 0.093095,
     "tp3": 0.095054,
     "sl_pct": 2.755,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.956,
+    "tp_max": "tp1",
     "fallos": "RSI 43 no extremo; extension -1.9% en 5h (<4%)"
    },
    {
