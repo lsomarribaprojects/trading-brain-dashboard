@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-07 08:57",
+ "actualizado": "2026-09-07 09:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 6,
@@ -234,8 +234,8 @@
   }
  },
  "hourly": {
-  "emitidas": 57,
-  "abiertas": 4,
+  "emitidas": 58,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 0,
@@ -249,7 +249,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 14,
+    "emitidas": 15,
     "resueltas": 14,
     "win": 5,
     "loss": 9,
@@ -272,6 +272,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-058",
+    "hora": "2026-09-07T09:13",
+    "activo": "DOT",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 1.0692,
+    "sl": 1.082,
+    "tp1": 1.0564,
+    "tp2": 1.0474,
+    "tp3": 1.0371,
+    "sl_pct": 1.2,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "deriva 0.96R desde el cierre"
+   },
    {
     "id": "HR-057",
     "hora": "2026-09-07T08:13",
