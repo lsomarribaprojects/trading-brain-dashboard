@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-07 10:27",
+ "actualizado": "2026-09-07 10:42",
  "reversion": {
-  "abiertas": 2,
-  "resueltas": 6,
+  "abiertas": 1,
+  "resueltas": 7,
   "win": 1,
-  "loss": 5,
-  "hit": 16.7,
+  "loss": 6,
+  "hit": 14.3,
   "break_even": 51.9,
-  "margen": -35.2,
-  "ic95": 29.8,
+  "margen": -37.6,
+  "ic95": 25.9,
   "significativo": true,
-  "r_trade": -0.7047,
-  "pf": 0.18,
-  "pnl_4usd": -16.91,
+  "r_trade": -0.753,
+  "pf": 0.15,
+  "pnl_4usd": -21.08,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -37,6 +37,10 @@
    {
     "t": "2026-09-05T20:43:26.637320",
     "v": 80.3
+   },
+   {
+    "t": "2026-09-07T09:45:58.890297",
+    "v": 76.11
    }
   ],
   "ultimas": [
@@ -91,7 +95,9 @@
     "id": "RV-007",
     "timestamp": "2026-09-07T09:45:58.890297",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-07T10:28:43.813949",
+    "r_neto": -1.043
    },
    {
     "activo": "OP",
@@ -1393,12 +1399,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 78.1769,
+  "capital": 67.7469,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.186,
+  "expectativa_r": -0.237,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -1467,9 +1473,28 @@
    {
     "t": "2026-09-05T20:16",
     "v": 78.1769
+   },
+   {
+    "t": "2026-09-07T09:45",
+    "v": 67.7469
    }
   ],
   "trades": [
+   {
+    "id": "RV-007",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "DOT",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-07T09:45",
+    "resuelto": "2026-09-07T10:28",
+    "outcome": "loss",
+    "r": -1.043,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": -10.43,
+    "capital": 67.7469
+   },
    {
     "id": "RV-005",
     "fuente": "reversion",
