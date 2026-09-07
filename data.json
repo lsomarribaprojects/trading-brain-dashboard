@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-07 09:43",
+ "actualizado": "2026-09-07 09:57",
  "reversion": {
-  "abiertas": 0,
+  "abiertas": 1,
   "resueltas": 6,
   "win": 1,
   "loss": 5,
@@ -40,6 +40,35 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "DOT",
+    "precio": 1.0529,
+    "vela_ts": 1788786000000,
+    "cierre_vela": 1.0569,
+    "rsi_1h": 72.32,
+    "ret_5h_pct": 8.48,
+    "atr_1h": 0.021035,
+    "bb_up": 1.031737,
+    "bb_lo": 0.936583,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 8.9,
+    "deriva_R": 0.137,
+    "entry": 1.0529,
+    "sl": 1.08203451,
+    "tp": 1.02376549,
+    "sl_pct": 2.767,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.043,
+    "size": 136.940695,
+    "notional": 144.18,
+    "id": "RV-007",
+    "timestamp": "2026-09-07T09:45:58.890297",
+    "emitida": true,
+    "outcome": null
+   },
    {
     "activo": "OP",
     "precio": 0.11348,
