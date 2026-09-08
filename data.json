@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-08 13:29",
+ "actualizado": "2026-09-08 15:30",
  "reversion": {
-  "abiertas": 1,
+  "abiertas": 2,
   "resueltas": 12,
   "win": 3,
   "loss": 9,
@@ -64,6 +64,35 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "DOT",
+    "precio": 1.2271,
+    "vela_ts": 1788886800000,
+    "cierre_vela": 1.2245,
+    "rsi_1h": 77.4,
+    "ret_5h_pct": 12.32,
+    "atr_1h": 0.030824,
+    "bb_up": 1.194243,
+    "bb_lo": 0.990697,
+    "go": true,
+    "razones": [],
+    "direccion": "SHORT",
+    "mecha_pct": 12.6,
+    "deriva_R": 0.078,
+    "entry": 1.2271,
+    "sl": 1.26032434,
+    "tp": 1.19387566,
+    "sl_pct": 2.708,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.044,
+    "size": 120.083658,
+    "notional": 147.35,
+    "id": "RV-014",
+    "timestamp": "2026-09-08T13:31:47.185806",
+    "emitida": true,
+    "outcome": null
+   },
    {
     "activo": "DOT",
     "precio": 1.193,
@@ -459,7 +488,7 @@
  },
  "hourly": {
   "emitidas": 76,
-  "abiertas": 5,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 4,
@@ -474,12 +503,12 @@
    },
    "B": {
     "emitidas": 18,
-    "resueltas": 16,
-    "win": 6,
+    "resueltas": 17,
+    "win": 7,
     "loss": 10,
-    "hit": 37.5,
-    "r_trade": -0.314,
-    "pf": 0.53,
+    "hit": 41.2,
+    "r_trade": -0.241,
+    "pf": 0.61,
     "tp2_pct": 6,
     "riesgo_paper": 0.0
    },
@@ -509,9 +538,9 @@
     "tp2": 1.2057,
     "tp3": 1.1895,
     "sl_pct": 1.631,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.926,
+    "tp_max": "tp1",
     "fallos": "deriva 0.77R desde el cierre"
    },
    {
