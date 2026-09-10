@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-09 21:27",
+ "actualizado": "2026-09-09 21:57",
  "reversion": {
-  "abiertas": 1,
+  "abiertas": 2,
   "resueltas": 16,
   "win": 4,
   "loss": 12,
@@ -80,6 +80,35 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "UNI",
+    "precio": 5.986,
+    "vela_ts": 1789002000000,
+    "cierre_vela": 6.0,
+    "rsi_1h": 18.72,
+    "ret_5h_pct": -6.15,
+    "atr_1h": 0.127341,
+    "bb_up": 7.026144,
+    "bb_lo": 6.015256,
+    "go": true,
+    "razones": [],
+    "direccion": "LONG",
+    "mecha_pct": 23.0,
+    "deriva_R": 0.079,
+    "entry": 5.986,
+    "sl": 5.8076587,
+    "tp": 6.1643413,
+    "sl_pct": 2.979,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.04,
+    "size": 22.37115,
+    "notional": 133.91,
+    "id": "RV-018",
+    "timestamp": "2026-09-09T21:32:34.293758",
+    "emitida": false,
+    "outcome": null
+   },
    {
     "activo": "UNI",
     "precio": 6.133,
