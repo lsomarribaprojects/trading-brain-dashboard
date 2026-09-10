@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-09 19:27",
+ "actualizado": "2026-09-09 19:42",
  "reversion": {
-  "abiertas": 3,
-  "resueltas": 14,
+  "abiertas": 2,
+  "resueltas": 15,
   "win": 4,
-  "loss": 10,
-  "hit": 28.6,
+  "loss": 11,
+  "hit": 26.7,
   "break_even": 52.1,
-  "margen": -23.6,
-  "ic95": 23.7,
-  "significativo": false,
-  "r_trade": -0.4715,
-  "pf": 0.37,
-  "pnl_4usd": -26.4,
+  "margen": -25.5,
+  "ic95": 22.4,
+  "significativo": true,
+  "r_trade": -0.5095,
+  "pf": 0.33,
+  "pnl_4usd": -30.57,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -69,6 +69,10 @@
    {
     "t": "2026-09-08T13:31:47.185806",
     "v": 70.58
+   },
+   {
+    "t": "2026-09-09T11:32:08.388652",
+    "v": 66.9
    }
   ],
   "ultimas": [
@@ -152,7 +156,9 @@
     "id": "RV-015",
     "timestamp": "2026-09-09T11:32:08.388652",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-09T19:29:22.512627",
+    "r_neto": -1.042
    },
    {
     "activo": "DOT",
@@ -582,7 +588,7 @@
  },
  "hourly": {
   "emitidas": 91,
-  "abiertas": 5,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 5,
@@ -597,12 +603,12 @@
    },
    "B": {
     "emitidas": 22,
-    "resueltas": 20,
+    "resueltas": 21,
     "win": 9,
-    "loss": 11,
-    "hit": 45.0,
-    "r_trade": -0.161,
-    "pf": 0.72,
+    "loss": 12,
+    "hit": 42.9,
+    "r_trade": -0.203,
+    "pf": 0.66,
     "tp2_pct": 5,
     "riesgo_paper": 0.0
    },
@@ -722,8 +728,8 @@
     "tp2": 0.1585,
     "tp3": 0.16153,
     "sl_pct": 2.494,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.048,
     "tp_max": null,
     "fallos": "deriva 0.41R desde el cierre"
    },
@@ -1705,12 +1711,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 43.9569,
+  "capital": 33.5369,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.256,
+  "expectativa_r": -0.286,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -1815,9 +1821,28 @@
    {
     "t": "2026-09-08T12:33",
     "v": 43.9569
+   },
+   {
+    "t": "2026-09-09T11:32",
+    "v": 33.5369
    }
   ],
   "trades": [
+   {
+    "id": "RV-015",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "ARB",
+    "direccion": "LONG",
+    "timestamp": "2026-09-09T11:32",
+    "resuelto": "2026-09-09T19:29",
+    "outcome": "loss",
+    "r": -1.042,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": -10.42,
+    "capital": 33.5369
+   },
    {
     "id": "HR-075",
     "fuente": "hourly",
