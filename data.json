@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-09 20:42",
+ "actualizado": "2026-09-09 20:57",
  "reversion": {
-  "abiertas": 2,
-  "resueltas": 15,
+  "abiertas": 1,
+  "resueltas": 16,
   "win": 4,
-  "loss": 11,
-  "hit": 26.7,
-  "break_even": 52.1,
-  "margen": -25.5,
-  "ic95": 22.4,
+  "loss": 12,
+  "hit": 25.0,
+  "break_even": 52.2,
+  "margen": -27.2,
+  "ic95": 21.2,
   "significativo": true,
-  "r_trade": -0.5095,
-  "pf": 0.33,
-  "pnl_4usd": -30.57,
+  "r_trade": -0.544,
+  "pf": 0.3,
+  "pnl_4usd": -34.82,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -73,6 +73,10 @@
    {
     "t": "2026-09-09T11:32:08.388652",
     "v": 66.9
+   },
+   {
+    "t": "2026-09-09T18:29:42.147141",
+    "v": 63.35
    }
   ],
   "ultimas": [
@@ -103,7 +107,9 @@
     "id": "RV-017",
     "timestamp": "2026-09-09T18:29:42.147141",
     "emitida": false,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-09T20:45:17.365805",
+    "r_neto": -1.061
    },
    {
     "activo": "OP",
@@ -588,7 +594,7 @@
  },
  "hourly": {
   "emitidas": 92,
-  "abiertas": 5,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 5,
@@ -603,23 +609,23 @@
    },
    "B": {
     "emitidas": 22,
-    "resueltas": 21,
+    "resueltas": 22,
     "win": 9,
-    "loss": 12,
-    "hit": 42.9,
-    "r_trade": -0.203,
-    "pf": 0.66,
+    "loss": 13,
+    "hit": 40.9,
+    "r_trade": -0.24,
+    "pf": 0.61,
     "tp2_pct": 5,
     "riesgo_paper": 0.0
    },
    "C": {
     "emitidas": 65,
-    "resueltas": 62,
+    "resueltas": 64,
     "win": 33,
-    "loss": 26,
-    "hit": 53.2,
-    "r_trade": 0.066,
-    "pf": 1.15,
+    "loss": 28,
+    "hit": 51.6,
+    "r_trade": 0.031,
+    "pf": 1.07,
     "tp2_pct": 11,
     "riesgo_paper": 0.0
    }
@@ -656,8 +662,8 @@
     "tp2": 6.3917,
     "tp3": 6.5105,
     "sl_pct": 2.421,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.05,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; mecha 42% (>40%): ya reboto"
    },
@@ -692,8 +698,8 @@
     "tp2": 0.15917,
     "tp3": 0.16304,
     "sl_pct": 3.2,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.037,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger"
    },
@@ -728,8 +734,8 @@
     "tp2": 0.16579,
     "tp3": 0.17151,
     "sl_pct": 4.659,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.026,
     "tp_max": null,
     "fallos": "deriva 0.33R desde el cierre"
    },
@@ -1711,12 +1717,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 33.5369,
+  "capital": 22.9269,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.286,
+  "expectativa_r": -0.315,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -1825,9 +1831,28 @@
    {
     "t": "2026-09-09T11:32",
     "v": 33.5369
+   },
+   {
+    "t": "2026-09-09T18:29",
+    "v": 22.9269
    }
   ],
   "trades": [
+   {
+    "id": "RV-017",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "UNI",
+    "direccion": "LONG",
+    "timestamp": "2026-09-09T18:29",
+    "resuelto": "2026-09-09T20:45",
+    "outcome": "loss",
+    "r": -1.061,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": -10.61,
+    "capital": 22.9269
+   },
    {
     "id": "RV-015",
     "fuente": "reversion",
