@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10 20:12",
+ "actualizado": "2026-09-10 20:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 17,
@@ -628,8 +628,8 @@
   }
  },
  "hourly": {
-  "emitidas": 102,
-  "abiertas": 6,
+  "emitidas": 103,
+  "abiertas": 7,
   "por_grado": {
    "A": {
     "emitidas": 5,
@@ -654,7 +654,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 72,
+    "emitidas": 73,
     "resueltas": 69,
     "win": 33,
     "loss": 33,
@@ -666,6 +666,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-103",
+    "hora": "2026-09-10T20:14",
+    "activo": "APT",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 87.1,
+    "entry": 0.6533,
+    "sl": 0.67109,
+    "tp1": 0.63551,
+    "tp2": 0.62305,
+    "tp3": 0.60882,
+    "sl_pct": 2.724,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 60 no extremo"
+   },
    {
     "id": "HR-102",
     "hora": "2026-09-10T19:43",
@@ -1727,24 +1745,6 @@
     "r": 0.926,
     "tp_max": "tp1",
     "fallos": "guard rails: SL a 0.22 (0.79×ATR). Mínimo 1.0×ATR (0.28). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
-   },
-   {
-    "id": "HR-043",
-    "hora": "2026-09-06T18:13",
-    "activo": "LINK",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 100.0,
-    "entry": 13.138,
-    "sl": 13.297,
-    "tp1": 12.979,
-    "tp2": 12.867,
-    "tp3": 12.74,
-    "sl_pct": 1.212,
-    "outcome": "loss",
-    "r": -1.099,
-    "tp_max": null,
-    "fallos": "deriva 0.58R desde el cierre"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
