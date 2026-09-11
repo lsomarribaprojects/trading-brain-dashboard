@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-10 20:42",
+ "actualizado": "2026-09-10 22:27",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 17,
+  "abiertas": 0,
+  "resueltas": 18,
   "win": 4,
   "loss": 13,
-  "hit": 23.5,
+  "hit": 22.2,
   "break_even": 52.2,
-  "margen": -28.7,
-  "ic95": 20.2,
+  "margen": -29.9,
+  "ic95": 19.2,
   "significativo": true,
-  "r_trade": -0.5731,
+  "r_trade": -0.5434,
   "pf": 0.28,
-  "pnl_4usd": -38.97,
+  "pnl_4usd": -39.13,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -81,6 +81,10 @@
    {
     "t": "2026-09-09T18:29:42.147141",
     "v": 60.06
+   },
+   {
+    "t": "2026-09-09T21:32:34.293758",
+    "v": 59.94
    }
   ],
   "ultimas": [
@@ -111,7 +115,9 @@
     "id": "RV-018",
     "timestamp": "2026-09-09T21:32:34.293758",
     "emitida": false,
-    "outcome": null
+    "outcome": "expirada",
+    "resuelto": "2026-09-10T22:24:14.296373",
+    "r_neto": -0.04
    },
    {
     "activo": "UNI",
@@ -628,7 +634,7 @@
   }
  },
  "hourly": {
-  "emitidas": 103,
+  "emitidas": 104,
   "abiertas": 7,
   "por_grado": {
    "A": {
@@ -644,17 +650,17 @@
    },
    "B": {
     "emitidas": 25,
-    "resueltas": 22,
+    "resueltas": 23,
     "win": 9,
     "loss": 13,
-    "hit": 40.9,
-    "r_trade": -0.24,
-    "pf": 0.61,
-    "tp2_pct": 5,
+    "hit": 39.1,
+    "r_trade": -0.226,
+    "pf": 0.62,
+    "tp2_pct": 4,
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 73,
+    "emitidas": 74,
     "resueltas": 69,
     "win": 33,
     "loss": 33,
@@ -666,6 +672,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-104",
+    "hora": "2026-09-10T22:23",
+    "activo": "NEAR",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 78.2,
+    "entry": 2.398,
+    "sl": 2.3221,
+    "tp1": 2.4739,
+    "tp2": 2.5271,
+    "tp3": 2.5878,
+    "sl_pct": 3.166,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 41 no extremo"
+   },
    {
     "id": "HR-103",
     "hora": "2026-09-10T20:14",
@@ -859,8 +883,8 @@
     "tp2": 6.2865,
     "tp3": 6.4284,
     "sl_pct": 2.963,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "expirada",
+    "r": 0.09,
     "tp_max": null,
     "fallos": "guard rails: BLOQUEO: Core PPI m/m en 10.3h. Lección T-003/T-009.; guard rails: SL a 0.18 (0.72×ATR). Mínimo 1.0×ATR (0.25). Lección T-003/T"
    },
@@ -1727,24 +1751,6 @@
     "r": 0.965,
     "tp_max": "tp1",
     "fallos": "deriva 0.42R desde el cierre"
-   },
-   {
-    "id": "HR-044",
-    "hora": "2026-09-06T19:20",
-    "activo": "LINK",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 100.0,
-    "entry": 13.264,
-    "sl": 13.48,
-    "tp1": 13.048,
-    "tp2": 12.897,
-    "tp3": 12.724,
-    "sl_pct": 1.628,
-    "outcome": "win",
-    "r": 0.926,
-    "tp_max": "tp1",
-    "fallos": "guard rails: SL a 0.22 (0.79×ATR). Mínimo 1.0×ATR (0.28). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
@@ -1752,12 +1758,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 12.5469,
+  "capital": 12.1469,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.341,
+  "expectativa_r": -0.33,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -1874,9 +1880,28 @@
    {
     "t": "2026-09-09T18:27",
     "v": 12.5469
+   },
+   {
+    "t": "2026-09-09T21:32",
+    "v": 12.1469
    }
   ],
   "trades": [
+   {
+    "id": "RV-018",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "UNI",
+    "direccion": "LONG",
+    "timestamp": "2026-09-09T21:32",
+    "resuelto": "2026-09-10T22:24",
+    "outcome": "expirada",
+    "r": -0.04,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": -0.4,
+    "capital": 12.1469
+   },
    {
     "id": "HR-090",
     "fuente": "hourly",
