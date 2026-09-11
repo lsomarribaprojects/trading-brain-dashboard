@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-11 12:28",
+ "actualizado": "2026-09-11 14:05",
  "reversion": {
   "abiertas": 0,
   "resueltas": 18,
@@ -634,8 +634,8 @@
   }
  },
  "hourly": {
-  "emitidas": 106,
-  "abiertas": 2,
+  "emitidas": 107,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 5,
@@ -649,14 +649,14 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 27,
-    "resueltas": 25,
-    "win": 11,
+    "emitidas": 28,
+    "resueltas": 27,
+    "win": 13,
     "loss": 13,
-    "hit": 44.0,
-    "r_trade": -0.137,
-    "pf": 0.75,
-    "tp2_pct": 4,
+    "hit": 48.1,
+    "r_trade": -0.057,
+    "pf": 0.89,
+    "tp2_pct": 7,
     "riesgo_paper": 0.0
    },
    "C": {
@@ -673,6 +673,24 @@
   },
   "ultimas": [
    {
+    "id": "HR-107",
+    "hora": "2026-09-11T12:38",
+    "activo": "ATOM",
+    "dir": "LONG",
+    "grado": "B",
+    "score": 93.3,
+    "entry": 1.668,
+    "sl": 1.6442,
+    "tp1": 1.6918,
+    "tp2": 1.7084,
+    "tp3": 1.7274,
+    "sl_pct": 1.426,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "extension -2.7% en 5h (<4%); deriva 0.46R desde el cierre"
+   },
+   {
     "id": "HR-106",
     "hora": "2026-09-11T07:19",
     "activo": "SUI",
@@ -685,9 +703,9 @@
     "tp2": 0.74896,
     "tp3": 0.76321,
     "sl_pct": 2.477,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.952,
+    "tp_max": "tp3",
     "fallos": "extension -2.5% en 5h (<4%); mecha 54% (>40%): ya reboto"
    },
    {
@@ -883,9 +901,9 @@
     "tp2": 102.745,
     "tp3": 104.319,
     "sl_pct": 1.979,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.939,
+    "tp_max": "tp1",
     "fallos": "major: el edge de reversion desaparece en majors (medido); extension -2.4% en 5h (<4%)"
    },
    {
@@ -1733,24 +1751,6 @@
     "r": -1.024,
     "tp_max": null,
     "fallos": "RSI 41 no extremo"
-   },
-   {
-    "id": "HR-047",
-    "hora": "2026-09-06T22:13",
-    "activo": "ATOM",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 71.1,
-    "entry": 1.593,
-    "sl": 1.6236,
-    "tp1": 1.5624,
-    "tp2": 1.5409,
-    "tp3": 1.5164,
-    "sl_pct": 1.924,
-    "outcome": "loss",
-    "r": -1.062,
-    "tp_max": null,
-    "fallos": "cierre dentro de Bollinger; RSI 61 no extremo"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
