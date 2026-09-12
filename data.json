@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12 07:57",
+ "actualizado": "2026-09-12 09:42",
  "reversion": {
   "abiertas": 0,
   "resueltas": 18,
@@ -634,7 +634,7 @@
   }
  },
  "hourly": {
-  "emitidas": 117,
+  "emitidas": 118,
   "abiertas": 8,
   "por_grado": {
    "A": {
@@ -660,18 +660,36 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 84,
-    "resueltas": 76,
-    "win": 37,
+    "emitidas": 85,
+    "resueltas": 77,
+    "win": 38,
     "loss": 36,
-    "hit": 48.7,
-    "r_trade": -0.035,
-    "pf": 0.93,
+    "hit": 49.4,
+    "r_trade": -0.023,
+    "pf": 0.95,
     "tp2_pct": 13,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-118",
+    "hora": "2026-09-12T09:28",
+    "activo": "ETH",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 67.7,
+    "entry": 2543.06,
+    "sl": 2562.4,
+    "tp1": 2523.7,
+    "tp2": 2510.2,
+    "tp3": 2494.7,
+    "sl_pct": 0.761,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
+   },
    {
     "id": "HR-117",
     "hora": "2026-09-12T07:15",
@@ -685,9 +703,9 @@
     "tp2": 125.04,
     "tp3": 123.81,
     "sl_pct": 1.202,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.9,
+    "tp_max": "tp1",
     "fallos": "RSI 64 no extremo; extension +1.5% en 5h (<4%)"
    },
    {
@@ -1733,24 +1751,6 @@
     "r": -1.035,
     "tp_max": null,
     "fallos": ""
-   },
-   {
-    "id": "HR-058",
-    "hora": "2026-09-07T09:13",
-    "activo": "DOT",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 100.0,
-    "entry": 1.0692,
-    "sl": 1.082,
-    "tp1": 1.0564,
-    "tp2": 1.0474,
-    "tp3": 1.0371,
-    "sl_pct": 1.2,
-    "outcome": "win",
-    "r": 0.9,
-    "tp_max": "tp1",
-    "fallos": "deriva 0.96R desde el cierre"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
