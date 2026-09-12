@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12 03:27",
+ "actualizado": "2026-09-12 03:42",
  "reversion": {
   "abiertas": 0,
   "resueltas": 18,
@@ -635,7 +635,7 @@
  },
  "hourly": {
   "emitidas": 113,
-  "abiertas": 5,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 5,
@@ -661,12 +661,12 @@
    },
    "C": {
     "emitidas": 80,
-    "resueltas": 75,
+    "resueltas": 76,
     "win": 37,
-    "loss": 35,
-    "hit": 49.3,
-    "r_trade": -0.021,
-    "pf": 0.96,
+    "loss": 36,
+    "hit": 48.7,
+    "r_trade": -0.035,
+    "pf": 0.93,
     "tp2_pct": 13,
     "riesgo_paper": 0.0
    }
@@ -703,8 +703,8 @@
     "tp2": 6.0997,
     "tp3": 6.0107,
     "sl_pct": 1.77,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.068,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 62 no extremo"
    },
