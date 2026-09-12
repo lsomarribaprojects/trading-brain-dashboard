@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12 10:12",
+ "actualizado": "2026-09-12 10:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 18,
@@ -634,8 +634,8 @@
   }
  },
  "hourly": {
-  "emitidas": 118,
-  "abiertas": 8,
+  "emitidas": 119,
+  "abiertas": 9,
   "por_grado": {
    "A": {
     "emitidas": 5,
@@ -660,7 +660,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 85,
+    "emitidas": 86,
     "resueltas": 77,
     "win": 38,
     "loss": 36,
@@ -672,6 +672,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-119",
+    "hora": "2026-09-12T10:14",
+    "activo": "UNI",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 70.9,
+    "entry": 6.484,
+    "sl": 6.5514,
+    "tp1": 6.4166,
+    "tp2": 6.3694,
+    "tp3": 6.3154,
+    "sl_pct": 1.04,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 68 no extremo"
+   },
    {
     "id": "HR-118",
     "hora": "2026-09-12T09:28",
@@ -1732,24 +1750,6 @@
     "outcome": "win",
     "r": 0.963,
     "tp_max": "tp1",
-    "fallos": ""
-   },
-   {
-    "id": "HR-059",
-    "hora": "2026-09-07T10:15",
-    "activo": "DOT",
-    "dir": "SHORT",
-    "grado": "A",
-    "score": 100.0,
-    "entry": 1.0634,
-    "sl": 1.0999,
-    "tp1": 1.0269,
-    "tp2": 1.0013,
-    "tp3": 0.9721,
-    "sl_pct": 3.436,
-    "outcome": "loss",
-    "r": -1.035,
-    "tp_max": null,
     "fallos": ""
    }
   ],
