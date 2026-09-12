@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12 11:43",
+ "actualizado": "2026-09-12 11:57",
  "reversion": {
   "abiertas": 0,
   "resueltas": 18,
@@ -634,7 +634,7 @@
   }
  },
  "hourly": {
-  "emitidas": 119,
+  "emitidas": 120,
   "abiertas": 5,
   "por_grado": {
    "A": {
@@ -660,18 +660,36 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 86,
-    "resueltas": 81,
-    "win": 38,
+    "emitidas": 87,
+    "resueltas": 82,
+    "win": 39,
     "loss": 40,
-    "hit": 46.9,
-    "r_trade": -0.074,
-    "pf": 0.86,
+    "hit": 47.6,
+    "r_trade": -0.062,
+    "pf": 0.88,
     "tp2_pct": 12,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-120",
+    "hora": "2026-09-12T11:44",
+    "activo": "UNI",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 87.0,
+    "entry": 6.424,
+    "sl": 6.6713,
+    "tp1": 6.1767,
+    "tp2": 6.0036,
+    "tp3": 5.8057,
+    "sl_pct": 3.85,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; extension +2.3% en 5h (<4%)"
+   },
    {
     "id": "HR-119",
     "hora": "2026-09-12T10:14",
@@ -847,9 +865,9 @@
     "tp2": 2.4608,
     "tp3": 2.5144,
     "sl_pct": 2.852,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.958,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 37 no extremo"
    },
    {
@@ -1729,24 +1747,6 @@
     "tp2": 1.0357,
     "tp3": 1.0073,
     "sl_pct": 3.242,
-    "outcome": "win",
-    "r": 0.963,
-    "tp_max": "tp1",
-    "fallos": ""
-   },
-   {
-    "id": "HR-060",
-    "hora": "2026-09-07T11:14",
-    "activo": "DOT",
-    "dir": "SHORT",
-    "grado": "A",
-    "score": 100.0,
-    "entry": 1.0773,
-    "sl": 1.1121,
-    "tp1": 1.0425,
-    "tp2": 1.0181,
-    "tp3": 0.9902,
-    "sl_pct": 3.234,
     "outcome": "win",
     "r": 0.963,
     "tp_max": "tp1",
