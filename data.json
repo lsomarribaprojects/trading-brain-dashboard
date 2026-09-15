@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-15 14:00",
+ "actualizado": "2026-09-15 14:12",
  "reversion": {
   "abiertas": 0,
   "resueltas": 21,
@@ -730,7 +730,7 @@
  },
  "hourly": {
   "emitidas": 147,
-  "abiertas": 2,
+  "abiertas": 0,
   "por_grado": {
    "A": {
     "emitidas": 7,
@@ -745,13 +745,13 @@
    },
    "B": {
     "emitidas": 40,
-    "resueltas": 38,
-    "win": 15,
-    "loss": 21,
-    "hit": 39.5,
-    "r_trade": -0.218,
-    "pf": 0.63,
-    "tp2_pct": 11,
+    "resueltas": 40,
+    "win": 16,
+    "loss": 22,
+    "hit": 40.0,
+    "r_trade": -0.209,
+    "pf": 0.65,
+    "tp2_pct": 10,
     "riesgo_paper": 0.0
    },
    "C": {
@@ -780,9 +780,9 @@
     "tp2": 0.13594,
     "tp3": 0.1287,
     "sl_pct": 5.985,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.98,
+    "tp_max": "tp1",
     "fallos": "mecha 71% (>40%): ya reboto"
    },
    {
@@ -816,8 +816,8 @@
     "tp2": 2498.1,
     "tp3": 2537.2,
     "sl_pct": 2.026,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.059,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); extension -2.7% en 5h (<4%)"
    },
