@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-15 06:44",
+ "actualizado": "2026-09-15 06:57",
  "reversion": {
   "abiertas": 1,
   "resueltas": 19,
@@ -693,17 +693,17 @@
   }
  },
  "hourly": {
-  "emitidas": 142,
+  "emitidas": 143,
   "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 6,
-    "resueltas": 5,
-    "win": 2,
+    "resueltas": 6,
+    "win": 3,
     "loss": 3,
-    "hit": 40.0,
-    "r_trade": -0.239,
-    "pf": 0.62,
+    "hit": 50.0,
+    "r_trade": -0.04,
+    "pf": 0.92,
     "tp2_pct": 0,
     "riesgo_paper": 0.03
    },
@@ -719,7 +719,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 98,
+    "emitidas": 99,
     "resueltas": 97,
     "win": 47,
     "loss": 45,
@@ -731,6 +731,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-143",
+    "hora": "2026-09-15T06:45",
+    "activo": "FIL",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 62.8,
+    "entry": 0.8738,
+    "sl": 0.86515,
+    "tp1": 0.88245,
+    "tp2": 0.8885,
+    "tp3": 0.89542,
+    "sl_pct": 0.99,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 34 no extremo"
+   },
    {
     "id": "HR-142",
     "hora": "2026-09-14T19:13",
@@ -798,9 +816,9 @@
     "tp2": 0.09838,
     "tp3": 0.09598,
     "sl_pct": 2.903,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.959,
+    "tp_max": "tp1",
     "fallos": ""
    },
    {
@@ -1792,24 +1810,6 @@
     "r": 0.974,
     "tp_max": "tp1",
     "fallos": "mecha 74% (>40%): ya reboto"
-   },
-   {
-    "id": "HR-083",
-    "hora": "2026-09-09T08:46",
-    "activo": "OP",
-    "dir": "LONG",
-    "grado": "C",
-    "score": 74.1,
-    "entry": 0.10328,
-    "sl": 0.10196,
-    "tp1": 0.1046,
-    "tp2": 0.10553,
-    "tp3": 0.10659,
-    "sl_pct": 1.28,
-    "outcome": "loss",
-    "r": -1.094,
-    "tp_max": null,
-    "fallos": "cierre dentro de Bollinger; RSI 35 no extremo"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
@@ -1817,12 +1817,12 @@
  "bot": {
   "version": 2,
   "capital_inicial": 100.0,
-  "capital": 21.6569,
+  "capital": 31.2469,
   "max_capital": 100.8784,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.288,
+  "expectativa_r": -0.247,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -1947,9 +1947,28 @@
    {
     "t": "2026-09-14T13:18",
     "v": 21.6569
+   },
+   {
+    "t": "2026-09-14T13:15",
+    "v": 31.2469
    }
   ],
   "trades": [
+   {
+    "id": "HR-139",
+    "fuente": "hourly",
+    "grado": "A",
+    "activo": "OP",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-14T13:15",
+    "resuelto": "2026-09-15T06:44",
+    "outcome": "win",
+    "r": 0.959,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 10.0,
+    "pnl": 9.59,
+    "capital": 31.2469
+   },
    {
     "id": "RV-020",
     "fuente": "reversion",
