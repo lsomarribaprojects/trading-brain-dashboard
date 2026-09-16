@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-15 20:50",
+ "actualizado": "2026-09-15 20:57",
  "reversion": {
   "abiertas": 5,
   "resueltas": 21,
@@ -838,8 +838,8 @@
   }
  },
  "hourly": {
-  "emitidas": 151,
-  "abiertas": 4,
+  "emitidas": 152,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 8,
@@ -864,7 +864,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 101,
+    "emitidas": 102,
     "resueltas": 100,
     "win": 49,
     "loss": 46,
@@ -876,6 +876,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-152",
+    "hora": "2026-09-15T20:51",
+    "activo": "OP",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 91.8,
+    "entry": 0.09238,
+    "sl": 0.091447,
+    "tp1": 0.093313,
+    "tp2": 0.093966,
+    "tp3": 0.094712,
+    "sl_pct": 1.01,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 33 no extremo"
+   },
    {
     "id": "HR-151",
     "hora": "2026-09-15T18:13",
@@ -1937,24 +1955,6 @@
     "r": 0.09,
     "tp_max": null,
     "fallos": "guard rails: BLOQUEO: Core PPI m/m en 10.3h. Lección T-003/T-009.; guard rails: SL a 0.18 (0.72×ATR). Mínimo 1.0×ATR (0.25). Lección T-003/T"
-   },
-   {
-    "id": "HR-092",
-    "hora": "2026-09-09T20:23",
-    "activo": "OP",
-    "dir": "LONG",
-    "grado": "C",
-    "score": 91.7,
-    "entry": 0.09799,
-    "sl": 0.095862,
-    "tp1": 0.100118,
-    "tp2": 0.101607,
-    "tp3": 0.103309,
-    "sl_pct": 2.171,
-    "outcome": "loss",
-    "r": -1.055,
-    "tp_max": null,
-    "fallos": "RSI 32 no extremo; extension -2.8% en 5h (<4%)"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
