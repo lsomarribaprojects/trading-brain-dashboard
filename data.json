@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-16 06:28",
+ "actualizado": "2026-09-16 06:42",
  "reversion": {
   "abiertas": 5,
   "resueltas": 21,
@@ -838,7 +838,7 @@
   }
  },
  "hourly": {
-  "emitidas": 159,
+  "emitidas": 160,
   "abiertas": 6,
   "por_grado": {
    "A": {
@@ -853,7 +853,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 42,
+    "emitidas": 43,
     "resueltas": 41,
     "win": 17,
     "loss": 22,
@@ -865,17 +865,35 @@
    },
    "C": {
     "emitidas": 109,
-    "resueltas": 104,
+    "resueltas": 105,
     "win": 50,
-    "loss": 49,
-    "hit": 48.1,
-    "r_trade": -0.048,
-    "pf": 0.91,
+    "loss": 50,
+    "hit": 47.6,
+    "r_trade": -0.057,
+    "pf": 0.89,
     "tp2_pct": 12,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-160",
+    "hora": "2026-09-16T06:29",
+    "activo": "ARB",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 94.2,
+    "entry": 0.15985,
+    "sl": 0.16625,
+    "tp1": 0.15345,
+    "tp2": 0.14896,
+    "tp3": 0.14384,
+    "sl_pct": 4.007,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "extension +3.2% en 5h (<4%); mecha 45% (>40%): ya reboto"
+   },
    {
     "id": "HR-159",
     "hora": "2026-09-16T03:13",
@@ -925,8 +943,8 @@
     "tp2": 0.14343,
     "tp3": 0.13858,
     "sl_pct": 3.941,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.03,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 68 no extremo"
    },
@@ -1937,24 +1955,6 @@
     "r": 0.954,
     "tp_max": "tp2",
     "fallos": "RSI 31 no extremo"
-   },
-   {
-    "id": "HR-100",
-    "hora": "2026-09-10T17:58",
-    "activo": "DOT",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 74.6,
-    "entry": 1.1122,
-    "sl": 1.1488,
-    "tp1": 1.0756,
-    "tp2": 1.05,
-    "tp3": 1.0208,
-    "sl_pct": 3.288,
-    "outcome": "loss",
-    "r": -1.036,
-    "tp_max": null,
-    "fallos": "cierre dentro de Bollinger; RSI 55 no extremo"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
