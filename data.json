@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-17 05:12",
+ "actualizado": "2026-09-17 05:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 26,
@@ -866,8 +866,8 @@
   }
  },
  "hourly": {
-  "emitidas": 173,
-  "abiertas": 2,
+  "emitidas": 174,
+  "abiertas": 3,
   "por_grado": {
    "A": {
     "emitidas": 8,
@@ -892,7 +892,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 120,
+    "emitidas": 121,
     "resueltas": 118,
     "win": 52,
     "loss": 61,
@@ -904,6 +904,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-174",
+    "hora": "2026-09-17T05:13",
+    "activo": "NEAR",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 94.7,
+    "entry": 2.783,
+    "sl": 2.9219,
+    "tp1": 2.6441,
+    "tp2": 2.5469,
+    "tp3": 2.4358,
+    "sl_pct": 4.99,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; mecha 49% (>40%): ya reboto"
+   },
    {
     "id": "HR-173",
     "hora": "2026-09-17T04:13",
@@ -1963,24 +1981,6 @@
     "sl_pct": 2.039,
     "outcome": "loss",
     "r": -1.059,
-    "tp_max": null,
-    "fallos": "cierre dentro de Bollinger; RSI 65 no extremo"
-   },
-   {
-    "id": "HR-114",
-    "hora": "2026-09-12T04:13",
-    "activo": "UNI",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 73.7,
-    "entry": 6.34,
-    "sl": 6.5395,
-    "tp1": 6.1405,
-    "tp2": 6.0009,
-    "tp3": 5.8413,
-    "sl_pct": 3.146,
-    "outcome": "loss",
-    "r": -1.038,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 65 no extremo"
    }
