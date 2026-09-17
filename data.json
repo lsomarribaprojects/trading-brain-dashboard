@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-17 09:26",
+ "actualizado": "2026-09-17 09:57",
  "reversion": {
   "abiertas": 0,
   "resueltas": 27,
@@ -872,7 +872,7 @@
   }
  },
  "hourly": {
-  "emitidas": 177,
+  "emitidas": 178,
   "abiertas": 5,
   "por_grado": {
    "A": {
@@ -887,7 +887,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 46,
+    "emitidas": 47,
     "resueltas": 45,
     "win": 17,
     "loss": 26,
@@ -899,17 +899,35 @@
    },
    "C": {
     "emitidas": 123,
-    "resueltas": 119,
+    "resueltas": 120,
     "win": 52,
-    "loss": 62,
-    "hit": 43.7,
-    "r_trade": -0.141,
-    "pf": 0.75,
+    "loss": 63,
+    "hit": 43.3,
+    "r_trade": -0.148,
+    "pf": 0.74,
     "tp2_pct": 11,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-178",
+    "hora": "2026-09-17T09:31",
+    "activo": "UNI",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 95.8,
+    "entry": 7.366,
+    "sl": 7.4288,
+    "tp1": 7.3032,
+    "tp2": 7.2592,
+    "tp3": 7.209,
+    "sl_pct": 0.853,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "extension +3.2% en 5h (<4%); deriva 1.88R desde el cierre"
+   },
    {
     "id": "HR-177",
     "hora": "2026-09-17T08:15",
@@ -959,8 +977,8 @@
     "tp2": 2.6634,
     "tp3": 2.593,
     "sl_pct": 3.129,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.038,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; mecha 44% (>40%): ya reboto"
    },
@@ -1971,24 +1989,6 @@
     "r": -1.115,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 68 no extremo"
-   },
-   {
-    "id": "HR-118",
-    "hora": "2026-09-12T09:28",
-    "activo": "ETH",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 67.7,
-    "entry": 2543.06,
-    "sl": 2562.4,
-    "tp1": 2523.7,
-    "tp2": 2510.2,
-    "tp3": 2494.7,
-    "sl_pct": 0.761,
-    "outcome": "win",
-    "r": 0.842,
-    "tp_max": "tp1",
-    "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
