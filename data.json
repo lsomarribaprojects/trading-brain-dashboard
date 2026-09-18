@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-17 23:57",
+ "actualizado": "2026-09-18 00:12",
  "reversion": {
   "abiertas": 2,
   "resueltas": 29,
@@ -867,16 +867,16 @@
  },
  "hourly": {
   "emitidas": 186,
-  "abiertas": 2,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 10,
-    "resueltas": 8,
+    "resueltas": 9,
     "win": 3,
-    "loss": 5,
-    "hit": 37.5,
-    "r_trade": -0.289,
-    "pf": 0.56,
+    "loss": 6,
+    "hit": 33.3,
+    "r_trade": -0.376,
+    "pf": 0.46,
     "tp2_pct": 0,
     "riesgo_paper": 0.03
    },
@@ -935,8 +935,8 @@
     "tp2": 1.0901,
     "tp3": 1.0748,
     "sl_pct": 1.699,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.071,
     "tp_max": null,
     "fallos": ""
    },
@@ -1995,7 +1995,7 @@
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-03",
-  "expectativa_r": -0.327,
+  "expectativa_r": -0.345,
   "hito": 200.0,
   "modo": "fijo",
   "riesgo_fijo_usd": 10.0,
@@ -2160,9 +2160,28 @@
    {
     "t": "2026-09-17T21:47",
     "v": -0.0101
+   },
+   {
+    "t": "2026-09-17T22:13",
+    "v": -0.0101
    }
   ],
   "trades": [
+   {
+    "id": "HR-185",
+    "fuente": "hourly",
+    "grado": "A",
+    "activo": "DOT",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-17T22:13",
+    "resuelto": "2026-09-17T23:59",
+    "outcome": "loss",
+    "r": -1.071,
+    "riesgo_pct": 0.03,
+    "riesgo_usd": 0.0,
+    "pnl": -0.0,
+    "capital": -0.0101
+   },
    {
     "id": "RV-029",
     "fuente": "reversion",
