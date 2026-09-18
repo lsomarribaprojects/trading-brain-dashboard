@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-18 17:27",
+ "actualizado": "2026-09-18 17:42",
  "reversion": {
-  "abiertas": 3,
-  "resueltas": 32,
-  "win": 8,
+  "abiertas": 2,
+  "resueltas": 33,
+  "win": 9,
   "loss": 23,
-  "hit": 25.0,
+  "hit": 27.3,
   "break_even": 52.2,
-  "margen": -27.2,
-  "ic95": 15.0,
+  "margen": -24.9,
+  "ic95": 15.2,
   "significativo": true,
-  "r_trade": -0.5128,
-  "pf": 0.32,
-  "pnl_4usd": -65.63,
+  "r_trade": -0.4685,
+  "pf": 0.36,
+  "pnl_4usd": -61.84,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -141,6 +141,10 @@
    {
     "t": "2026-09-18T00:13:15.974696",
     "v": 42.26
+   },
+   {
+    "t": "2026-09-18T16:14:27.386409",
+    "v": 44.26
    }
   ],
   "ultimas": [
@@ -195,7 +199,9 @@
     "id": "RV-034",
     "timestamp": "2026-09-18T16:14:27.386409",
     "emitida": false,
-    "outcome": null
+    "outcome": "win",
+    "resuelto": "2026-09-18T17:28:48.424045",
+    "r_neto": 0.947
    },
    {
     "activo": "OP",
@@ -877,16 +883,16 @@
  },
  "hourly": {
   "emitidas": 203,
-  "abiertas": 3,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 13,
-    "resueltas": 11,
-    "win": 3,
+    "resueltas": 12,
+    "win": 4,
     "loss": 8,
-    "hit": 27.3,
-    "r_trade": -0.494,
-    "pf": 0.35,
+    "hit": 33.3,
+    "r_trade": -0.374,
+    "pf": 0.46,
     "tp2_pct": 0,
     "riesgo_paper": 0.01
    },
@@ -945,9 +951,9 @@
     "tp2": 0.11417,
     "tp3": 0.11203,
     "sl_pct": 2.258,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.947,
+    "tp_max": "tp1",
     "fallos": ""
    },
    {
@@ -2000,18 +2006,40 @@
  "bot": {
   "version": 3,
   "capital_inicial": 100.0,
-  "capital": 100.0,
-  "max_capital": 100.0,
+  "capital": 100.947,
+  "max_capital": 100.947,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-18T06:16:29",
-  "expectativa_r": null,
+  "expectativa_r": 0.947,
   "hito": 200.0,
   "modo": "pct",
   "riesgo_fijo_usd": 10.0,
   "reglas": "Cuenta paper v2 desde el 03-sep: $100 con meta $1000. Riesgo A 1.0% / B 0.0% / C 0.0% del capital, reversion 1%, scalps 0%. Resultado con fees, resuelto contra velas de OKX.",
-  "equity": [],
-  "trades": []
+  "equity": [
+   {
+    "t": "2026-09-18T16:14",
+    "v": 100.947
+   }
+  ],
+  "trades": [
+   {
+    "id": "HR-202",
+    "fuente": "hourly",
+    "grado": "A",
+    "activo": "OP",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-18T16:14",
+    "resuelto": "2026-09-18T17:28",
+    "outcome": "win",
+    "r": 0.947,
+    "riesgo_pct": 0.01,
+    "riesgo_usd": 1.0,
+    "pnl": 0.947,
+    "capital": 100.947,
+    "lobo": null
+   }
+  ]
  },
  "senales": {
   "resueltas": 51,
