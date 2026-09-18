@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-17 21:57",
+ "actualizado": "2026-09-17 22:12",
  "reversion": {
   "abiertas": 1,
   "resueltas": 28,
@@ -874,8 +874,8 @@
   }
  },
  "hourly": {
-  "emitidas": 183,
-  "abiertas": 2,
+  "emitidas": 184,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 8,
@@ -889,7 +889,7 @@
     "riesgo_paper": 0.03
    },
    "B": {
-    "emitidas": 49,
+    "emitidas": 50,
     "resueltas": 49,
     "win": 20,
     "loss": 27,
@@ -901,17 +901,35 @@
    },
    "C": {
     "emitidas": 126,
-    "resueltas": 124,
+    "resueltas": 126,
     "win": 52,
-    "loss": 67,
-    "hit": 41.9,
-    "r_trade": -0.177,
-    "pf": 0.69,
+    "loss": 69,
+    "hit": 41.3,
+    "r_trade": -0.191,
+    "pf": 0.67,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-184",
+    "hora": "2026-09-17T21:58",
+    "activo": "APT",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 0.661,
+    "sl": 0.62854,
+    "tp1": 0.62854,
+    "tp2": 0.60581,
+    "tp3": 0.57985,
+    "sl_pct": 4.911,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "deriva 1.28R desde el cierre"
+   },
    {
     "id": "HR-183",
     "hora": "2026-09-17T16:28",
@@ -925,8 +943,8 @@
     "tp2": 0.161,
     "tp3": 0.15354,
     "sl_pct": 5.273,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.023,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 64 no extremo"
    },
@@ -943,8 +961,8 @@
     "tp2": 0.15306,
     "tp3": 0.14197,
     "sl_pct": 7.847,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.015,
     "tp_max": null,
     "fallos": "RSI 67 no extremo; mecha 57% (>40%): ya reboto"
    },
@@ -1973,24 +1991,6 @@
     "r": -1.041,
     "tp_max": null,
     "fallos": "deriva 1.46R desde el cierre"
-   },
-   {
-    "id": "HR-124",
-    "hora": "2026-09-13T08:13",
-    "activo": "FIL",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 96.0,
-    "entry": 0.8397,
-    "sl": 0.84975,
-    "tp1": 0.82965,
-    "tp2": 0.82261,
-    "tp3": 0.81457,
-    "sl_pct": 1.197,
-    "outcome": "loss",
-    "r": -1.1,
-    "tp_max": null,
-    "fallos": "extension +3.2% en 5h (<4%); deriva 0.36R desde el cierre"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
