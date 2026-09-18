@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-17 23:12",
+ "actualizado": "2026-09-17 23:27",
  "reversion": {
-  "abiertas": 1,
+  "abiertas": 2,
   "resueltas": 29,
   "win": 8,
   "loss": 20,
@@ -132,6 +132,30 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "OP",
+    "direccion": "SHORT",
+    "precio": 0.11187,
+    "vela_ts": 1789700400000,
+    "cierre_vela": 0.11246,
+    "rsi_1h": 84.7,
+    "ret_5h_pct": 11.77,
+    "atr_1h": 0.00224641,
+    "entry": 0.11187,
+    "sl": 0.11807,
+    "sl_pct": 5.539,
+    "fee_en_R": 0.022,
+    "max_hold_h": 24,
+    "go": true,
+    "tp": 0.10567,
+    "tp_r": 1.0,
+    "razones": [],
+    "origen": "hourly_signal",
+    "id": "RV-031",
+    "timestamp": "2026-09-17T23:14:12.960512",
+    "emitida": true,
+    "outcome": null
+   },
    {
     "activo": "DOT",
     "direccion": "SHORT",
@@ -833,37 +857,6 @@
     "outcome": "loss",
     "resuelto": "2026-09-07T10:28:43.813949",
     "r_neto": -1.043
-   },
-   {
-    "activo": "OP",
-    "precio": 0.11348,
-    "vela_ts": 1788652800000,
-    "cierre_vela": 0.11291,
-    "rsi_1h": 74.64,
-    "ret_5h_pct": 9.49,
-    "atr_1h": 0.002467,
-    "bb_up": 0.111205,
-    "bb_lo": 0.094977,
-    "go": true,
-    "razones": [],
-    "direccion": "SHORT",
-    "mecha_pct": 13.5,
-    "deriva_R": 0.211,
-    "entry": 0.11348,
-    "sl": 0.11618671,
-    "tp": 0.11077329,
-    "sl_pct": 2.385,
-    "tp_r": 1.0,
-    "max_hold_h": 24,
-    "fee_en_R": 0.05,
-    "size": 1474.004804,
-    "notional": 167.27,
-    "id": "RV-006",
-    "timestamp": "2026-09-05T20:43:26.637320",
-    "emitida": false,
-    "outcome": "win",
-    "resuelto": "2026-09-05T21:28:07.115104",
-    "r_neto": 0.95
    }
   ],
   "esperado": {
@@ -873,11 +866,11 @@
   }
  },
  "hourly": {
-  "emitidas": 185,
-  "abiertas": 1,
+  "emitidas": 186,
+  "abiertas": 2,
   "por_grado": {
    "A": {
-    "emitidas": 9,
+    "emitidas": 10,
     "resueltas": 8,
     "win": 3,
     "loss": 5,
@@ -911,6 +904,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-186",
+    "hora": "2026-09-17T23:14",
+    "activo": "OP",
+    "dir": "SHORT",
+    "grado": "A",
+    "score": 100.0,
+    "entry": 0.11187,
+    "sl": 0.11807,
+    "tp1": 0.10567,
+    "tp2": 0.10134,
+    "tp3": 0.09638,
+    "sl_pct": 5.539,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": ""
+   },
    {
     "id": "HR-185",
     "hora": "2026-09-17T22:13",
@@ -1972,24 +1983,6 @@
     "r": -1.063,
     "tp_max": null,
     "fallos": "deriva 0.97R desde el cierre"
-   },
-   {
-    "id": "HR-126",
-    "hora": "2026-09-13T10:13",
-    "activo": "FIL",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 100.0,
-    "entry": 0.9197,
-    "sl": 0.93923,
-    "tp1": 0.90017,
-    "tp2": 0.8865,
-    "tp3": 0.87087,
-    "sl_pct": 2.124,
-    "outcome": "loss",
-    "r": -1.057,
-    "tp_max": null,
-    "fallos": "deriva 0.39R desde el cierre"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
