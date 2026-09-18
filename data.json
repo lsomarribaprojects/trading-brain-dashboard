@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-18 14:27",
+ "actualizado": "2026-09-18 14:42",
  "reversion": {
   "abiertas": 1,
   "resueltas": 31,
@@ -872,7 +872,7 @@
  },
  "hourly": {
   "emitidas": 200,
-  "abiertas": 5,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 11,
@@ -887,23 +887,23 @@
    },
    "B": {
     "emitidas": 59,
-    "resueltas": 58,
+    "resueltas": 59,
     "win": 21,
-    "loss": 35,
-    "hit": 36.2,
-    "r_trade": -0.31,
-    "pf": 0.52,
-    "tp2_pct": 9,
+    "loss": 36,
+    "hit": 35.6,
+    "r_trade": -0.323,
+    "pf": 0.51,
+    "tp2_pct": 8,
     "riesgo_paper": 0.0
    },
    "C": {
     "emitidas": 130,
-    "resueltas": 127,
+    "resueltas": 129,
     "win": 52,
-    "loss": 70,
-    "hit": 40.9,
-    "r_trade": -0.197,
-    "pf": 0.66,
+    "loss": 72,
+    "hit": 40.3,
+    "r_trade": -0.211,
+    "pf": 0.64,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
@@ -922,8 +922,8 @@
     "tp2": 0.1135,
     "tp3": 0.11239,
     "sl_pct": 1.194,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.1,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; extension +3.9% en 5h (<4%)"
    },
@@ -940,8 +940,8 @@
     "tp2": 2560.5,
     "tp3": 2539.0,
     "sl_pct": 1.032,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.116,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    },
@@ -958,8 +958,8 @@
     "tp2": 2529.2,
     "tp3": 2498.3,
     "sl_pct": 1.488,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.081,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); extension +3.5% en 5h (<4%)"
    },
