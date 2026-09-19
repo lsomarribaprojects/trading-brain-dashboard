@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-19 00:57",
+ "actualizado": "2026-09-19 01:12",
  "reversion": {
   "abiertas": 5,
   "resueltas": 37,
@@ -888,7 +888,7 @@
  },
  "hourly": {
   "emitidas": 210,
-  "abiertas": 1,
+  "abiertas": 0,
   "por_grado": {
    "A": {
     "emitidas": 15,
@@ -914,13 +914,13 @@
    },
    "C": {
     "emitidas": 131,
-    "resueltas": 130,
-    "win": 52,
+    "resueltas": 131,
+    "win": 53,
     "loss": 73,
-    "hit": 40.0,
-    "r_trade": -0.218,
-    "pf": 0.64,
-    "tp2_pct": 10,
+    "hit": 40.5,
+    "r_trade": -0.209,
+    "pf": 0.65,
+    "tp2_pct": 11,
     "riesgo_paper": 0.0
    }
   },
@@ -938,9 +938,9 @@
     "tp2": 0.73098,
     "tp3": 0.70946,
     "sl_pct": 3.463,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.965,
+    "tp_max": "tp2",
     "fallos": "cierre dentro de Bollinger; mecha 42% (>40%): ya reboto"
    },
    {
