@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-20 18:13",
+ "actualizado": "2026-09-20 18:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 42,
@@ -915,8 +915,8 @@
   }
  },
  "hourly": {
-  "emitidas": 225,
-  "abiertas": 4,
+  "emitidas": 226,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 15,
@@ -941,7 +941,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 138,
+    "emitidas": 139,
     "resueltas": 136,
     "win": 57,
     "loss": 74,
@@ -953,6 +953,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-226",
+    "hora": "2026-09-20T18:15",
+    "activo": "XLM",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 81.1,
+    "entry": 0.19777,
+    "sl": 0.20182,
+    "tp1": 0.19372,
+    "tp2": 0.19088,
+    "tp3": 0.18763,
+    "sl_pct": 2.05,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 64 no extremo; extension +1.8% en 5h (<4%)"
+   },
    {
     "id": "HR-225",
     "hora": "2026-09-20T17:38",
@@ -2014,24 +2032,6 @@
     "r": -1.083,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 67 no extremo"
-   },
-   {
-    "id": "HR-166",
-    "hora": "2026-09-16T21:14",
-    "activo": "UNI",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 91.2,
-    "entry": 6.671,
-    "sl": 7.0677,
-    "tp1": 6.2743,
-    "tp2": 5.9967,
-    "tp3": 5.6793,
-    "sl_pct": 5.946,
-    "outcome": "loss",
-    "r": -1.02,
-    "tp_max": null,
-    "fallos": "RSI 66 no extremo; mecha 49% (>40%): ya reboto"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
