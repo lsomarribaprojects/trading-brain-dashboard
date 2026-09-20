@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-20 14:10",
+ "actualizado": "2026-09-20 14:12",
  "reversion": {
   "abiertas": 1,
   "resueltas": 42,
@@ -915,8 +915,8 @@
   }
  },
  "hourly": {
-  "emitidas": 222,
-  "abiertas": 2,
+  "emitidas": 223,
+  "abiertas": 3,
   "por_grado": {
    "A": {
     "emitidas": 15,
@@ -941,7 +941,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 135,
+    "emitidas": 136,
     "resueltas": 135,
     "win": 56,
     "loss": 74,
@@ -953,6 +953,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-223",
+    "hora": "2026-09-20T14:12",
+    "activo": "AVAX",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 81.8,
+    "entry": 11.076,
+    "sl": 11.627,
+    "tp1": 10.525,
+    "tp2": 10.139,
+    "tp3": 9.699,
+    "sl_pct": 4.974,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; mecha 65% (>40%): ya reboto"
+   },
    {
     "id": "HR-222",
     "hora": "2026-09-20T12:15",
@@ -2013,24 +2031,6 @@
     "outcome": "win",
     "r": 0.908,
     "tp_max": "tp1",
-    "fallos": "cierre dentro de Bollinger; RSI 69 no extremo"
-   },
-   {
-    "id": "HR-163",
-    "hora": "2026-09-16T18:13",
-    "activo": "NEAR",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 75.6,
-    "entry": 2.579,
-    "sl": 2.653,
-    "tp1": 2.505,
-    "tp2": 2.4532,
-    "tp3": 2.394,
-    "sl_pct": 2.87,
-    "outcome": "loss",
-    "r": -1.042,
-    "tp_max": null,
     "fallos": "cierre dentro de Bollinger; RSI 69 no extremo"
    }
   ],
