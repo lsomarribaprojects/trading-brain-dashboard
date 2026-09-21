@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-21 03:42",
+ "actualizado": "2026-09-21 03:57",
  "reversion": {
   "abiertas": 1,
   "resueltas": 42,
@@ -916,7 +916,7 @@
  },
  "hourly": {
   "emitidas": 233,
-  "abiertas": 5,
+  "abiertas": 3,
   "por_grado": {
    "A": {
     "emitidas": 15,
@@ -942,12 +942,12 @@
    },
    "C": {
     "emitidas": 145,
-    "resueltas": 140,
+    "resueltas": 142,
     "win": 57,
-    "loss": 78,
-    "hit": 40.7,
-    "r_trade": -0.205,
-    "pf": 0.65,
+    "loss": 80,
+    "hit": 40.1,
+    "r_trade": -0.217,
+    "pf": 0.64,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
@@ -1002,8 +1002,8 @@
     "tp2": 1.3932,
     "tp3": 1.3753,
     "sl_pct": 1.565,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.077,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    },
@@ -1092,8 +1092,8 @@
     "tp2": 0.19088,
     "tp3": 0.18763,
     "sl_pct": 2.05,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.059,
     "tp_max": null,
     "fallos": "RSI 64 no extremo; extension +1.8% en 5h (<4%)"
    },
