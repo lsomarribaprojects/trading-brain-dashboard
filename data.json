@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-21 13:42",
+ "actualizado": "2026-09-21 13:57",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 44,
+  "abiertas": 0,
+  "resueltas": 45,
   "win": 15,
-  "loss": 28,
-  "hit": 34.1,
+  "loss": 29,
+  "hit": 33.3,
   "break_even": 52.3,
-  "margen": -18.2,
-  "ic95": 14.0,
+  "margen": -19.0,
+  "ic95": 13.8,
   "significativo": true,
-  "r_trade": -0.3413,
-  "pf": 0.49,
-  "pnl_4usd": -60.06,
+  "r_trade": -0.357,
+  "pf": 0.47,
+  "pnl_4usd": -64.26,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -189,6 +189,10 @@
    {
     "t": "2026-09-21T06:13:19.196696",
     "v": 44.64
+   },
+   {
+    "t": "2026-09-21T11:05:34.894555",
+    "v": 42.3
    }
   ],
   "ultimas": [
@@ -219,7 +223,9 @@
     "id": "RV-045",
     "timestamp": "2026-09-21T11:05:34.894555",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-21T13:51:27.843205",
+    "r_neto": -1.049
    },
    {
     "activo": "AAVE",
@@ -2047,12 +2053,12 @@
  "bot": {
   "version": 3,
   "capital_inicial": 100.0,
-  "capital": 98.5224,
+  "capital": 97.4889,
   "max_capital": 101.9121,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-18T06:16:29",
-  "expectativa_r": -0.16,
+  "expectativa_r": -0.249,
   "hito": 200.0,
   "modo": "pct",
   "riesgo_fijo_usd": 10.0,
@@ -2093,9 +2099,29 @@
    {
     "t": "2026-09-19T08:58",
     "v": 98.5224
+   },
+   {
+    "t": "2026-09-21T11:05",
+    "v": 97.4889
    }
   ],
   "trades": [
+   {
+    "id": "RV-045",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "DOGE",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-21T11:05",
+    "resuelto": "2026-09-21T13:51",
+    "outcome": "loss",
+    "r": -1.049,
+    "riesgo_pct": 0.01,
+    "riesgo_usd": 0.9852,
+    "pnl": -1.0335,
+    "capital": 97.4889,
+    "lobo": null
+   },
    {
     "id": "RV-043",
     "fuente": "reversion",
