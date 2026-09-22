@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22 15:12",
+ "actualizado": "2026-09-22 15:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 45,
@@ -929,8 +929,8 @@
   }
  },
  "hourly": {
-  "emitidas": 254,
-  "abiertas": 5,
+  "emitidas": 255,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 16,
@@ -955,18 +955,36 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 160,
-    "resueltas": 156,
-    "win": 66,
+    "emitidas": 161,
+    "resueltas": 158,
+    "win": 68,
     "loss": 85,
-    "hit": 42.3,
-    "r_trade": -0.177,
-    "pf": 0.69,
-    "tp2_pct": 10,
+    "hit": 43.0,
+    "r_trade": -0.163,
+    "pf": 0.72,
+    "tp2_pct": 9,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-255",
+    "hora": "2026-09-22T15:17",
+    "activo": "APT",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 84.4,
+    "entry": 0.7868,
+    "sl": 0.80516,
+    "tp1": 0.76844,
+    "tp2": 0.75559,
+    "tp3": 0.7409,
+    "sl_pct": 2.334,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 60 no extremo; extension +3.4% en 5h (<4%)"
+   },
    {
     "id": "HR-254",
     "hora": "2026-09-22T14:14",
@@ -1106,9 +1124,9 @@
     "tp2": 4.0718,
     "tp3": 3.8821,
     "sl_pct": 5.3,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.977,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 61 no extremo"
    },
    {
@@ -1124,9 +1142,9 @@
     "tp2": 4.049,
     "tp3": 3.8438,
     "sl_pct": 5.719,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.979,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 63 no extremo"
    },
    {
@@ -2028,24 +2046,6 @@
     "r": -1.061,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); deriva 0.34R desde el cierre"
-   },
-   {
-    "id": "HR-195",
-    "hora": "2026-09-18T09:19",
-    "activo": "BTC",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 91.6,
-    "entry": 80497.3,
-    "sl": 81035.3,
-    "tp1": 79959.3,
-    "tp2": 79582.7,
-    "tp3": 79152.3,
-    "sl_pct": 0.668,
-    "outcome": "loss",
-    "r": -1.18,
-    "tp_max": null,
-    "fallos": "major: el edge de reversion desaparece en majors (medido); extension +2.3% en 5h (<4%)"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
