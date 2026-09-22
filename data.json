@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22 09:57",
+ "actualizado": "2026-09-22 11:14",
  "reversion": {
   "abiertas": 0,
   "resueltas": 45,
@@ -929,7 +929,7 @@
   }
  },
  "hourly": {
-  "emitidas": 250,
+  "emitidas": 251,
   "abiertas": 5,
   "por_grado": {
    "A": {
@@ -955,18 +955,36 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 156,
-    "resueltas": 152,
-    "win": 64,
+    "emitidas": 157,
+    "resueltas": 153,
+    "win": 65,
     "loss": 83,
-    "hit": 42.1,
-    "r_trade": -0.18,
-    "pf": 0.69,
+    "hit": 42.5,
+    "r_trade": -0.173,
+    "pf": 0.7,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-251",
+    "hora": "2026-09-22T10:15",
+    "activo": "ARB",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 74.6,
+    "entry": 0.21421,
+    "sl": 0.20565,
+    "tp1": 0.22277,
+    "tp2": 0.22876,
+    "tp3": 0.23561,
+    "sl_pct": 3.996,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 41 no extremo; extension -2.3% en 5h (<4%)"
+   },
    {
     "id": "HR-250",
     "hora": "2026-09-22T09:07",
@@ -1070,9 +1088,9 @@
     "tp2": 11.421,
     "tp3": 11.712,
     "sl_pct": 3.365,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.964,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 41 no extremo"
    },
    {
@@ -2028,24 +2046,6 @@
     "r": -1.127,
     "tp_max": null,
     "fallos": "extension +1.4% en 5h (<4%)"
-   },
-   {
-    "id": "HR-191",
-    "hora": "2026-09-18T04:13",
-    "activo": "BTC",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 75.7,
-    "entry": 78415.6,
-    "sl": 78886.1,
-    "tp1": 77945.1,
-    "tp2": 77615.8,
-    "tp3": 77239.4,
-    "sl_pct": 0.6,
-    "outcome": "loss",
-    "r": -1.2,
-    "tp_max": null,
-    "fallos": "major: el edge de reversion desaparece en majors (medido); extension +1.1% en 5h (<4%)"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
