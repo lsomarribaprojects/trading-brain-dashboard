@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22 02:12",
+ "actualizado": "2026-09-22 02:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 45,
@@ -929,8 +929,8 @@
   }
  },
  "hourly": {
-  "emitidas": 243,
-  "abiertas": 1,
+  "emitidas": 244,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 16,
@@ -955,7 +955,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 150,
+    "emitidas": 151,
     "resueltas": 149,
     "win": 61,
     "loss": 83,
@@ -967,6 +967,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-244",
+    "hora": "2026-09-22T02:13",
+    "activo": "AVAX",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 87.3,
+    "entry": 10.718,
+    "sl": 10.439,
+    "tp1": 10.997,
+    "tp2": 11.193,
+    "tp3": 11.416,
+    "sl_pct": 2.606,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 39 no extremo"
+   },
    {
     "id": "HR-243",
     "hora": "2026-09-22T01:13",
@@ -2028,24 +2046,6 @@
     "r": -1.071,
     "tp_max": null,
     "fallos": ""
-   },
-   {
-    "id": "HR-184",
-    "hora": "2026-09-17T21:58",
-    "activo": "APT",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 100.0,
-    "entry": 0.661,
-    "sl": 0.62854,
-    "tp1": 0.62854,
-    "tp2": 0.60581,
-    "tp3": 0.57985,
-    "sl_pct": 4.911,
-    "outcome": "loss",
-    "r": -1.024,
-    "tp_max": null,
-    "fallos": "deriva 1.28R desde el cierre"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
