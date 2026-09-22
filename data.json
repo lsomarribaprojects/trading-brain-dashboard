@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22 03:12",
+ "actualizado": "2026-09-22 03:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 45,
@@ -929,8 +929,8 @@
   }
  },
  "hourly": {
-  "emitidas": 244,
-  "abiertas": 2,
+  "emitidas": 245,
+  "abiertas": 3,
   "por_grado": {
    "A": {
     "emitidas": 16,
@@ -955,7 +955,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 151,
+    "emitidas": 152,
     "resueltas": 149,
     "win": 61,
     "loss": 83,
@@ -967,6 +967,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-245",
+    "hora": "2026-09-22T03:13",
+    "activo": "AVAX",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 62.9,
+    "entry": 10.803,
+    "sl": 10.44,
+    "tp1": 11.166,
+    "tp2": 11.421,
+    "tp3": 11.712,
+    "sl_pct": 3.365,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 41 no extremo"
+   },
    {
     "id": "HR-244",
     "hora": "2026-09-22T02:13",
@@ -2026,24 +2044,6 @@
     "sl_pct": 5.539,
     "outcome": "loss",
     "r": -1.022,
-    "tp_max": null,
-    "fallos": ""
-   },
-   {
-    "id": "HR-185",
-    "hora": "2026-09-17T22:13",
-    "activo": "DOT",
-    "dir": "SHORT",
-    "grado": "A",
-    "score": 100.0,
-    "entry": 1.1225,
-    "sl": 1.1416,
-    "tp1": 1.1034,
-    "tp2": 1.0901,
-    "tp3": 1.0748,
-    "sl_pct": 1.699,
-    "outcome": "loss",
-    "r": -1.071,
     "tp_max": null,
     "fallos": ""
    }
