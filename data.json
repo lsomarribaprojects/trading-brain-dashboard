@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22 09:06",
+ "actualizado": "2026-09-22 09:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 45,
@@ -929,8 +929,8 @@
   }
  },
  "hourly": {
-  "emitidas": 249,
-  "abiertas": 7,
+  "emitidas": 250,
+  "abiertas": 6,
   "por_grado": {
    "A": {
     "emitidas": 16,
@@ -944,7 +944,7 @@
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 77,
+    "emitidas": 78,
     "resueltas": 77,
     "win": 26,
     "loss": 49,
@@ -956,17 +956,35 @@
    },
    "C": {
     "emitidas": 156,
-    "resueltas": 149,
-    "win": 61,
+    "resueltas": 151,
+    "win": 63,
     "loss": 83,
-    "hit": 40.9,
-    "r_trade": -0.203,
-    "pf": 0.66,
+    "hit": 41.7,
+    "r_trade": -0.188,
+    "pf": 0.68,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
   },
   "ultimas": [
+   {
+    "id": "HR-250",
+    "hora": "2026-09-22T09:07",
+    "activo": "XRP",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 93.3,
+    "entry": 1.5755,
+    "sl": 1.6205,
+    "tp1": 1.5305,
+    "tp2": 1.499,
+    "tp3": 1.463,
+    "sl_pct": 2.857,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "major: el edge de reversion desaparece en majors (medido); extension +2.7% en 5h (<4%)"
+   },
    {
     "id": "HR-249",
     "hora": "2026-09-22T07:13",
@@ -980,9 +998,9 @@
     "tp2": 1.7929,
     "tp3": 1.8164,
     "sl_pct": 1.685,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.929,
+    "tp_max": "tp1",
     "fallos": "RSI 37 no extremo; extension -1.7% en 5h (<4%)"
    },
    {
@@ -1070,9 +1088,9 @@
     "tp2": 11.193,
     "tp3": 11.416,
     "sl_pct": 2.606,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.954,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 39 no extremo"
    },
    {
@@ -2024,24 +2042,6 @@
     "tp2": 77615.8,
     "tp3": 77239.4,
     "sl_pct": 0.6,
-    "outcome": "loss",
-    "r": -1.2,
-    "tp_max": null,
-    "fallos": "major: el edge de reversion desaparece en majors (medido); extension +1.1% en 5h (<4%)"
-   },
-   {
-    "id": "HR-190",
-    "hora": "2026-09-18T03:13",
-    "activo": "BTC",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 85.3,
-    "entry": 77743.0,
-    "sl": 78210.4,
-    "tp1": 77275.6,
-    "tp2": 76948.4,
-    "tp3": 76574.5,
-    "sl_pct": 0.601,
     "outcome": "loss",
     "r": -1.2,
     "tp_max": null,
