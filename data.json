@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23 00:12",
+ "actualizado": "2026-09-23 00:27",
  "reversion": {
   "abiertas": 3,
   "resueltas": 46,
@@ -932,8 +932,8 @@
   }
  },
  "hourly": {
-  "emitidas": 260,
-  "abiertas": 1,
+  "emitidas": 261,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 17,
@@ -947,7 +947,7 @@
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 82,
+    "emitidas": 83,
     "resueltas": 81,
     "win": 26,
     "loss": 53,
@@ -970,6 +970,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-261",
+    "hora": "2026-09-23T00:13",
+    "activo": "XRP",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 99.3,
+    "entry": 1.6222,
+    "sl": 1.6855,
+    "tp1": 1.5589,
+    "tp2": 1.5146,
+    "tp3": 1.464,
+    "sl_pct": 3.9,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "major: el edge de reversion desaparece en majors (medido); mecha 42% (>40%): ya reboto"
+   },
    {
     "id": "HR-260",
     "hora": "2026-09-22T23:13",
@@ -2030,24 +2048,6 @@
     "outcome": "win",
     "r": 0.947,
     "tp_max": "tp1",
-    "fallos": ""
-   },
-   {
-    "id": "HR-201",
-    "hora": "2026-09-18T15:14",
-    "activo": "OP",
-    "dir": "SHORT",
-    "grado": "A",
-    "score": 100.0,
-    "entry": 0.11745,
-    "sl": 0.12041,
-    "tp1": 0.11449,
-    "tp2": 0.11242,
-    "tp3": 0.11005,
-    "sl_pct": 2.521,
-    "outcome": "loss",
-    "r": -1.048,
-    "tp_max": null,
     "fallos": ""
    }
   ],
