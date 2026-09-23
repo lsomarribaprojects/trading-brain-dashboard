@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23 08:27",
+ "actualizado": "2026-09-23 10:42",
  "reversion": {
   "abiertas": 0,
   "resueltas": 49,
@@ -951,7 +951,7 @@
  },
  "hourly": {
   "emitidas": 269,
-  "abiertas": 5,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 17,
@@ -977,12 +977,12 @@
    },
    "C": {
     "emitidas": 168,
-    "resueltas": 165,
-    "win": 72,
+    "resueltas": 166,
+    "win": 73,
     "loss": 88,
-    "hit": 43.6,
-    "r_trade": -0.152,
-    "pf": 0.73,
+    "hit": 44.0,
+    "r_trade": -0.145,
+    "pf": 0.74,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
@@ -1019,9 +1019,9 @@
     "tp2": 4.5411,
     "tp3": 4.4395,
     "sl_pct": 2.67,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.955,
+    "tp_max": "tp1",
     "fallos": "RSI 67 no extremo; deriva 0.52R desde el cierre"
    },
    {
