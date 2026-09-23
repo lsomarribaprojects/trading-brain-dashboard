@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-22 20:12",
+ "actualizado": "2026-09-22 20:27",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 45,
+  "abiertas": 0,
+  "resueltas": 46,
   "win": 15,
-  "loss": 29,
-  "hit": 33.3,
+  "loss": 30,
+  "hit": 32.6,
   "break_even": 52.3,
-  "margen": -19.0,
-  "ic95": 13.8,
+  "margen": -19.7,
+  "ic95": 13.5,
   "significativo": true,
-  "r_trade": -0.357,
-  "pf": 0.47,
-  "pnl_4usd": -64.26,
+  "r_trade": -0.3718,
+  "pf": 0.45,
+  "pnl_4usd": -68.41,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -193,6 +193,10 @@
    {
     "t": "2026-09-21T11:05:34.894555",
     "v": 42.3
+   },
+   {
+    "t": "2026-09-22T19:50:13.784604",
+    "v": 40.1
    }
   ],
   "ultimas": [
@@ -223,7 +227,9 @@
     "id": "RV-046",
     "timestamp": "2026-09-22T19:50:13.784604",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-22T20:14:14.347794",
+    "r_neto": -1.038
    },
    {
     "activo": "DOGE",
@@ -932,7 +938,7 @@
   }
  },
  "hourly": {
-  "emitidas": 256,
+  "emitidas": 257,
   "abiertas": 2,
   "por_grado": {
    "A": {
@@ -947,12 +953,12 @@
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 79,
-    "resueltas": 77,
+    "emitidas": 80,
+    "resueltas": 78,
     "win": 26,
-    "loss": 49,
-    "hit": 33.8,
-    "r_trade": -0.366,
+    "loss": 50,
+    "hit": 33.3,
+    "r_trade": -0.374,
     "pf": 0.46,
     "tp2_pct": 8,
     "riesgo_paper": 0.0
@@ -971,6 +977,24 @@
   },
   "ultimas": [
    {
+    "id": "HR-257",
+    "hora": "2026-09-22T20:13",
+    "activo": "UNI",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 10.663,
+    "sl": 10.809,
+    "tp1": 10.517,
+    "tp2": 10.415,
+    "tp3": 10.298,
+    "sl_pct": 1.37,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "deriva 1.66R desde el cierre"
+   },
+   {
     "id": "HR-256",
     "hora": "2026-09-22T19:49",
     "activo": "UNI",
@@ -983,8 +1007,8 @@
     "tp2": 9.753,
     "tp3": 9.499,
     "sl_pct": 3.084,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.039,
     "tp_max": null,
     "fallos": "guard rails: SL a 0.32 (0.66×ATR). Mínimo 1.0×ATR (0.48). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
    },
@@ -2031,24 +2055,6 @@
     "r": -1.081,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); extension +3.5% en 5h (<4%)"
-   },
-   {
-    "id": "HR-197",
-    "hora": "2026-09-18T11:14",
-    "activo": "SOL",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 100.0,
-    "entry": 111.44,
-    "sl": 112.89,
-    "tp1": 109.99,
-    "tp2": 108.98,
-    "tp3": 107.82,
-    "sl_pct": 1.3,
-    "outcome": "loss",
-    "r": -1.092,
-    "tp_max": null,
-    "fallos": "major: el edge de reversion desaparece en majors (medido)"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
@@ -2056,12 +2062,12 @@
  "bot": {
   "version": 3,
   "capital_inicial": 100.0,
-  "capital": 97.4889,
+  "capital": 96.477,
   "max_capital": 101.9121,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-18T06:16:29",
-  "expectativa_r": -0.249,
+  "expectativa_r": -0.321,
   "hito": 200.0,
   "modo": "pct",
   "riesgo_fijo_usd": 10.0,
@@ -2106,9 +2112,29 @@
    {
     "t": "2026-09-21T11:05",
     "v": 97.4889
+   },
+   {
+    "t": "2026-09-22T19:50",
+    "v": 96.477
    }
   ],
   "trades": [
+   {
+    "id": "RV-046",
+    "fuente": "reversion",
+    "grado": "RV",
+    "activo": "UNI",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-22T19:50",
+    "resuelto": "2026-09-22T20:14",
+    "outcome": "loss",
+    "r": -1.038,
+    "riesgo_pct": 0.01,
+    "riesgo_usd": 0.9749,
+    "pnl": -1.0119,
+    "capital": 96.477,
+    "lobo": null
+   },
    {
     "id": "RV-045",
     "fuente": "reversion",
