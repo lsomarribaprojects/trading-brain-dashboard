@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-09-23 11:42",
+ "actualizado": "2026-09-23 11:57",
  "reversion": {
-  "abiertas": 8,
+  "abiertas": 9,
   "resueltas": 49,
   "win": 18,
   "loss": 30,
@@ -212,6 +212,35 @@
    }
   ],
   "ultimas": [
+   {
+    "activo": "AVAX",
+    "precio": 10.303,
+    "vela_ts": 1790175600000,
+    "cierre_vela": 10.229,
+    "rsi_1h": 27.03,
+    "ret_5h_pct": -8.81,
+    "atr_1h": 0.240603,
+    "bb_up": 11.588375,
+    "bb_lo": 10.475925,
+    "go": true,
+    "razones": [],
+    "direccion": "LONG",
+    "mecha_pct": 9.5,
+    "deriva_R": 0.215,
+    "entry": 10.303,
+    "sl": 9.95939674,
+    "tp": 10.64660326,
+    "sl_pct": 3.335,
+    "tp_r": 1.0,
+    "max_hold_h": 24,
+    "fee_en_R": 0.036,
+    "size": 11.611356,
+    "notional": 119.63,
+    "id": "RV-058",
+    "timestamp": "2026-09-23T11:46:55.478821",
+    "emitida": false,
+    "outcome": null
+   },
    {
     "activo": "FIL",
     "precio": 0.9348,
@@ -904,32 +933,6 @@
     "outcome": "win",
     "resuelto": "2026-09-18T17:28:48.424045",
     "r_neto": 0.947
-   },
-   {
-    "activo": "OP",
-    "direccion": "SHORT",
-    "precio": 0.11745,
-    "vela_ts": 1789758000000,
-    "cierre_vela": 0.11791,
-    "rsi_1h": 77.5,
-    "ret_5h_pct": 5.27,
-    "atr_1h": 0.00223035,
-    "entry": 0.11745,
-    "sl": 0.12041,
-    "sl_pct": 2.521,
-    "fee_en_R": 0.048,
-    "max_hold_h": 24,
-    "go": true,
-    "tp": 0.11449,
-    "tp_r": 1.0,
-    "razones": [],
-    "origen": "hourly_signal",
-    "id": "RV-033",
-    "timestamp": "2026-09-18T15:14:25.942824",
-    "emitida": true,
-    "outcome": "loss",
-    "resuelto": "2026-09-18T18:44:06.140982",
-    "r_neto": -1.048
    }
   ],
   "esperado": {
