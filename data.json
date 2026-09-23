@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23 10:57",
+ "actualizado": "2026-09-23 11:12",
  "reversion": {
   "abiertas": 2,
   "resueltas": 49,
@@ -942,7 +942,7 @@
  },
  "hourly": {
   "emitidas": 270,
-  "abiertas": 3,
+  "abiertas": 1,
   "por_grado": {
    "A": {
     "emitidas": 18,
@@ -968,12 +968,12 @@
    },
    "C": {
     "emitidas": 168,
-    "resueltas": 166,
-    "win": 73,
+    "resueltas": 168,
+    "win": 75,
     "loss": 88,
-    "hit": 44.0,
-    "r_trade": -0.145,
-    "pf": 0.74,
+    "hit": 44.6,
+    "r_trade": -0.132,
+    "pf": 0.76,
     "tp2_pct": 10,
     "riesgo_paper": 0.0
    }
@@ -1010,9 +1010,9 @@
     "tp2": 4.1481,
     "tp3": 3.9133,
     "sl_pct": 6.316,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.981,
+    "tp_max": "tp1",
     "fallos": "RSI 69 no extremo; mecha 49% (>40%): ya reboto"
    },
    {
@@ -1046,9 +1046,9 @@
     "tp2": 4.1503,
     "tp3": 3.9527,
     "sl_pct": 5.403,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.978,
+    "tp_max": "tp1",
     "fallos": "RSI 63 no extremo; extension +3.5% en 5h (<4%)"
    },
    {
