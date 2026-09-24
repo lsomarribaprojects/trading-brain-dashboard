@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-24 03:57",
+ "actualizado": "2026-09-24 04:12",
  "reversion": {
   "abiertas": 9,
   "resueltas": 49,
@@ -943,7 +943,7 @@
  },
  "hourly": {
   "emitidas": 285,
-  "abiertas": 7,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 19,
@@ -969,9 +969,9 @@
    },
    "C": {
     "emitidas": 181,
-    "resueltas": 175,
-    "win": 82,
-    "loss": 88,
+    "resueltas": 177,
+    "win": 83,
+    "loss": 89,
     "hit": 46.9,
     "r_trade": -0.088,
     "pf": 0.84,
@@ -993,9 +993,9 @@
     "tp2": 0.95551,
     "tp3": 0.93726,
     "sl_pct": 2.295,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.948,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 58 no extremo"
    },
    {
@@ -1029,8 +1029,8 @@
     "tp2": 85363.9,
     "tp3": 85932.0,
     "sl_pct": 0.844,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.142,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    },
