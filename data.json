@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-24 15:12",
+ "actualizado": "2026-09-24 15:27",
  "reversion": {
   "abiertas": 0,
   "resueltas": 58,
@@ -996,8 +996,8 @@
   }
  },
  "hourly": {
-  "emitidas": 294,
-  "abiertas": 4,
+  "emitidas": 295,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 19,
@@ -1022,7 +1022,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 189,
+    "emitidas": 190,
     "resueltas": 186,
     "win": 88,
     "loss": 93,
@@ -1034,6 +1034,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-295",
+    "hora": "2026-09-24T15:13",
+    "activo": "SUI",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 97.5,
+    "entry": 1.0218,
+    "sl": 1.0498,
+    "tp1": 0.9938,
+    "tp2": 0.9742,
+    "tp3": 0.9519,
+    "sl_pct": 2.737,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 68 no extremo; extension +3.9% en 5h (<4%)"
+   },
    {
     "id": "HR-294",
     "hora": "2026-09-24T14:47",
@@ -2095,24 +2113,6 @@
     "r": 0.937,
     "tp_max": "tp1",
     "fallos": ""
-   },
-   {
-    "id": "HR-235",
-    "hora": "2026-09-21T05:13",
-    "activo": "BTC",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 99.1,
-    "entry": 84556.4,
-    "sl": 85963.3,
-    "tp1": 83149.5,
-    "tp2": 82164.6,
-    "tp3": 81039.0,
-    "sl_pct": 1.664,
-    "outcome": "loss",
-    "r": -1.072,
-    "tp_max": null,
-    "fallos": "major: el edge de reversion desaparece en majors (medido); extension +4.0% en 5h (<4%)"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
