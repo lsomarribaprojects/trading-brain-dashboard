@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-24 10:57",
+ "actualizado": "2026-09-24 11:27",
  "reversion": {
   "abiertas": 1,
   "resueltas": 57,
@@ -990,8 +990,8 @@
   }
  },
  "hourly": {
-  "emitidas": 291,
-  "abiertas": 3,
+  "emitidas": 292,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 19,
@@ -1016,7 +1016,7 @@
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 187,
+    "emitidas": 188,
     "resueltas": 184,
     "win": 88,
     "loss": 91,
@@ -1028,6 +1028,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-292",
+    "hora": "2026-09-24T11:14",
+    "activo": "APT",
+    "dir": "SHORT",
+    "grado": "C",
+    "score": 97.2,
+    "entry": 0.8183,
+    "sl": 0.85381,
+    "tp1": 0.78279,
+    "tp2": 0.75794,
+    "tp3": 0.72953,
+    "sl_pct": 4.339,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "RSI 68 no extremo"
+   },
    {
     "id": "HR-291",
     "hora": "2026-09-24T10:14",
@@ -2087,24 +2105,6 @@
     "sl_pct": 3.517,
     "outcome": "loss",
     "r": -1.034,
-    "tp_max": null,
-    "fallos": "cierre dentro de Bollinger"
-   },
-   {
-    "id": "HR-232",
-    "hora": "2026-09-21T02:13",
-    "activo": "SUI",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 93.4,
-    "entry": 0.956,
-    "sl": 1.00301,
-    "tp1": 0.90899,
-    "tp2": 0.87608,
-    "tp3": 0.83848,
-    "sl_pct": 4.917,
-    "outcome": "loss",
-    "r": -1.024,
     "tp_max": null,
     "fallos": "cierre dentro de Bollinger"
    }
