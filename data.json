@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-24 11:27",
+ "actualizado": "2026-09-24 11:43",
  "reversion": {
   "abiertas": 1,
   "resueltas": 57,
@@ -2114,12 +2114,12 @@
  "bot": {
   "version": 3,
   "capital_inicial": 100.0,
-  "capital": 102.067,
-  "max_capital": 102.067,
+  "capital": 98.4536,
+  "max_capital": 100.947,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-18T06:16:29",
-  "expectativa_r": 0.113,
+  "expectativa_r": -0.137,
   "hito": 200.0,
   "modo": "pct",
   "riesgo_fijo_usd": 10.0,
@@ -2130,95 +2130,47 @@
     "v": 100.947
    },
    {
-    "t": "2026-09-18T16:15",
-    "v": 101.9121
-   },
-   {
     "t": "2026-09-18T15:14",
-    "v": 100.8441
-   },
-   {
-    "t": "2026-09-18T19:16",
-    "v": 99.7742
+    "v": 99.899
    },
    {
     "t": "2026-09-18T19:14",
-    "v": 100.729
+    "v": 100.855
    },
    {
     "t": "2026-09-18T22:17",
-    "v": 99.6864
+    "v": 99.8111
    },
    {
     "t": "2026-09-18T21:17",
-    "v": 98.6526
+    "v": 98.7652
    },
    {
     "t": "2026-09-21T06:13",
-    "v": 99.577
+    "v": 99.6907
    },
    {
     "t": "2026-09-19T08:58",
-    "v": 98.5224
+    "v": 98.6447
    },
    {
     "t": "2026-09-21T11:05",
-    "v": 97.4889
+    "v": 97.61
    },
    {
     "t": "2026-09-22T19:50",
-    "v": 96.477
+    "v": 96.5968
    },
    {
-    "t": "2026-09-23T11:16",
-    "v": 97.3965
-   },
-   {
-    "t": "2026-09-23T10:44",
-    "v": 98.3364
-   },
-   {
-    "t": "2026-09-23T11:16",
-    "v": 99.2814
-   },
-   {
-    "t": "2026-09-23T11:16",
-    "v": 98.2449
-   },
-   {
-    "t": "2026-09-23T11:16",
-    "v": 99.1968
-   },
-   {
-    "t": "2026-09-23T11:16",
-    "v": 100.1362
+    "t": "2026-09-22T22:59",
+    "v": 97.5174
    },
    {
     "t": "2026-09-23T10:44",
-    "v": 101.0975
-   },
-   {
-    "t": "2026-09-23T11:16",
-    "v": 102.067
+    "v": 98.4536
    }
   ],
   "trades": [
-   {
-    "id": "RV-056",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "DOGE",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T11:16",
-    "resuelto": "2026-09-24T09:30",
-    "outcome": "win",
-    "r": 0.959,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 1.011,
-    "pnl": 0.9695,
-    "capital": 102.067,
-    "lobo": null
-   },
    {
     "id": "HR-270",
     "fuente": "hourly",
@@ -2230,112 +2182,26 @@
     "outcome": "win",
     "r": 0.96,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 1.0014,
-    "pnl": 0.9613,
-    "capital": 101.0975,
+    "riesgo_usd": 0.9752,
+    "pnl": 0.9362,
+    "capital": 98.4536,
     "lobo": null
    },
    {
-    "id": "RV-053",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "LINK",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T11:16",
-    "resuelto": "2026-09-24T09:16",
-    "outcome": "win",
-    "r": 0.947,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 0.992,
-    "pnl": 0.9394,
-    "capital": 100.1362,
-    "lobo": null
-   },
-   {
-    "id": "RV-057",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "FIL",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T11:16",
-    "resuelto": "2026-09-24T08:42",
-    "outcome": "win",
-    "r": 0.969,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9824,
-    "pnl": 0.9519,
-    "capital": 99.1968,
-    "lobo": null
-   },
-   {
-    "id": "RV-055",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "XLM",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T11:16",
-    "resuelto": "2026-09-24T08:42",
-    "outcome": "loss",
-    "r": -1.044,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9928,
-    "pnl": -1.0365,
-    "capital": 98.2449,
-    "lobo": null
-   },
-   {
-    "id": "RV-054",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "SUI",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T11:16",
-    "resuelto": "2026-09-24T08:42",
-    "outcome": "win",
-    "r": 0.961,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9834,
-    "pnl": 0.945,
-    "capital": 99.2814,
-    "lobo": null
-   },
-   {
-    "id": "RV-051",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "DOT",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T10:44",
-    "resuelto": "2026-09-24T08:42",
-    "outcome": "win",
-    "r": 0.965,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 0.974,
-    "pnl": 0.9399,
-    "capital": 98.3364,
-    "lobo": null
-   },
-   {
-    "id": "HR-271",
+    "id": "HR-259",
     "fuente": "hourly",
     "grado": "A",
-    "activo": "DOT",
-    "direccion": "LONG",
-    "timestamp": "2026-09-23T11:16",
-    "resuelto": "2026-09-23T23:42",
+    "activo": "ARB",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-22T22:59",
+    "resuelto": "2026-09-22T23:27",
     "outcome": "win",
     "r": 0.953,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9648,
-    "pnl": 0.9195,
-    "capital": 97.3965,
-    "lobo": {
-     "lb": "LB-008",
-     "dir_lobo": "LONG",
-     "relacion": "coincide",
-     "mercado": "futuros",
-     "desde": "2026-09-14"
-    }
+    "riesgo_usd": 0.966,
+    "pnl": 0.9206,
+    "capital": 97.5174,
+    "lobo": null
    },
    {
     "id": "RV-046",
@@ -2348,9 +2214,9 @@
     "outcome": "loss",
     "r": -1.038,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9749,
-    "pnl": -1.0119,
-    "capital": 96.477,
+    "riesgo_usd": 0.9761,
+    "pnl": -1.0132,
+    "capital": 96.5968,
     "lobo": null
    },
    {
@@ -2364,9 +2230,9 @@
     "outcome": "loss",
     "r": -1.049,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9852,
-    "pnl": -1.0335,
-    "capital": 97.4889,
+    "riesgo_usd": 0.9864,
+    "pnl": -1.0347,
+    "capital": 97.61,
     "lobo": null
    },
    {
@@ -2380,9 +2246,9 @@
     "outcome": "loss",
     "r": -1.059,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9958,
-    "pnl": -1.0546,
-    "capital": 98.5224,
+    "riesgo_usd": 0.9877,
+    "pnl": -1.046,
+    "capital": 98.6447,
     "lobo": null
    },
    {
@@ -2396,9 +2262,9 @@
     "outcome": "win",
     "r": 0.937,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9865,
-    "pnl": 0.9244,
-    "capital": 99.577,
+    "riesgo_usd": 0.9877,
+    "pnl": 0.9255,
+    "capital": 99.6907,
     "lobo": null
    },
    {
@@ -2412,9 +2278,9 @@
     "outcome": "loss",
     "r": -1.037,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9969,
-    "pnl": -1.0338,
-    "capital": 98.6526,
+    "riesgo_usd": 1.0086,
+    "pnl": -1.0459,
+    "capital": 98.7652,
     "lobo": null
    },
    {
@@ -2428,9 +2294,9 @@
     "outcome": "loss",
     "r": -1.035,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 1.0073,
-    "pnl": -1.0426,
-    "capital": 99.6864,
+    "riesgo_usd": 1.0086,
+    "pnl": -1.0439,
+    "capital": 99.8111,
     "lobo": null
    },
    {
@@ -2444,25 +2310,9 @@
     "outcome": "win",
     "r": 0.957,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 0.9977,
-    "pnl": 0.9548,
-    "capital": 100.729,
-    "lobo": null
-   },
-   {
-    "id": "RV-037",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "FIL",
-    "direccion": "SHORT",
-    "timestamp": "2026-09-18T19:16",
-    "resuelto": "2026-09-18T19:44",
-    "outcome": "loss",
-    "r": -1.061,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 1.0084,
-    "pnl": -1.0699,
-    "capital": 99.7742,
+    "riesgo_usd": 0.999,
+    "pnl": 0.956,
+    "capital": 100.855,
     "lobo": null
    },
    {
@@ -2476,25 +2326,9 @@
     "outcome": "loss",
     "r": -1.048,
     "riesgo_pct": 0.01,
-    "riesgo_usd": 1.0191,
-    "pnl": -1.068,
-    "capital": 100.8441,
-    "lobo": null
-   },
-   {
-    "id": "RV-035",
-    "fuente": "reversion",
-    "grado": "RV",
-    "activo": "APT",
-    "direccion": "SHORT",
-    "timestamp": "2026-09-18T16:15",
-    "resuelto": "2026-09-18T17:58",
-    "outcome": "win",
-    "r": 0.956,
-    "riesgo_pct": 0.01,
-    "riesgo_usd": 1.0095,
-    "pnl": 0.9651,
-    "capital": 101.9121,
+    "riesgo_usd": 1.0,
+    "pnl": -1.048,
+    "capital": 99.899,
     "lobo": null
    },
    {
