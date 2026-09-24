@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-24 11:57",
+ "actualizado": "2026-09-24 12:12",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 57,
+  "abiertas": 0,
+  "resueltas": 58,
   "win": 25,
   "loss": 31,
-  "hit": 43.9,
+  "hit": 43.1,
   "break_even": 52.2,
-  "margen": -8.4,
-  "ic95": 12.9,
+  "margen": -9.1,
+  "ic95": 12.7,
   "significativo": false,
-  "r_trade": -0.1501,
-  "pf": 0.74,
-  "pnl_4usd": -34.21,
+  "r_trade": -0.1481,
+  "pf": 0.73,
+  "pnl_4usd": -34.36,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -241,6 +241,10 @@
    {
     "t": "2026-09-23T11:16:56.256257",
     "v": 60.73
+   },
+   {
+    "t": "2026-09-23T11:46:55.478821",
+    "v": 60.62
    }
   ],
   "ultimas": [
@@ -271,7 +275,9 @@
     "id": "RV-058",
     "timestamp": "2026-09-23T11:46:55.478821",
     "emitida": false,
-    "outcome": null
+    "outcome": "expirada",
+    "resuelto": "2026-09-24T11:58:06.856426",
+    "r_neto": -0.036
    },
    {
     "activo": "FIL",
