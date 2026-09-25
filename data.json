@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-25 09:29",
+ "actualizado": "2026-09-25 09:42",
  "reversion": {
-  "abiertas": 2,
-  "resueltas": 58,
+  "abiertas": 1,
+  "resueltas": 59,
   "win": 25,
-  "loss": 31,
-  "hit": 43.1,
+  "loss": 32,
+  "hit": 42.4,
   "break_even": 52.2,
-  "margen": -9.1,
-  "ic95": 12.7,
+  "margen": -9.9,
+  "ic95": 12.6,
   "significativo": false,
-  "r_trade": -0.1481,
-  "pf": 0.73,
-  "pnl_4usd": -34.36,
+  "r_trade": -0.1634,
+  "pf": 0.71,
+  "pnl_4usd": -38.55,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -245,6 +245,10 @@
    {
     "t": "2026-09-23T11:46:55.478821",
     "v": 60.62
+   },
+   {
+    "t": "2026-09-25T07:14:40.545904",
+    "v": 57.44
    }
   ],
   "ultimas": [
@@ -270,7 +274,9 @@
     "id": "RV-060",
     "timestamp": "2026-09-25T07:14:40.545904",
     "emitida": false,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-25T09:31:29.694243",
+    "r_neto": -1.049
    },
    {
     "activo": "NEAR",
@@ -987,28 +993,28 @@
   }
  },
  "hourly": {
-  "emitidas": 309,
-  "abiertas": 3,
+  "emitidas": 310,
+  "abiertas": 2,
   "por_grado": {
    "A": {
     "emitidas": 21,
-    "resueltas": 19,
+    "resueltas": 20,
     "win": 9,
-    "loss": 10,
-    "hit": 47.4,
-    "r_trade": -0.095,
-    "pf": 0.83,
+    "loss": 11,
+    "hit": 45.0,
+    "r_trade": -0.143,
+    "pf": 0.75,
     "tp2_pct": 0,
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 89,
-    "resueltas": 88,
+    "emitidas": 90,
+    "resueltas": 89,
     "win": 30,
-    "loss": 56,
-    "hit": 34.1,
-    "r_trade": -0.359,
-    "pf": 0.47,
+    "loss": 57,
+    "hit": 33.7,
+    "r_trade": -0.367,
+    "pf": 0.46,
     "tp2_pct": 9,
     "riesgo_paper": 0.0
    },
@@ -1026,6 +1032,24 @@
   },
   "ultimas": [
    {
+    "id": "HR-310",
+    "hora": "2026-09-25T09:31",
+    "activo": "NEAR",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 5.091,
+    "sl": 5.3394,
+    "tp1": 4.8426,
+    "tp2": 4.6688,
+    "tp3": 4.4701,
+    "sl_pct": 4.878,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "deriva 0.33R desde el cierre"
+   },
+   {
     "id": "HR-309",
     "hora": "2026-09-25T07:14",
     "activo": "OP",
@@ -1038,8 +1062,8 @@
     "tp2": 0.13231,
     "tp3": 0.12963,
     "sl_pct": 2.428,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.049,
     "tp_max": null,
     "fallos": ""
    },
@@ -1056,8 +1080,8 @@
     "tp2": 4.7933,
     "tp3": 4.6861,
     "sl_pct": 2.668,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.045,
     "tp_max": null,
     "fallos": "mecha 43% (>40%): ya reboto; deriva 0.46R desde el cierre"
    },
@@ -2086,24 +2110,6 @@
     "r": 0.97,
     "tp_max": "tp3",
     "fallos": "RSI 41 no extremo; extension -2.3% en 5h (<4%)"
-   },
-   {
-    "id": "HR-250",
-    "hora": "2026-09-22T09:07",
-    "activo": "XRP",
-    "dir": "SHORT",
-    "grado": "B",
-    "score": 93.3,
-    "entry": 1.5755,
-    "sl": 1.6205,
-    "tp1": 1.5305,
-    "tp2": 1.499,
-    "tp3": 1.463,
-    "sl_pct": 2.857,
-    "outcome": "loss",
-    "r": -1.042,
-    "tp_max": null,
-    "fallos": "major: el edge de reversion desaparece en majors (medido); extension +2.7% en 5h (<4%)"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
@@ -2111,12 +2117,12 @@
  "bot": {
   "version": 3,
   "capital_inicial": 100.0,
-  "capital": 98.4536,
+  "capital": 97.4209,
   "max_capital": 100.947,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-18T06:16:29",
-  "expectativa_r": -0.137,
+  "expectativa_r": -0.213,
   "hito": 200.0,
   "modo": "pct",
   "riesgo_fijo_usd": 10.0,
@@ -2165,9 +2171,29 @@
    {
     "t": "2026-09-23T10:44",
     "v": 98.4536
+   },
+   {
+    "t": "2026-09-25T07:14",
+    "v": 97.4209
    }
   ],
   "trades": [
+   {
+    "id": "HR-309",
+    "fuente": "hourly",
+    "grado": "A",
+    "activo": "OP",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-25T07:14",
+    "resuelto": "2026-09-25T09:30",
+    "outcome": "loss",
+    "r": -1.049,
+    "riesgo_pct": 0.01,
+    "riesgo_usd": 0.9845,
+    "pnl": -1.0327,
+    "capital": 97.4209,
+    "lobo": null
+   },
    {
     "id": "HR-270",
     "fuente": "hourly",
