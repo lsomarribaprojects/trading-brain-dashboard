@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-09-25 13:37",
+ "actualizado": "2026-09-25 14:12",
  "reversion": {
-  "abiertas": 1,
-  "resueltas": 59,
+  "abiertas": 0,
+  "resueltas": 60,
   "win": 25,
-  "loss": 32,
-  "hit": 42.4,
+  "loss": 33,
+  "hit": 41.7,
   "break_even": 52.2,
-  "margen": -9.9,
-  "ic95": 12.6,
+  "margen": -10.5,
+  "ic95": 12.5,
   "significativo": false,
-  "r_trade": -0.1634,
-  "pf": 0.71,
-  "pnl_4usd": -38.55,
+  "r_trade": -0.1777,
+  "pf": 0.69,
+  "pnl_4usd": -42.64,
   "equity_100": [
    {
     "t": "2026-08-31T13:14:10.005481",
@@ -247,8 +247,12 @@
     "v": 60.62
    },
    {
+    "t": "2026-09-25T05:13:16.402828",
+    "v": 57.52
+   },
+   {
     "t": "2026-09-25T07:14:40.545904",
-    "v": 57.44
+    "v": 54.5
    }
   ],
   "ultimas": [
@@ -300,7 +304,9 @@
     "id": "RV-059",
     "timestamp": "2026-09-25T05:13:16.402828",
     "emitida": true,
-    "outcome": null
+    "outcome": "loss",
+    "resuelto": "2026-09-25T13:39:37.706793",
+    "r_neto": -1.022
    },
    {
     "activo": "AVAX",
@@ -993,22 +999,22 @@
   }
  },
  "hourly": {
-  "emitidas": 311,
+  "emitidas": 312,
   "abiertas": 3,
   "por_grado": {
    "A": {
     "emitidas": 21,
-    "resueltas": 20,
+    "resueltas": 21,
     "win": 9,
-    "loss": 11,
-    "hit": 45.0,
-    "r_trade": -0.143,
-    "pf": 0.75,
+    "loss": 12,
+    "hit": 42.9,
+    "r_trade": -0.185,
+    "pf": 0.69,
     "tp2_pct": 0,
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 90,
+    "emitidas": 91,
     "resueltas": 89,
     "win": 30,
     "loss": 57,
@@ -1031,6 +1037,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-312",
+    "hora": "2026-09-25T13:39",
+    "activo": "AAVE",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 88.8,
+    "entry": 155.42,
+    "sl": 157.98,
+    "tp1": 152.86,
+    "tp2": 151.07,
+    "tp3": 149.03,
+    "sl_pct": 1.645,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "extension +3.1% en 5h (<4%); mecha 58% (>40%): ya reboto"
+   },
    {
     "id": "HR-311",
     "hora": "2026-09-25T10:14",
@@ -1116,8 +1140,8 @@
     "tp2": 4.481,
     "tp3": 4.2678,
     "sl_pct": 5.401,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.022,
     "tp_max": null,
     "fallos": ""
    },
@@ -2092,24 +2116,6 @@
     "r": -1.077,
     "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
-   },
-   {
-    "id": "HR-252",
-    "hora": "2026-09-22T11:15",
-    "activo": "OP",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 85.5,
-    "entry": 0.12763,
-    "sl": 0.1322,
-    "tp1": 0.12306,
-    "tp2": 0.11986,
-    "tp3": 0.11621,
-    "sl_pct": 3.579,
-    "outcome": "loss",
-    "r": -1.034,
-    "tp_max": null,
-    "fallos": "cierre dentro de Bollinger; RSI 59 no extremo"
    }
   ],
   "leyenda": "A = paso TODAS las reglas del motor de reversion + guard rails (operable). B = extremo (fuera de Bollinger + RSI) pero falla un filtro secundario: solo paper. C = nadie en extremo, mejor candidato del universo: solo paper con riesgo minimo."
@@ -2117,12 +2123,12 @@
  "bot": {
   "version": 3,
   "capital_inicial": 100.0,
-  "capital": 97.4209,
+  "capital": 96.4147,
   "max_capital": 100.947,
   "meta": 1000.0,
   "meta_meses": null,
   "inicio": "2026-09-18T06:16:29",
-  "expectativa_r": -0.213,
+  "expectativa_r": -0.276,
   "hito": 200.0,
   "modo": "pct",
   "riesgo_fijo_usd": 10.0,
@@ -2175,9 +2181,29 @@
    {
     "t": "2026-09-25T07:14",
     "v": 97.4209
+   },
+   {
+    "t": "2026-09-25T05:13",
+    "v": 96.4147
    }
   ],
   "trades": [
+   {
+    "id": "HR-307",
+    "fuente": "hourly",
+    "grado": "A",
+    "activo": "NEAR",
+    "direccion": "SHORT",
+    "timestamp": "2026-09-25T05:13",
+    "resuelto": "2026-09-25T13:37",
+    "outcome": "loss",
+    "r": -1.022,
+    "riesgo_pct": 0.01,
+    "riesgo_usd": 0.9845,
+    "pnl": -1.0062,
+    "capital": 96.4147,
+    "lobo": null
+   },
    {
     "id": "HR-309",
     "fuente": "hourly",
