@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-25 14:27",
+ "actualizado": "2026-09-25 16:11",
  "reversion": {
   "abiertas": 1,
   "resueltas": 60,
@@ -1002,8 +1002,8 @@
   }
  },
  "hourly": {
-  "emitidas": 312,
-  "abiertas": 3,
+  "emitidas": 313,
+  "abiertas": 4,
   "por_grado": {
    "A": {
     "emitidas": 21,
@@ -1017,7 +1017,7 @@
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 91,
+    "emitidas": 92,
     "resueltas": 89,
     "win": 30,
     "loss": 57,
@@ -1040,6 +1040,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-313",
+    "hora": "2026-09-25T14:31",
+    "activo": "AAVE",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 100.0,
+    "entry": 154.47,
+    "sl": 159.01,
+    "tp1": 149.93,
+    "tp2": 146.76,
+    "tp3": 143.13,
+    "sl_pct": 2.936,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "guard rails: SL a 4.54 (0.91×ATR). Mínimo 1.0×ATR (5.00). Lección T-003/T; guard rails: BLOQUEO: estructura 4H higher_high + higher_low. SHORT contr"
+   },
    {
     "id": "HR-312",
     "hora": "2026-09-25T13:39",
@@ -2100,24 +2118,6 @@
     "outcome": "win",
     "r": 0.926,
     "tp_max": "tp1",
-    "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
-   },
-   {
-    "id": "HR-253",
-    "hora": "2026-09-22T13:17",
-    "activo": "XRP",
-    "dir": "SHORT",
-    "grado": "C",
-    "score": 73.5,
-    "entry": 1.5771,
-    "sl": 1.6017,
-    "tp1": 1.5525,
-    "tp2": 1.5352,
-    "tp3": 1.5155,
-    "sl_pct": 1.562,
-    "outcome": "loss",
-    "r": -1.077,
-    "tp_max": null,
     "fallos": "major: el edge de reversion desaparece en majors (medido); cierre dentro de Bollinger"
    }
   ],
