@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26 10:42",
+ "actualizado": "2026-09-26 10:57",
  "reversion": {
   "abiertas": 0,
   "resueltas": 61,
@@ -1008,8 +1008,8 @@
   }
  },
  "hourly": {
-  "emitidas": 329,
-  "abiertas": 5,
+  "emitidas": 330,
+  "abiertas": 6,
   "por_grado": {
    "A": {
     "emitidas": 21,
@@ -1023,7 +1023,7 @@
     "riesgo_paper": 0.01
    },
    "B": {
-    "emitidas": 97,
+    "emitidas": 98,
     "resueltas": 96,
     "win": 34,
     "loss": 60,
@@ -1046,6 +1046,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-330",
+    "hora": "2026-09-26T10:43",
+    "activo": "FIL",
+    "dir": "SHORT",
+    "grado": "B",
+    "score": 90.0,
+    "entry": 1.2019,
+    "sl": 1.2091,
+    "tp1": 1.1947,
+    "tp2": 1.1896,
+    "tp3": 1.1839,
+    "sl_pct": 0.6,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "SL natural <0.6%: suelo aplicado; deriva 4.87R desde el cierre"
+   },
    {
     "id": "HR-329",
     "hora": "2026-09-26T09:16",
@@ -2105,24 +2123,6 @@
     "sl_pct": 2.556,
     "outcome": "win",
     "r": 0.953,
-    "tp_max": "tp1",
-    "fallos": ""
-   },
-   {
-    "id": "HR-270",
-    "hora": "2026-09-23T10:44",
-    "activo": "LINK",
-    "dir": "LONG",
-    "grado": "A",
-    "score": 100.0,
-    "entry": 12.243,
-    "sl": 11.877,
-    "tp1": 12.609,
-    "tp2": 12.866,
-    "tp3": 13.159,
-    "sl_pct": 2.992,
-    "outcome": "win",
-    "r": 0.96,
     "tp_max": "tp1",
     "fallos": ""
    }
