@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26 09:43",
+ "actualizado": "2026-09-26 09:58",
  "reversion": {
   "abiertas": 0,
   "resueltas": 61,
@@ -1009,7 +1009,7 @@
  },
  "hourly": {
   "emitidas": 329,
-  "abiertas": 6,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 21,
@@ -1024,12 +1024,12 @@
    },
    "B": {
     "emitidas": 97,
-    "resueltas": 95,
+    "resueltas": 96,
     "win": 34,
-    "loss": 59,
-    "hit": 35.8,
-    "r_trade": -0.326,
-    "pf": 0.51,
+    "loss": 60,
+    "hit": 35.4,
+    "r_trade": -0.333,
+    "pf": 0.5,
     "tp2_pct": 9,
     "riesgo_paper": 0.0
    },
@@ -1113,8 +1113,8 @@
     "tp2": 1.0391,
     "tp3": 1.0162,
     "sl_pct": 2.634,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.046,
     "tp_max": null,
     "fallos": "extension +3.4% en 5h (<4%); regimen 15/15 alts sobre EMA20: el motor no opera"
    },
