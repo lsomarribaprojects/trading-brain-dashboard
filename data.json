@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26 10:57",
+ "actualizado": "2026-09-26 11:12",
  "reversion": {
   "abiertas": 0,
   "resueltas": 61,
@@ -1009,7 +1009,7 @@
  },
  "hourly": {
   "emitidas": 330,
-  "abiertas": 6,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 21,
@@ -1024,12 +1024,12 @@
    },
    "B": {
     "emitidas": 98,
-    "resueltas": 96,
+    "resueltas": 97,
     "win": 34,
-    "loss": 60,
-    "hit": 35.4,
-    "r_trade": -0.333,
-    "pf": 0.5,
+    "loss": 61,
+    "hit": 35.1,
+    "r_trade": -0.342,
+    "pf": 0.49,
     "tp2_pct": 9,
     "riesgo_paper": 0.0
    },
@@ -1059,8 +1059,8 @@
     "tp2": 1.1896,
     "tp3": 1.1839,
     "sl_pct": 0.6,
-    "outcome": "abierta",
-    "r": null,
+    "outcome": "loss",
+    "r": -1.2,
     "tp_max": null,
     "fallos": "SL natural <0.6%: suelo aplicado; deriva 4.87R desde el cierre"
    },
