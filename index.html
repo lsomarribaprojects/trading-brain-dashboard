@@ -28,28 +28,113 @@ h1 small{color:var(--ink3);font-weight:400;font-size:12px}
 table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
 th{text-align:left;color:var(--ink3);font-size:11px;text-transform:uppercase;letter-spacing:.4px;padding:6px 8px;border-bottom:1px solid var(--border)}
 td{padding:6px 8px;border-bottom:1px solid #21262d;white-space:nowrap}
-.w{color:var(--win);font-weight:600}.l{color:var(--loss);font-weight:600}.p{color:var(--ink3)}.f{color:var(--loss);font-weight:700}
+.w{color:var(--win);font-weight:600}.l{color:var(--loss);font-weight:600}.p{color:var(--ink3)}.f{color:var(--loss);font-weight:700}.warn{color:var(--warn);font-weight:600}
 .num{font-variant-numeric:tabular-nums}
 .note{color:var(--ink3);font-size:12px;margin:8px 0}
+.errnote{color:var(--loss);font-size:12px;margin:8px 0}
 svg text{font:11px -apple-system,Segoe UI,sans-serif}
 .tipbox{position:fixed;pointer-events:none;background:#1c2128;border:1px solid var(--border);border-radius:6px;padding:6px 9px;font-size:12px;display:none;z-index:9}
 .legend{display:flex;gap:16px;font-size:12px;color:var(--ink2);margin:4px 0 0 4px;flex-wrap:wrap}
 .legend span::before{content:"";display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
 .legend .lb::before{background:var(--accent)}
 .legend .lg::before{background:var(--ink3);height:0;border-top:2px dashed var(--ink3)}
+/* ---- panel nuevo ---- */
+.banner{background:#1c2128;border:1px solid var(--warn);border-radius:8px;padding:10px 14px;margin:10px 0 4px;font-size:12.5px;color:var(--ink);line-height:1.5}
+.banner b{color:var(--warn)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:4px 0 10px}
+.filters select,.filters input{background:var(--bg);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:12px}
+.filters input{flex:1;min-width:160px}
+.btn{background:var(--bg);border:1px solid var(--border);color:var(--ink);border-radius:6px;padding:6px 14px;font-size:12px;cursor:pointer;margin-top:8px}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.chip{display:inline-block;padding:2px 7px;margin:2px 3px 2px 0;border:1px solid var(--border);border-radius:99px;font-size:11px;color:var(--ink2);background:var(--bg)}
+.opgrid{display:grid;grid-template-columns:74px 42px 112px 60px 50px 140px 66px 130px;gap:6px;align-items:center;min-width:700px}
+.ophead{color:var(--ink3);font-size:11px;text-transform:uppercase;letter-spacing:.4px;padding:6px 8px 6px 22px;border-bottom:1px solid var(--border)}
+details.exprow{border-bottom:1px solid #21262d}
+details.exprow summary{cursor:pointer;padding:8px;font-size:13px}
+details.exprow summary:hover{background:#1c2128}
+details.exprow[open]{background:#11161d}
+.opdetail{padding:6px 8px 14px 22px;background:#0f141a;font-size:12.5px;color:var(--ink2)}
+.opdetail div{margin:4px 0}
+.opdetail ul{margin:4px 0 8px 18px}
+.wrap-table td{white-space:normal;max-width:280px;vertical-align:top}
+.wrap-table th{white-space:nowrap}
+details.pm summary{cursor:pointer;font-size:13px;color:var(--ink2);padding:2px 0}
 </style>
 </head>
 <body>
 <h1>📊 Trading Brain <small id="upd">cargando…</small></h1>
+<div class="banner" id="banner">cargando contexto…</div>
 <div class="tabs">
-  <div class="tab on" data-p="bot">🤖 Paper $100 → $1000</div>
+  <div class="tab on" data-p="op">🧭 Operativas</div>
+  <div class="tab" data-p="con">📚 Conocimiento</div>
+  <div class="tab" data-p="lob">🐺 Lobo</div>
+  <div class="tab" data-p="bot">🤖 Paper $100 → $1000</div>
   <div class="tab" data-p="hora">🕐 Señal de la hora</div>
   <div class="tab" data-p="real">👤 Cuenta real</div>
   <div class="tab" data-p="sen">📡 Señales de traders</div>
   <div class="tab" data-p="fue">🔍 Fuentes</div>
 </div>
 
-<div class="panel on" id="p-bot">
+<div class="panel on" id="p-op">
+  <div class="tiles" id="op-tiles"></div>
+  <div class="card"><h3>Equity de la cuenta paper v3 (cada punto = una operativa resuelta)</h3>
+    <div id="op-chart"></div>
+    <div class="legend"><span class="w" style="font-weight:600">✓ ganadora</span><span class="l" style="font-weight:600">✗ perdedora</span><span class="p">• inicio / otro</span></div>
+  </div>
+  <p class="note" id="op-aviso"></p>
+  <div class="card"><h3>Por dia (contexto macro — no predice al motor)</h3>
+    <div id="op-dias"></div>
+    <p class="note" id="op-dias-nota"></p>
+  </div>
+  <div class="card"><h3>Marcador por fuente / grado</h3><div id="op-resumen"></div></div>
+  <details class="card pm" id="op-pm"><summary>Post-mortem — click para expandir</summary>
+    <div id="op-pm-body" style="margin-top:10px"></div>
+  </details>
+  <div class="card">
+    <h3>Todas las operativas (HR + RV + S)</h3>
+    <div class="filters">
+      <select id="f-tipo"><option value="todos">tipo: todos</option><option value="HR">HR</option><option value="RV">RV</option><option value="S">S</option></select>
+      <select id="f-grado"><option value="todos">grado: todos</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="RV">RV</option><option value="S">S</option></select>
+      <select id="f-outcome"><option value="todos">resultado: todos</option><option value="win">win</option><option value="loss">loss</option><option value="expirada">expirada</option><option value="expirada_verde">expirada verde</option><option value="expirada_roja">expirada roja</option><option value="abierta">abierta</option></select>
+      <select id="f-paper"><option value="todos">paper: todos</option><option value="tomada">tomada</option><option value="omitida">omitida</option><option value="en_curso">en curso</option><option value="sin_dinero">sin dinero</option><option value="antes_v3">antes v3</option><option value="no_candidata">no candidata</option></select>
+      <select id="f-activo"><option value="todos">activo: todos</option></select>
+      <input id="f-texto" type="text" placeholder="buscar id / activo / texto…">
+    </div>
+    <div class="ophead opgrid"><span>ID</span><span>Grado</span><span>Emision</span><span>Activo</span><span>Dir</span><span>Resultado</span><span>R</span><span>Paper</span></div>
+    <div id="op-rows"></div>
+    <p class="note" id="op-count"></p>
+    <button class="btn" id="op-more" style="display:none">Ver más (+50)</button>
+  </div>
+</div>
+
+<div class="panel" id="p-con">
+  <div class="tiles" id="con-tiles"></div>
+  <div class="card"><h3>Notas de conocimiento (K-XXX)</h3><div id="con-k"></div></div>
+  <div class="card"><h3>Hipotesis probadas (H-XXX)</h3><div id="con-h"></div></div>
+  <div class="card"><h3>Tesis narrativas (TS-XXX)</h3>
+    <div class="filters"><select id="f-ts-estado">
+      <option value="todos">estado: todos</option>
+      <option value="en_plazo">en plazo</option>
+      <option value="acierto">acierto</option>
+      <option value="fallo">fallo</option>
+      <option value="vencida_sin_resolver">vencida sin resolver</option>
+    </select></div>
+    <div id="con-ts"></div>
+  </div>
+</div>
+
+<div class="panel" id="p-lob">
+  <div class="tiles" id="lob-tiles"></div>
+  <div class="card"><h3>Prueba virtual: copiar al Lobo 1 semana (solo papel)</h3><div id="lob-prueba"></div></div>
+  <div class="card"><h3>Videos del live de BITLOBO</h3><div id="lob-videos"></div></div>
+  <div class="card"><h3>Libro LB — no cerradas</h3><div id="lob-abiertas"></div></div>
+  <div class="card"><h3>Libro LB — cerradas</h3><div id="lob-cerradas"></div></div>
+  <div class="card"><h3>Sus tesis (TS de fuente BITLOBO)</h3><div id="lob-ts"></div></div>
+  <div class="card"><h3>Nuestras cards vs el Lobo</h3><div id="lob-cruce"></div></div>
+  <div class="card"><h3>Copy trading (BingX, referencia)</h3><div id="lob-copy"></div></div>
+</div>
+
+<div class="panel" id="p-bot">
   <div class="tiles" id="bot-tiles"></div>
   <div class="card"><h3>Equity de la cuenta paper (cada punto = una operativa resuelta)</h3>
     <div id="chart"></div>
@@ -66,7 +151,7 @@ svg text{font:11px -apple-system,Segoe UI,sans-serif}
   <div class="card"><h3>Marcador por grado (lo que decide si B y C valen algo)</h3><div id="hora-grados"></div>
   <p class="note" id="hora-leyenda"></p></div>
   <div class="card"><h3>Cards horarias (HR-XXX): niveles, grado y resultado real contra velas</h3><div id="hora-list"></div>
-  <p class="note">Solo el grado A es operable con dinero real. B y C se mandan para ver el mercado y se simulan en paper con riesgo minimo. Break-even de un 1:1 con fees: ~54.5%.</p></div>
+  <p class="note" id="hora-realtxt">Break-even de un 1:1 con fees: ~54.5%.</p></div>
 </div>
 
 <div class="panel" id="p-real">
@@ -97,9 +182,14 @@ document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
   t.classList.add('on'); $('#p-'+t.dataset.p).classList.add('on');
 });
 const fmt=n=>n==null?'—':('$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:2}));
-const cls=o=>o==='win'||o==='win_tp1'?'w':(o==='loss'?'l':(o==='FABRICADO'?'f':'p'));
-const lbl=o=>({win:'✓ win',win_tp1:'✓ win',loss:'✗ loss',FABRICADO:'⚠ FABRICADA',fuera_de_sistema:'fuera de sistema',abierta:'⏳ abierta',expirada:'⌛ expirada'})[o]||o;
+const fmtP=n=>n==null?'—':('$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:Math.abs(n)>=100?2:(Math.abs(n)>=1?4:6)}));
+const cls=o=>o==='win'||o==='win_tp1'||o==='expirada_verde'?'w':((o==='loss'||o==='expirada_roja')?'l':(o==='FABRICADO'?'f':'p'));
+const lbl=o=>({win:'✓ win',win_tp1:'✓ win',loss:'✗ loss',FABRICADO:'⚠ FABRICADA',fuera_de_sistema:'fuera de sistema',abierta:'⏳ abierta',expirada:'⌛ expirada',expirada_verde:'⌛ expirada (verde)',expirada_roja:'⌛ expirada (roja)'})[o]||o||'—';
 const gr=g=>g==='A'?'<b style="color:var(--win)">A</b>':(g==='B'?'<b style="color:var(--warn)">B</b>':(g==='C'?'<b style="color:var(--ink3)">C</b>':(g||'—')));
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const signed=(n,d=2)=>n==null||isNaN(n)?'—':(n>=0?'+':'')+Number(n).toFixed(d);
+const errHtml=msg=>`<p class="errnote">⚠ ${esc(msg)}</p>`;
+const isErr=x=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.prototype.hasOwnProperty.call(x,'error');
 
 // En Vercel la pagina se despliega una vez; los DATOS viven en GitHub (el ciclo hace
 // push cada 15 min). Asi no se gasta un deploy de Vercel por cada actualizacion.
@@ -110,8 +200,9 @@ fetch(SRC+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch('data
   // ---- BOT ----
   const b=d.bot, ret=(b.capital/b.capital_inicial-1)*100;
   const prog=Math.max(0,Math.min(100,(b.capital-b.capital_inicial)/(b.meta-b.capital_inicial)*100));
+  const riesgoTxtViejo = b.modo==='pct' ? 'riesgo % del capital (modo pct, ver reglas abajo)' : ('riesgo fijo $'+b.riesgo_fijo_usd+'/op');
   $('#bot-tiles').innerHTML=tile('Capital paper',fmt(b.capital),(ret>=0?'+':'')+ret.toFixed(1)+'% desde $'+b.capital_inicial)
-    +(b.hito?tile('Hito '+fmt(b.hito),Math.max(0,Math.min(100,(b.capital-b.capital_inicial)/(b.hito-b.capital_inicial)*100)).toFixed(1)+'%','riesgo fijo $'+b.riesgo_fijo_usd+'/op'):'')
+    +(b.hito?tile('Hito '+fmt(b.hito),Math.max(0,Math.min(100,(b.capital-b.capital_inicial)/(b.hito-b.capital_inicial)*100)).toFixed(1)+'%',riesgoTxtViejo):'')
     +tile('Meta',fmt(b.meta),prog.toFixed(1)+'% del camino')
     +tile('Operativas',b.trades.length,wl(b.trades))
     +tile('Expectativa',b.expectativa_r==null?'—':((b.expectativa_r>=0?'+':'')+b.expectativa_r.toFixed(3)+'R'),b.trades.length<30?'n<30: ruido':'por operativa')
@@ -136,6 +227,8 @@ fetch(SRC+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch('data
     h.ultimas.map(x=>[x.id,x.hora,x.activo,x.dir,gr(x.grado),x.score,x.entry,x.sl,x.tp1,x.tp2,x.tp3,
       `<span class="${cls(x.outcome)}">${lbl(x.outcome)}</span>`,x.r==null?'—':`<span class="num ${x.r>=0?'w':'l'}">${x.r>=0?'+':''}${Number(x.r).toFixed(2)}</span>`,
       x.tp_max||'—',`<span class="p">${x.fallos||''}</span>`]));
+  const modoRealTxt=(d.panel&&d.panel.modo_real&&d.panel.modo_real.texto)||'Solo el grado A es operable con dinero real. B y C se mandan para ver el mercado y se simulan en paper con riesgo minimo.';
+  $('#hora-realtxt').textContent=modoRealTxt+' Break-even de un 1:1 con fees: ~54.5%.';
   // ---- REAL ----
   const r=d.real, pnlReal=r.trades.reduce((a,t)=>a+(t.pnl||0),0);
   $('#real-tiles').innerHTML=tile('Patrimonio cripto',fmt(r.patrimonio),'reto → '+fmt(r.meta_reto))
@@ -161,6 +254,19 @@ fetch(SRC+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch('data
       f.fabricadas?'<span class="f">NO CONFIABLE</span>':(f.wins+f.losses>=3?'midiendo':'muestra chica')]));
   $('#fue-det').innerHTML=tabla(['ID','Fuente','Activo','Dir','Resultado real','Nuestro juez dijo'],
     d.ext_detalle.map(e=>[e.id,e.fuente,e.activo,e.dir,`<span class="${cls(e.outcome)}">${lbl(e.outcome)}</span>`,e.veredicto_nuestro||'—']));
+
+  // ================= PANEL NUEVO =================
+  try{ renderBanner(d.panel); }catch(e){ $('#banner').innerHTML=errHtml('banner: '+e.message); }
+
+  if(d.panel_error){
+    $('#p-op').insertAdjacentHTML('beforeend', errHtml('panel_error: '+d.panel_error));
+    $('#p-con').insertAdjacentHTML('beforeend', errHtml('panel_error: '+d.panel_error));
+    $('#p-lob').insertAdjacentHTML('beforeend', errHtml('panel_error: '+d.panel_error));
+  } else {
+    try{ renderPanelOperativas(d.panel||{}); }catch(e){ $('#p-op').insertAdjacentHTML('beforeend', errHtml('render Operativas: '+e.message)); }
+    try{ renderConocimiento(d.conocimiento||{}); }catch(e){ $('#p-con').insertAdjacentHTML('beforeend', errHtml('render Conocimiento: '+e.message)); }
+    try{ renderLobo(d.lobo||{}); }catch(e){ $('#p-lob').insertAdjacentHTML('beforeend', errHtml('render Lobo: '+e.message)); }
+  }
 });
 
 function tile(k,v,s){return `<div class="tile"><div class="k">${k}</div><div class="v num">${v}</div><div class="s">${s}</div></div>`}
@@ -168,10 +274,12 @@ function wl(ts){const w=ts.filter(t=>t.outcome==='win').length,l=ts.filter(t=>t.
 function best(bk){const g=bk.filter(x=>x.n>=2&&x.win_rate_pct>=50).sort((a,b)=>b.win_rate_pct-a.win_rate_pct)[0];return g?`${g.activo} ${g.direccion}`:'—'}
 function tabla(hs,rows){return '<table><thead><tr>'+hs.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'
   +rows.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')+'</tbody></table>'}
+function tablaW(hs,rows){return '<table class="wrap-table"><thead><tr>'+hs.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'
+  +rows.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')+'</tbody></table>'}
 
 function drawChart(b){
   const W=920,H=260,P={t:12,r:64,b:24,l:8};
-  const eq=[{t:b.inicio+'T00:00',v:b.capital_inicial},...b.equity.map(e=>({t:e.t,v:e.v}))];
+  const eq=[{t:b.inicio,v:b.capital_inicial},...b.equity.map(e=>({t:e.t,v:e.v}))];
   const t0=new Date(b.inicio).getTime(), t1=Math.max(Date.now(),new Date(eq[eq.length-1].t).getTime());
   const dias=Math.max(1,(t1-t0)/864e5);
   // Linea de referencia: capital inicial (la meta $1000 no tiene fecha; el ritmo lo dice el resumen diario)
@@ -197,6 +305,415 @@ function drawChart(b){
       tip.innerHTML=`${c.dataset.t}<br><b>$${Number(c.dataset.v).toFixed(2)}</b>`};
     c.onmouseout=()=>tip.style.display='none';
   });
+}
+
+/* ================= PANEL NUEVO: helpers ================= */
+function chipList(arr){ return (arr&&arr.length)? arr.map(id=>`<span class="chip">${esc(id)}</span>`).join(''):'<span class="p">—</span>'; }
+function chipsDerivados(dv){ if(!dv) return '<span class="p">—</span>'; return chipList([...(dv.tesis||[]),...(dv.senales||[]),...(dv.hipotesis||[])]); }
+function opBadge(o){
+  return `<span class="${cls(o.outcome)}">${lbl(o.outcome)}</span>`;
+}
+function paperBadge(p){
+  if(!p) return '<span class="p">—</span>';
+  if(isErr(p)) return `<span class="l">error: ${esc(p.error)}</span>`;
+  const map={tomada:['💰 tomada','w'],omitida:['🚫 omitida','warn'],en_curso:['⏳ en curso','p'],
+    sin_dinero:['🔕 sin dinero','p'],antes_v3:['⏮ antes v3','p'],no_candidata:['— no candidata','p']};
+  const x=map[p.estado]||[p.estado||'—','p'];
+  return `<span class="${x[1]}">${x[0]}</span>`;
+}
+function veredictoBadge(tono,texto){
+  const map={vive:['✅ vive','w'],muerta:['💀 muerta','l'],sombra:['🌑 sombra','warn'],pendiente:['⏳ pendiente','p']};
+  const x=map[tono]||[tono||'—','p'];
+  return `<span class="${x[1]}" title="${esc(texto||'')}">${x[0]}</span>`;
+}
+function tsBadge(e){
+  const map={acierto:['✅ acierto','w'],fallo:['❌ fallo','l'],en_plazo:['⏳ en plazo','p'],vencida_sin_resolver:['⚠ vencida sin resolver','warn']};
+  const x=map[e]||[e||'—','p'];
+  return `<span class="${x[1]}">${x[0]}</span>`;
+}
+function videoBadge(e){
+  const map={analizado:['✅ analizado','w'],descartado:['🚫 descartado','p'],sin_transcripcion:['⚠ sin transcripcion','warn']};
+  const x=map[e]||[e||'—','p'];
+  return `<span class="${x[1]}">${x[0]}</span>`;
+}
+function stopBadge(o){
+  if(o.precio==null) return '<span class="p">sin dato</span>';
+  return o.stop_tocado? '<span class="l">⚠ STOP TOCADO</span>' : '<span class="w">dentro</span>';
+}
+function ctxTxt(c){
+  if(!c) return '<span class="p">—</span>';
+  if(isErr(c)) return `<span class="l">error: ${esc(c.error)}</span>`;
+  if(c.regimen_arriba==null) return '<span class="p">sin contexto</span>';
+  const frenaTxt=c.regimen_frena?' <span class="warn">FRENA</span>':'';
+  return `regimen ${c.regimen_arriba}/${c.regimen_total}${frenaTxt} · alts ${signed(c.alts_dia_pct)}% · BTC ${signed(c.btc_dia_pct)}% · F&amp;G ${c.fng??'—'}`;
+}
+function niveles(o){
+  const parts=[`entry ${o.entry??'—'}`,`SL ${o.sl??'—'}${o.sl_pct!=null?(' ('+o.sl_pct+'%)'):''}`];
+  if(o.tp1!=null) parts.push(`TP1 ${o.tp1}`);
+  if(o.tp2!=null) parts.push(`TP2 ${o.tp2}`);
+  if(o.tp3!=null) parts.push(`TP3 ${o.tp3}`);
+  if(o.tp!=null) parts.push(`TP ${o.tp}`);
+  if(o.tp_max) parts.push(`llego a ${String(o.tp_max).toUpperCase()}`);
+  return parts.join(' · ');
+}
+
+/* ---- Operativas (tab) ---- */
+const opState={tipo:'todos',grado:'todos',outcome:'todos',paperEstado:'todos',activo:'',texto:'',mostrar:50};
+function opcionesActivos(ops){
+  const s=[...new Set(ops.map(o=>o.activo).filter(Boolean))].sort();
+  return '<option value="todos">activo: todos</option>'+s.map(a=>`<option value="${esc(a)}">${esc(a)}</option>`).join('');
+}
+function opDetalle(o){
+  let h='';
+  h+=`<div>${esc(niveles(o))}</div>`;
+  h+=`<div>Emitida: ${esc(o.t||'—')}${o.t_res?(' · Resuelta: '+esc(o.t_res)):''}</div>`;
+  if(o.r_bruto!=null||o.fee_R!=null) h+=`<div>Bruto ${signed(o.r_bruto,2)}R · fee ${o.fee_R!=null?o.fee_R.toFixed(3):'—'}R · neto ${signed(o.r,2)}R</div>`;
+  if(o.porque&&o.porque.length) h+=`<div><b>Por que:</b><ul>${o.porque.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  if(o.fallos&&o.fallos.length) h+=`<div><b>No cumplia:</b> ${esc(o.fallos.join('; '))}</div>`;
+  const pp=o.paper||{};
+  let pline=`<b>Paper:</b> ${paperBadge(pp)}`;
+  if(pp.motivo) pline+=' — '+esc(pp.motivo);
+  if(pp.pnl!=null) pline+=` · pnl ${signed(pp.pnl,3)} · capital ${fmt(pp.capital)}`;
+  if(pp.v2) pline+=` · (v2: pnl ${signed(pp.v2.pnl,3)}, capital ${fmt(pp.v2.capital)})`;
+  h+=`<div>${pline}</div>`;
+  if(o.ctx&&Object.keys(o.ctx).length) h+=`<div><b>Contexto del dia:</b> ${ctxTxt(o.ctx)}</div>`;
+  if(o.lobo) h+=`<div><b>Lobo:</b> ${esc(o.lobo.dir_lobo)} ${esc(o.activo)} (${esc(o.lobo.lb)}) — <b>${esc((o.lobo.relacion||'').toUpperCase())}</b></div>`;
+  if(o.vinculo) h+=`<div><b>Vinculo:</b> misma operativa que ${esc(o.vinculo)} (no se cuenta doble en los totales)</div>`;
+  return h;
+}
+function opRow(o){
+  return `<details class="exprow"><summary class="opgrid">
+    <span>${esc(o.id)}</span><span>${gr(o.grado)}</span><span>${esc((o.t||'').slice(0,16).replace('T',' '))}</span>
+    <span>${esc(o.activo||'—')}</span><span>${esc(o.dir||'—')}</span><span>${opBadge(o)}</span>
+    <span class="num">${o.r==null?'—':signed(o.r,2)}</span><span>${paperBadge(o.paper)}</span>
+  </summary><div class="opdetail">${opDetalle(o)}</div></details>`;
+}
+function opsFiltradas(){
+  return (window.__ops||[]).filter(o=>{
+    if(opState.tipo!=='todos'&&o.tipo!==opState.tipo) return false;
+    if(opState.grado!=='todos'&&o.grado!==opState.grado) return false;
+    if(opState.outcome!=='todos'&&o.outcome!==opState.outcome) return false;
+    if(opState.paperEstado!=='todos'&&(o.paper&&o.paper.estado)!==opState.paperEstado) return false;
+    if(opState.activo&&o.activo!==opState.activo) return false;
+    if(opState.texto){
+      const t=opState.texto.toLowerCase();
+      const hay=(o.id+' '+(o.activo||'')+' '+(o.porque||[]).join(' ')).toLowerCase();
+      if(!hay.includes(t)) return false;
+    }
+    return true;
+  });
+}
+function renderOps(){
+  const all=opsFiltradas();
+  const show=all.slice(0,opState.mostrar);
+  $('#op-rows').innerHTML=show.map(opRow).join('')||'<p class="note" style="padding:10px 0">sin resultados con estos filtros</p>';
+  $('#op-count').textContent=`mostrando ${show.length} de ${all.length} filtradas (total: ${(window.__ops||[]).length})`;
+  $('#op-more').style.display= show.length<all.length? 'inline-block':'none';
+}
+function readFilters(){
+  opState.tipo=$('#f-tipo').value; opState.grado=$('#f-grado').value; opState.outcome=$('#f-outcome').value;
+  opState.paperEstado=$('#f-paper').value;
+  const av=$('#f-activo').value; opState.activo= av==='todos'?'':av;
+  opState.texto=$('#f-texto').value.trim();
+}
+function initOperativasList(ops){
+  if(!ops||isErr(ops)){ $('#op-rows').innerHTML=''; $('#op-count').innerHTML=errHtml(ops&&ops.error?ops.error:'sin datos'); return; }
+  window.__ops=ops;
+  $('#f-activo').innerHTML=opcionesActivos(ops);
+  ['f-tipo','f-grado','f-outcome','f-paper','f-activo'].forEach(id=>{ $('#'+id).onchange=()=>{ readFilters(); opState.mostrar=50; renderOps(); }; });
+  $('#f-texto').oninput=()=>{ readFilters(); opState.mostrar=50; renderOps(); };
+  $('#op-more').onclick=()=>{ opState.mostrar+=50; renderOps(); };
+  renderOps();
+}
+function avisoSimultaneas(p){
+  const cuando=p.max_simultaneas_cuando? esc(p.max_simultaneas_cuando.slice(0,16).replace('T',' ')):'—';
+  const t1=p.tope_1_sim;
+  return `<b>Decision pendiente de Luis — tope de posiciones:</b> el paper acepta varias a la vez; la regla real es <b>1 posicion</b> (risk_config.json → max_posiciones). Abiertas de verdad a la vez: maximo <b>${p.max_simultaneas??'—'}</b> (el ${cuando}); el stop diario -2% ya actua como tope ~2. Candidatas <i>emitidas</i> solapadas: hasta ${p.max_emitidas_simultaneas??'—'}, pero el freno las omitio.`+
+    (t1?` Con tope 1 el paper daria $${t1.capital} (${t1.n} ops, ${t1.r_op}R/op) vs ${fmt(p.capital)} hoy: diferencia del tamaño del ruido.`:'');
+}
+function drawPanelChart(p){
+  const eq=p.equity;
+  if(!eq||eq.length<2){ $('#op-chart').innerHTML='<p class="note">sin operativas resueltas todavia</p>'; return; }
+  const W=920,H=260,P={t:12,r:64,b:24,l:8};
+  const t0=new Date(eq[0].t).getTime(), t1=new Date(eq[eq.length-1].t).getTime();
+  const dias=Math.max(1,(t1-t0)/864e5);
+  const vals=eq.map(e=>e.v);
+  const vmax=Math.max(...vals)*1.03, vmin=Math.min(...vals)*0.97;
+  const X=d0=>P.l+(W-P.l-P.r)*(dias?d0/dias:0), Y=v=>P.t+(H-P.t-P.b)*(1-(v-vmin)/((vmax-vmin)||1));
+  const dx=e=>X((new Date(e.t).getTime()-t0)/864e5);
+  const base=Y(p.capital_inicial);
+  let l='';eq.forEach((e,i)=>l+=(i?'L':'M')+dx(e).toFixed(1)+' '+Y(e.v).toFixed(1));
+  const gy=[vmin,(vmin+vmax)/2,vmax];
+  const markers=eq.map(e=>{
+    if(e.id==null) return `<circle cx="${dx(e).toFixed(1)}" cy="${Y(e.v).toFixed(1)}" r="3" fill="#6e7681"/>`;
+    const win=e.outcome==='win'||e.outcome==='expirada_verde';
+    const loss=e.outcome==='loss'||e.outcome==='expirada_roja';
+    const color=win?'#3fb950':(loss?'#f85149':'#d29922');
+    return `<circle cx="${dx(e).toFixed(1)}" cy="${Y(e.v).toFixed(1)}" r="9" fill="transparent" class="pt2" data-t="${e.t}" data-id="${e.id}" data-out="${e.outcome}" data-v="${e.v}"/>
+      <circle cx="${dx(e).toFixed(1)}" cy="${Y(e.v).toFixed(1)}" r="3.5" fill="${color}"/>`;
+  }).join('');
+  $('#op-chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%">
+    <line x1="${P.l}" x2="${W-P.r}" y1="${base.toFixed(1)}" y2="${base.toFixed(1)}" stroke="#3d444d" stroke-dasharray="4 4"/>
+    ${gy.map(v=>`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="#21262d"/>
+      <text x="${W-P.r+6}" y="${(Y(v)+4).toFixed(1)}" fill="#6e7681">$${v.toFixed(0)}</text>`).join('')}
+    <path d="${l}" fill="none" stroke="#6ea8fe" stroke-width="2"/>
+    ${markers}
+  </svg>`;
+  const tip=$('#tip');
+  document.querySelectorAll('.pt2').forEach(c=>{
+    c.onmousemove=ev=>{tip.style.display='block';tip.style.left=(ev.clientX+12)+'px';tip.style.top=(ev.clientY-10)+'px';
+      const o=c.dataset.out; const txt=o==='win'||o==='expirada_verde'?'✓ ganadora':((o==='loss'||o==='expirada_roja')?'✗ perdedora':o);
+      tip.innerHTML=`${c.dataset.id||'inicio'} · ${c.dataset.t}<br>${txt}<br><b>$${Number(c.dataset.v).toFixed(2)}</b>`};
+    c.onmouseout=()=>tip.style.display='none';
+  });
+}
+function renderPanelTiles(panel){
+  const p=panel.paper;
+  if(!p||isErr(p)){ $('#op-tiles').innerHTML=''; $('#op-aviso').innerHTML=errHtml('paper: '+(p&&p.error?p.error:'sin datos')); $('#op-chart').innerHTML=''; return; }
+  const ret=(p.capital/p.capital_inicial-1)*100;
+  const prog=Math.max(0,Math.min(100,(p.capital-p.capital_inicial)/(p.meta-p.capital_inicial)*100));
+  const om=p.omitidas||{n:0,r_suma:0};
+  $('#op-tiles').innerHTML=
+    tile('Capital paper v3',fmt(p.capital),(ret>=0?'+':'')+ret.toFixed(1)+'% desde $'+p.capital_inicial)+
+    tile('Avance a '+fmt(p.meta),prog.toFixed(1)+'%','meta '+fmt(p.meta))+
+    tile('Operativas',p.n,p.win+'W / '+p.loss+'L')+
+    tile('R/op',p.r_op==null?'—':signed(p.r_op,4),'suma '+signed(p.r_suma,3)+'R')+
+    tile('Drawdown max',(p.drawdown_max_pct??'—')+'%',p.pausada?'⚠ PAUSADA':'activa')+
+    tile('Omitidas por freno',om.n,signed(om.r_suma,3)+'R que habrian sumado')+
+    tile('Max abiertas a la vez',p.max_simultaneas??'—','regla real: 1 · emitidas solapadas '+(p.max_emitidas_simultaneas??'—'));
+  $('#op-aviso').innerHTML=avisoSimultaneas(p);
+  drawPanelChart(p);
+}
+function renderDias(panel){
+  const dias=panel.dias;
+  if(!dias||isErr(dias)){ $('#op-dias').innerHTML=errHtml(dias&&dias.error?dias.error:'sin datos'); return; }
+  $('#op-dias').innerHTML=tabla(['Fecha','Tomadas','W','L','PnL','Capital cierre','Omitidas','Contexto del dia'],
+    dias.map(x=>[x.fecha,x.tomadas,x.win,x.loss,
+      `<span class="num ${x.pnl_usd>=0?'w':'l'}">${signed(x.pnl_usd,3)}</span>`,
+      `<span class="num">${fmt(x.capital_cierre)}</span>`,x.omitidas,ctxTxt(x.contexto)]));
+  $('#op-dias-nota').textContent=panel.dias_nota||'';
+}
+function renderResumenFuentes(rf){
+  if(!rf||isErr(rf)){ $('#op-resumen').innerHTML=errHtml(rf&&rf.error?rf.error:'sin datos'); return; }
+  const order=['HR_A','HR_B','HR_C','RV','S'];
+  const rows=order.filter(k=>rf[k]).map(k=>{
+    const x=rf[k];
+    return [k.replace('HR_','HR '),x.emitidas,x.resueltas,x.win,x.loss,x.expirada,
+      x.hit==null?'—':`<span class="${x.hit>=54.5?'w':'l'}">${x.hit}%</span>`,
+      x.r_op==null?'—':`<span class="num ${x.r_op>=0?'w':'l'}">${signed(x.r_op,4)}</span>`];
+  });
+  $('#op-resumen').innerHTML=tabla(['Fuente','Emitidas','Resueltas','W','L','Expirada','Hit','R/op'],rows);
+}
+function pmTabla(rows){
+  return tabla(['Bucket','n','W','Hit%','R/op'],(rows||[]).map(x=>{
+    const rop=x.n?(x.r_sum/x.n):null; const ruido=x.n<30;
+    return [esc(x.bucket),x.n,x.win,
+      `<span class="${x.hit>=54.5?'w':'l'}">${x.hit}%</span>`+(ruido?' <span class="p">(n&lt;30: ruido)</span>':''),
+      rop==null?'—':`<span class="num ${rop>=0?'w':'l'}">${signed(rop,3)}</span>`];
+  }));
+}
+function renderPostMortem(pm){
+  const sum=$('#op-pm summary');
+  if(!pm||isErr(pm)){ $('#op-pm-body').innerHTML=errHtml(pm&&pm.error?pm.error:'sin datos'); sum.textContent='Post-mortem — sin datos'; return; }
+  sum.textContent=`Post-mortem (n=${pm.n}, break-even ${pm.BE}%) — click para expandir`;
+  const dims=[['grado','Por grado'],['direccion','Por direccion'],['extremo','Extremo real vs no'],['z','Por z-score'],['rsi','Por RSI'],['ext5','Por extension en 5h'],['hora','Por hora'],['fee','Por fee en R']];
+  $('#op-pm-body').innerHTML=dims.map(([k,label])=>`<h4 style="margin:14px 0 6px;color:var(--ink2);font-size:12px">${label}</h4>${pmTabla(pm[k])}`).join('');
+}
+// Las operativas viven en ops_recientes.json + ops_historico.json (junto a data.json).
+function cargarOps(panel){
+  if(Array.isArray(panel.ops)) return Promise.resolve(panel.ops);
+  const base=SRC.replace(/data\.json$/,'');
+  const uno=n=>fetch(base+n+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():fetch(n+'?t='+Date.now()).then(x=>x.json()));
+  $('#op-count').textContent='cargando operativas…';
+  return Promise.all([uno('ops_recientes.json'),uno('ops_historico.json')]).then(([a,b])=>a.concat(b));
+}
+function renderPanelOperativas(panel){
+  try{ renderPanelTiles(panel); }catch(e){ $('#op-tiles').insertAdjacentHTML('beforeend',errHtml('tiles: '+e.message)); }
+  try{ renderDias(panel); }catch(e){ $('#op-dias').innerHTML=errHtml('dias: '+e.message); }
+  try{ renderResumenFuentes(panel.resumen_fuentes); }catch(e){ $('#op-resumen').innerHTML=errHtml('resumen_fuentes: '+e.message); }
+  try{ renderPostMortem(panel.post_mortem); }catch(e){ $('#op-pm-body').innerHTML=errHtml('post_mortem: '+e.message); }
+  cargarOps(panel).then(ops=>{ try{ initOperativasList(ops); }catch(e){ $('#op-count').innerHTML=errHtml('ops: '+e.message); } })
+    .catch(e=>{ $('#op-count').innerHTML=errHtml('no se pudieron cargar las operativas: '+e.message); });
+}
+
+/* ---- Conocimiento (tab) ---- */
+function renderConTiles(c){
+  const h=(c.h&&!isErr(c.h))?c.h:[];
+  const counts={vive:0,muerta:0,sombra:0,pendiente:0};
+  h.forEach(x=>{counts[x.veredicto_tono]=(counts[x.veredicto_tono]||0)+1;});
+  const tsst=(c.ts_stats&&!isErr(c.ts_stats))?(c.ts_stats.total||{}):{};
+  const kN=(c.k&&!isErr(c.k))?c.k.length:0;
+  $('#con-tiles').innerHTML=
+    tile('Notas K',kN,'conocimiento externo registrado')+
+    tile('Hipotesis vivas',counts.vive||0,(counts.muerta||0)+' muertas'+(counts.sombra?(' · '+counts.sombra+' sombra'):''))+
+    tile('Tesis TS',(tsst.aciertos??0)+'/'+(tsst.fallos??0)+' A/F',(tsst.en_plazo??0)+' en plazo (incl. '+(tsst.vencidas_sin_resolver??0)+' vencidas sin resolver)');
+}
+function renderConK(k){
+  if(!k||isErr(k)){ $('#con-k').innerHTML=errHtml(k&&k.error?k.error:'sin datos'); return; }
+  $('#con-k').innerHTML=tablaW(['ID','Fecha','Fuente','Tipo','Estado','Resumen','Derivados'],
+    k.map(x=>[x.id,x.fecha_contenido||'—',x.fuente||'—',x.tipo||'—',x.estado||'—',esc(x.resumen||''),chipsDerivados(x.derivados)]));
+}
+function renderConH(h){
+  if(!h||isErr(h)){ $('#con-h').innerHTML=errHtml(h&&h.error?h.error:'sin datos'); return; }
+  $('#con-h').innerHTML=h.map(x=>`<details class="exprow"><summary style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <b>${esc(x.id)}</b> ${veredictoBadge(x.veredicto_tono,x.veredicto)} <span class="p">${esc(x.familia||'')}</span>
+      <span style="color:var(--ink2);flex:1;min-width:140px">${esc((x.regla||'').slice(0,80))}${(x.regla||'').length>80?'…':''}</span>
+      <span class="p">${esc(x.actualizada||'')}</span>
+    </summary>
+    <div class="opdetail">
+      <div><b>Regla:</b> ${esc(x.regla||'')}</div>
+      <div><b>Fuente:</b> ${esc(x.fuente||'')}</div>
+      <div><b>Resultado:</b> ${esc(x.resultado||'')}</div>
+    </div></details>`).join('');
+}
+let tsEstadoSel='todos';
+function drawTS(){
+  const ts=window.__ts;
+  if(!ts||isErr(ts)){ $('#con-ts').innerHTML=errHtml(ts&&ts.error?ts.error:'sin datos'); return; }
+  const rows=ts.filter(t=>tsEstadoSel==='todos'||t.estado===tsEstadoSel);
+  $('#con-ts').innerHTML=tablaW(['ID','Fuente','Activo','Tipo','Nivel','Dir','Estado','Vence','Horas rest.','Precio actual','Dist %','Texto'],
+    rows.map(t=>[t.id,t.fuente,t.activo,t.tipo,t.nivel+(t.nivel2!=null?(' - '+t.nivel2):''),t.direccion||'—',
+      tsBadge(t.estado),esc((t.vence||'').slice(0,16).replace('T',' ')),t.horas_restantes==null?'—':t.horas_restantes.toFixed(1),
+      t.precio_actual==null?'—':t.precio_actual,t.distancia_pct==null?'—':signed(t.distancia_pct,2)+'%',esc(t.texto||'')]));
+}
+function renderConTS(ts){
+  window.__ts=ts;
+  $('#f-ts-estado').onchange=(e)=>{ tsEstadoSel=e.target.value; drawTS(); };
+  drawTS();
+}
+function renderConocimiento(c){
+  try{ renderConTiles(c); }catch(e){ $('#con-tiles').insertAdjacentHTML('beforeend',errHtml('tiles: '+e.message)); }
+  try{ renderConK(c.k); }catch(e){ $('#con-k').innerHTML=errHtml('k: '+e.message); }
+  try{ renderConH(c.h); }catch(e){ $('#con-h').innerHTML=errHtml('h: '+e.message); }
+  try{ renderConTS(c.ts); }catch(e){ $('#con-ts').innerHTML=errHtml('ts: '+e.message); }
+}
+
+/* ---- Lobo (tab) ---- */
+function renderLobTiles(l){
+  const videos=(l.videos&&!isErr(l.videos))?l.videos:[];
+  const lb=(l.lb&&!isErr(l.lb))?l.lb:[];
+  const cr=(l.cruce&&!isErr(l.cruce))?l.cruce:{};
+  const vAnaliz=videos.filter(v=>v.estado==='analizado').length;
+  const noCerr=lb.filter(o=>o.estado!=='cerrada');
+  const cerr=lb.filter(o=>o.estado==='cerrada');
+  const stopIds=noCerr.filter(o=>o.stop_tocado).map(o=>o.id);
+  const medidas=cerr.filter(o=>o.resultado_pct_okx!=null);
+  const ganadoras=medidas.filter(o=>o.resultado_pct_okx>0);
+  $('#lob-tiles').innerHTML=
+    tile('Videos analizados',vAnaliz+'/'+videos.length,'resto: descartados / sin transcripcion')+
+    tile('LB no cerradas',noCerr.length,stopIds.length?('stop tocado: '+stopIds.join(', ')):'ningun stop tocado')+
+    tile('LB cerradas',cerr.length,medidas.length+' medidas · '+ganadoras.length+' ganadoras')+
+    tile('Coincide con el Lobo',(cr.coincide?cr.coincide.hit:'—')+'%','n='+(cr.coincide?cr.coincide.n:0)+' · '+signed(cr.coincide&&cr.coincide.r_op,3)+'R/op')+
+    tile('Choca con el Lobo',(cr.choca?cr.choca.hit:'—')+'%','n='+(cr.choca?cr.choca.n:0)+' · '+signed(cr.choca&&cr.choca.r_op,3)+'R/op');
+}
+function renderLobVideos(videos){
+  if(!videos||isErr(videos)){ $('#lob-videos').innerHTML=errHtml(videos&&videos.error?videos.error:'sin datos'); return; }
+  $('#lob-videos').innerHTML=tablaW(['Publicado','Titulo','Estado','K','TS','LB'],
+    videos.map(v=>[esc((v.publicado||'').slice(0,16)),esc(v.titulo||''),videoBadge(v.estado),v.kid||'—',chipList(v.ts),chipList(v.lb)]));
+}
+function lbRow(o){
+  const precioTxt=o.precio==null?'sin dato':(fmtP(o.precio)+' ('+signed(o.pct,2)+'%)');
+  return `<details class="exprow"><summary style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <b>${esc(o.id)}</b><span>${esc(o.activo)}</span><span class="p">${esc(o.direccion)}</span><span class="p">${esc(o.mercado||'')}</span>
+      <span>${precioTxt}</span>${stopBadge(o)}${o.cobertura_parcial&&o.precio!=null?'<span class="p">(cobertura parcial)</span>':''}
+    </summary>
+    <div class="opdetail">
+      <div><b>Apertura:</b> ${esc(o.fecha_apertura||'—')} · entrada ${o.entrada??'—'}${o.entrada_es_aprox?' (aprox)':''} · stop ${o.stop??'—'}</div>
+      ${o.razon?`<div><b>Razon:</b> ${esc(o.razon)}</div>`:''}
+      ${o.ultimo_evento?`<div><b>Ultimo evento (${esc(o.ultimo_evento.tipo)}, ${esc(o.ultimo_evento.fecha)}):</b> "${esc(o.ultimo_evento.cita||'')}"</div>`:''}
+      <div>Eventos registrados: ${o.n_eventos??0}${o.precios_actualizado?(' · precio actualizado: '+esc(o.precios_actualizado)):''}</div>
+    </div></details>`;
+}
+function lbRowCerrada(o){
+  const rpt=o.resultado_pct_okx;
+  return `<details class="exprow"><summary style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <b>${esc(o.id)}</b><span>${esc(o.activo)}</span><span class="p">${esc(o.direccion)}</span>
+      <span class="${rpt==null?'p':(rpt>=0?'w':'l')}">${rpt==null?'sin medir':signed(rpt,2)+'%'}</span>
+      <span class="p">${esc(o.fecha_cierre||'')}</span>
+    </summary>
+    <div class="opdetail">
+      <div><b>Apertura:</b> ${esc(o.fecha_apertura||'—')} · entrada ${o.entrada??'—'} · stop ${o.stop??'—'}</div>
+      <div><b>Cierre:</b> ${esc(o.fecha_cierre||'—')} · precio ${o.precio_cierre??'—'}</div>
+      ${o.razon?`<div><b>Razon:</b> ${esc(o.razon)}</div>`:''}
+    </div></details>`;
+}
+function renderLobLB(lb){
+  if(!lb||isErr(lb)){
+    $('#lob-abiertas').innerHTML=errHtml(lb&&lb.error?lb.error:'sin datos'); $('#lob-cerradas').innerHTML=''; return;
+  }
+  const abiertas=lb.filter(o=>o.estado!=='cerrada'), cerradas=lb.filter(o=>o.estado==='cerrada');
+  $('#lob-abiertas').innerHTML=abiertas.map(lbRow).join('')||'<p class="note">ninguna</p>';
+  $('#lob-cerradas').innerHTML=cerradas.map(lbRowCerrada).join('')||'<p class="note">ninguna</p>';
+}
+function renderLobTS(ts){
+  if(!ts||isErr(ts)){ $('#lob-ts').innerHTML=errHtml(ts&&ts.error?ts.error:'sin datos'); return; }
+  $('#lob-ts').innerHTML='<div class="tiles">'+tile('Aciertos',ts.aciertos??0,'')+tile('Fallos',ts.fallos??0,'')+tile('En plazo',ts.en_plazo??0,'n='+(ts.n??0))+'</div>';
+}
+function renderLobCruce(cr){
+  if(!cr||isErr(cr)){ $('#lob-cruce').innerHTML=errHtml(cr&&cr.error?cr.error:'sin datos'); return; }
+  const buckets=['coincide','choca','sin_lobo'];
+  const rows=buckets.filter(b=>cr[b]).map(b=>{
+    const x=cr[b]; const ruido=x.n<30;
+    return [b,x.n,x.win,`<span class="${x.hit>=50?'w':'l'}">${x.hit}%</span>`+(ruido?' <span class="p">(no se concluye, n&lt;30)</span>':''),
+      signed(x.r_total,2),signed(x.r_op,3),x.pendientes];
+  });
+  $('#lob-cruce').innerHTML=tabla(['Relacion','n','W','Hit%','R total','R/op','Pendientes'],rows)+`<p class="note">desde ${esc(cr.desde||'—')}</p>`;
+}
+function renderLobCopy(cp){
+  if(!cp||isErr(cp)){ $('#lob-copy').innerHTML=errHtml(cp&&cp.error?cp.error:'sin datos'); return; }
+  $('#lob-copy').innerHTML=tabla(['Campo','Valor'],[
+    ['Posiciones',cp.posiciones],
+    ['Acierto',cp.acierto_pct+'%'],
+    ['Ganancia media',fmt(cp.ganancia_media)],
+    ['Perdida media',fmt(cp.perdida_media)],
+    ['Ratio gana/pierde',cp.ratio],
+    ['Copiadores',cp.copiadores],
+    ['PnL de copiadores',`<span class="${cp.pnl_copiadores>=0?'w':'l'}">${signed(cp.pnl_copiadores,2)}</span>`],
+    ['Ultimo trade',cp.ultimo_trade||'—'],
+    ['Snapshot del',cp.fecha||'—'],
+    ['Perfil',cp.url?`<a class="p" href="${cp.url}" target="_blank" rel="noopener">ver</a>`:'—'],
+  ]);
+}
+function renderLobPrueba(p){
+  if(!p||isErr(p)){ $('#lob-prueba').innerHTML=errHtml(p&&p.error?p.error:'sin datos'); return; }
+  const c=p.config||{}, r=p.resumen;
+  const reglas=`<p class="note">Del ${esc((c.inicio||'').slice(0,10))} al ${esc((c.fin||'').slice(0,10))}. Cada operativa que muestre en sus lives o en su Telegram se copia en papel: entra en SU entrada (limite) o a mercado si no la dio, SU stop (y sus movimientos), sale en el stop, cuando él cierra o al terminar la semana. Fees incluidos. Sin stop no hay R: solo %. "Aun hay tiempo" = el precio esta a menos de 0.25R a favor desde su entrada; es informativo, NO una señal (todo es SOLO PAPER).</p>`;
+  if(!r){ $('#lob-prueba').innerHTML=reglas+`<p class="note">${esc(p.nota||'sin datos todavia')}</p>`; return; }
+  const tiles=`<div class="tiles">${tile('Veredicto',r.terminada?(r.r_total>0?'GANO':'PERDIO'):'en curso',esc(r.veredicto||''))}
+    ${tile('Operativas',r.n,r.activadas+' activadas · '+r.pendientes+' pendientes')}
+    ${tile('Resultado R',signed(r.r_total,2)+'R',r.r_op==null?'sin R medible':(signed(r.r_op,3)+'R/op · '+r.win+'W/'+r.loss+'L cerradas'))}
+    ${tile('Resultado %',signed(r.pct_total,2)+'%','suma a 1x · '+r.sin_stop+' sin stop (solo %)')}</div>`;
+  const filas=(p.ops||[]).map(f=>{
+    let tiempo='—';
+    if(f.estado==='pendiente') tiempo=f.distancia_entrada_pct==null?'esperando su entrada':`su entrada esta a ${signed(-f.distancia_entrada_pct,2)}% del precio`;
+    else if(f.aun_hay_tiempo===true) tiempo=`<span class="w">aun hay tiempo</span> (${signed(f.progreso_r,2)}R)`;
+    else if(f.aun_hay_tiempo===false) tiempo=`<span class="p">ya se fue</span> (${signed(f.progreso_r,2)}R)`;
+    else if(f.estado==='cerrada') tiempo=esc(f.motivo||'cerrada');
+    return [esc(f.id),esc((f.anuncio||'').replace('T',' ')),esc(f.origen||''),esc(f.activo)+' '+esc(f.dir),
+      f.entrada_lobo==null?(f.entrada==null?'—':'mercado '+fmtP(f.entrada)):(fmtP(f.entrada_lobo)+(f.entrada&&f.entrada!==f.entrada_lobo?` <span class="p">(lleno ${fmtP(f.entrada)})</span>`:'')),
+      fmtP(f.stop_actual??f.stop_lobo),(f.objetivos||[]).map(fmtP).join(' · ')||'—',fmtP(f.precio),
+      f.pct==null?'—':`<span class="${f.pct>=0?'w':'l'}">${signed(f.pct,2)}%</span>`,
+      f.r==null?'—':`<span class="${f.r>=0?'w':'l'}">${signed(f.r,2)}R</span>`,esc(f.estado),tiempo];
+  });
+  $('#lob-prueba').innerHTML=reglas+tiles+(filas.length?tablaW(['LB','Anuncio','Origen','Activo','Entrada','Stop','Objetivos','Ahora','%','R','Estado','¿Entrar?'],filas):'<p class="note">todavia no mostro ninguna operativa en la semana de prueba</p>')+
+    (p.actualizado?`<p class="note">precios OKX 1H, actualizado ${esc(p.actualizado.replace('T',' '))}</p>`:'');
+}
+function renderLobo(l){
+  try{ renderLobPrueba(l.prueba); }catch(e){ $('#lob-prueba').innerHTML=errHtml('prueba: '+e.message); }
+  try{ renderLobTiles(l); }catch(e){ $('#lob-tiles').insertAdjacentHTML('beforeend',errHtml('tiles: '+e.message)); }
+  try{ renderLobVideos(l.videos); }catch(e){ $('#lob-videos').innerHTML=errHtml('videos: '+e.message); }
+  try{ renderLobLB(l.lb); }catch(e){ $('#lob-abiertas').innerHTML=errHtml('lb: '+e.message); }
+  try{ renderLobTS(l.ts_lobo); }catch(e){ $('#lob-ts').innerHTML=errHtml('ts_lobo: '+e.message); }
+  try{ renderLobCruce(l.cruce); }catch(e){ $('#lob-cruce').innerHTML=errHtml('cruce: '+e.message); }
+  try{ renderLobCopy(l.copytrading); }catch(e){ $('#lob-copy').innerHTML=errHtml('copytrading: '+e.message); }
+}
+
+function renderBanner(panel){
+  if(!panel||isErr(panel)){ $('#banner').innerHTML=panel&&panel.error?errHtml('panel: '+panel.error):''; return; }
+  const mr=panel.modo_real||{}, rh=panel.regimen_hoy||{};
+  let t='⚠ <b>'+esc(mr.texto||'SOLO PAPER')+'</b>';
+  if(rh.texto) t+=' · '+esc(rh.texto);
+  $('#banner').innerHTML=t;
 }
 </script>
 </body>

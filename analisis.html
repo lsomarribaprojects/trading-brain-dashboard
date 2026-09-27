@@ -53,7 +53,8 @@
 
   <div class="veredicto" id="veredicto"></div>
 
-  <h2>Experimento $100 → $1000 · riesgo 5% compuesto</h2>
+  <h2 id="titulo-experimento">Experimento $100 → $1000</h2>
+  <div class="note" id="riesgonote" style="margin:-8px 0 14px"></div>
   <div class="card"><svg id="eq" viewBox="0 0 900 190" preserveAspectRatio="none"></svg>
     <div class="note" id="eqnote" style="margin-top:8px"></div>
   </div>
@@ -74,6 +75,8 @@
         0,102R por operación a MillionTrader (36% de su edge).</li>
     <li><b>Máximo:</b> 24 h en posición. Al vencer, cierre a mercado.</li>
     <li><b>Riesgo:</b> el de <code>risk_config.json</code>. Leverage máx. 5X. SL dentro de la orden.</li>
+    <li><b>Filtro de regimen (H-011, desde el 25-sep):</b> sin GO si 0/15 o 9+/15 alts estan sobre su EMA20 diaria (mercado no mixto).</li>
+    <li><b>SOLO PAPER:</b> ninguna señal de este motor invita a operar con dinero real hasta que las A filtradas junten n≥50 con acierto &gt;54,5% (ver pestaña Operativas del marcador).</li>
   </ul></div>
 </div>
 
@@ -108,10 +111,11 @@ const render = d => {
         cls(r.pnl_4usd), "acumulado desde el inicio");
 
   const v = document.getElementById("veredicto");
+  const espNota = (r.esperado && r.esperado.nota) ? r.esperado.nota :
+    "18 meses con el filtro de regimen H-011 en produccion: +0,026R/op; sin el filtro: -0,072R/op (hit 48,5%). No es edge probado para dinero real todavia.";
   if (!r.resueltas) {
     v.innerHTML = "<b>Sin muestra todavía.</b> El motor acaba de entrar en producción. " +
-      "Hasta las 50 operaciones resueltas cualquier número aquí es ruido — " +
-      "el backtest espera ~55% de acierto y +0,03R por operación.";
+      "Hasta las 50 operaciones resueltas cualquier número aquí es ruido. " + espNota;
   } else if (r.significativo) {
     v.style.borderLeftColor = r.margen > 0 ? "var(--ok)" : "var(--bad)";
     v.innerHTML = "<b>" + (r.margen > 0 ? "EDGE CONFIRMADO." : "SIN EDGE.") + "</b> El margen de " +
@@ -119,8 +123,15 @@ const render = d => {
   } else {
     v.innerHTML = "<b>Dentro del ruido.</b> Margen " + (r.margen > 0 ? "+" : "") + f(r.margen, 1) +
       " pts contra un ruido de ±" + f(r.ic95, 1) + " pts (n=" + r.resueltas + "). " +
-      "No concluye nada todavía: hacen falta más operaciones.";
+      "No concluye nada todavía: hacen falta más operaciones. " + espNota;
   }
+
+  // riesgo real usado hoy en este motor (v3, modo pct) — ya no es "5% compuesto"
+  const riesgoPct = (d.panel && d.panel.paper && d.panel.paper.riesgo && d.panel.paper.riesgo.reversion != null)
+    ? d.panel.paper.riesgo.reversion : null;
+  document.getElementById("riesgonote").textContent = riesgoPct != null
+    ? ("riesgo real usado por la cuenta paper v3: " + (riesgoPct * 100).toFixed(1) + "% del capital actual por operacion")
+    : "riesgo: ver output/risk_config.json (no hay dato de paper_config en este data.json)";
 
   // curva de equity del experimento
   const eq = r.equity_100 || [];
@@ -140,8 +151,17 @@ const render = d => {
       " operaciones · la línea punteada es el capital inicial";
   } else {
     svg.innerHTML = `<text x="12" y="96" fill="#8b949e" font-size="13">sin operaciones resueltas todavía</text>`;
-    document.getElementById("eqnote").textContent =
-      "Con el edge medido (+0,03R) y riesgo del 5% compuesto, $100 → $1000 son ~1.537 operaciones (~1,4 años a 3/día).";
+    const rTrade = (r.esperado && r.esperado.r_trade != null) ? r.esperado.r_trade : null;
+    if (rTrade != null && riesgoPct != null && rTrade > 0) {
+      const nOps = Math.log(10) / Math.log(1 + riesgoPct * rTrade);
+      document.getElementById("eqnote").textContent =
+        "Con el margen medido (" + (rTrade >= 0 ? "+" : "") + f(rTrade, 3) + "R/op, sin edge probado todavia) y " +
+        (riesgoPct * 100).toFixed(1) + "% de riesgo, $100 → $1000 tomarian ~" + Math.round(nOps).toLocaleString("es") +
+        " operaciones — una proyeccion, no una promesa: ver el margen sobre break-even arriba.";
+    } else {
+      document.getElementById("eqnote").textContent =
+        "Sin edge probado todavia para proyectar cuantas operaciones tomaria llegar a $1000 (ver margen sobre break-even arriba).";
+    }
   }
 
   const tb = document.querySelector("#tabla tbody");
