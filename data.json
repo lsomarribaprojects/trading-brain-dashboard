@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-12 14:58",
+ "actualizado": "2026-10-12 15:14",
  "reversion": {
   "abiertas": 0,
   "resueltas": 80,
@@ -1086,7 +1086,7 @@
   }
  },
  "hourly": {
-  "emitidas": 623,
+  "emitidas": 624,
   "abiertas": 4,
   "por_grado": {
    "A": {
@@ -1102,17 +1102,17 @@
    },
    "B": {
     "emitidas": 159,
-    "resueltas": 155,
-    "win": 63,
+    "resueltas": 156,
+    "win": 64,
     "loss": 85,
-    "hit": 40.6,
-    "r_trade": -0.214,
-    "pf": 0.64,
+    "hit": 41.0,
+    "r_trade": -0.206,
+    "pf": 0.65,
     "tp2_pct": 9,
     "riesgo_paper": 0.0
    },
    "C": {
-    "emitidas": 436,
+    "emitidas": 437,
     "resueltas": 436,
     "win": 209,
     "loss": 209,
@@ -1124,6 +1124,24 @@
    }
   },
   "ultimas": [
+   {
+    "id": "HR-624",
+    "hora": "2026-10-12T15:13",
+    "activo": "FIL",
+    "dir": "LONG",
+    "grado": "C",
+    "score": 85.5,
+    "entry": 1.132,
+    "sl": 1.1044,
+    "tp1": 1.1596,
+    "tp2": 1.1789,
+    "tp3": 1.201,
+    "sl_pct": 2.438,
+    "outcome": "abierta",
+    "r": null,
+    "tp_max": null,
+    "fallos": "cierre dentro de Bollinger; RSI 32 no extremo"
+   },
    {
     "id": "HR-623",
     "hora": "2026-10-12T14:13",
@@ -1137,9 +1155,9 @@
     "tp2": 10.667,
     "tp3": 10.804,
     "sl_pct": 1.648,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.927,
+    "tp_max": "tp1",
     "fallos": "regimen 11/15 alts sobre EMA20: el motor no opera"
    },
    {
@@ -2184,24 +2202,6 @@
     "outcome": "win",
     "r": 0.963,
     "tp_max": "tp1",
-    "fallos": "cierre dentro de Bollinger; RSI 31 no extremo"
-   },
-   {
-    "id": "HR-564",
-    "hora": "2026-10-08T17:43",
-    "activo": "NEAR",
-    "dir": "LONG",
-    "grado": "C",
-    "score": 80.4,
-    "entry": 4.55,
-    "sl": 4.3387,
-    "tp1": 4.7613,
-    "tp2": 4.9092,
-    "tp3": 5.0783,
-    "sl_pct": 4.644,
-    "outcome": "win",
-    "r": 0.974,
-    "tp_max": "tp2",
     "fallos": "cierre dentro de Bollinger; RSI 31 no extremo"
    }
   ],
@@ -3894,7 +3894,7 @@
   ],
   "dias_nota": "El contexto macro NO predice al motor (estudios 22 y 23-sep: ningun factor macro/OKX anticipo sus periodos malos; solo la amplitud diaria sobrevivio, y ya esta dentro del filtro de regimen). Se muestra para entender el dia, no para decidir.",
   "post_mortem": {
-   "n": 619,
+   "n": 620,
    "BE": 54.5,
    "grado": [
     {
@@ -3906,10 +3906,10 @@
     },
     {
      "bucket": "B",
-     "n": 155,
-     "win": 63,
-     "hit": 40.6,
-     "r_sum": -33.094
+     "n": 156,
+     "win": 64,
+     "hit": 41.0,
+     "r_sum": -32.167
     },
     {
      "bucket": "A",
@@ -3929,10 +3929,10 @@
     },
     {
      "bucket": "extremo real",
-     "n": 183,
-     "win": 74,
-     "hit": 40.4,
-     "r_sum": -38.606
+     "n": 184,
+     "win": 75,
+     "hit": 40.8,
+     "r_sum": -37.679
     }
    ],
    "direccion": [
@@ -3945,19 +3945,19 @@
     },
     {
      "bucket": "LONG",
-     "n": 210,
-     "win": 110,
-     "hit": 52.4,
-     "r_sum": 6.994
+     "n": 211,
+     "win": 111,
+     "hit": 52.6,
+     "r_sum": 7.921
     }
    ],
    "z": [
     {
      "bucket": "|z|>=2 (fuera)",
-     "n": 307,
-     "win": 134,
-     "hit": 43.6,
-     "r_sum": -40.854
+     "n": 308,
+     "win": 135,
+     "hit": 43.8,
+     "r_sum": -39.927
     },
     {
      "bucket": "1.5-2.0",
@@ -3977,10 +3977,10 @@
    "rsi": [
     {
      "bucket": "RSI extremo (>70/<30)",
-     "n": 273,
-     "win": 117,
-     "hit": 42.9,
-     "r_sum": -47.851
+     "n": 274,
+     "win": 118,
+     "hit": 43.1,
+     "r_sum": -46.924
     },
     {
      "bucket": "RSI 60-70/30-40",
@@ -4000,10 +4000,10 @@
    "ext5": [
     {
      "bucket": ">=4% (regla)",
-     "n": 257,
-     "win": 111,
-     "hit": 43.2,
-     "r_sum": -35.989
+     "n": 258,
+     "win": 112,
+     "hit": 43.4,
+     "r_sum": -35.062
     },
     {
      "bucket": "2-4%",
@@ -4030,10 +4030,10 @@
     },
     {
      "bucket": "tarde 14-21",
-     "n": 203,
-     "win": 90,
-     "hit": 44.3,
-     "r_sum": -26.946
+     "n": 204,
+     "win": 91,
+     "hit": 44.6,
+     "r_sum": -26.019
     },
     {
      "bucket": "mañana 08-13",
@@ -4053,10 +4053,10 @@
     },
     {
      "bucket": "0.06-0.10R",
-     "n": 155,
-     "win": 78,
-     "hit": 50.3,
-     "r_sum": -9.3
+     "n": 156,
+     "win": 79,
+     "hit": 50.6,
+     "r_sum": -8.373
     },
     {
      "bucket": "fee>=0.10R",
@@ -4079,15 +4079,15 @@
    },
    "HR_B": {
     "emitidas": 159,
-    "resueltas": 155,
-    "win": 63,
+    "resueltas": 156,
+    "win": 64,
     "loss": 85,
     "expirada": 7,
-    "hit": 40.6,
-    "r_op": -0.2135
+    "hit": 41.0,
+    "r_op": -0.2062
    },
    "HR_C": {
-    "emitidas": 436,
+    "emitidas": 437,
     "resueltas": 436,
     "win": 209,
     "loss": 209,
@@ -4116,12 +4116,31 @@
   },
   "ops_archivos": {
    "corte": "2026-10-11",
-   "recientes": 25,
+   "recientes": 26,
    "historico": 702
   }
  },
  "conocimiento": {
   "k": [
+   {
+    "id": "K-027",
+    "fecha_contenido": "2026-10-12",
+    "registrado": "2026-10-12T15:00",
+    "fuente": "BITLOBO",
+    "tipo": "transcript",
+    "estado": "procesado",
+    "resumen": "3 tesis (TS-075 BTC 80500, TS-076 BTC pierde 81500->77900, TS-077 ciclo fin 2nov), 1 operativa nueva (LB-035 BTC SHORT 84000-84700), 2 eventos (LB-033 ETH cierra +190USDT; LB-035 comenta reentrada condicional), 0 hipotesis",
+    "derivados": {
+     "tesis": [
+      "TS-075",
+      "TS-076",
+      "TS-077"
+     ],
+     "senales": [],
+     "hipotesis": []
+    },
+    "nota": "knowledge/notas/K-027.md"
+   },
    {
     "id": "K-026",
     "fecha_contenido": "2026-10-10",
@@ -4825,6 +4844,60 @@
   ],
   "ts": [
    {
+    "id": "TS-077",
+    "fuente": "BITLOBO",
+    "activo": "BTC",
+    "tipo": "rango",
+    "nivel": 73000.0,
+    "nivel2": 78000.0,
+    "direccion": "arriba",
+    "plazo_h": 504.0,
+    "vence": "2026-11-02T11:39:00",
+    "estado": "en_plazo",
+    "horas_restantes": 500.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 13.71,
+    "max_alcanzado": null,
+    "min_alcanzado": null,
+    "texto": "Ciclo bajista BTC termina posiblemente semana del 2 de noviembre (elecciones de medio termino). CAMBIO DE FECHA: antes era semana 19-26 oct. 'estaba yo pensando que... coincida con la semana del 2 de noviembre... semana de las elecciones de medio termino' [0:23:47-0:24:23]. 'serian dos semanas mas' [0:24:58]. Plazo: ~21 dias (supuesto nuestro para el rango del ciclo). Video K-027 JiUyPmUgnsA"
+   },
+   {
+    "id": "TS-076",
+    "fuente": "BITLOBO",
+    "activo": "BTC",
+    "tipo": "pierde",
+    "nivel": 81500.0,
+    "nivel2": 77900.0,
+    "direccion": "abajo",
+    "plazo_h": 168.0,
+    "vence": "2026-10-19T11:39:00",
+    "estado": "en_plazo",
+    "horas_restantes": 164.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 1.85,
+    "max_alcanzado": null,
+    "min_alcanzado": null,
+    "texto": "Si BTC pierde 81500 con vela diaria completa, primer objetivo 77900, luego 75200-73800. 'el primer objetivo que se va a atravesar son los 77,900' [0:45:09]. 'cuando esto ocurra... vamos a tener un cuerpo de vela diario completo de bajo de 81,500... venir a buscar como minimo la zona de 75,200, 73,800' [0:45:09]. Plazo estimado 7 dias (supuesto nuestro). Video K-027 JiUyPmUgnsA"
+   },
+   {
+    "id": "TS-075",
+    "fuente": "BITLOBO",
+    "activo": "BTC",
+    "tipo": "alcanza",
+    "nivel": 80500.0,
+    "nivel2": null,
+    "direccion": "abajo",
+    "plazo_h": 48.0,
+    "vence": "2026-10-14T11:39:00",
+    "estado": "en_plazo",
+    "horas_restantes": 44.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 3.11,
+    "max_alcanzado": null,
+    "min_alcanzado": null,
+    "texto": "Objetivo H4 corto plazo: retestear los 80500 antes del miercoles IPC. 'voy a seguir esperando de menos venir a este target nuevamente de los 80,500' [0:43:29]. 'Primer objetivo en H4... retestear los 80,500' [0:45:46]. Plazo: antes del miercoles 14 oct. Video K-027 JiUyPmUgnsA"
+   },
+   {
     "id": "TS-074",
     "fuente": "K-026",
     "activo": "ETH-USDT",
@@ -4835,9 +4908,9 @@
     "plazo_h": 168.0,
     "vence": "2026-10-17T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 122.4,
-    "precio_actual": 2511.91,
-    "distancia_pct": -1.49,
+    "horas_restantes": 122.1,
+    "precio_actual": 2523.97,
+    "distancia_pct": -1.02,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "resistencia rebote en zona 2500-2550; confluencia Lobonachi + punto de control H4; el Lobo le mete matacran ahi para short. 'voy a dejar los vasos en el caso de Etherium, que si viniésemos a buscar esta zona le voy a meter matacran... hasta donde lo paso, hasta el punto de control que se encontraria justamente donde hemos rebotado' [1:29:24-1:30:01]"
@@ -4853,9 +4926,9 @@
     "plazo_h": 96.0,
     "vence": "2026-10-14T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 50.4,
-    "precio_actual": 82394.7,
-    "distancia_pct": -2.61,
+    "horas_restantes": 50.1,
+    "precio_actual": 83005.8,
+    "distancia_pct": -1.88,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "rebote maximo antes de reentrada en corto; zona media 100 H4; ratio 1:3 con stop ~1.8% y target 6.3% hacia 78K. 'si Bitcoin me viene a buscar esta zona, voy a volver a entrar en corto... 83800 como maximo los 84600' [1:10:02-1:12:32]"
@@ -4871,9 +4944,9 @@
     "plazo_h": 504.0,
     "vence": "2026-10-31T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 458.4,
-    "precio_actual": 82394.7,
-    "distancia_pct": 12.87,
+    "horas_restantes": 458.1,
+    "precio_actual": 83005.8,
+    "distancia_pct": 13.71,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "target final semanal bajista; deuda 74K + zona acumulacion + liquidez 73800; alineacion semanal+diario+H4; condicion: cierre diario bajo 81500. 'en tanto en grafica semanal como en grafica diaria tenemos la misma proyeccion... objetivo semanal retroceso 73-75K, deuda en 74K' [0:51:40-0:54:33]"
@@ -4889,9 +4962,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-24T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 290.4,
-    "precio_actual": 82394.7,
-    "distancia_pct": 5.63,
+    "horas_restantes": 290.1,
+    "precio_actual": 83005.8,
+    "distancia_pct": 6.42,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "primer objetivo control diario; condicion: cuerpo vela diaria bajo 81500; confluencia H4 zona de rebote temporal antes de continuar bajista. 'primer objetivo de grafica diaria 78K... es un punto de control' [0:52:47-0:54:33]"
@@ -4907,9 +4980,9 @@
     "plazo_h": 168.0,
     "vence": "2026-10-15T17:17:00.071089",
     "estado": "en_plazo",
-    "horas_restantes": 74.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 3.9,
+    "horas_restantes": 74.0,
+    "precio_actual": 83005.8,
+    "distancia_pct": 4.67,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC cae a 79.300-77.300 (minimo de onda 5 del impulso H4 en curso; primer zona de reversion del ultimo swing alcista completo)"
@@ -4925,9 +4998,9 @@
     "plazo_h": 48.0,
     "vence": "2026-10-10T17:16:19.575683",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -45.7,
-    "precio_actual": 82394.7,
-    "distancia_pct": -0.71,
+    "horas_restantes": -46.0,
+    "precio_actual": 83005.8,
+    "distancia_pct": 0.03,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC rebota a 82.983 (onda 4 H4); nivel donde el Lobo tomaria beneficios del largo tactico antes de continuar bajista"
@@ -4943,9 +5016,9 @@
     "plazo_h": 168.0,
     "vence": "2026-10-14T20:46:00",
     "estado": "en_plazo",
-    "horas_restantes": 53.8,
-    "precio_actual": 5.406,
-    "distancia_pct": -8.06,
+    "horas_restantes": 53.5,
+    "precio_actual": 5.501,
+    "distancia_pct": -6.45,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "NEAR como proxy del mercado de alts; pauta plana similar a mayoria de alts; objetivo 5.88 '588' [K-024 0:28:47]"
@@ -4961,9 +5034,9 @@
     "plazo_h": 168.0,
     "vence": "2026-10-14T20:46:00",
     "estado": "en_plazo",
-    "horas_restantes": 53.8,
-    "precio_actual": 2511.98,
-    "distancia_pct": 5.99,
+    "horas_restantes": 53.5,
+    "precio_actual": 2523.97,
+    "distancia_pct": 6.5,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH largo tactico en zona ~2.370; rebote esperado hacia zona superior; 'buscaría un esto por ahí por los 2.370 aproximadamente' [K-024 0:24:19]"
@@ -4979,9 +5052,9 @@
     "plazo_h": 72.0,
     "vence": "2026-10-10T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -42.2,
-    "precio_actual": 82394.7,
-    "distancia_pct": -5.62,
+    "horas_restantes": -42.5,
+    "precio_actual": 83005.8,
+    "distancia_pct": -4.92,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC H4 onda 4 del impulso bajista rebota a ~87.300; tras ese rebote viene onda 5 bajista hacia 75.280-73.800 si cierra bajo 81.500 [K-024 0:12:29-0:15:18]"
@@ -4997,8 +5070,8 @@
     "plazo_h": 48,
     "vence": "2026-10-10T15:05:18.276290",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -47.9,
-    "precio_actual": 82394.7,
+    "horas_restantes": -48.1,
+    "precio_actual": 83005.8,
     "distancia_pct": null,
     "max_alcanzado": null,
     "min_alcanzado": null,
@@ -5015,9 +5088,9 @@
     "plazo_h": 504.0,
     "vence": "2026-10-24T11:47:00",
     "estado": "en_plazo",
-    "horas_restantes": 284.8,
-    "precio_actual": 0.21547,
-    "distancia_pct": -44.75,
+    "horas_restantes": 284.5,
+    "precio_actual": 0.21912,
+    "distancia_pct": -43.82,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ENA pauta plana de continuacion hasta linea tendencia 0.39 USD; desde ahi rebote; K-023 NQRDlNgIAK8 [1:16:36] hasta los 39 centimos que es la linea de tendencia; precio emision 0.23452 (ENA a 0.234, objetivo 0.39 ARRIBA)"
@@ -5033,9 +5106,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-17T11:47:00",
     "estado": "en_plazo",
-    "horas_restantes": 116.8,
-    "precio_actual": 82394.7,
-    "distancia_pct": -3.07,
+    "horas_restantes": 116.5,
+    "precio_actual": 83005.8,
+    "distancia_pct": -2.35,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC NO supera 85000 en corto plazo segun metrica on chain; reitera TS-062 (invalidad oct-1 a 87K); precio emision 84863; K-023 NQRDlNgIAK8 [0:01:42] ni de conja vamos a superar los 85000"
@@ -5051,9 +5124,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-14T12:59:00",
     "estado": "en_plazo",
-    "horas_restantes": 46.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": -3.07,
+    "horas_restantes": 45.7,
+    "precio_actual": 83005.8,
+    "distancia_pct": -2.35,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC NO supera 85000 en corto plazo segun metrica onchain; [K-022 0:01:46] ni de conja en corto plazo Bitcoin va a superar los 85000; garbled 5000=85000 en subtitulos; BTC subio a ~87K el 01-oct K-021 posiblemente ya invalidada"
@@ -5069,9 +5142,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-15T12:55:00",
     "estado": "en_plazo",
-    "horas_restantes": 69.9,
-    "precio_actual": 82394.7,
-    "distancia_pct": -8.45,
+    "horas_restantes": 69.7,
+    "precio_actual": 83005.8,
+    "distancia_pct": -7.77,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC NO supera 90000 en corto plazo; metrica onchain + Strike Put alcista opciones en ese nivel. SUPUESTO NUESTRO: plazo 14 dias. Si BTC supera 90K -> tesis bajista del Lobo invalidada. 'la metrica chain me dice que en el corto plazo no vamos a superar los [90000]. Strike Put de alcista en 90.000' [0:01:42] K-021"
@@ -5087,9 +5160,9 @@
     "plazo_h": 192.0,
     "vence": "2026-10-09T12:55:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -74.1,
-    "precio_actual": 82394.7,
-    "distancia_pct": -1.91,
+    "horas_restantes": -74.3,
+    "precio_actual": 83005.8,
+    "distancia_pct": -1.18,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC bajista corto plazo desde zona 86800; Max Pain expiracion 9-oct en 84000. Entro SHORT en chiquilina Elbank y Bitunix. 'nosotros hemos entrado en corto. Tenemos Max Pain en 84.000 para el proximo viernes 9 de octubre.' [0:00:35, 0:01:42] K-021"
@@ -5105,9 +5178,9 @@
     "plazo_h": 480.0,
     "vence": "2026-10-20T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 188.7,
-    "precio_actual": 2511.98,
-    "distancia_pct": 4.67,
+    "horas_restantes": 188.4,
+    "precio_actual": 2523.97,
+    "distancia_pct": 5.17,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH correctiva minimo hacia zona 2400 como primer objetivo bajista [K-020 0:37:35]. Movimiento diario alcista pero correctivo esperado. Supuesto plazo: 20 dias."
@@ -5123,9 +5196,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-30T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 428.7,
-    "precio_actual": 82394.7,
-    "distancia_pct": 1.1,
+    "horas_restantes": 428.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 1.85,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC primer cuerpo de vela diaria completa bajo 81500 -> primer zona de interes 75200-73800 [K-020 0:24:02]. Rango diario confirmado; condicion de retroceso. Supuesto plazo: 30 dias."
@@ -5141,9 +5214,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-13T12:12:00",
     "estado": "en_plazo",
-    "horas_restantes": 21.2,
-    "precio_actual": 2511.98,
-    "distancia_pct": 9.22,
+    "horas_restantes": 21.0,
+    "precio_actual": 2523.97,
+    "distancia_pct": 9.74,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH muy debil; minimo 2.300-2.389 en diario; deuda 4H en 2.285; siguiente objetivo 2.200 [0:29:34]. Actualiza TS-051 (era 2.400) a la baja"
@@ -5159,9 +5232,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-13T12:01:00",
     "estado": "en_plazo",
-    "horas_restantes": 21.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 10.6,
+    "horas_restantes": 20.8,
+    "precio_actual": 83005.8,
+    "distancia_pct": 11.42,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC primer cuerpo de vela diaria completo bajo 81.500 -> zona 75.200 (techo) - 73.800 (piso); midpoint 74.500. Reitera TS-053 con nivel superior actualizado 75.280->75.200 [0:21:59, 1:00:51]"
@@ -5177,9 +5250,9 @@
     "plazo_h": 72.0,
     "vence": "2026-10-02T12:10:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -242.8,
-    "precio_actual": 82394.7,
-    "distancia_pct": 2.35,
+    "horas_restantes": -243.1,
+    "precio_actual": 83005.8,
+    "distancia_pct": 3.11,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC baja a testear zona 80.500-81.400 en H4 (testeo a media de dominancia USDT = esos niveles BTC); primer objetivo bajista antes de rebote [0:27:47]"
@@ -5195,9 +5268,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-28T11:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 380.7,
-    "precio_actual": 1.2087,
-    "distancia_pct": -24.46,
+    "horas_restantes": 380.4,
+    "precio_actual": 1.2182,
+    "distancia_pct": -23.86,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "DOT diagonal alcista en diario; objetivo zona 'por ahi por 160' [1:07:48 K-018]. Supuesto nuestro: plazo 720h. Ya tiene LB-008 DOT LONG desde 1.0153; plan de martingala en EMA100 ~1.12"
@@ -5213,9 +5286,9 @@
     "plazo_h": 504.0,
     "vence": "2026-10-19T11:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 164.7,
-    "precio_actual": 82394.7,
-    "distancia_pct": 10.54,
+    "horas_restantes": 164.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 11.36,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC cierre diario bajo 81.500 -> zona 75.280-73.800 (midpoint 74.540); rango diario confirma sesgo bajista [0:24:09 K-018]. Reitera narrativa TS-050 con zona ligeramente mas baja"
@@ -5231,9 +5304,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-25T17:50:00",
     "estado": "en_plazo",
-    "horas_restantes": 314.9,
-    "precio_actual": 0.2417,
-    "distancia_pct": -59.72,
+    "horas_restantes": 314.6,
+    "precio_actual": 0.2434,
+    "distancia_pct": -59.43,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ADA rompiendo resistencia diaria -> objetivo 60 centavos en spot semanal (+133% desde emision) [1:01:43 K-017]"
@@ -5249,9 +5322,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-09T17:50:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -69.1,
-    "precio_actual": 2511.98,
-    "distancia_pct": 4.67,
+    "horas_restantes": -69.4,
+    "precio_actual": 2523.97,
+    "distancia_pct": 5.17,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH objetivo minimo 2400 diario; conteo ondas completado; reitera TS-048/TS-041 [0:22:38 K-017]"
@@ -5267,9 +5340,9 @@
     "plazo_h": 480.0,
     "vence": "2026-10-15T17:50:00",
     "estado": "en_plazo",
-    "horas_restantes": 74.9,
-    "precio_actual": 82394.7,
-    "distancia_pct": 10.01,
+    "horas_restantes": 74.6,
+    "precio_actual": 83005.8,
+    "distancia_pct": 10.82,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC cierre diario bajo 81.500 -> minimo 74.800-75.000; shooting star semanal confirmada + resistencia onchain 85K [0:14:31 K-017]"
@@ -5285,9 +5358,9 @@
     "plazo_h": 168.0,
     "vence": "2026-10-01T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -266.0,
-    "precio_actual": 107.5,
-    "distancia_pct": -15.35,
+    "horas_restantes": -266.3,
+    "precio_actual": 108.68,
+    "distancia_pct": -14.43,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "SOL alcanza directriz 127-128: zona para entrada en corto tactico. Condicional. SOL estaba en 117 al emitir [K-016 1:10:29]"
@@ -5303,9 +5376,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-08T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -98.0,
-    "precio_actual": 2511.98,
-    "distancia_pct": 4.67,
+    "horas_restantes": -98.3,
+    "precio_actual": 2523.97,
+    "distancia_pct": 5.17,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH retroceso minimo a 2400 (diario). Condicion: dominancia BTC sigue cayendo. Plazo supuesto nuestro [K-016 0:43:50]"
@@ -5321,9 +5394,9 @@
     "plazo_h": 48,
     "vence": "2026-09-26T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -386.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 1.1,
+    "horas_restantes": -386.3,
+    "precio_actual": 83005.8,
+    "distancia_pct": 1.85,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC genera rango 81500-88000 en diario antes de continuar cayendo (no es rango para 100K). Plazo supuesto nuestro ~20 dias [K-016 0:35:57]"
@@ -5339,9 +5412,9 @@
     "plazo_h": 480.0,
     "vence": "2026-10-14T12:58:00",
     "estado": "en_plazo",
-    "horas_restantes": 46.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 10.89,
+    "horas_restantes": 45.7,
+    "precio_actual": 83005.8,
+    "distancia_pct": 11.72,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC: cierre vela diaria completa bajo 81500 -> retroceso a zona de interes ~74300. Condicionada: primero debe romper 81500 en vela diaria. Plazo supuesto nuestro [K-016 0:26:50]"
@@ -5357,9 +5430,9 @@
     "plazo_h": 168.0,
     "vence": "2026-09-30T18:49:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -284.2,
-    "precio_actual": 0.08475,
-    "distancia_pct": -29.37,
+    "horas_restantes": -284.4,
+    "precio_actual": 0.08534,
+    "distancia_pct": -28.88,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "DOGE alcista en diario; si supera zona de interes (0.1044), objetivo 12 centimos (25% desde zona). Mantiene LONG Bitunix personal; cerro Bank. 'Para buscar los 12 centimos seria 25%. Si rompe los 1044, senal de que va a seguir subiendo.' [0:55:47-0:56:22] K-015"
@@ -5375,9 +5448,9 @@
     "plazo_h": 48.0,
     "vence": "2026-09-25T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -411.5,
-    "precio_actual": 2511.98,
-    "distancia_pct": -1.3,
+    "horas_restantes": -411.7,
+    "precio_actual": 2523.97,
+    "distancia_pct": -0.83,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH: primer soporte en 2.545-2.555 con triple confluencia deuda+soporte+media movil 100; espera rebote desde esa zona al 50-61.8% de retrace antes de continuar la correccion diaria (supuesto nuestro: 2 dias)"
@@ -5393,9 +5466,9 @@
     "plazo_h": 120.0,
     "vence": "2026-09-28T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -339.5,
-    "precio_actual": 82394.7,
-    "distancia_pct": 3.9,
+    "horas_restantes": -339.7,
+    "precio_actual": 83005.8,
+    "distancia_pct": 4.67,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC deuda en 79.300 mas confluencia media movil 100; objetivo secundario condicionado a perder zona 81.500 en vela diaria completa (zona dorada segun el Lobo; supuesto nuestro: 5 dias si se da la condicion)"
@@ -5411,9 +5484,9 @@
     "plazo_h": 72.0,
     "vence": "2026-09-26T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -387.5,
-    "precio_actual": 82394.7,
-    "distancia_pct": 1.72,
+    "horas_restantes": -387.7,
+    "precio_actual": 83005.8,
+    "distancia_pct": 2.48,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC caida desde 84.200 a zona soporte 81.000-81.500 en 4H/diario; confluencia estructura y primer objetivo del retroceso; si cierra vela diaria completa bajo 81.500 inicia retroceso fuerte a zona dorada (supuesto nuestro: 3 dias)"
@@ -5429,7 +5502,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-29T12:54:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -314.1,
+    "horas_restantes": -314.3,
     "precio_actual": null,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -5447,9 +5520,9 @@
     "plazo_h": 168.0,
     "vence": "2026-09-29T12:15:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -314.7,
-    "precio_actual": 2511.98,
-    "distancia_pct": 2.53,
+    "horas_restantes": -315.0,
+    "precio_actual": 2523.97,
+    "distancia_pct": 3.02,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH en diario: onda 5 completada, espera correccion con primer objetivo 2400-2450 (fair value bloque 4H). Supuesto nuestro: 1 semana [0:41:19]"
@@ -5465,9 +5538,9 @@
     "plazo_h": 336.0,
     "vence": "2026-10-06T11:51:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -147.1,
-    "precio_actual": 82394.7,
-    "distancia_pct": 1.1,
+    "horas_restantes": -147.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 1.85,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC espera rango 81500-88500 en grafico diario proximas 2 semanas; soporte OTE 81500, resistencia max ~88500; mientras rangu altcoins deberan moverse [0:28:60-0:30:09 y 1:25:54]"
@@ -5483,9 +5556,9 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T13:19:00",
     "estado": "en_plazo",
-    "horas_restantes": 886.3,
-    "precio_actual": 1.0643,
-    "distancia_pct": -57.43,
+    "horas_restantes": 886.1,
+    "precio_actual": 1.076,
+    "distancia_pct": -56.96,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "SUI minimo especulado: podriamos ir como minimo a los 2.50 y siendo optimistas 2.90-3 [1:19:47]. PLAZO: supuesto nuestro (~nov, ~60d). Condicion: confirmacion Others y Total3 semanal."
@@ -5501,9 +5574,9 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T12:42:00",
     "estado": "en_plazo",
-    "horas_restantes": 885.7,
-    "precio_actual": 2511.98,
-    "distancia_pct": -16.27,
+    "horas_restantes": 885.5,
+    "precio_actual": 2523.97,
+    "distancia_pct": -15.87,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "segundo objetivo diario ETH despues de 2.800: inclusive los 3.000 [0:42:40]. PLAZO: supuesto nuestro (~60d). Tras correctiva post ciclo bajista mete ETH fuerte."
@@ -5519,9 +5592,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-19T12:42:00",
     "estado": "en_plazo",
-    "horas_restantes": 165.7,
-    "precio_actual": 2511.98,
-    "distancia_pct": -10.29,
+    "horas_restantes": 165.5,
+    "precio_actual": 2523.97,
+    "distancia_pct": -9.86,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "primer objetivo diario ETH: los siguientes objetivos serian los 2.800 y inclusive los 3.000 [0:42:40]. PLAZO: supuesto nuestro (~30d)."
@@ -5537,9 +5610,9 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T12:09:00",
     "estado": "en_plazo",
-    "horas_restantes": 885.2,
-    "precio_actual": 82394.7,
-    "distancia_pct": -11.31,
+    "horas_restantes": 884.9,
+    "precio_actual": 83005.8,
+    "distancia_pct": -10.65,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "segundo objetivo tras 84.200: Tenemos otro en los 92.900 los vasos [0:10:54]. PLAZO: supuesto nuestro (~60d); el no da fecha."
@@ -5555,9 +5628,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-09T16:41:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -70.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 8.99,
+    "horas_restantes": -70.6,
+    "precio_actual": 83005.8,
+    "distancia_pct": 9.8,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Correccion profunda si BTC cierra cuerpo diario completo bajo 75600. 'la unica manera de que Bitcoin venga a niveles muy profundos seria un cierre diario por debajo de 75600' [0:15:55]. Supuesto plazo 30 dias nuestro."
@@ -5573,9 +5646,9 @@
     "plazo_h": 336.0,
     "vence": "2026-09-23T16:41:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -454.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 7.56,
+    "horas_restantes": -454.6,
+    "precio_actual": 83005.8,
+    "distancia_pct": 8.36,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "BTC viene a recoger liquidez pendiente en 76600 como minimo desde 78148. 'ahí estamos esperando que venga a recoger la liquidez que esta pendiente aqui en los 76600 como minimo' [0:15:22]"
@@ -5591,9 +5664,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-10T11:44:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -51.2,
-    "precio_actual": 82394.7,
-    "distancia_pct": 7.01,
+    "horas_restantes": -51.5,
+    "precio_actual": 83005.8,
+    "distancia_pct": 7.8,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Soporte on-chain 77.000. Si BTC rompe esta zona segun metrica chain, siguiente cluster es 60.000 (no hay soporte intermedio). [0:01:46] 'si nosotros rompemos esa zona... segun esta metrica chain, ya no tenemos nada de nueva cuenta hasta los 60'"
@@ -5609,9 +5682,9 @@
     "plazo_h": 336.0,
     "vence": "2026-09-25T12:44:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -410.2,
-    "precio_actual": 1.2087,
-    "distancia_pct": 2.43,
+    "horas_restantes": -410.5,
+    "precio_actual": 1.2182,
+    "distancia_pct": 3.24,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "DOT retesteando resistencia diaria. Forma diagonal alcista, espera a directriz y movimiento alcista. TP minimo 1.18. 'deberíamos subir polcados... formamos la diagonal, esperamos con paciencia, buscamos nuevamente la directriz y nos vamos con el movimiento alcista' [1:04:02]. TP declarado 1.18 en chiquilina Bitunix [1:08:40]. Stop declarado 0.985."
@@ -5627,9 +5700,9 @@
     "plazo_h": 1092.0,
     "vence": "2026-10-26T23:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 344.7,
-    "precio_actual": 82394.7,
-    "distancia_pct": 21.17,
+    "horas_restantes": 344.4,
+    "precio_actual": 83005.8,
+    "distancia_pct": 22.07,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Si estructura diaria rompe en zigzag, objetivo 68000-69000. 'no solamente vamos a ir a los 69 68, sino que habremos roto toda la estructura' [0:30:53]. Condicion: ruptura confirmada de estructura diaria. Fecha ciclo: semana 19-26 oct (plazo supuesto nuestro)."
@@ -5645,9 +5718,9 @@
     "plazo_h": 336.0,
     "vence": "2026-09-26T17:06:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -381.9,
-    "precio_actual": 82394.7,
-    "distancia_pct": -1.91,
+    "horas_restantes": -382.1,
+    "precio_actual": 83005.8,
+    "distancia_pct": -1.18,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "altas probabilidades de que podamos alcanzar todavia esta zona: objetivo semanal 84-85K si seguimos por encima de 76000 [0:43:28]"
@@ -5663,9 +5736,9 @@
     "plazo_h": 168.0,
     "vence": "2026-09-19T17:08:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -549.8,
-    "precio_actual": 82394.7,
-    "distancia_pct": 11.34,
+    "horas_restantes": -550.1,
+    "precio_actual": 83005.8,
+    "distancia_pct": 12.17,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "doble kill hasta la deuda de 74,000 en grafico diario. Sacar liquidez por arriba y luego ir a buscar esa deuda [0:45:11]"
@@ -5681,9 +5754,9 @@
     "plazo_h": 48.0,
     "vence": "2026-09-14T17:38:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -669.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 4.96,
+    "horas_restantes": -669.6,
+    "precio_actual": 83005.8,
+    "distancia_pct": 5.74,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Si el precio de Bitcoin sube por encima de los 78,500, yo el lobo aprovecharia para meter o recargar corto [1:16:20]"
@@ -5699,9 +5772,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-18T11:38:00",
     "estado": "en_plazo",
-    "horas_restantes": 140.7,
-    "precio_actual": 2511.91,
-    "distancia_pct": 8.27,
+    "horas_restantes": 140.4,
+    "precio_actual": 2523.97,
+    "distancia_pct": 8.79,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH supera 2320 cierre cuerpo vela diaria -> confirma estructura ABC convierte en 1-2-3-4-5, cambio tendencia; target 2700+; ya cotizaba ~2626 al procesar (18-sep tarde) [K-007, 0:38:35]"
@@ -5717,9 +5790,9 @@
     "plazo_h": 1008.0,
     "vence": "2026-10-30T11:38:00",
     "estado": "en_plazo",
-    "horas_restantes": 428.7,
-    "precio_actual": 0.8304,
-    "distancia_pct": -16.96,
+    "horas_restantes": 428.4,
+    "precio_actual": 0.8389,
+    "distancia_pct": -16.11,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "APT rompe 0.70 (6to intento, acumulacion con volumen); objetivo psicologico 1 USD; supply 85% desbloqueado; Lobo tiene largo spot desde ~0.60 sin tomar parciales [K-007, 1:07:49]"
@@ -5735,9 +5808,9 @@
     "plazo_h": 24.0,
     "vence": "2026-09-18T11:42:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -579.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 9.86,
+    "horas_restantes": -579.5,
+    "precio_actual": 83005.8,
+    "distancia_pct": 10.67,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Max Pain opciones vencimiento 18-sep-2026 en 75.000; strike bajistas en 74.000. Presion gravitatoria hacia ese nivel en 24h. Plazo supuesto nuestro. [K-006 wDVIkahzWY0, 0:01:07]"
@@ -5753,9 +5826,9 @@
     "plazo_h": 120.0,
     "vence": "2026-09-20T14:24:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -528.6,
-    "precio_actual": 82394.7,
-    "distancia_pct": 13.96,
+    "horas_restantes": -528.8,
+    "precio_actual": 83005.8,
+    "distancia_pct": 14.81,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Liquidez lobonachi 1.618 en zona 4H. 'Ahi esta la liquidez en 72,300 los bichos' [1:02:20]. Condicional: si 73300 no aguanta el rebote. Plazo supuesto nuestro 120h. K-004 xqiLUFEEeBg."
@@ -5771,9 +5844,9 @@
     "plazo_h": 72.0,
     "vence": "2026-09-18T14:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -576.8,
-    "precio_actual": 82394.7,
-    "distancia_pct": 9.13,
+    "horas_restantes": -577.0,
+    "precio_actual": 83005.8,
+    "distancia_pct": 9.94,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Primera zona de reaccion bajista. 'Considero que vamos a venir a esta zonita' [0:50:03]. Estructura 4H bajista Boss formado. Plazo supuesto nuestro 72h. K-004 xqiLUFEEeBg."
@@ -5789,9 +5862,9 @@
     "plazo_h": 240.0,
     "vence": "2026-09-26T14:25:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -384.6,
-    "precio_actual": 2511.98,
-    "distancia_pct": 25.6,
+    "horas_restantes": -384.8,
+    "precio_actual": 2523.97,
+    "distancia_pct": 26.2,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Primer objetivo bajista ETH si cierra diario < 2322 (ver TS-020). Condicion previa necesaria. [0:54:34] K-005 n_kq_GM2j4Q plazo supuesto nuestro"
@@ -5807,9 +5880,9 @@
     "plazo_h": 120.0,
     "vence": "2026-09-21T14:25:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -504.6,
-    "precio_actual": 2511.98,
-    "distancia_pct": 8.18,
+    "horas_restantes": -504.8,
+    "precio_actual": 2523.97,
+    "distancia_pct": 8.7,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Cierre cuerpo diario ETH < 2322 confirma zigzag bajista. [0:54:34] K-005 n_kq_GM2j4Q plazo supuesto nuestro"
@@ -5825,9 +5898,9 @@
     "plazo_h": 72.0,
     "vence": "2026-09-19T13:31:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -553.5,
-    "precio_actual": 82394.7,
-    "distancia_pct": 12.41,
+    "horas_restantes": -553.7,
+    "precio_actual": 83005.8,
+    "distancia_pct": 13.24,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Zona 4H bajista 73300-74000: Boss formado en H4, estructura bajista. Lobo quiere comprar en esa zona. Si no recupera 76000 sigue a zona 72900. [0:35:35] K-005 n_kq_GM2j4Q plazo supuesto nuestro"
@@ -5843,9 +5916,9 @@
     "plazo_h": 168.0,
     "vence": "2026-09-21T14:45:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -504.2,
-    "precio_actual": 2511.98,
-    "distancia_pct": -6.96,
+    "horas_restantes": -504.5,
+    "precio_actual": 2523.97,
+    "distancia_pct": -6.52,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "ETH busca media de 100 en 2700 [1:02:31] plazo supuesto nuestro K-003 EP0wapeZY-E"
@@ -5861,9 +5934,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-14T14:13:00",
     "estado": "en_plazo",
-    "horas_restantes": 47.2,
-    "precio_actual": 82394.7,
-    "distancia_pct": 21.17,
+    "horas_restantes": 47.0,
+    "precio_actual": 83005.8,
+    "distancia_pct": 22.07,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Condicion: cierre cuerpo diario < 75600; la unica manera de caer a 69-68K. [0:30:30] K-003 EP0wapeZY-E"
@@ -5879,9 +5952,9 @@
     "plazo_h": 72.0,
     "vence": "2026-09-17T14:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -600.8,
-    "precio_actual": 82394.7,
-    "distancia_pct": -0.01,
+    "horas_restantes": -601.0,
+    "precio_actual": 83005.8,
+    "distancia_pct": 0.74,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Parte alta del rango diario 82000-82400: si BTC rompe zona OTE (79800) va a buscar el ultimo alto [0:56:09] K-003 EP0wapeZY-E"
@@ -5897,9 +5970,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -101.6,
-    "precio_actual": 0.08475,
-    "distancia_pct": -29.37,
+    "horas_restantes": -101.9,
+    "precio_actual": 0.08534,
+    "distancia_pct": -28.88,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Objetivo minimo de 12 centimos. Deuda semanal en 21 centimos: riesgo 40% para buscar 139%, uno por tres. Divergencia brutal. SOLO SPOT. [plazo 720h = supuesto nuestro]"
@@ -5915,7 +5988,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -101.6,
+    "horas_restantes": -101.9,
     "precio_actual": null,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -5933,9 +6006,9 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -101.6,
-    "precio_actual": 0.21547,
-    "distancia_pct": -10.22,
+    "horas_restantes": -101.9,
+    "precio_actual": 0.21912,
+    "distancia_pct": -8.7,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Desde el retroceso, venir a buscar primero que nada los 24 centimos. [plazo 720h = supuesto nuestro, ligado a su fecha de fin de bear market]"
@@ -5951,9 +6024,9 @@
     "plazo_h": 168.0,
     "vence": "2026-09-15T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -653.6,
-    "precio_actual": 0.21547,
-    "distancia_pct": 53.91,
+    "horas_restantes": -653.9,
+    "precio_actual": 0.21912,
+    "distancia_pct": 56.51,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Escenario mas probable: si viniese a buscar niveles por debajo de 14 centimos (deuda 0.1385) tendriamos oportunidad. SOLO SPOT. [plazo 168h = supuesto nuestro]"
@@ -5969,9 +6042,9 @@
     "plazo_h": 168.0,
     "vence": "2026-09-15T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -653.6,
-    "precio_actual": 82394.7,
-    "distancia_pct": -2.14,
+    "horas_restantes": -653.9,
+    "precio_actual": 83005.8,
+    "distancia_pct": -1.42,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "El siguiente objetivo que hemos actualizado son los 84.200 y de ahi vamos a ver si los 92.900 se pueden tambien. [plazo 168h = supuesto nuestro]"
@@ -5987,9 +6060,9 @@
     "plazo_h": 72.0,
     "vence": "2026-09-11T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -749.6,
-    "precio_actual": 82394.7,
-    "distancia_pct": 8.41,
+    "horas_restantes": -749.9,
+    "precio_actual": 83005.8,
+    "distancia_pct": 9.22,
     "max_alcanzado": null,
     "min_alcanzado": null,
     "texto": "Diario: lo dejamos buscando la parte baja del rango. Como minimo la liquidez de 76.000. En 4H Bitcoin va a continuar cayendo, no me dejaria engañar por la velita del martillo. Zigzag de libro. [plazo 72h = supuesto nuestro]"
@@ -6005,9 +6078,9 @@
     "plazo_h": 48.0,
     "vence": "2026-09-05T08:22:00",
     "estado": "acierto",
-    "horas_restantes": -894.6,
-    "precio_actual": 82394.7,
-    "distancia_pct": 2.99,
+    "horas_restantes": -894.9,
+    "precio_actual": 83005.8,
+    "distancia_pct": 3.76,
     "max_alcanzado": 82285.0,
     "min_alcanzado": 78650.0,
     "texto": "ir a buscar la liquidez pendiente en la parte superior, entorno a los 80K (estructura 1H alcista)"
@@ -6023,9 +6096,9 @@
     "plazo_h": 240.0,
     "vence": "2026-08-30T08:00:00",
     "estado": "acierto",
-    "horas_restantes": -1039.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 7.01,
+    "horas_restantes": -1039.2,
+    "precio_actual": 83005.8,
+    "distancia_pct": 7.8,
     "max_alcanzado": 80000.0,
     "min_alcanzado": 76888.0,
     "texto": "20-ago live: tras cumplir 72-74K, siguientes targets diarios 73.300 y 77.000, luego zona 85K. Mantiene que NO hay cambio de tendencia: falta el volumen masivo en diario. Piso de BTC entre finales de oct y principios de nov"
@@ -6041,9 +6114,9 @@
     "plazo_h": 120.0,
     "vence": "2026-08-18T04:19:00",
     "estado": "fallo",
-    "horas_restantes": -1330.7,
-    "precio_actual": 82394.7,
-    "distancia_pct": 26.76,
+    "horas_restantes": -1330.9,
+    "precio_actual": 83005.8,
+    "distancia_pct": 27.7,
     "max_alcanzado": 64630.3,
     "min_alcanzado": 62521.8,
     "texto": "13-ago 04:19 Telegram (avatar lobo, identidad SIN CONFIRMAR): BTC dentro del FVG; si aguanta la zona, impulso a buscar liquidez en 65000-66000. Declara rango de agosto 62K-66K y 65-66K como resistencia clave"
@@ -6059,9 +6132,9 @@
     "plazo_h": 120.0,
     "vence": "2026-08-17T12:00:00",
     "estado": "fallo",
-    "horas_restantes": -1347.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 24.84,
+    "horas_restantes": -1347.2,
+    "precio_actual": 83005.8,
+    "distancia_pct": 25.77,
     "max_alcanzado": 64427.4,
     "min_alcanzado": 62521.8,
     "texto": "12-ago live: 'tengo todo para que BTC inicie un rebote de menos hasta los 66' (estructura, volumen, POC). Admite que le falta la sobreventa. Mantiene 72-74K de fondo"
@@ -6077,9 +6150,9 @@
     "plazo_h": 336.0,
     "vence": "2026-08-25T12:00:00",
     "estado": "acierto",
-    "horas_restantes": -1155.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 14.44,
+    "horas_restantes": -1155.2,
+    "precio_actual": 83005.8,
+    "distancia_pct": 15.29,
     "max_alcanzado": 73111.0,
     "min_alcanzado": 62521.8,
     "texto": "11-ago live: reitera por 3a vez el target de rebote 72-74K desde la zona de acumulacion (misma tesis de T-001 21-jul y T-002 29-jul, ambas FALLO)"
@@ -6095,9 +6168,9 @@
     "plazo_h": 48.0,
     "vence": "2026-08-13T12:00:00",
     "estado": "acierto",
-    "horas_restantes": -1443.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 31.2,
+    "horas_restantes": -1443.2,
+    "precio_actual": 83005.8,
+    "distancia_pct": 32.17,
     "max_alcanzado": 64496.9,
     "min_alcanzado": 62846.3,
     "texto": "11-ago live: espera la 'trampa' bajista a la zona 62700-63000 antes del dato IPC; su stop en 62200. Se decanta por barrida y reversion, no por caida a 60K"
@@ -6113,9 +6186,9 @@
     "plazo_h": 48.0,
     "vence": "2026-08-01T10:37:45.900040",
     "estado": "fallo",
-    "horas_restantes": -1732.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 32.89,
+    "horas_restantes": -1732.6,
+    "precio_actual": 83005.8,
+    "distancia_pct": 33.88,
     "max_alcanzado": 65423.7,
     "min_alcanzado": 62457.1,
     "texto": "29-jul: indicadores diarios en rojo tras rechazo; posible que alcance la zona de soporte antes de rebotar"
@@ -6131,9 +6204,9 @@
     "plazo_h": 48.0,
     "vence": "2026-08-01T10:37:44.174535",
     "estado": "fallo",
-    "horas_restantes": -1732.3,
-    "precio_actual": 82394.7,
-    "distancia_pct": 22.98,
+    "horas_restantes": -1732.6,
+    "precio_actual": 83005.8,
+    "distancia_pct": 23.89,
     "max_alcanzado": 65423.7,
     "min_alcanzado": 62457.1,
     "texto": "29-jul 05:31: esperamos horas mas de impulso alcista para atacar los 67.000. Si rompe con fuerza: 72-74K"
@@ -6149,9 +6222,9 @@
     "plazo_h": 240.0,
     "vence": "2026-07-31T05:00:00",
     "estado": "fallo",
-    "horas_restantes": -1762.0,
-    "precio_actual": 82394.7,
-    "distancia_pct": 22.98,
+    "horas_restantes": -1762.2,
+    "precio_actual": 83005.8,
+    "distancia_pct": 23.89,
     "max_alcanzado": 65423.7,
     "min_alcanzado": 63605.8,
     "texto": "21-jul: BTC reacciono en zona de compras, siguiente movimiento probable hacia 67.000-70.000 (zona de liquidez)"
@@ -6161,13 +6234,13 @@
    "total": {
     "aciertos": 4,
     "fallos": 5,
-    "en_plazo": 65,
+    "en_plazo": 68,
     "vencidas_sin_resolver": 37
    },
    "BITLOBO": {
     "aciertos": 4,
     "fallos": 3,
-    "en_plazo": 59,
+    "en_plazo": 62,
     "vencidas_sin_resolver": 36
    },
    "Crypto_Senales_VIP": {
@@ -6198,6 +6271,31 @@
  },
  "lobo": {
   "videos": [
+   {
+    "video": "nDPbI6CE8XM",
+    "titulo": "🚨 BITCOIN CAYENDO… TE DI LA ZONA EXACTA DE VENTAS ¿QUÉ HACEMOS AHORA? EN VIVO",
+    "publicado": "2026-10-12T12:59-05:00",
+    "estado": "sin_transcripcion",
+    "kid": null,
+    "ts": [],
+    "lb": []
+   },
+   {
+    "video": "JiUyPmUgnsA",
+    "titulo": "🚨 BITCOIN CAYENDO… TE DI LA ZONA EXACTA DE VENTAS ¿QUÉ HACEMOS AHORA? EN VIVO",
+    "publicado": "2026-10-12T11:39-05:00",
+    "estado": "analizado",
+    "kid": "K-027",
+    "ts": [
+     "TS-075",
+     "TS-076",
+     "TS-077"
+    ],
+    "lb": [
+     "LB-033",
+     "LB-035"
+    ]
+   },
    {
     "video": "uVUn0aBvG74",
     "titulo": "💥 EL PATRÓN QUE NADIE ESTÁ VIENDO EN BITCOIN… Análisis Semanal EN DIRECTO",
@@ -6648,12 +6746,12 @@
      "fecha": "2026-09-12T17:54",
      "cita": "SUI posicion ya abierta al 12-sep. Menciona intension de salir en el rebote: 'aprovecharé para salir quizas de Porcout, vale, Y de esta baso"
     },
-    "precio": 1.0643,
-    "pct": 51.5,
+    "precio": 1.076,
+    "pct": 53.17,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-002",
@@ -6674,12 +6772,12 @@
      "fecha": "2026-09-17T11:41",
      "cita": "Stop 76.550 tocado en OKX; BTC fue a ~75.000 segun el Lobo ('ayer... cogieron a Bitcoin en los niveles de 75.000' [0:20:00]). El Lobo no men"
     },
-    "precio": 82394.7,
-    "pct": 4.0,
+    "precio": 83005.8,
+    "pct": 4.78,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-003",
@@ -6769,12 +6867,12 @@
      "fecha": "2026-09-19T13:44",
      "cita": "K-012: el Lobo muestra AVAX LONG en bank (+447%) y Bitunix (parcial tomado), pero NO menciona esta cobertura SHORT (-41.5% en OKX). Sin cier"
     },
-    "precio": 10.371,
-    "pct": -36.3,
+    "precio": 10.563,
+    "pct": -38.82,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-007",
@@ -6795,12 +6893,12 @@
      "fecha": "2026-09-15T14:15",
      "cita": "50% de apt [0:53:02]. Tomando ganancias en volatilidad previo a votacion ley clarity"
     },
-    "precio": 0.8304,
-    "pct": -38.03,
+    "precio": 0.8389,
+    "pct": -39.44,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-008",
@@ -6821,12 +6919,12 @@
      "fecha": "2026-10-03T11:47",
      "cita": "Aqui si tengo a Dot. En la chiquilina de Bitunix si estoy en ese reto de 20.000 a 100.000 [1:32:33]. Muestra la posicion DOT en Bitunix acti"
     },
-    "precio": 1.2087,
-    "pct": 19.05,
+    "precio": 1.2182,
+    "pct": 19.98,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-009",
@@ -6916,12 +7014,12 @@
      "fecha": "2026-09-23T18:49",
      "cita": "Yo traigo Dodge en mi cuenta personal de Bitunix. En el Bank la cerré. [0:52:52]. La cuenta Bitunix personal sigue abierta; solo cerro la po"
     },
-    "precio": 0.08475,
-    "pct": 3.23,
+    "precio": 0.08534,
+    "pct": 3.95,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-013",
@@ -6969,12 +7067,12 @@
      "fecha": "2026-10-10T18:28",
      "cita": "voy a tomarle un parcialito aptos. Le he cargado un poquito mas de margen a aptos. Estoy sacandole 1000 UST en la chiquilina de Elbank. Asi "
     },
-    "precio": 0.8304,
-    "pct": 38.4,
+    "precio": 0.8389,
+    "pct": 39.82,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-015",
@@ -6995,12 +7093,12 @@
      "fecha": "2026-09-19T12:09",
      "cita": "stop 76.700 (BE) tocado en OKX; BTC bajo a ~75.000 el 16-sep. El Lobo no menciona LB-015 en K-012 ni confirma el cierre. En K-012 dice no te"
     },
-    "precio": 82394.7,
-    "pct": 7.42,
+    "precio": 83005.8,
+    "pct": 8.22,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-016",
@@ -7069,12 +7167,12 @@
      "fecha": "2026-09-09T12:08",
      "cita": "Toma parcial del 49% de la cobertura SHORT de DOT. 'le voy a poner 49%, le voy a dar cerrar... ya le tome parcial a esa cobertura de Polcado"
     },
-    "precio": 1.2087,
-    "pct": -6.87,
+    "precio": 1.2182,
+    "pct": -7.71,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-019",
@@ -7095,12 +7193,12 @@
      "fecha": "2026-09-25T18:19",
      "cita": "Tengo lobiqueña con Avaxas. Okay, ahi esta. [0:28:51] Confirma que sigue con posicion AVAX abierta en la chiquilina tras el cierre de LB-024"
     },
-    "precio": 10.371,
-    "pct": 7.5,
+    "precio": 10.563,
+    "pct": 9.5,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-020",
@@ -7121,12 +7219,12 @@
      "fecha": "2026-09-25T18:32",
      "cita": "Creo que sera que por aqui traigo creo que tambien le estaba metiendo un scalpin. Ah, no, ya no lo tengo. [0:42:00] Duda si tenia BCH pero d"
     },
-    "precio": 272.9,
-    "pct": -17.78,
+    "precio": 274.6,
+    "pct": -17.26,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-021",
@@ -7292,7 +7390,7 @@
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-028",
@@ -7313,12 +7411,12 @@
      "fecha": "2026-09-30T11:39",
      "cita": "cobertura tactica en chiquilina Bitunix. Sesgo bajista corto plazo en alts [1:00:31]."
     },
-    "precio": 107.5,
-    "pct": 10.68,
+    "precio": 108.68,
+    "pct": 9.7,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": false,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-029",
@@ -7339,12 +7437,12 @@
      "fecha": "2026-09-30T11:39",
      "cita": "posicion chiquilina Bitunix con pequena ganancia. Mencionada junto a SOL SHORT [1:00:31]."
     },
-    "precio": 1.3594,
-    "pct": 10.07,
+    "precio": 1.3695,
+    "pct": 9.41,
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": false,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
    },
    {
     "id": "LB-030",
@@ -7420,7 +7518,7 @@
     "activo": "ETH",
     "direccion": "LONG",
     "mercado": "futuros",
-    "estado": "abierta",
+    "estado": "cerrada",
     "fecha_apertura": "2026-10-08T16:39",
     "entrada": 2370.0,
     "entrada_es_aprox": false,
@@ -7431,21 +7529,15 @@
      2490.0
     ],
     "razon": "largo tactico en zona soporte 2.370; stop 3.6%; objetivo 4-5%; 'aqui tambien tengo un pequeno largo... de momento ahi estamos en positivo. Ha venido clavado el movimiento y ahora estamos teniendo un rebote' [0:01:10, 0:07:51]",
-    "n_eventos": 2,
+    "n_eventos": 3,
     "ultimo_evento": {
-     "tipo": "comenta",
-     "fecha": "2026-10-10T17:14",
-     "cita": "OBJ1 (2480) y OBJ2 (2490) tocados en OKX (ETH en 2509); el Lobo no menciona ETH gestion en este live; al final dice 'si logramos llegar a po"
+     "tipo": "cierra",
+     "fecha": "2026-10-12T12:35",
+     "cita": "me puede venir a sacar y asi que lo voy a cerrar trader que se ahi con 190 pesos. Vamos a cerrar esta de Ethereum. Listo. [0:56:23]. Confirm"
     },
-    "precio": 2511.98,
-    "pct": 5.99,
-    "stop_tocado": false,
-    "obj_tocados": [
-     1,
-     2
-    ],
-    "cobertura_parcial": false,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "fecha_cierre": "2026-10-12T12:35",
+    "precio_cierre": 2523.0,
+    "resultado_pct_okx": 5.996202531645567
    },
    {
     "id": "LB-034",
@@ -7471,24 +7563,50 @@
     "stop_tocado": false,
     "obj_tocados": [],
     "cobertura_parcial": true,
-    "precios_actualizado": "2026-10-12T14:13:31"
+    "precios_actualizado": "2026-10-12T15:14:11"
+   },
+   {
+    "id": "LB-035",
+    "activo": "BTC",
+    "direccion": "SHORT",
+    "mercado": "futuros",
+    "estado": "abierta",
+    "fecha_apertura": "2026-10-12T11:39",
+    "entrada": 84350.0,
+    "entrada_es_aprox": false,
+    "precio_okx_apertura": 82507.2,
+    "stop": null,
+    "objetivos": [],
+    "razon": "SHORT dado a premium cuando BTC testeaba zona 84000-84700 (rebote maximo proyectado en K-026). Abierto en Bitunix chiquilina y Elbank chiquilina. Razones: resistencia H4 en zona 83800-84600 post-correccion; rebote onda 4 completado; IPC miercoles 14-oct = sesgo bajista. 'a los muchachos del premium les mande cuando Bitcoin estaba testeando la zona... En 84000 hasta 84000 700, verdad? Corto' [0:38:19]. Ya 564 UST de ganancia en Bitunix al inicio del live [0:47:02]",
+    "n_eventos": 2,
+    "ultimo_evento": {
+     "tipo": "comenta",
+     "fecha": "2026-10-12T11:39",
+     "cita": "Si Bitcoin me viene a buscar esta zona [mas alta, no especificada exactamente], voy a volver a entrar en corto. Primer objetivo 80500 para b"
+    },
+    "precio": 83005.8,
+    "pct": 1.59,
+    "stop_tocado": false,
+    "obj_tocados": [],
+    "cobertura_parcial": false,
+    "precios_actualizado": "2026-10-12T15:14:11"
    }
   ],
   "ts_lobo": {
-   "n": 67,
+   "n": 70,
    "aciertos": 4,
    "fallos": 4,
-   "en_plazo": 59
+   "en_plazo": 62
   },
   "cruce": {
    "desde": "2026-09-16",
    "coincide": {
-    "n": 63,
-    "win": 26,
-    "hit": 41.3,
-    "r_total": -14.438,
-    "r_op": -0.229,
-    "pendientes": 1
+    "n": 64,
+    "win": 27,
+    "hit": 42.2,
+    "r_total": -13.511,
+    "r_op": -0.211,
+    "pendientes": 0
    },
    "choca": {
     "n": 82,
@@ -7504,7 +7622,7 @@
     "hit": 46.7,
     "r_total": -30.215,
     "r_op": -0.095,
-    "pendientes": 2
+    "pendientes": 3
    }
   },
   "copytrading": {
@@ -7650,7 +7768,7 @@
      "pct": -0.0
     }
    ],
-   "actualizado": "2026-10-12T14:13:31"
+   "actualizado": "2026-10-12T15:14:11"
   }
  }
 }
