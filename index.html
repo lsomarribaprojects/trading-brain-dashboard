@@ -127,7 +127,8 @@ details.pm summary{cursor:pointer;font-size:13px;color:var(--ink2);padding:2px 0
   <div class="tiles" id="lob-tiles"></div>
   <div class="card"><h3>Prueba virtual: copiar al Lobo 1 semana (solo papel)</h3><div id="lob-prueba"></div></div>
   <div class="card"><h3>Videos del live de BITLOBO</h3><div id="lob-videos"></div></div>
-  <div class="card"><h3>Libro LB — no cerradas</h3><div id="lob-abiertas"></div></div>
+  <div class="card"><h3>Cartera viva del Lobo — mencionada en los ultimos 7 dias</h3><p class="note">Lo que declaro en sus lives, medido contra OKX (no contra lo que dice que gana). Entradas "(aprox)" = no dijo el precio: se usa OKX a esa hora.</p><div id="lob-abiertas"></div></div>
+  <div class="card"><h3>Sin noticias hace mas de 7 dias</h3><p class="note">Nunca dijo que las cerro. Probablemente cerradas: no cuentan en su cartera viva.</p><div id="lob-viejas"></div></div>
   <div class="card"><h3>Libro LB — cerradas</h3><div id="lob-cerradas"></div></div>
   <div class="card"><h3>Sus tesis (TS de fuente BITLOBO)</h3><div id="lob-ts"></div></div>
   <div class="card"><h3>Nuestras cards vs el Lobo</h3><div id="lob-cruce"></div></div>
@@ -615,7 +616,7 @@ function lbRow(o){
   const precioTxt=o.precio==null?'sin dato':(fmtP(o.precio)+' ('+signed(o.pct,2)+'%)');
   return `<details class="exprow"><summary style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
       <b>${esc(o.id)}</b><span>${esc(o.activo)}</span><span class="p">${esc(o.direccion)}</span><span class="p">${esc(o.mercado||'')}</span>
-      <span>${precioTxt}</span>${stopBadge(o)}${o.cobertura_parcial&&o.precio!=null?'<span class="p">(cobertura parcial)</span>':''}
+      <span>${precioTxt}</span>${stopBadge(o)}${o.dias_sin_noticias!=null?`<span class="p">${o.dias_sin_noticias===0?'hoy':'hace '+o.dias_sin_noticias+'d'}</span>`:''}${o.cobertura_parcial&&o.precio!=null?'<span class="p">(cobertura parcial)</span>':''}
     </summary>
     <div class="opdetail">
       <div><b>Apertura:</b> ${esc(o.fecha_apertura||'—')} · entrada ${o.entrada??'—'}${o.entrada_es_aprox?' (aprox)':''} · stop ${o.stop??'—'}</div>
@@ -642,7 +643,10 @@ function renderLobLB(lb){
     $('#lob-abiertas').innerHTML=errHtml(lb&&lb.error?lb.error:'sin datos'); $('#lob-cerradas').innerHTML=''; return;
   }
   const abiertas=lb.filter(o=>o.estado!=='cerrada'), cerradas=lb.filter(o=>o.estado==='cerrada');
-  $('#lob-abiertas').innerHTML=abiertas.map(lbRow).join('')||'<p class="note">ninguna</p>';
+  const viva=o=>o.dias_sin_noticias==null||o.dias_sin_noticias<=7;
+  const porNoticia=(x,y)=>(y.ultima_noticia||'').localeCompare(x.ultima_noticia||'');
+  $('#lob-abiertas').innerHTML=abiertas.filter(viva).sort(porNoticia).map(lbRow).join('')||'<p class="note">ninguna</p>';
+  $('#lob-viejas').innerHTML=abiertas.filter(o=>!viva(o)).sort(porNoticia).map(lbRow).join('')||'<p class="note">ninguna</p>';
   $('#lob-cerradas').innerHTML=cerradas.map(lbRowCerrada).join('')||'<p class="note">ninguna</p>';
 }
 function renderLobTS(ts){
