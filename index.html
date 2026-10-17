@@ -59,6 +59,12 @@ details.exprow[open]{background:#11161d}
 .wrap-table td{white-space:normal;max-width:280px;vertical-align:top}
 .wrap-table th{white-space:nowrap}
 details.pm summary{cursor:pointer;font-size:13px;color:var(--ink2);padding:2px 0}
+/* ---- Lobo vs nosotros ---- */
+.vs-leg{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;margin:6px 0}
+.vs-leg span{cursor:pointer;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.vs-leg span.off{opacity:.35}
+.vs-leg i{display:inline-block;width:14px;height:3px;border-radius:2px}
+.vs-chart text{font-size:11px;fill:var(--ink3)}
 /* ---- Cartera del Lobo hoy ---- */
 .cl-sec{margin:6px 0 18px;padding-bottom:6px;border-bottom:1px dashed var(--border)}
 .cl-sec h2{font-size:15px;margin:8px 0 2px}
@@ -155,6 +161,7 @@ details.pm summary{cursor:pointer;font-size:13px;color:var(--ink2);padding:2px 0
 </div>
 
 <div class="panel" id="p-lob">
+  <div id="lob-vs"></div>
   <div id="lob-cartera"></div>
   <div class="tiles" id="lob-tiles"></div>
   <div class="card"><h3>Prueba virtual: copiar al Lobo 1 semana (solo papel)</h3><div id="lob-prueba"></div></div>
@@ -734,6 +741,84 @@ function renderLobPrueba(p){
   $('#lob-prueba').innerHTML=reglas+tiles+(filas.length?tablaW(['LB','Anuncio','Origen','Activo','Entrada','Stop','Objetivos','Ahora','%','R','Estado','¿Entrar?'],filas):'<p class="note">todavia no mostro ninguna operativa en la semana de prueba</p>')+
     (p.actualizado?`<p class="note">precios OKX 1H, actualizado ${esc(p.actualizado.replace('T',' '))}</p>`:'');
 }
+/* ---- Lobo vs nosotros (data.lobo.vs) ---- */
+const VS_COL={lobo:'#d29922',motor:'#6ea8fe',todas:'#f85149'};
+const VS_OFF={todas:false};
+function vsChart(v){
+  const W=920,H=280,P={t:14,r:70,b:26,l:8};
+  const ser={lobo:v.lobo.curva.map(p=>[p.t,p.acum,p]),motor:v.motor.curva.map(p=>[p.t,p.acum,p]),todas:v.todas.curva.map(p=>[p[0],p[1],null])};
+  const t0=new Date(v.desde+'T00:00').getTime(), t1=Date.now();
+  const on=Object.keys(ser).filter(k=>!VS_OFF[k]);
+  let vals=[0];on.forEach(k=>ser[k].forEach(p=>vals.push(p[1])));
+  if(!VS_OFF.lobo&&v.lobo.abiertas_n) vals.push((v.lobo.stats.usd_total||0)+(v.lobo.abiertas_usd||0));
+  const vmax=Math.max(...vals), vmin=Math.min(...vals), pad=(vmax-vmin)*0.06||5;
+  const lo=vmin-pad, hi=vmax+pad;
+  const X=t=>P.l+(W-P.l-P.r)*(((typeof t==='number'?t:new Date(t).getTime())-t0)/((t1-t0)||1));
+  const Y=y=>P.t+(H-P.t-P.b)*(1-(y-lo)/((hi-lo)||1));
+  const step=pts=>{ if(!pts.length) return ''; let d=`M${X(t0).toFixed(1)} ${Y(0).toFixed(1)}`; let prev=0;
+    pts.forEach(p=>{ const x=X(p[0]).toFixed(1); d+=`L${x} ${Y(prev).toFixed(1)}L${x} ${Y(p[1]).toFixed(1)}`; prev=p[1]; });
+    return d+`L${X(t1).toFixed(1)} ${Y(prev).toFixed(1)}`; };
+  const gy=[0,1,2,3,4].map(i=>lo+(hi-lo)*i/4);
+  const lunes=[]; { const d=new Date(t0); d.setDate(d.getDate()+((8-d.getDay())%7)); for(;d.getTime()<t1;d.setDate(d.getDate()+7)) lunes.push(d.getTime()); }
+  let svg=`<svg class="vs-chart" viewBox="0 0 ${W} ${H}" style="width:100%">`;
+  svg+=gy.map(y=>`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(y).toFixed(1)}" y2="${Y(y).toFixed(1)}" stroke="#21262d"/><text x="${W-P.r+6}" y="${(Y(y)+4).toFixed(1)}">${y>=0?'+':'-'}$${Math.abs(y).toFixed(0)}</text>`).join('');
+  svg+=lunes.map(ms=>{ const d=new Date(ms); return `<text x="${X(ms).toFixed(1)}" y="${H-8}" text-anchor="middle">${d.getDate()}/${d.getMonth()+1}</text>`; }).join('');
+  svg+=`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" stroke="#6e7681" stroke-dasharray="4 4"/>`;
+  ['todas','motor','lobo'].forEach(k=>{ if(VS_OFF[k]) return; svg+=`<path d="${step(ser[k])}" fill="none" stroke="${VS_COL[k]}" stroke-width="${k==='lobo'?2.6:2}" ${k==='todas'?'opacity=".8"':''}/>`; });
+  ['motor','lobo'].forEach(k=>{ if(VS_OFF[k]) return; ser[k].forEach(p=>{ const o=p[2]; const c=o.pct>0?'#3fb950':'#f85149';
+    const cx=X(p[0]).toFixed(1), cy=Y(p[1]).toFixed(1);
+    svg+=`<circle cx="${cx}" cy="${cy}" r="${k==='lobo'?4.5:3}" fill="${c}" stroke="${VS_COL[k]}" stroke-width="1.5"/>`+
+      `<circle cx="${cx}" cy="${cy}" r="9" fill="transparent" class="vspt" data-k="${k}" data-id="${esc(o.id)}" data-a="${esc(o.activo)} ${esc(o.dir)}${o.grado?' '+esc(o.grado):''}" data-t="${esc(p[0])}" data-pct="${o.pct}" data-acum="${p[1]}" data-abre="${esc(o.abre||'')}"/>`; }); });
+  if(!VS_OFF.lobo&&v.lobo.abiertas_n){ const y0=v.lobo.stats.usd_total||0, y1=y0+(v.lobo.abiertas_usd||0), x=X(t1).toFixed(1);
+    svg+=`<line x1="${x}" x2="${x}" y1="${Y(y0).toFixed(1)}" y2="${Y(y1).toFixed(1)}" stroke="${VS_COL.lobo}" stroke-width="2" stroke-dasharray="3 3"/><circle cx="${x}" cy="${Y(y1).toFixed(1)}" r="4" fill="var(--bg)" stroke="${VS_COL.lobo}" stroke-width="2"/>`; }
+  return svg+'</svg>';
+}
+function vsBarras(sem){
+  if(!sem||!sem.length) return '<p class="note">sin semanas</p>';
+  const W=920,H=210,P={t:14,r:70,b:26,l:8};
+  const ks=['lobo','motor','todas'].filter(k=>!VS_OFF[k]);
+  if(!ks.length) return '<p class="note">activá una línea en la leyenda</p>';
+  let vals=[0]; sem.forEach(s=>ks.forEach(k=>vals.push(s[k])));
+  const hi=Math.max(...vals)*1.12||1, lo=Math.min(...vals)*1.12;
+  const Y=y=>P.t+(H-P.t-P.b)*(1-(y-lo)/((hi-lo)||1));
+  const gw=(W-P.l-P.r)/sem.length, bw=Math.min(30,(gw-16)/ks.length);
+  let svg=`<svg class="vs-chart" viewBox="0 0 ${W} ${H}" style="width:100%"><line x1="${P.l}" x2="${W-P.r}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" stroke="#6e7681"/>`;
+  [lo,0,hi].forEach(y=>svg+=`<text x="${W-P.r+6}" y="${(Y(y)+4).toFixed(1)}">${y>=0?'+':'-'}$${Math.abs(y).toFixed(0)}</text>`);
+  sem.forEach((s,i)=>{ const x0=P.l+gw*i+(gw-bw*ks.length)/2;
+    ks.forEach((k,j)=>{ const y=s[k], ya=Y(Math.max(0,y)), yb=Y(Math.min(0,y)), x=x0+j*bw;
+      svg+=`<rect x="${x.toFixed(1)}" y="${ya.toFixed(1)}" width="${(bw-3).toFixed(1)}" height="${Math.max(1,yb-ya).toFixed(1)}" fill="${VS_COL[k]}" rx="2"><title>${k} semana del ${s.semana}: ${y>=0?'+':'-'}$${Math.abs(y).toFixed(2)}</title></rect>`;
+      if(Math.abs(y)>=0.5) svg+=`<text x="${(x+(bw-3)/2).toFixed(1)}" y="${(y>=0?ya-3:yb+11).toFixed(1)}" text-anchor="middle" style="font-size:9.5px">${y>=0?'+':'-'}${Math.abs(y).toFixed(0)}</text>`; });
+    const d=s.semana.split('-'); svg+=`<text x="${(P.l+gw*i+gw/2).toFixed(1)}" y="${H-8}" text-anchor="middle">sem ${+d[2]}/${+d[1]}</text>`; });
+  return svg+'</svg>';
+}
+function renderLobVs(v){
+  const box=$('#lob-vs'); if(!box) return;
+  if(!v||isErr(v)){ box.innerHTML=errHtml('Lobo vs nosotros: '+(v&&v.error?v.error:'sin datos')); return; }
+  const L=v.lobo.stats, M=v.motor.stats, T=v.todas.stats;
+  const cl=x=>x==null?'':(x>=0?'w':'l');
+  const usd=x=>x==null?'—':(x>=0?'+':'-')+'$'+Math.abs(x).toFixed(2);
+  const t=(k,nombre,s,extra)=>`<div class="tile" style="border-top:3px solid ${VS_COL[k]}"><div class="k">${nombre}</div><div class="v num"><span class="${cl(s.usd_total)}">${usd(s.usd_total)}</span></div><div class="s">${s.n} operativas · ${s.ganadas}G / ${s.perdidas}P (${s.hit??'—'}%)<br>${usd(s.usd_op)} por operativa · mejor ${usd(s.mejor)} · peor ${usd(s.peor)}${extra||''}</div></div>`;
+  const ab=v.lobo.abiertas_n?`<br>sus ${v.lobo.abiertas_n} abiertas sin cobertura, si cerrara ya: <span class="${cl(v.lobo.abiertas_usd)}">${usd(v.lobo.abiertas_usd)}</span>`:'';
+  const leg=[['lobo','Lobo (cerradas)'],['motor','Nuestro motor A + RV'],['todas','Todas nuestras cards A/B/C']].map(([k,n])=>`<span data-k="${k}" class="${VS_OFF[k]?'off':''}"><i style="background:${VS_COL[k]}"></i>${n}</span>`).join('');
+  const ultL=v.lobo.curva.slice().reverse().slice(0,10).map(p=>[esc(p.id),esc(p.activo),p.dir==='LONG'?'<span class="w">LONG</span>':'<span class="l">SHORT</span>',esc((p.abre||'').replace('T',' ')),esc(p.t.replace('T',' ')),`<span class="${cl(p.pct)}">${usd(p.pct)}</span>`,usd(p.acum)]);
+  box.innerHTML=`<div class="cl-sec"><h2>📈 ¿Cuánto gana el Lobo y cuánto nosotros?</h2>
+    <p class="note">La misma vara para los dos: <b>$100 en cada operativa, sin apalancamiento, comisión ${v.fee_pct}% ida+vuelta</b>, desde el ${esc(v.desde.split('-').reverse().join('/'))} (cuando arranca su libro). +$2 = la operativa se movió 2% a favor. Con 5X sería 5 veces más, para bien y para mal.</p>
+    <div class="cl-marc">${t('lobo','🐺 El Lobo',L,ab)}${t('motor','🤖 Nuestro motor (A + RV)',M)}${t('todas','📋 Todas nuestras cards',T)}</div>
+    <div class="card"><h3>Ganancia acumulada ($ con $100 por operativa)</h3><div class="vs-leg">${leg}</div>${vsChart(v)}
+    <p class="note">Cada punto es una operativa cerrada (relleno verde = ganó, rojo = perdió). Tocá la leyenda para ocultar una línea. La raya punteada al final del Lobo = sus abiertas a precio de hoy.</p></div>
+    <div class="card"><h3>Por semana ($ ganados en la semana)</h3>${vsBarras(v.semanas)}</div>
+    <div class="card"><h3>Últimos cierres del Lobo</h3>${tabla(['LB','Activo','Dir','Abrió','Cerró','Resultado','Acumulado'],ultL)}</div>
+    <p class="note"><b>Para leerlo bien:</b> (1) Del Lobo solo cuenta lo que dice en el live; si no cuenta una pérdida, no aparece (en su copy trading de BingX, 506 posiciones, la expectativa era negativa). (2) Él opera poco y deja correr días; nosotros muchas de horas, y la comisión es ~2/3 de nuestra pérdida. (3) Casi nunca da stop: no se sabe cuánto arriesgó ni se puede medir en R. (4) Sin precio en OKX, no medidas: ${esc((v.lobo.sin_precio||[]).join(', ')||'ninguna')}. (5) ${L.n} operativas no prueban edge.</p>
+  </div>`;
+  box.querySelectorAll('.vs-leg span').forEach(sp=>sp.onclick=()=>{ const k=sp.dataset.k; VS_OFF[k]=!VS_OFF[k]; renderLobVs(v); });
+  const tip=$('#tip');
+  box.querySelectorAll('.vspt').forEach(c=>{
+    c.onmousemove=ev=>{tip.style.display='block';tip.style.left=(ev.clientX+12)+'px';tip.style.top=(ev.clientY-10)+'px';
+      const pct=Number(c.dataset.pct), ac=Number(c.dataset.acum);
+      tip.innerHTML=`<b>${c.dataset.k==='lobo'?'🐺 ':'🤖 '}${c.dataset.id}</b> · ${c.dataset.a}<br>${c.dataset.abre?'abrió '+c.dataset.abre.replace('T',' ')+'<br>':''}cerró ${c.dataset.t.replace('T',' ')}<br><span class="${pct>=0?'w':'l'}">${usd(pct)}</span> · acumulado ${usd(ac)}`};
+    c.onmouseout=()=>tip.style.display='none';
+  });
+}
 /* ---- Cartera del Lobo hoy (data.lobo.cartera) ---- */
 function clPx(n){ return n==null?'—':fmtP(n).slice(1); }
 function clDir(d){ return d==='LONG'?'<span class="w">LARGO</span>':(d==='SHORT'?'<span class="l">CORTO</span>':esc(d||'')); }
@@ -896,6 +981,7 @@ function renderCarteraLobo(c){
   }
 }
 function renderLobo(l){
+  try{ renderLobVs(l.vs); }catch(e){ const bx=$('#lob-vs'); if(bx) bx.innerHTML=errHtml('vs: '+e.message); }
   try{ renderCarteraLobo(l.cartera); }catch(e){ const bx=$('#lob-cartera'); if(bx) bx.innerHTML=errHtml('cartera: '+e.message); }
   try{ renderLobPrueba(l.prueba); }catch(e){ $('#lob-prueba').innerHTML=errHtml('prueba: '+e.message); }
   try{ renderLobTiles(l); }catch(e){ $('#lob-tiles').insertAdjacentHTML('beforeend',errHtml('tiles: '+e.message)); }

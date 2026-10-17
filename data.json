@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17 12:28",
+ "actualizado": "2026-10-17 12:43",
  "reversion": {
   "abiertas": 2,
   "resueltas": 87,
@@ -5248,7 +5248,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-19T12:59:00",
     "estado": "en_plazo",
-    "horas_restantes": 48.5,
+    "horas_restantes": 48.3,
     "precio_actual": 81275.1,
     "distancia_pct": 8.08,
     "max_alcanzado": null,
@@ -5266,7 +5266,7 @@
     "plazo_h": 48.0,
     "vence": "2026-10-14T12:59:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -71.5,
+    "horas_restantes": -71.7,
     "precio_actual": 81275.1,
     "distancia_pct": -0.28,
     "max_alcanzado": null,
@@ -5284,7 +5284,7 @@
     "plazo_h": 504.0,
     "vence": "2026-11-02T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 383.2,
+    "horas_restantes": 382.9,
     "precio_actual": 81275.1,
     "distancia_pct": 11.34,
     "max_alcanzado": null,
@@ -5302,7 +5302,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-19T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 47.2,
+    "horas_restantes": 46.9,
     "precio_actual": 81275.1,
     "distancia_pct": -0.28,
     "max_alcanzado": null,
@@ -5320,7 +5320,7 @@
     "plazo_h": 48.0,
     "vence": "2026-10-14T11:39:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -72.8,
+    "horas_restantes": -73.1,
     "precio_actual": 81275.1,
     "distancia_pct": 0.96,
     "max_alcanzado": null,
@@ -5338,7 +5338,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-17T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 4.9,
+    "horas_restantes": 4.6,
     "precio_actual": 2406.25,
     "distancia_pct": -5.64,
     "max_alcanzado": null,
@@ -5356,7 +5356,7 @@
     "plazo_h": 96.0,
     "vence": "2026-10-14T17:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -67.1,
+    "horas_restantes": -67.4,
     "precio_actual": 81275.1,
     "distancia_pct": -3.93,
     "max_alcanzado": null,
@@ -5374,7 +5374,7 @@
     "plazo_h": 504.0,
     "vence": "2026-10-31T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 340.9,
+    "horas_restantes": 340.6,
     "precio_actual": 81275.1,
     "distancia_pct": 11.34,
     "max_alcanzado": null,
@@ -5392,7 +5392,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-24T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 172.9,
+    "horas_restantes": 172.6,
     "precio_actual": 81275.1,
     "distancia_pct": 4.2,
     "max_alcanzado": null,
@@ -5410,7 +5410,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-15T17:17:00.071089",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -43.2,
+    "horas_restantes": -43.4,
     "precio_actual": 81275.1,
     "distancia_pct": 2.49,
     "max_alcanzado": null,
@@ -5428,7 +5428,7 @@
     "plazo_h": 48.0,
     "vence": "2026-10-10T17:16:19.575683",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -163.2,
+    "horas_restantes": -163.4,
     "precio_actual": 81275.1,
     "distancia_pct": -2.06,
     "max_alcanzado": null,
@@ -5446,7 +5446,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-14T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -63.7,
+    "horas_restantes": -64.0,
     "precio_actual": 4.86,
     "distancia_pct": -17.35,
     "max_alcanzado": null,
@@ -5464,7 +5464,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-14T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -63.7,
+    "horas_restantes": -64.0,
     "precio_actual": 2406.25,
     "distancia_pct": 1.53,
     "max_alcanzado": null,
@@ -5482,7 +5482,7 @@
     "plazo_h": 72.0,
     "vence": "2026-10-10T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -159.7,
+    "horas_restantes": -160.0,
     "precio_actual": 81275.1,
     "distancia_pct": -6.9,
     "max_alcanzado": null,
@@ -5500,7 +5500,7 @@
     "plazo_h": 48,
     "vence": "2026-10-10T15:05:18.276290",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -165.4,
+    "horas_restantes": -165.6,
     "precio_actual": 81275.1,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -5518,7 +5518,7 @@
     "plazo_h": 504.0,
     "vence": "2026-10-24T11:47:00",
     "estado": "en_plazo",
-    "horas_restantes": 167.3,
+    "horas_restantes": 167.1,
     "precio_actual": 0.18718,
     "distancia_pct": -52.01,
     "max_alcanzado": null,
@@ -5536,7 +5536,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-17T11:47:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -0.7,
+    "horas_restantes": -0.9,
     "precio_actual": 81275.1,
     "distancia_pct": -4.38,
     "max_alcanzado": null,
@@ -5554,7 +5554,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-14T12:59:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -71.5,
+    "horas_restantes": -71.7,
     "precio_actual": 81275.1,
     "distancia_pct": -4.38,
     "max_alcanzado": null,
@@ -5572,7 +5572,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-15T12:55:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -47.6,
+    "horas_restantes": -47.8,
     "precio_actual": 81275.1,
     "distancia_pct": -9.69,
     "max_alcanzado": null,
@@ -5590,7 +5590,7 @@
     "plazo_h": 192.0,
     "vence": "2026-10-09T12:55:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -191.6,
+    "horas_restantes": -191.8,
     "precio_actual": 81275.1,
     "distancia_pct": -3.24,
     "max_alcanzado": null,
@@ -5608,7 +5608,7 @@
     "plazo_h": 480.0,
     "vence": "2026-10-20T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 71.2,
+    "horas_restantes": 70.9,
     "precio_actual": 2406.25,
     "distancia_pct": 0.26,
     "max_alcanzado": null,
@@ -5626,7 +5626,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-30T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 311.2,
+    "horas_restantes": 310.9,
     "precio_actual": 81275.1,
     "distancia_pct": -0.28,
     "max_alcanzado": null,
@@ -5644,7 +5644,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-13T12:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -96.3,
+    "horas_restantes": -96.5,
     "precio_actual": 2406.25,
     "distancia_pct": 4.62,
     "max_alcanzado": null,
@@ -5662,7 +5662,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-13T12:01:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -96.5,
+    "horas_restantes": -96.7,
     "precio_actual": 81275.1,
     "distancia_pct": 9.09,
     "max_alcanzado": null,
@@ -5680,7 +5680,7 @@
     "plazo_h": 72.0,
     "vence": "2026-10-02T12:10:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -360.3,
+    "horas_restantes": -360.6,
     "precio_actual": 81275.1,
     "distancia_pct": 0.96,
     "max_alcanzado": null,
@@ -5698,7 +5698,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-28T11:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 263.2,
+    "horas_restantes": 262.9,
     "precio_actual": 1.1083,
     "distancia_pct": -30.73,
     "max_alcanzado": null,
@@ -5716,7 +5716,7 @@
     "plazo_h": 504.0,
     "vence": "2026-10-19T11:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 47.2,
+    "horas_restantes": 46.9,
     "precio_actual": 81275.1,
     "distancia_pct": 9.04,
     "max_alcanzado": null,
@@ -5734,7 +5734,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-25T17:50:00",
     "estado": "en_plazo",
-    "horas_restantes": 197.4,
+    "horas_restantes": 197.1,
     "precio_actual": 0.2198,
     "distancia_pct": -63.37,
     "max_alcanzado": null,
@@ -5752,7 +5752,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-09T17:50:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -186.6,
+    "horas_restantes": -186.9,
     "precio_actual": 2406.25,
     "distancia_pct": 0.26,
     "max_alcanzado": null,
@@ -5770,7 +5770,7 @@
     "plazo_h": 480.0,
     "vence": "2026-10-15T17:50:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -42.6,
+    "horas_restantes": -42.9,
     "precio_actual": 81275.1,
     "distancia_pct": 8.51,
     "max_alcanzado": null,
@@ -5788,7 +5788,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-01T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -383.5,
+    "horas_restantes": -383.8,
     "precio_actual": 103.26,
     "distancia_pct": -18.69,
     "max_alcanzado": null,
@@ -5806,7 +5806,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-08T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -215.5,
+    "horas_restantes": -215.8,
     "precio_actual": 2406.25,
     "distancia_pct": 0.26,
     "max_alcanzado": null,
@@ -5824,7 +5824,7 @@
     "plazo_h": 48,
     "vence": "2026-09-26T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -503.5,
+    "horas_restantes": -503.8,
     "precio_actual": 81275.1,
     "distancia_pct": -0.28,
     "max_alcanzado": null,
@@ -5842,7 +5842,7 @@
     "plazo_h": 480.0,
     "vence": "2026-10-14T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -71.5,
+    "horas_restantes": -71.8,
     "precio_actual": 81275.1,
     "distancia_pct": 9.39,
     "max_alcanzado": null,
@@ -5860,7 +5860,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-30T18:49:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -401.7,
+    "horas_restantes": -401.9,
     "precio_actual": 0.07916,
     "distancia_pct": -34.03,
     "max_alcanzado": null,
@@ -5878,7 +5878,7 @@
     "plazo_h": 48.0,
     "vence": "2026-09-25T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -529.0,
+    "horas_restantes": -529.2,
     "precio_actual": 2406.25,
     "distancia_pct": -5.45,
     "max_alcanzado": null,
@@ -5896,7 +5896,7 @@
     "plazo_h": 120.0,
     "vence": "2026-09-28T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -457.0,
+    "horas_restantes": -457.2,
     "precio_actual": 81275.1,
     "distancia_pct": 2.49,
     "max_alcanzado": null,
@@ -5914,7 +5914,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-26T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -505.0,
+    "horas_restantes": -505.2,
     "precio_actual": 81275.1,
     "distancia_pct": 0.34,
     "max_alcanzado": null,
@@ -5932,7 +5932,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-29T12:54:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -431.6,
+    "horas_restantes": -431.8,
     "precio_actual": null,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -5950,7 +5950,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-29T12:15:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -432.2,
+    "horas_restantes": -432.5,
     "precio_actual": 2406.25,
     "distancia_pct": -1.79,
     "max_alcanzado": null,
@@ -5968,7 +5968,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-06T11:51:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -264.6,
+    "horas_restantes": -264.9,
     "precio_actual": 81275.1,
     "distancia_pct": -0.28,
     "max_alcanzado": null,
@@ -5986,7 +5986,7 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T13:19:00",
     "estado": "en_plazo",
-    "horas_restantes": 768.8,
+    "horas_restantes": 768.6,
     "precio_actual": 0.9743,
     "distancia_pct": -61.03,
     "max_alcanzado": null,
@@ -6004,7 +6004,7 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T12:42:00",
     "estado": "en_plazo",
-    "horas_restantes": 768.2,
+    "horas_restantes": 768.0,
     "precio_actual": 2406.25,
     "distancia_pct": -19.79,
     "max_alcanzado": null,
@@ -6022,7 +6022,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-19T12:42:00",
     "estado": "en_plazo",
-    "horas_restantes": 48.2,
+    "horas_restantes": 48.0,
     "precio_actual": 2406.25,
     "distancia_pct": -14.06,
     "max_alcanzado": null,
@@ -6040,7 +6040,7 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T12:09:00",
     "estado": "en_plazo",
-    "horas_restantes": 767.7,
+    "horas_restantes": 767.4,
     "precio_actual": 81275.1,
     "distancia_pct": -12.51,
     "max_alcanzado": null,
@@ -6058,7 +6058,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-09T16:41:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -187.8,
+    "horas_restantes": -188.0,
     "precio_actual": 81275.1,
     "distancia_pct": 7.51,
     "max_alcanzado": null,
@@ -6076,7 +6076,7 @@
     "plazo_h": 336.0,
     "vence": "2026-09-23T16:41:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -571.8,
+    "horas_restantes": -572.0,
     "precio_actual": 81275.1,
     "distancia_pct": 6.1,
     "max_alcanzado": null,
@@ -6094,7 +6094,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-10T11:44:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -168.7,
+    "horas_restantes": -169.0,
     "precio_actual": 81275.1,
     "distancia_pct": 5.55,
     "max_alcanzado": null,
@@ -6112,7 +6112,7 @@
     "plazo_h": 336.0,
     "vence": "2026-09-25T12:44:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -527.7,
+    "horas_restantes": -528.0,
     "precio_actual": 1.1083,
     "distancia_pct": -6.08,
     "max_alcanzado": null,
@@ -6130,7 +6130,7 @@
     "plazo_h": 1092.0,
     "vence": "2026-10-26T23:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 227.2,
+    "horas_restantes": 226.9,
     "precio_actual": 81275.1,
     "distancia_pct": 19.52,
     "max_alcanzado": null,
@@ -6148,7 +6148,7 @@
     "plazo_h": 336.0,
     "vence": "2026-09-26T17:06:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -499.4,
+    "horas_restantes": -499.6,
     "precio_actual": 81275.1,
     "distancia_pct": -3.24,
     "max_alcanzado": null,
@@ -6166,7 +6166,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-19T17:08:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -667.3,
+    "horas_restantes": -667.6,
     "precio_actual": 81275.1,
     "distancia_pct": 9.83,
     "max_alcanzado": null,
@@ -6184,7 +6184,7 @@
     "plazo_h": 48.0,
     "vence": "2026-09-14T17:38:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -786.8,
+    "horas_restantes": -787.1,
     "precio_actual": 81275.1,
     "distancia_pct": 3.54,
     "max_alcanzado": null,
@@ -6202,7 +6202,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-18T11:38:00",
     "estado": "en_plazo",
-    "horas_restantes": 23.2,
+    "horas_restantes": 22.9,
     "precio_actual": 2406.25,
     "distancia_pct": 3.72,
     "max_alcanzado": null,
@@ -6220,7 +6220,7 @@
     "plazo_h": 1008.0,
     "vence": "2026-10-30T11:38:00",
     "estado": "en_plazo",
-    "horas_restantes": 311.2,
+    "horas_restantes": 310.9,
     "precio_actual": 0.7962,
     "distancia_pct": -20.38,
     "max_alcanzado": null,
@@ -6238,7 +6238,7 @@
     "plazo_h": 24.0,
     "vence": "2026-09-18T11:42:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -696.8,
+    "horas_restantes": -697.0,
     "precio_actual": 81275.1,
     "distancia_pct": 8.37,
     "max_alcanzado": null,
@@ -6256,7 +6256,7 @@
     "plazo_h": 120.0,
     "vence": "2026-09-20T14:24:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -646.1,
+    "horas_restantes": -646.3,
     "precio_actual": 81275.1,
     "distancia_pct": 12.41,
     "max_alcanzado": null,
@@ -6274,7 +6274,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-18T14:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -694.3,
+    "horas_restantes": -694.5,
     "precio_actual": 81275.1,
     "distancia_pct": 7.65,
     "max_alcanzado": null,
@@ -6292,7 +6292,7 @@
     "plazo_h": 240.0,
     "vence": "2026-09-26T14:25:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -502.1,
+    "horas_restantes": -502.3,
     "precio_actual": 2406.25,
     "distancia_pct": 20.31,
     "max_alcanzado": null,
@@ -6310,7 +6310,7 @@
     "plazo_h": 120.0,
     "vence": "2026-09-21T14:25:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -622.1,
+    "horas_restantes": -622.3,
     "precio_actual": 2406.25,
     "distancia_pct": 3.63,
     "max_alcanzado": null,
@@ -6328,7 +6328,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-19T13:31:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -671.0,
+    "horas_restantes": -671.2,
     "precio_actual": 81275.1,
     "distancia_pct": 10.88,
     "max_alcanzado": null,
@@ -6346,7 +6346,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-21T14:45:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -621.7,
+    "horas_restantes": -622.0,
     "precio_actual": 2406.25,
     "distancia_pct": -10.88,
     "max_alcanzado": null,
@@ -6364,7 +6364,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-14T14:13:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -70.3,
+    "horas_restantes": -70.5,
     "precio_actual": 81275.1,
     "distancia_pct": 19.52,
     "max_alcanzado": null,
@@ -6382,7 +6382,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-17T14:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -718.3,
+    "horas_restantes": -718.5,
     "precio_actual": 81275.1,
     "distancia_pct": -1.37,
     "max_alcanzado": null,
@@ -6400,7 +6400,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -219.1,
+    "horas_restantes": -219.4,
     "precio_actual": 0.07916,
     "distancia_pct": -34.03,
     "max_alcanzado": null,
@@ -6418,7 +6418,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -219.1,
+    "horas_restantes": -219.4,
     "precio_actual": null,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -6436,7 +6436,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -219.1,
+    "horas_restantes": -219.4,
     "precio_actual": 0.18718,
     "distancia_pct": -22.01,
     "max_alcanzado": null,
@@ -6454,7 +6454,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-15T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -771.1,
+    "horas_restantes": -771.4,
     "precio_actual": 0.18718,
     "distancia_pct": 33.7,
     "max_alcanzado": null,
@@ -6472,7 +6472,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-15T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -771.1,
+    "horas_restantes": -771.4,
     "precio_actual": 81275.1,
     "distancia_pct": -3.47,
     "max_alcanzado": null,
@@ -6490,7 +6490,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-11T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -867.1,
+    "horas_restantes": -867.4,
     "precio_actual": 81275.1,
     "distancia_pct": 6.94,
     "max_alcanzado": null,
@@ -6508,7 +6508,7 @@
     "plazo_h": 48.0,
     "vence": "2026-09-05T08:22:00",
     "estado": "acierto",
-    "horas_restantes": -1012.1,
+    "horas_restantes": -1012.4,
     "precio_actual": 81275.1,
     "distancia_pct": 1.59,
     "max_alcanzado": 82285.0,
@@ -6526,7 +6526,7 @@
     "plazo_h": 240.0,
     "vence": "2026-08-30T08:00:00",
     "estado": "acierto",
-    "horas_restantes": -1156.5,
+    "horas_restantes": -1156.7,
     "precio_actual": 81275.1,
     "distancia_pct": 5.55,
     "max_alcanzado": 80000.0,
@@ -6544,7 +6544,7 @@
     "plazo_h": 120.0,
     "vence": "2026-08-18T04:19:00",
     "estado": "fallo",
-    "horas_restantes": -1448.2,
+    "horas_restantes": -1448.4,
     "precio_actual": 81275.1,
     "distancia_pct": 25.04,
     "max_alcanzado": 64630.3,
@@ -6562,7 +6562,7 @@
     "plazo_h": 120.0,
     "vence": "2026-08-17T12:00:00",
     "estado": "fallo",
-    "horas_restantes": -1464.5,
+    "horas_restantes": -1464.7,
     "precio_actual": 81275.1,
     "distancia_pct": 23.14,
     "max_alcanzado": 64427.4,
@@ -6580,7 +6580,7 @@
     "plazo_h": 336.0,
     "vence": "2026-08-25T12:00:00",
     "estado": "acierto",
-    "horas_restantes": -1272.5,
+    "horas_restantes": -1272.7,
     "precio_actual": 81275.1,
     "distancia_pct": 12.88,
     "max_alcanzado": 73111.0,
@@ -6598,7 +6598,7 @@
     "plazo_h": 48.0,
     "vence": "2026-08-13T12:00:00",
     "estado": "acierto",
-    "horas_restantes": -1560.5,
+    "horas_restantes": -1560.7,
     "precio_actual": 81275.1,
     "distancia_pct": 29.42,
     "max_alcanzado": 64496.9,
@@ -6616,7 +6616,7 @@
     "plazo_h": 48.0,
     "vence": "2026-08-01T10:37:45.900040",
     "estado": "fallo",
-    "horas_restantes": -1849.9,
+    "horas_restantes": -1850.1,
     "precio_actual": 81275.1,
     "distancia_pct": 31.09,
     "max_alcanzado": 65423.7,
@@ -6634,7 +6634,7 @@
     "plazo_h": 48.0,
     "vence": "2026-08-01T10:37:44.174535",
     "estado": "fallo",
-    "horas_restantes": -1849.9,
+    "horas_restantes": -1850.1,
     "precio_actual": 81275.1,
     "distancia_pct": 21.31,
     "max_alcanzado": 65423.7,
@@ -6652,7 +6652,7 @@
     "plazo_h": 240.0,
     "vence": "2026-07-31T05:00:00",
     "estado": "fallo",
-    "horas_restantes": -1879.5,
+    "horas_restantes": -1879.7,
     "precio_actual": 81275.1,
     "distancia_pct": 21.31,
     "max_alcanzado": 65423.7,
@@ -7434,7 +7434,7 @@
     "razon": "Long DOT en chiquilina de Bitunix: si BTC sube al igual que ETH (que liquido los cortos), DOT tambien sube [1:08:26-1:09:04]",
     "n_eventos": 12,
     "ultima_noticia": "2026-10-15T12:34",
-    "dias_sin_noticias": 1,
+    "dias_sin_noticias": 2,
     "ultimo_evento": {
      "tipo": "comenta",
      "fecha": "2026-10-15T12:34",
@@ -8100,7 +8100,7 @@
     "razon": "largo tactico en zona soporte 2.370; stop 3.6%; objetivo 4-5%; 'aqui tambien tengo un pequeno largo... de momento ahi estamos en positivo. Ha venido clavado el movimiento y ahora estamos teniendo un rebote' [0:01:10, 0:07:51]",
     "n_eventos": 3,
     "ultima_noticia": "2026-10-12T12:35",
-    "dias_sin_noticias": 4,
+    "dias_sin_noticias": 5,
     "ultimo_evento": {
      "tipo": "cierra",
      "fecha": "2026-10-12T12:35",
@@ -8231,7 +8231,7 @@
     "razon": "Largo de XRP en Bitunix CON COBERTURA corta (en vez de tomar parcial). Abierto antes del 14-oct (fecha real no dicha). 14-oct: 'estaba ayer en 700, ahora solo 289, pero tengo cobertura de XRP con 376' [0:31:06 K-029]. OJO: el 12-oct dijo \"XRP ya 170, tambien ya tenia 1000 ayer\" (quedo en LB-029 SHORT); por el 14-oct el largo perdia mientras la cobertura ganaba, asi que el largo es anterior al 11-oct y LB-029 podria ser esa cobertura. Sin confirmar.",
     "n_eventos": 3,
     "ultima_noticia": "2026-10-15T12:38",
-    "dias_sin_noticias": 1,
+    "dias_sin_noticias": 2,
     "ultimo_evento": {
      "tipo": "parcial",
      "fecha": "2026-10-15T12:38",
@@ -14641,6 +14641,3232 @@
     "r_op": -0.1,
     "pendientes": 3
    }
+  },
+  "vs": {
+   "desde": "2026-09-14",
+   "fee_pct": 0.12,
+   "lobo": {
+    "stats": {
+     "n": 13,
+     "ganadas": 10,
+     "perdidas": 3,
+     "hit": 76.9,
+     "usd_total": 36.44,
+     "usd_op": 2.803,
+     "mejor": 8.72,
+     "peor": -3.52
+    },
+    "curva": [
+     {
+      "t": "2026-09-15T14:17",
+      "id": "LB-009",
+      "activo": "BTC",
+      "dir": "LONG",
+      "pct": -0.12,
+      "abre": "2026-09-15T14:14",
+      "acum": -0.12
+     },
+     {
+      "t": "2026-09-18T11:38",
+      "id": "LB-003",
+      "activo": "BTC",
+      "dir": "SHORT",
+      "pct": -3.521,
+      "abre": "2026-09-14T13:43",
+      "acum": -3.64
+     },
+     {
+      "t": "2026-09-25T17:51",
+      "id": "LB-024",
+      "activo": "AVAX",
+      "dir": "LONG",
+      "pct": 3.619,
+      "abre": "2026-09-23T19:14",
+      "acum": -0.02
+     },
+     {
+      "t": "2026-09-29T12:24",
+      "id": "LB-025",
+      "activo": "HYPE",
+      "dir": "SHORT",
+      "pct": 8.72,
+      "abre": "2026-09-24T13:48",
+      "acum": 8.7
+     },
+     {
+      "t": "2026-09-30T12:59",
+      "id": "LB-030",
+      "activo": "NEAR",
+      "dir": "SHORT",
+      "pct": -0.12,
+      "abre": "2026-09-30T12:40",
+      "acum": 8.58
+     },
+     {
+      "t": "2026-10-01T12:57",
+      "id": "LB-021",
+      "activo": "BTC",
+      "dir": "SHORT",
+      "pct": 0.799,
+      "abre": "2026-09-22T12:17",
+      "acum": 9.38
+     },
+     {
+      "t": "2026-10-10T18:14",
+      "id": "LB-031",
+      "activo": "BTC",
+      "dir": "SHORT",
+      "pct": 4.0,
+      "abre": "2026-10-01T12:56",
+      "acum": 13.38
+     },
+     {
+      "t": "2026-10-10T18:18",
+      "id": "LB-032",
+      "activo": "BTC",
+      "dir": "LONG",
+      "pct": 1.498,
+      "abre": "2026-10-08T16:39",
+      "acum": 14.88
+     },
+     {
+      "t": "2026-10-12T12:35",
+      "id": "LB-033",
+      "activo": "ETH",
+      "dir": "LONG",
+      "pct": 5.876,
+      "abre": "2026-10-08T16:39",
+      "acum": 20.75
+     },
+     {
+      "t": "2026-10-15T08:30",
+      "id": "LB-035",
+      "activo": "BTC",
+      "dir": "SHORT",
+      "pct": 4.789,
+      "abre": "2026-10-12T11:39",
+      "acum": 25.54
+     },
+     {
+      "t": "2026-10-15T15:00",
+      "id": "LB-042",
+      "activo": "SUI",
+      "dir": "LONG",
+      "pct": 6.302,
+      "abre": "2026-10-15T08:30",
+      "acum": 31.84
+     },
+     {
+      "t": "2026-10-16T12:27",
+      "id": "LB-043",
+      "activo": "ETH",
+      "dir": "LONG",
+      "pct": 2.929,
+      "abre": "2026-10-15T08:30",
+      "acum": 34.77
+     },
+     {
+      "t": "2026-10-16T12:27",
+      "id": "LB-044",
+      "activo": "HBAR",
+      "dir": "LONG",
+      "pct": 1.665,
+      "abre": "2026-10-15T08:30",
+      "acum": 36.44
+     }
+    ],
+    "sin_precio": [
+     "LB-004 ORO",
+     "LB-005 USDJPY",
+     "LB-010 CRUDO",
+     "LB-011 EUR",
+     "LB-013 EUR",
+     "LB-016 USDJPY",
+     "LB-017 ORO",
+     "LB-022 ORO",
+     "LB-023 EUR",
+     "LB-026 ORO",
+     "LB-036 ETH"
+    ],
+    "abiertas": [
+     {
+      "id": "LB-008",
+      "activo": "DOT",
+      "dir": "LONG",
+      "pct": 9.04,
+      "cobertura": true
+     },
+     {
+      "id": "LB-014",
+      "activo": "APT",
+      "dir": "LONG",
+      "pct": 32.58,
+      "cobertura": true
+     },
+     {
+      "id": "LB-029",
+      "activo": "XRP",
+      "dir": "SHORT",
+      "pct": 14.38,
+      "cobertura": true
+     },
+     {
+      "id": "LB-038",
+      "activo": "XRP",
+      "dir": "LONG",
+      "pct": -5.37,
+      "cobertura": false
+     },
+     {
+      "id": "LB-040",
+      "activo": "BCH",
+      "dir": "LONG",
+      "pct": 0.36,
+      "cobertura": false
+     },
+     {
+      "id": "LB-041",
+      "activo": "XLM",
+      "dir": "LONG",
+      "pct": -2.83,
+      "cobertura": false
+     },
+     {
+      "id": "LB-046",
+      "activo": "ETH",
+      "dir": "SHORT",
+      "pct": 0.12,
+      "cobertura": false
+     }
+    ],
+    "abiertas_usd": -7.72,
+    "abiertas_n": 4
+   },
+   "motor": {
+    "stats": {
+     "n": 69,
+     "ganadas": 33,
+     "perdidas": 36,
+     "hit": 47.8,
+     "usd_total": -10.96,
+     "usd_op": -0.159,
+     "mejor": 6.05,
+     "peor": -5.66
+    },
+    "curva": [
+     {
+      "t": "2026-09-14T14:44",
+      "id": "RV-020",
+      "activo": "NEAR",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 2.331,
+      "acum": 2.33
+     },
+     {
+      "t": "2026-09-15T06:44",
+      "id": "HR-139",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 2.784,
+      "acum": 5.12
+     },
+     {
+      "t": "2026-09-15T11:28",
+      "id": "HR-146",
+      "activo": "ARB",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -4.79,
+      "acum": 0.33
+     },
+     {
+      "t": "2026-09-16T03:12",
+      "id": "HR-150",
+      "activo": "APT",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": -2.593,
+      "acum": -2.27
+     },
+     {
+      "t": "2026-09-16T17:11",
+      "id": "RV-022",
+      "activo": "FIL",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -3.283,
+      "acum": -5.55
+     },
+     {
+      "t": "2026-09-16T17:11",
+      "id": "RV-024",
+      "activo": "DOT",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 1.356,
+      "acum": -4.2
+     },
+     {
+      "t": "2026-09-16T17:11",
+      "id": "RV-025",
+      "activo": "FIL",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -2.791,
+      "acum": -6.99
+     },
+     {
+      "t": "2026-09-16T17:11",
+      "id": "RV-026",
+      "activo": "XLM",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 2.554,
+      "acum": -4.43
+     },
+     {
+      "t": "2026-09-17T08:15",
+      "id": "RV-027",
+      "activo": "NEAR",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -4.641,
+      "acum": -9.07
+     },
+     {
+      "t": "2026-09-17T21:47",
+      "id": "RV-028",
+      "activo": "NEAR",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -4.303,
+      "acum": -13.38
+     },
+     {
+      "t": "2026-09-17T22:13",
+      "id": "RV-029",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -1.798,
+      "acum": -15.17
+     },
+     {
+      "t": "2026-09-17T23:59",
+      "id": "HR-185",
+      "activo": "DOT",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -1.82,
+      "acum": -16.99
+     },
+     {
+      "t": "2026-09-18T13:13",
+      "id": "HR-187",
+      "activo": "APT",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -3.875,
+      "acum": -20.87
+     },
+     {
+      "t": "2026-09-18T14:58",
+      "id": "HR-186",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -5.661,
+      "acum": -26.53
+     },
+     {
+      "t": "2026-09-18T17:28",
+      "id": "HR-202",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 2.138,
+      "acum": -24.39
+     },
+     {
+      "t": "2026-09-18T17:58",
+      "id": "RV-035",
+      "activo": "APT",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 2.615,
+      "acum": -21.78
+     },
+     {
+      "t": "2026-09-18T18:43",
+      "id": "HR-201",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -2.642,
+      "acum": -24.42
+     },
+     {
+      "t": "2026-09-18T19:44",
+      "id": "RV-037",
+      "activo": "FIL",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -2.093,
+      "acum": -26.51
+     },
+     {
+      "t": "2026-09-18T20:28",
+      "id": "HR-205",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 2.683,
+      "acum": -23.83
+     },
+     {
+      "t": "2026-09-18T23:28",
+      "id": "HR-208",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -3.579,
+      "acum": -27.41
+     },
+     {
+      "t": "2026-09-19T08:28",
+      "id": "RV-038",
+      "activo": "FIL",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -3.382,
+      "acum": -30.79
+     },
+     {
+      "t": "2026-09-19T08:28",
+      "id": "RV-040",
+      "activo": "APT",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 4.055,
+      "acum": -26.74
+     },
+     {
+      "t": "2026-09-19T08:28",
+      "id": "RV-041",
+      "activo": "AAVE",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 1.311,
+      "acum": -25.42
+     },
+     {
+      "t": "2026-09-19T08:28",
+      "id": "RV-042",
+      "activo": "FIL",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 2.181,
+      "acum": -23.24
+     },
+     {
+      "t": "2026-09-21T10:58",
+      "id": "HR-236",
+      "activo": "AAVE",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 1.79,
+      "acum": -21.45
+     },
+     {
+      "t": "2026-09-21T11:03",
+      "id": "RV-043",
+      "activo": "AVAX",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -2.156,
+      "acum": -23.61
+     },
+     {
+      "t": "2026-09-21T13:51",
+      "id": "RV-045",
+      "activo": "DOGE",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -2.551,
+      "acum": -26.16
+     },
+     {
+      "t": "2026-09-22T20:14",
+      "id": "RV-046",
+      "activo": "UNI",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -3.243,
+      "acum": -29.4
+     },
+     {
+      "t": "2026-09-22T23:27",
+      "id": "HR-259",
+      "activo": "ARB",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 2.455,
+      "acum": -26.95
+     },
+     {
+      "t": "2026-09-23T08:13",
+      "id": "RV-048",
+      "activo": "UNI",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 3.308,
+      "acum": -23.64
+     },
+     {
+      "t": "2026-09-23T08:13",
+      "id": "RV-049",
+      "activo": "AAVE",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 3.018,
+      "acum": -20.62
+     },
+     {
+      "t": "2026-09-23T23:42",
+      "id": "HR-271",
+      "activo": "DOT",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 2.436,
+      "acum": -18.19
+     },
+     {
+      "t": "2026-09-24T08:42",
+      "id": "RV-051",
+      "activo": "DOT",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 3.321,
+      "acum": -14.87
+     },
+     {
+      "t": "2026-09-24T08:42",
+      "id": "RV-054",
+      "activo": "SUI",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 2.953,
+      "acum": -11.91
+     },
+     {
+      "t": "2026-09-24T08:42",
+      "id": "RV-055",
+      "activo": "XLM",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -2.866,
+      "acum": -14.78
+     },
+     {
+      "t": "2026-09-24T08:42",
+      "id": "RV-057",
+      "activo": "FIL",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 3.783,
+      "acum": -11.0
+     },
+     {
+      "t": "2026-09-24T09:16",
+      "id": "RV-053",
+      "activo": "LINK",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 2.16,
+      "acum": -8.84
+     },
+     {
+      "t": "2026-09-24T09:28",
+      "id": "HR-270",
+      "activo": "LINK",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 2.872,
+      "acum": -5.96
+     },
+     {
+      "t": "2026-09-24T09:30",
+      "id": "RV-056",
+      "activo": "DOGE",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 2.791,
+      "acum": -3.17
+     },
+     {
+      "t": "2026-09-24T11:58",
+      "id": "RV-058",
+      "activo": "AVAX",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -0.12,
+      "acum": -3.29
+     },
+     {
+      "t": "2026-09-25T09:30",
+      "id": "HR-309",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -2.547,
+      "acum": -5.84
+     },
+     {
+      "t": "2026-09-25T13:37",
+      "id": "HR-307",
+      "activo": "NEAR",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -5.52,
+      "acum": -11.36
+     },
+     {
+      "t": "2026-09-25T16:31",
+      "id": "RV-061",
+      "activo": "AAVE",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 2.544,
+      "acum": -8.82
+     },
+     {
+      "t": "2026-10-08T12:27",
+      "id": "HR-558",
+      "activo": "SUI",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": -3.009,
+      "acum": -11.82
+     },
+     {
+      "t": "2026-10-08T12:27",
+      "id": "HR-559",
+      "activo": "LINK",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": -2.029,
+      "acum": -13.85
+     },
+     {
+      "t": "2026-10-08T12:28",
+      "id": "RV-063",
+      "activo": "UNI",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -3.398,
+      "acum": -17.25
+     },
+     {
+      "t": "2026-10-08T12:28",
+      "id": "RV-064",
+      "activo": "ADA",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -2.543,
+      "acum": -19.79
+     },
+     {
+      "t": "2026-10-08T12:28",
+      "id": "RV-069",
+      "activo": "LINK",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -1.9,
+      "acum": -21.69
+     },
+     {
+      "t": "2026-10-08T12:58",
+      "id": "RV-071",
+      "activo": "NEAR",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -3.912,
+      "acum": -25.61
+     },
+     {
+      "t": "2026-10-08T14:27",
+      "id": "HR-560",
+      "activo": "LINK",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 2.164,
+      "acum": -23.44
+     },
+     {
+      "t": "2026-10-08T15:13",
+      "id": "RV-070",
+      "activo": "DOT",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 2.385,
+      "acum": -21.06
+     },
+     {
+      "t": "2026-10-09T08:13",
+      "id": "RV-068",
+      "activo": "ARB",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": 6.047,
+      "acum": -15.01
+     },
+     {
+      "t": "2026-10-09T12:15",
+      "id": "RV-065",
+      "activo": "XLM",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -0.121,
+      "acum": -15.13
+     },
+     {
+      "t": "2026-10-09T12:15",
+      "id": "RV-066",
+      "activo": "DOGE",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -0.121,
+      "acum": -15.25
+     },
+     {
+      "t": "2026-10-09T12:15",
+      "id": "RV-067",
+      "activo": "AVAX",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -0.12,
+      "acum": -15.37
+     },
+     {
+      "t": "2026-10-09T21:57",
+      "id": "HR-577",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -2.991,
+      "acum": -18.36
+     },
+     {
+      "t": "2026-10-10T00:27",
+      "id": "HR-579",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": -4.078,
+      "acum": -22.44
+     },
+     {
+      "t": "2026-10-10T08:14",
+      "id": "RV-077",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -3.163,
+      "acum": -25.6
+     },
+     {
+      "t": "2026-10-10T08:14",
+      "id": "RV-079",
+      "activo": "FIL",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -2.027,
+      "acum": -27.63
+     },
+     {
+      "t": "2026-10-10T09:43",
+      "id": "RV-076",
+      "activo": "ADA",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": -2.257,
+      "acum": -29.89
+     },
+     {
+      "t": "2026-10-10T22:13",
+      "id": "HR-578",
+      "activo": "DOT",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 1.853,
+      "acum": -28.03
+     },
+     {
+      "t": "2026-10-11T08:57",
+      "id": "HR-594",
+      "activo": "APT",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 2.92,
+      "acum": -25.11
+     },
+     {
+      "t": "2026-10-14T06:57",
+      "id": "HR-648",
+      "activo": "OP",
+      "dir": "SHORT",
+      "grado": "A",
+      "pct": 3.519,
+      "acum": -21.6
+     },
+     {
+      "t": "2026-10-14T19:12",
+      "id": "HR-660",
+      "activo": "OP",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 2.953,
+      "acum": -18.64
+     },
+     {
+      "t": "2026-10-14T21:28",
+      "id": "RV-083",
+      "activo": "FIL",
+      "dir": "LONG",
+      "grado": "RV",
+      "pct": -3.151,
+      "acum": -21.79
+     },
+     {
+      "t": "2026-10-14T23:42",
+      "id": "HR-672",
+      "activo": "DOT",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 1.704,
+      "acum": -20.09
+     },
+     {
+      "t": "2026-10-15T08:28",
+      "id": "HR-675",
+      "activo": "OP",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 2.544,
+      "acum": -17.55
+     },
+     {
+      "t": "2026-10-15T09:42",
+      "id": "HR-674",
+      "activo": "OP",
+      "dir": "LONG",
+      "grado": "A",
+      "pct": 3.087,
+      "acum": -14.46
+     },
+     {
+      "t": "2026-10-15T22:43",
+      "id": "RV-087",
+      "activo": "NEAR",
+      "dir": "SHORT",
+      "grado": "RV",
+      "pct": 3.501,
+      "acum": -10.96
+     }
+    ]
+   },
+   "todas": {
+    "stats": {
+     "n": 586,
+     "ganadas": 280,
+     "perdidas": 306,
+     "hit": 47.8,
+     "usd_total": -119.2,
+     "usd_op": -0.203,
+     "mejor": 8.59,
+     "peor": -8.26
+    },
+    "curva": [
+     [
+      "2026-09-14T11:43",
+      -0.78
+     ],
+     [
+      "2026-09-14T12:43",
+      -1.5
+     ],
+     [
+      "2026-09-14T13:13",
+      0.03
+     ],
+     [
+      "2026-09-14T14:28",
+      -0.94
+     ],
+     [
+      "2026-09-14T19:04",
+      0.02
+     ],
+     [
+      "2026-09-15T06:44",
+      2.8
+     ],
+     [
+      "2026-09-15T06:57",
+      4.99
+     ],
+     [
+      "2026-09-15T09:43",
+      5.86
+     ],
+     [
+      "2026-09-15T10:43",
+      -0.75
+     ],
+     [
+      "2026-09-15T11:28",
+      -5.54
+     ],
+     [
+      "2026-09-15T14:00",
+      -7.69
+     ],
+     [
+      "2026-09-15T14:00",
+      -1.82
+     ],
+     [
+      "2026-09-15T21:27",
+      -0.93
+     ],
+     [
+      "2026-09-15T23:43",
+      1.12
+     ],
+     [
+      "2026-09-15T23:43",
+      -2.53
+     ],
+     [
+      "2026-09-16T02:27",
+      -4.36
+     ],
+     [
+      "2026-09-16T03:12",
+      -6.96
+     ],
+     [
+      "2026-09-16T03:57",
+      -8.18
+     ],
+     [
+      "2026-09-16T06:29",
+      -12.24
+     ],
+     [
+      "2026-09-16T07:13",
+      -16.37
+     ],
+     [
+      "2026-09-16T17:09",
+      -19.89
+     ],
+     [
+      "2026-09-16T17:09",
+      -23.17
+     ],
+     [
+      "2026-09-16T17:09",
+      -20.59
+     ],
+     [
+      "2026-09-16T17:09",
+      -23.13
+     ],
+     [
+      "2026-09-16T17:09",
+      -24.53
+     ],
+     [
+      "2026-09-16T17:09",
+      -27.52
+     ],
+     [
+      "2026-09-16T19:35",
+      -30.91
+     ],
+     [
+      "2026-09-16T19:35",
+      -33.9
+     ],
+     [
+      "2026-09-16T20:42",
+      -32.72
+     ],
+     [
+      "2026-09-17T03:42",
+      -34.25
+     ],
+     [
+      "2026-09-17T03:57",
+      -40.32
+     ],
+     [
+      "2026-09-17T03:57",
+      -42.36
+     ],
+     [
+      "2026-09-17T04:12",
+      -46.69
+     ],
+     [
+      "2026-09-17T04:12",
+      -50.59
+     ],
+     [
+      "2026-09-17T04:12",
+      -52.12
+     ],
+     [
+      "2026-09-17T04:27",
+      -55.99
+     ],
+     [
+      "2026-09-17T07:42",
+      -57.55
+     ],
+     [
+      "2026-09-17T09:27",
+      -60.8
+     ],
+     [
+      "2026-09-17T09:58",
+      -58.78
+     ],
+     [
+      "2026-09-17T09:58",
+      -58.05
+     ],
+     [
+      "2026-09-17T12:09",
+      -63.16
+     ],
+     [
+      "2026-09-17T12:09",
+      -66.36
+     ],
+     [
+      "2026-09-17T13:58",
+      -64.49
+     ],
+     [
+      "2026-09-17T21:35",
+      -66.76
+     ],
+     [
+      "2026-09-17T21:35",
+      -69.12
+     ],
+     [
+      "2026-09-17T21:35",
+      -77.38
+     ],
+     [
+      "2026-09-17T21:57",
+      -85.34
+     ],
+     [
+      "2026-09-17T21:57",
+      -90.74
+     ],
+     [
+      "2026-09-17T22:12",
+      -95.77
+     ],
+     [
+      "2026-09-17T23:59",
+      -97.59
+     ],
+     [
+      "2026-09-18T02:28",
+      -97.11
+     ],
+     [
+      "2026-09-18T04:12",
+      -97.83
+     ],
+     [
+      "2026-09-18T05:42",
+      -98.89
+     ],
+     [
+      "2026-09-18T08:41",
+      -100.48
+     ],
+     [
+      "2026-09-18T08:41",
+      -101.2
+     ],
+     [
+      "2026-09-18T08:41",
+      -103.7
+     ],
+     [
+      "2026-09-18T10:13",
+      -104.48
+     ],
+     [
+      "2026-09-18T11:43",
+      -106.57
+     ],
+     [
+      "2026-09-18T13:13",
+      -110.45
+     ],
+     [
+      "2026-09-18T13:43",
+      -111.87
+     ],
+     [
+      "2026-09-18T14:28",
+      -113.48
+     ],
+     [
+      "2026-09-18T14:28",
+      -114.63
+     ],
+     [
+      "2026-09-18T14:28",
+      -115.94
+     ],
+     [
+      "2026-09-18T14:58",
+      -121.6
+     ],
+     [
+      "2026-09-18T15:28",
+      -125.36
+     ],
+     [
+      "2026-09-18T17:28",
+      -123.22
+     ],
+     [
+      "2026-09-18T18:43",
+      -125.87
+     ],
+     [
+      "2026-09-18T18:58",
+      -127.28
+     ],
+     [
+      "2026-09-18T20:28",
+      -124.6
+     ],
+     [
+      "2026-09-18T21:13",
+      -126.65
+     ],
+     [
+      "2026-09-18T22:13",
+      -130.49
+     ],
+     [
+      "2026-09-18T23:28",
+      -133.96
+     ],
+     [
+      "2026-09-18T23:28",
+      -137.53
+     ],
+     [
+      "2026-09-18T23:43",
+      -135.47
+     ],
+     [
+      "2026-09-19T00:57",
+      -132.13
+     ],
+     [
+      "2026-09-19T02:27",
+      -128.67
+     ],
+     [
+      "2026-09-19T04:27",
+      -129.43
+     ],
+     [
+      "2026-09-19T05:57",
+      -127.13
+     ],
+     [
+      "2026-09-19T06:12",
+      -129.92
+     ],
+     [
+      "2026-09-19T07:02",
+      -127.73
+     ],
+     [
+      "2026-09-19T08:27",
+      -126.39
+     ],
+     [
+      "2026-09-20T11:14",
+      -129.34
+     ],
+     [
+      "2026-09-20T11:14",
+      -133.09
+     ],
+     [
+      "2026-09-20T11:14",
+      -136.84
+     ],
+     [
+      "2026-09-20T11:14",
+      -133.75
+     ],
+     [
+      "2026-09-20T17:58",
+      -130.55
+     ],
+     [
+      "2026-09-20T20:10",
+      -134.73
+     ],
+     [
+      "2026-09-20T20:11",
+      -140.51
+     ],
+     [
+      "2026-09-20T20:11",
+      -145.61
+     ],
+     [
+      "2026-09-20T20:11",
+      -150.34
+     ],
+     [
+      "2026-09-20T20:57",
+      -148.91
+     ],
+     [
+      "2026-09-21T01:27",
+      -154.03
+     ],
+     [
+      "2026-09-21T01:27",
+      -157.62
+     ],
+     [
+      "2026-09-21T03:42",
+      -159.79
+     ],
+     [
+      "2026-09-21T03:42",
+      -161.47
+     ],
+     [
+      "2026-09-21T03:57",
+      -165.11
+     ],
+     [
+      "2026-09-21T04:27",
+      -170.14
+     ],
+     [
+      "2026-09-21T05:42",
+      -172.36
+     ],
+     [
+      "2026-09-21T10:58",
+      -166.61
+     ],
+     [
+      "2026-09-21T10:58",
+      -168.4
+     ],
+     [
+      "2026-09-21T10:58",
+      -166.61
+     ],
+     [
+      "2026-09-21T10:58",
+      -168.21
+     ],
+     [
+      "2026-09-21T12:44",
+      -166.18
+     ],
+     [
+      "2026-09-21T23:04",
+      -164.32
+     ],
+     [
+      "2026-09-21T23:04",
+      -167.85
+     ],
+     [
+      "2026-09-21T23:42",
+      -167.03
+     ],
+     [
+      "2026-09-22T00:57",
+      -166.45
+     ],
+     [
+      "2026-09-22T09:06",
+      -163.97
+     ],
+     [
+      "2026-09-22T09:06",
+      -162.4
+     ],
+     [
+      "2026-09-22T09:28",
+      -158.86
+     ],
+     [
+      "2026-09-22T10:29",
+      -155.61
+     ],
+     [
+      "2026-09-22T13:13",
+      -154.08
+     ],
+     [
+      "2026-09-22T13:43",
+      -157.78
+     ],
+     [
+      "2026-09-22T14:28",
+      -159.46
+     ],
+     [
+      "2026-09-22T15:12",
+      -153.86
+     ],
+     [
+      "2026-09-22T15:12",
+      -148.68
+     ],
+     [
+      "2026-09-22T19:48",
+      -144.81
+     ],
+     [
+      "2026-09-22T19:48",
+      -143.31
+     ],
+     [
+      "2026-09-22T19:48",
+      -145.77
+     ],
+     [
+      "2026-09-22T20:12",
+      -148.97
+     ],
+     [
+      "2026-09-22T20:27",
+      -150.46
+     ],
+     [
+      "2026-09-22T22:59",
+      -153.44
+     ],
+     [
+      "2026-09-22T22:59",
+      -156.75
+     ],
+     [
+      "2026-09-22T23:27",
+      -154.29
+     ],
+     [
+      "2026-09-23T02:57",
+      -149.99
+     ],
+     [
+      "2026-09-23T05:12",
+      -148.14
+     ],
+     [
+      "2026-09-23T07:12",
+      -153.61
+     ],
+     [
+      "2026-09-23T08:12",
+      -149.84
+     ],
+     [
+      "2026-09-23T08:12",
+      -151.73
+     ],
+     [
+      "2026-09-23T08:27",
+      -149.18
+     ],
+     [
+      "2026-09-23T10:43",
+      -145.29
+     ],
+     [
+      "2026-09-23T10:43",
+      -141.13
+     ],
+     [
+      "2026-09-23T10:58",
+      -135.85
+     ],
+     [
+      "2026-09-23T10:58",
+      -129.65
+     ],
+     [
+      "2026-09-23T22:48",
+      -127.05
+     ],
+     [
+      "2026-09-23T22:48",
+      -124.21
+     ],
+     [
+      "2026-09-23T22:49",
+      -122.04
+     ],
+     [
+      "2026-09-23T22:49",
+      -119.36
+     ],
+     [
+      "2026-09-23T23:42",
+      -116.92
+     ],
+     [
+      "2026-09-24T00:12",
+      -113.94
+     ],
+     [
+      "2026-09-24T00:12",
+      -110.31
+     ],
+     [
+      "2026-09-24T00:12",
+      -108.2
+     ],
+     [
+      "2026-09-24T01:12",
+      -104.19
+     ],
+     [
+      "2026-09-24T03:57",
+      -105.15
+     ],
+     [
+      "2026-09-24T03:57",
+      -102.98
+     ],
+     [
+      "2026-09-24T04:57",
+      -106.41
+     ],
+     [
+      "2026-09-24T08:41",
+      -104.35
+     ],
+     [
+      "2026-09-24T08:41",
+      -102.3
+     ],
+     [
+      "2026-09-24T08:41",
+      -99.34
+     ],
+     [
+      "2026-09-24T09:28",
+      -96.47
+     ],
+     [
+      "2026-09-24T09:28",
+      -95.54
+     ],
+     [
+      "2026-09-24T09:28",
+      -91.58
+     ],
+     [
+      "2026-09-24T09:29",
+      -93.24
+     ],
+     [
+      "2026-09-24T11:44",
+      -98.12
+     ],
+     [
+      "2026-09-24T14:44",
+      -100.14
+     ],
+     [
+      "2026-09-24T16:43",
+      -96.3
+     ],
+     [
+      "2026-09-24T20:46",
+      -99.16
+     ],
+     [
+      "2026-09-24T22:29",
+      -97.67
+     ],
+     [
+      "2026-09-24T23:28",
+      -96.39
+     ],
+     [
+      "2026-09-25T02:27",
+      -99.1
+     ],
+     [
+      "2026-09-25T02:27",
+      -101.25
+     ],
+     [
+      "2026-09-25T03:27",
+      -105.64
+     ],
+     [
+      "2026-09-25T03:27",
+      -108.09
+     ],
+     [
+      "2026-09-25T03:27",
+      -110.62
+     ],
+     [
+      "2026-09-25T03:27",
+      -113.44
+     ],
+     [
+      "2026-09-25T03:27",
+      -111.57
+     ],
+     [
+      "2026-09-25T03:27",
+      -112.94
+     ],
+     [
+      "2026-09-25T04:57",
+      -114.92
+     ],
+     [
+      "2026-09-25T06:12",
+      -110.7
+     ],
+     [
+      "2026-09-25T06:12",
+      -116.0
+     ],
+     [
+      "2026-09-25T07:12",
+      -120.46
+     ],
+     [
+      "2026-09-25T09:30",
+      -123.25
+     ],
+     [
+      "2026-09-25T09:30",
+      -125.8
+     ],
+     [
+      "2026-09-25T13:37",
+      -131.32
+     ],
+     [
+      "2026-09-25T16:28",
+      -134.63
+     ],
+     [
+      "2026-09-25T16:28",
+      -133.11
+     ],
+     [
+      "2026-09-25T19:15",
+      -138.22
+     ],
+     [
+      "2026-09-25T21:13",
+      -137.73
+     ],
+     [
+      "2026-09-25T23:27",
+      -135.21
+     ],
+     [
+      "2026-09-26T01:42",
+      -136.66
+     ],
+     [
+      "2026-09-26T02:58",
+      -131.9
+     ],
+     [
+      "2026-09-26T04:28",
+      -130.28
+     ],
+     [
+      "2026-09-26T04:42",
+      -128.19
+     ],
+     [
+      "2026-09-26T04:57",
+      -126.7
+     ],
+     [
+      "2026-09-26T08:58",
+      -128.87
+     ],
+     [
+      "2026-09-26T09:13",
+      -131.06
+     ],
+     [
+      "2026-09-26T09:13",
+      -133.95
+     ],
+     [
+      "2026-09-26T09:13",
+      -135.66
+     ],
+     [
+      "2026-09-26T09:44",
+      -138.42
+     ],
+     [
+      "2026-09-26T10:57",
+      -139.14
+     ],
+     [
+      "2026-09-26T12:12",
+      -136.62
+     ],
+     [
+      "2026-09-26T14:42",
+      -136.94
+     ],
+     [
+      "2026-09-26T14:42",
+      -133.61
+     ],
+     [
+      "2026-09-26T15:12",
+      -131.53
+     ],
+     [
+      "2026-09-26T15:27",
+      -128.68
+     ],
+     [
+      "2026-09-26T15:42",
+      -129.59
+     ],
+     [
+      "2026-09-26T15:57",
+      -131.08
+     ],
+     [
+      "2026-09-26T19:27",
+      -129.75
+     ],
+     [
+      "2026-09-26T19:42",
+      -132.55
+     ],
+     [
+      "2026-09-26T22:13",
+      -135.28
+     ],
+     [
+      "2026-09-26T22:13",
+      -134.21
+     ],
+     [
+      "2026-09-26T22:34",
+      -135.2
+     ],
+     [
+      "2026-09-26T23:57",
+      -136.66
+     ],
+     [
+      "2026-09-27T01:42",
+      -135.71
+     ],
+     [
+      "2026-09-27T01:43",
+      -134.27
+     ],
+     [
+      "2026-09-27T02:27",
+      -133.09
+     ],
+     [
+      "2026-09-27T02:57",
+      -135.82
+     ],
+     [
+      "2026-09-27T03:58",
+      -133.32
+     ],
+     [
+      "2026-09-27T06:42",
+      -129.03
+     ],
+     [
+      "2026-09-27T08:13",
+      -128.15
+     ],
+     [
+      "2026-09-27T09:27",
+      -125.92
+     ],
+     [
+      "2026-09-27T09:57",
+      -125.44
+     ],
+     [
+      "2026-09-27T11:13",
+      -124.64
+     ],
+     [
+      "2026-09-27T14:00",
+      -121.8
+     ],
+     [
+      "2026-09-27T14:13",
+      -124.45
+     ],
+     [
+      "2026-09-27T14:13",
+      -127.23
+     ],
+     [
+      "2026-09-27T15:28",
+      -125.52
+     ],
+     [
+      "2026-09-27T20:43",
+      -125.14
+     ],
+     [
+      "2026-09-27T20:44",
+      -128.9
+     ],
+     [
+      "2026-09-27T20:44",
+      -126.66
+     ],
+     [
+      "2026-09-27T20:44",
+      -124.21
+     ],
+     [
+      "2026-09-27T20:44",
+      -122.77
+     ],
+     [
+      "2026-09-27T20:58",
+      -123.49
+     ],
+     [
+      "2026-09-27T22:16",
+      -126.61
+     ],
+     [
+      "2026-09-28T07:13",
+      -122.34
+     ],
+     [
+      "2026-09-28T07:13",
+      -121.46
+     ],
+     [
+      "2026-09-28T07:13",
+      -123.29
+     ],
+     [
+      "2026-09-28T09:58",
+      -126.4
+     ],
+     [
+      "2026-09-28T11:45",
+      -133.37
+     ],
+     [
+      "2026-09-28T12:58",
+      -131.86
+     ],
+     [
+      "2026-09-28T13:21",
+      -129.08
+     ],
+     [
+      "2026-09-28T14:43",
+      -133.8
+     ],
+     [
+      "2026-09-28T14:43",
+      -137.03
+     ],
+     [
+      "2026-09-28T19:13",
+      -138.33
+     ],
+     [
+      "2026-09-28T20:43",
+      -141.03
+     ],
+     [
+      "2026-09-28T20:43",
+      -139.47
+     ],
+     [
+      "2026-09-28T20:57",
+      -140.37
+     ],
+     [
+      "2026-09-28T22:13",
+      -144.32
+     ],
+     [
+      "2026-09-28T23:28",
+      -141.43
+     ],
+     [
+      "2026-09-29T01:58",
+      -142.75
+     ],
+     [
+      "2026-09-29T02:12",
+      -140.51
+     ],
+     [
+      "2026-09-29T02:42",
+      -137.23
+     ],
+     [
+      "2026-09-29T02:42",
+      -138.86
+     ],
+     [
+      "2026-09-29T06:43",
+      -136.09
+     ],
+     [
+      "2026-09-29T06:43",
+      -138.58
+     ],
+     [
+      "2026-09-29T06:43",
+      -141.08
+     ],
+     [
+      "2026-09-29T06:43",
+      -144.38
+     ],
+     [
+      "2026-09-29T06:58",
+      -146.47
+     ],
+     [
+      "2026-09-29T10:28",
+      -144.31
+     ],
+     [
+      "2026-09-29T10:28",
+      -142.48
+     ],
+     [
+      "2026-09-29T13:34",
+      -138.5
+     ],
+     [
+      "2026-09-29T13:34",
+      -135.31
+     ],
+     [
+      "2026-09-29T13:35",
+      -131.2
+     ],
+     [
+      "2026-09-29T14:00",
+      -125.13
+     ],
+     [
+      "2026-09-29T16:28",
+      -123.66
+     ],
+     [
+      "2026-09-29T18:43",
+      -120.95
+     ],
+     [
+      "2026-09-29T23:15",
+      -122.63
+     ],
+     [
+      "2026-09-30T02:12",
+      -125.24
+     ],
+     [
+      "2026-09-30T03:27",
+      -122.99
+     ],
+     [
+      "2026-09-30T03:42",
+      -124.7
+     ],
+     [
+      "2026-09-30T04:28",
+      -123.53
+     ],
+     [
+      "2026-09-30T05:42",
+      -128.1
+     ],
+     [
+      "2026-09-30T05:42",
+      -132.79
+     ],
+     [
+      "2026-09-30T05:57",
+      -136.22
+     ],
+     [
+      "2026-09-30T06:13",
+      -134.75
+     ],
+     [
+      "2026-09-30T07:43",
+      -132.29
+     ],
+     [
+      "2026-09-30T07:43",
+      -130.16
+     ],
+     [
+      "2026-09-30T07:43",
+      -127.7
+     ],
+     [
+      "2026-09-30T07:43",
+      -126.18
+     ],
+     [
+      "2026-09-30T07:59",
+      -124.25
+     ],
+     [
+      "2026-09-30T08:43",
+      -123.75
+     ],
+     [
+      "2026-09-30T11:28",
+      -123.27
+     ],
+     [
+      "2026-09-30T11:58",
+      -126.72
+     ],
+     [
+      "2026-09-30T11:58",
+      -130.12
+     ],
+     [
+      "2026-09-30T13:58",
+      -127.0
+     ],
+     [
+      "2026-09-30T14:28",
+      -130.73
+     ],
+     [
+      "2026-09-30T17:28",
+      -133.32
+     ],
+     [
+      "2026-09-30T20:03",
+      -131.63
+     ],
+     [
+      "2026-09-30T20:03",
+      -129.45
+     ],
+     [
+      "2026-09-30T20:36",
+      -127.51
+     ],
+     [
+      "2026-09-30T20:36",
+      -125.13
+     ],
+     [
+      "2026-09-30T22:42",
+      -126.13
+     ],
+     [
+      "2026-09-30T23:58",
+      -124.11
+     ],
+     [
+      "2026-10-01T02:28",
+      -122.8
+     ],
+     [
+      "2026-10-01T02:28",
+      -121.17
+     ],
+     [
+      "2026-10-01T02:28",
+      -119.37
+     ],
+     [
+      "2026-10-01T05:13",
+      -117.32
+     ],
+     [
+      "2026-10-01T05:13",
+      -119.19
+     ],
+     [
+      "2026-10-01T05:28",
+      -122.51
+     ],
+     [
+      "2026-10-01T08:28",
+      -116.79
+     ],
+     [
+      "2026-10-01T08:28",
+      -120.64
+     ],
+     [
+      "2026-10-01T08:28",
+      -124.52
+     ],
+     [
+      "2026-10-01T08:58",
+      -122.86
+     ],
+     [
+      "2026-10-01T10:15",
+      -123.18
+     ],
+     [
+      "2026-10-01T10:15",
+      -125.03
+     ],
+     [
+      "2026-10-01T13:13",
+      -127.99
+     ],
+     [
+      "2026-10-01T19:58",
+      -131.59
+     ],
+     [
+      "2026-10-01T21:01",
+      -134.09
+     ],
+     [
+      "2026-10-01T21:13",
+      -131.83
+     ],
+     [
+      "2026-10-01T21:13",
+      -128.69
+     ],
+     [
+      "2026-10-01T22:43",
+      -126.56
+     ],
+     [
+      "2026-10-01T22:43",
+      -123.94
+     ],
+     [
+      "2026-10-01T22:43",
+      -124.76
+     ],
+     [
+      "2026-10-01T23:29",
+      -121.7
+     ],
+     [
+      "2026-10-01T23:29",
+      -125.23
+     ],
+     [
+      "2026-10-01T23:50",
+      -128.22
+     ],
+     [
+      "2026-10-01T23:50",
+      -130.53
+     ],
+     [
+      "2026-10-01T23:50",
+      -131.58
+     ],
+     [
+      "2026-10-02T03:58",
+      -129.27
+     ],
+     [
+      "2026-10-02T07:45",
+      -130.5
+     ],
+     [
+      "2026-10-02T07:45",
+      -131.33
+     ],
+     [
+      "2026-10-02T14:43",
+      -133.57
+     ],
+     [
+      "2026-10-02T14:43",
+      -135.65
+     ],
+     [
+      "2026-10-02T14:43",
+      -133.2
+     ],
+     [
+      "2026-10-02T14:43",
+      -129.53
+     ],
+     [
+      "2026-10-02T14:43",
+      -131.54
+     ],
+     [
+      "2026-10-02T14:43",
+      -128.41
+     ],
+     [
+      "2026-10-02T14:43",
+      -127.08
+     ],
+     [
+      "2026-10-02T19:47",
+      -125.32
+     ],
+     [
+      "2026-10-02T19:47",
+      -123.45
+     ],
+     [
+      "2026-10-02T20:14",
+      -121.33
+     ],
+     [
+      "2026-10-02T20:14",
+      -119.2
+     ],
+     [
+      "2026-10-02T20:59",
+      -117.74
+     ],
+     [
+      "2026-10-03T00:42",
+      -120.37
+     ],
+     [
+      "2026-10-03T03:12",
+      -118.96
+     ],
+     [
+      "2026-10-03T05:12",
+      -117.39
+     ],
+     [
+      "2026-10-03T05:27",
+      -119.39
+     ],
+     [
+      "2026-10-03T05:42",
+      -117.36
+     ],
+     [
+      "2026-10-03T06:42",
+      -114.33
+     ],
+     [
+      "2026-10-03T06:42",
+      -111.89
+     ],
+     [
+      "2026-10-03T07:57",
+      -110.13
+     ],
+     [
+      "2026-10-03T07:57",
+      -108.91
+     ],
+     [
+      "2026-10-03T11:27",
+      -107.43
+     ],
+     [
+      "2026-10-03T13:32",
+      -105.69
+     ],
+     [
+      "2026-10-03T14:12",
+      -104.19
+     ],
+     [
+      "2026-10-03T15:28",
+      -105.42
+     ],
+     [
+      "2026-10-03T18:28",
+      -107.35
+     ],
+     [
+      "2026-10-03T19:43",
+      -105.99
+     ],
+     [
+      "2026-10-03T19:43",
+      -107.19
+     ],
+     [
+      "2026-10-03T21:27",
+      -105.49
+     ],
+     [
+      "2026-10-03T23:42",
+      -106.21
+     ],
+     [
+      "2026-10-04T10:44",
+      -106.63
+     ],
+     [
+      "2026-10-04T10:44",
+      -106.86
+     ],
+     [
+      "2026-10-04T10:44",
+      -105.41
+     ],
+     [
+      "2026-10-04T10:44",
+      -104.74
+     ],
+     [
+      "2026-10-04T10:44",
+      -105.91
+     ],
+     [
+      "2026-10-04T10:44",
+      -106.63
+     ],
+     [
+      "2026-10-04T11:57",
+      -109.43
+     ],
+     [
+      "2026-10-04T11:57",
+      -112.25
+     ],
+     [
+      "2026-10-04T11:57",
+      -114.73
+     ],
+     [
+      "2026-10-04T12:57",
+      -115.45
+     ],
+     [
+      "2026-10-04T13:42",
+      -114.95
+     ],
+     [
+      "2026-10-04T16:43",
+      -116.66
+     ],
+     [
+      "2026-10-04T16:57",
+      -118.21
+     ],
+     [
+      "2026-10-04T17:12",
+      -119.95
+     ],
+     [
+      "2026-10-04T17:27",
+      -121.19
+     ],
+     [
+      "2026-10-04T17:42",
+      -124.42
+     ],
+     [
+      "2026-10-04T20:27",
+      -125.44
+     ],
+     [
+      "2026-10-04T20:42",
+      -122.96
+     ],
+     [
+      "2026-10-04T20:42",
+      -122.35
+     ],
+     [
+      "2026-10-04T22:43",
+      -125.77
+     ],
+     [
+      "2026-10-04T22:43",
+      -127.47
+     ],
+     [
+      "2026-10-05T07:43",
+      -130.0
+     ],
+     [
+      "2026-10-05T07:58",
+      -129.52
+     ],
+     [
+      "2026-10-05T08:28",
+      -130.39
+     ],
+     [
+      "2026-10-05T09:43",
+      -127.07
+     ],
+     [
+      "2026-10-05T09:43",
+      -126.24
+     ],
+     [
+      "2026-10-05T10:57",
+      -127.0
+     ],
+     [
+      "2026-10-05T15:13",
+      -125.97
+     ],
+     [
+      "2026-10-05T15:13",
+      -124.54
+     ],
+     [
+      "2026-10-05T15:42",
+      -127.84
+     ],
+     [
+      "2026-10-05T15:42",
+      -129.75
+     ],
+     [
+      "2026-10-05T19:13",
+      -128.74
+     ],
+     [
+      "2026-10-05T23:42",
+      -127.2
+     ],
+     [
+      "2026-10-05T23:42",
+      -126.68
+     ],
+     [
+      "2026-10-06T01:13",
+      -124.22
+     ],
+     [
+      "2026-10-06T02:42",
+      -123.61
+     ],
+     [
+      "2026-10-06T04:27",
+      -121.57
+     ],
+     [
+      "2026-10-06T04:27",
+      -119.7
+     ],
+     [
+      "2026-10-06T04:27",
+      -120.42
+     ],
+     [
+      "2026-10-06T06:43",
+      -121.94
+     ],
+     [
+      "2026-10-06T09:12",
+      -118.77
+     ],
+     [
+      "2026-10-06T10:27",
+      -116.85
+     ],
+     [
+      "2026-10-06T11:12",
+      -114.67
+     ],
+     [
+      "2026-10-06T11:42",
+      -111.98
+     ],
+     [
+      "2026-10-06T11:42",
+      -109.83
+     ],
+     [
+      "2026-10-06T11:42",
+      -109.0
+     ],
+     [
+      "2026-10-06T13:13",
+      -108.23
+     ],
+     [
+      "2026-10-06T14:27",
+      -106.74
+     ],
+     [
+      "2026-10-06T15:27",
+      -104.7
+     ],
+     [
+      "2026-10-06T16:27",
+      -106.08
+     ],
+     [
+      "2026-10-06T17:42",
+      -107.21
+     ],
+     [
+      "2026-10-06T20:12",
+      -108.68
+     ],
+     [
+      "2026-10-06T20:42",
+      -105.52
+     ],
+     [
+      "2026-10-06T20:42",
+      -107.04
+     ],
+     [
+      "2026-10-06T20:42",
+      -108.19
+     ],
+     [
+      "2026-10-06T21:12",
+      -104.96
+     ],
+     [
+      "2026-10-06T21:12",
+      -106.22
+     ],
+     [
+      "2026-10-06T21:12",
+      -107.25
+     ],
+     [
+      "2026-10-06T21:12",
+      -108.24
+     ],
+     [
+      "2026-10-06T21:27",
+      -107.61
+     ],
+     [
+      "2026-10-07T04:42",
+      -109.24
+     ],
+     [
+      "2026-10-07T04:42",
+      -110.49
+     ],
+     [
+      "2026-10-07T04:57",
+      -112.06
+     ],
+     [
+      "2026-10-07T09:02",
+      -114.13
+     ],
+     [
+      "2026-10-07T09:02",
+      -115.43
+     ],
+     [
+      "2026-10-07T09:02",
+      -114.3
+     ],
+     [
+      "2026-10-07T17:13",
+      -112.46
+     ],
+     [
+      "2026-10-07T17:13",
+      -114.12
+     ],
+     [
+      "2026-10-07T17:13",
+      -116.16
+     ],
+     [
+      "2026-10-07T17:13",
+      -117.78
+     ],
+     [
+      "2026-10-07T22:12",
+      -119.06
+     ],
+     [
+      "2026-10-07T22:27",
+      -120.28
+     ],
+     [
+      "2026-10-07T22:28",
+      -121.28
+     ],
+     [
+      "2026-10-08T07:57",
+      -122.5
+     ],
+     [
+      "2026-10-08T07:57",
+      -125.74
+     ],
+     [
+      "2026-10-08T07:57",
+      -123.91
+     ],
+     [
+      "2026-10-08T07:57",
+      -122.31
+     ],
+     [
+      "2026-10-08T07:57",
+      -120.97
+     ],
+     [
+      "2026-10-08T10:28",
+      -121.86
+     ],
+     [
+      "2026-10-08T10:28",
+      -124.75
+     ],
+     [
+      "2026-10-08T10:42",
+      -128.12
+     ],
+     [
+      "2026-10-08T12:27",
+      -131.13
+     ],
+     [
+      "2026-10-08T12:27",
+      -133.16
+     ],
+     [
+      "2026-10-08T14:27",
+      -131.0
+     ],
+     [
+      "2026-10-08T20:42",
+      -127.86
+     ],
+     [
+      "2026-10-08T22:28",
+      -131.17
+     ],
+     [
+      "2026-10-09T08:12",
+      -122.58
+     ],
+     [
+      "2026-10-09T08:12",
+      -118.06
+     ],
+     [
+      "2026-10-09T08:12",
+      -113.97
+     ],
+     [
+      "2026-10-09T08:12",
+      -117.56
+     ],
+     [
+      "2026-10-09T08:12",
+      -120.51
+     ],
+     [
+      "2026-10-09T15:57",
+      -119.28
+     ],
+     [
+      "2026-10-09T15:57",
+      -123.47
+     ],
+     [
+      "2026-10-09T15:57",
+      -125.97
+     ],
+     [
+      "2026-10-09T16:27",
+      -126.86
+     ],
+     [
+      "2026-10-09T18:12",
+      -129.09
+     ],
+     [
+      "2026-10-09T18:42",
+      -131.31
+     ],
+     [
+      "2026-10-09T18:42",
+      -132.79
+     ],
+     [
+      "2026-10-09T21:57",
+      -131.6
+     ],
+     [
+      "2026-10-09T21:57",
+      -134.59
+     ],
+     [
+      "2026-10-10T00:27",
+      -138.67
+     ],
+     [
+      "2026-10-10T00:42",
+      -137.23
+     ],
+     [
+      "2026-10-10T01:12",
+      -134.36
+     ],
+     [
+      "2026-10-10T01:42",
+      -133.54
+     ],
+     [
+      "2026-10-10T05:27",
+      -136.32
+     ],
+     [
+      "2026-10-10T08:42",
+      -139.08
+     ],
+     [
+      "2026-10-10T09:28",
+      -141.52
+     ],
+     [
+      "2026-10-10T09:28",
+      -144.11
+     ],
+     [
+      "2026-10-10T09:42",
+      -142.68
+     ],
+     [
+      "2026-10-10T09:42",
+      -144.81
+     ],
+     [
+      "2026-10-10T14:12",
+      -148.64
+     ],
+     [
+      "2026-10-10T16:58",
+      -147.32
+     ],
+     [
+      "2026-10-10T22:13",
+      -145.47
+     ],
+     [
+      "2026-10-10T22:13",
+      -144.49
+     ],
+     [
+      "2026-10-10T22:14",
+      -145.98
+     ],
+     [
+      "2026-10-10T22:59",
+      -144.27
+     ],
+     [
+      "2026-10-10T22:59",
+      -142.09
+     ],
+     [
+      "2026-10-10T23:00",
+      -140.02
+     ],
+     [
+      "2026-10-11T08:57",
+      -137.1
+     ],
+     [
+      "2026-10-11T08:57",
+      -141.02
+     ],
+     [
+      "2026-10-11T09:27",
+      -145.0
+     ],
+     [
+      "2026-10-11T09:42",
+      -144.55
+     ],
+     [
+      "2026-10-11T10:42",
+      -146.48
+     ],
+     [
+      "2026-10-11T10:42",
+      -149.13
+     ],
+     [
+      "2026-10-11T16:58",
+      -146.22
+     ],
+     [
+      "2026-10-11T16:58",
+      -145.29
+     ],
+     [
+      "2026-10-11T16:58",
+      -143.56
+     ],
+     [
+      "2026-10-11T20:15",
+      -140.42
+     ],
+     [
+      "2026-10-11T23:42",
+      -139.3
+     ],
+     [
+      "2026-10-12T00:42",
+      -138.64
+     ],
+     [
+      "2026-10-12T03:27",
+      -138.11
+     ],
+     [
+      "2026-10-12T06:12",
+      -135.37
+     ],
+     [
+      "2026-10-12T06:42",
+      -137.34
+     ],
+     [
+      "2026-10-12T08:12",
+      -136.42
+     ],
+     [
+      "2026-10-12T08:12",
+      -135.53
+     ],
+     [
+      "2026-10-12T08:12",
+      -136.78
+     ],
+     [
+      "2026-10-12T08:42",
+      -134.72
+     ],
+     [
+      "2026-10-12T09:27",
+      -136.97
+     ],
+     [
+      "2026-10-12T09:42",
+      -132.52
+     ],
+     [
+      "2026-10-12T09:42",
+      -134.17
+     ],
+     [
+      "2026-10-12T09:42",
+      -135.85
+     ],
+     [
+      "2026-10-12T09:42",
+      -137.16
+     ],
+     [
+      "2026-10-12T11:57",
+      -139.35
+     ],
+     [
+      "2026-10-12T15:12",
+      -137.82
+     ],
+     [
+      "2026-10-12T17:27",
+      -140.63
+     ],
+     [
+      "2026-10-12T17:28",
+      -143.19
+     ],
+     [
+      "2026-10-12T17:28",
+      -146.49
+     ],
+     [
+      "2026-10-12T18:12",
+      -149.21
+     ],
+     [
+      "2026-10-12T20:42",
+      -152.08
+     ],
+     [
+      "2026-10-12T20:42",
+      -155.33
+     ],
+     [
+      "2026-10-12T23:57",
+      -150.11
+     ],
+     [
+      "2026-10-13T00:12",
+      -146.46
+     ],
+     [
+      "2026-10-13T00:12",
+      -143.73
+     ],
+     [
+      "2026-10-13T03:27",
+      -144.79
+     ],
+     [
+      "2026-10-13T03:27",
+      -145.56
+     ],
+     [
+      "2026-10-13T05:42",
+      -143.76
+     ],
+     [
+      "2026-10-13T06:12",
+      -141.31
+     ],
+     [
+      "2026-10-13T06:27",
+      -143.4
+     ],
+     [
+      "2026-10-13T08:42",
+      -142.5
+     ],
+     [
+      "2026-10-13T10:57",
+      -146.0
+     ],
+     [
+      "2026-10-13T10:57",
+      -148.24
+     ],
+     [
+      "2026-10-13T13:12",
+      -151.25
+     ],
+     [
+      "2026-10-13T13:27",
+      -150.77
+     ],
+     [
+      "2026-10-13T13:57",
+      -155.3
+     ],
+     [
+      "2026-10-13T14:27",
+      -154.82
+     ],
+     [
+      "2026-10-13T15:42",
+      -157.13
+     ],
+     [
+      "2026-10-13T18:28",
+      -159.6
+     ],
+     [
+      "2026-10-13T19:27",
+      -156.59
+     ],
+     [
+      "2026-10-13T20:12",
+      -155.4
+     ],
+     [
+      "2026-10-13T20:29",
+      -153.22
+     ],
+     [
+      "2026-10-14T06:57",
+      -153.15
+     ],
+     [
+      "2026-10-14T06:57",
+      -149.63
+     ],
+     [
+      "2026-10-14T06:57",
+      -145.35
+     ],
+     [
+      "2026-10-14T06:57",
+      -140.3
+     ],
+     [
+      "2026-10-14T06:57",
+      -136.06
+     ],
+     [
+      "2026-10-14T06:58",
+      -134.17
+     ],
+     [
+      "2026-10-14T07:27",
+      -132.47
+     ],
+     [
+      "2026-10-14T08:27",
+      -135.77
+     ],
+     [
+      "2026-10-14T08:27",
+      -138.32
+     ],
+     [
+      "2026-10-14T09:27",
+      -142.19
+     ],
+     [
+      "2026-10-14T10:12",
+      -142.97
+     ],
+     [
+      "2026-10-14T11:58",
+      -141.38
+     ],
+     [
+      "2026-10-14T17:57",
+      -139.43
+     ],
+     [
+      "2026-10-14T19:12",
+      -136.48
+     ],
+     [
+      "2026-10-14T19:12",
+      -133.79
+     ],
+     [
+      "2026-10-14T21:27",
+      -136.87
+     ],
+     [
+      "2026-10-14T21:27",
+      -140.9
+     ],
+     [
+      "2026-10-14T21:27",
+      -144.17
+     ],
+     [
+      "2026-10-14T21:27",
+      -145.71
+     ],
+     [
+      "2026-10-14T21:27",
+      -146.96
+     ],
+     [
+      "2026-10-14T21:27",
+      -149.2
+     ],
+     [
+      "2026-10-14T21:27",
+      -150.45
+     ],
+     [
+      "2026-10-14T21:28",
+      -151.57
+     ],
+     [
+      "2026-10-14T21:28",
+      -153.09
+     ],
+     [
+      "2026-10-14T23:42",
+      -151.38
+     ],
+     [
+      "2026-10-15T01:57",
+      -153.31
+     ],
+     [
+      "2026-10-15T08:28",
+      -150.77
+     ],
+     [
+      "2026-10-15T09:27",
+      -149.87
+     ],
+     [
+      "2026-10-15T09:42",
+      -146.78
+     ],
+     [
+      "2026-10-15T09:42",
+      -143.39
+     ],
+     [
+      "2026-10-15T09:57",
+      -139.89
+     ],
+     [
+      "2026-10-15T10:12",
+      -135.76
+     ],
+     [
+      "2026-10-15T10:42",
+      -137.58
+     ],
+     [
+      "2026-10-15T11:42",
+      -135.94
+     ],
+     [
+      "2026-10-15T13:57",
+      -139.01
+     ],
+     [
+      "2026-10-15T14:42",
+      -141.69
+     ],
+     [
+      "2026-10-15T17:57",
+      -143.97
+     ],
+     [
+      "2026-10-15T20:57",
+      -145.65
+     ],
+     [
+      "2026-10-15T21:42",
+      -149.16
+     ],
+     [
+      "2026-10-15T22:43",
+      -146.29
+     ],
+     [
+      "2026-10-15T22:43",
+      -142.41
+     ],
+     [
+      "2026-10-15T22:43",
+      -140.22
+     ],
+     [
+      "2026-10-15T22:43",
+      -138.22
+     ],
+     [
+      "2026-10-15T22:43",
+      -135.58
+     ],
+     [
+      "2026-10-16T01:57",
+      -137.18
+     ],
+     [
+      "2026-10-16T02:27",
+      -139.23
+     ],
+     [
+      "2026-10-16T03:27",
+      -135.67
+     ],
+     [
+      "2026-10-16T03:42",
+      -137.86
+     ],
+     [
+      "2026-10-16T06:27",
+      -139.69
+     ],
+     [
+      "2026-10-16T06:27",
+      -141.51
+     ],
+     [
+      "2026-10-16T06:27",
+      -142.72
+     ],
+     [
+      "2026-10-16T10:12",
+      -140.99
+     ],
+     [
+      "2026-10-16T10:12",
+      -138.5
+     ],
+     [
+      "2026-10-16T14:58",
+      -135.64
+     ],
+     [
+      "2026-10-16T14:58",
+      -132.43
+     ],
+     [
+      "2026-10-16T14:58",
+      -129.25
+     ],
+     [
+      "2026-10-16T18:13",
+      -126.98
+     ],
+     [
+      "2026-10-16T22:28",
+      -124.2
+     ],
+     [
+      "2026-10-17T00:03",
+      -122.69
+     ],
+     [
+      "2026-10-17T00:57",
+      -121.56
+     ],
+     [
+      "2026-10-17T02:12",
+      -119.33
+     ],
+     [
+      "2026-10-17T05:13",
+      -114.57
+     ],
+     [
+      "2026-10-17T07:13",
+      -112.36
+     ],
+     [
+      "2026-10-17T07:13",
+      -108.23
+     ],
+     [
+      "2026-10-17T07:13",
+      -109.49
+     ],
+     [
+      "2026-10-17T07:28",
+      -111.74
+     ],
+     [
+      "2026-10-17T07:28",
+      -112.66
+     ],
+     [
+      "2026-10-17T07:58",
+      -114.51
+     ],
+     [
+      "2026-10-17T07:58",
+      -116.78
+     ],
+     [
+      "2026-10-17T07:58",
+      -118.39
+     ],
+     [
+      "2026-10-17T07:58",
+      -119.77
+     ],
+     [
+      "2026-10-17T07:58",
+      -120.75
+     ],
+     [
+      "2026-10-17T08:27",
+      -116.29
+     ],
+     [
+      "2026-10-17T08:43",
+      -117.72
+     ],
+     [
+      "2026-10-17T10:57",
+      -119.2
+     ]
+    ]
+   },
+   "semanas": [
+    {
+     "semana": "2026-09-14",
+     "lobo": -3.64,
+     "motor": -23.24,
+     "todas": -148.91
+    },
+    {
+     "semana": "2026-09-21",
+     "lobo": 3.62,
+     "motor": 14.43,
+     "todas": 22.3
+    },
+    {
+     "semana": "2026-09-28",
+     "lobo": 9.4,
+     "motor": 0.0,
+     "todas": -0.86
+    },
+    {
+     "semana": "2026-10-05",
+     "lobo": 5.5,
+     "motor": -16.3,
+     "todas": -11.83
+    },
+    {
+     "semana": "2026-10-12",
+     "lobo": 21.56,
+     "motor": 14.16,
+     "todas": 20.11
+    }
+   ]
   },
   "copytrading": {
    "fecha": "2026-09-16T20:50",
