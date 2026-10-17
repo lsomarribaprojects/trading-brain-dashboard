@@ -59,6 +59,37 @@ details.exprow[open]{background:#11161d}
 .wrap-table td{white-space:normal;max-width:280px;vertical-align:top}
 .wrap-table th{white-space:nowrap}
 details.pm summary{cursor:pointer;font-size:13px;color:var(--ink2);padding:2px 0}
+/* ---- Cartera del Lobo hoy ---- */
+.cl-sec{margin:6px 0 18px;padding-bottom:6px;border-bottom:1px dashed var(--border)}
+.cl-sec h2{font-size:15px;margin:8px 0 2px}
+.cl-sec h4{font-size:12px;color:var(--ink2);text-transform:uppercase;letter-spacing:.4px;margin:14px 0 6px}
+.cl-marc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;margin:8px 0}
+.cl-marc .tile .v{font-size:20px}
+.cl-marc .tile .s{font-size:12px;margin-top:3px;line-height:1.4}
+.cl-ladder{display:flex;flex-direction:column;gap:3px;font-size:12.5px;margin-top:6px}
+.cl-ladder .r{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:4px 8px;border-radius:6px;border:1px solid var(--border);background:var(--bg)}
+.cl-ladder .r.hit{border-color:var(--accent);background:#14233b}
+.cl-ladder .r.px{border-style:dashed;border-color:var(--accent);color:var(--accent);font-weight:700}
+.cl-ladder .r.sell{border-left:3px solid var(--loss)}.cl-ladder .r.buy{border-left:3px solid var(--win)}.cl-ladder .r.key{border-left:3px solid var(--warn)}
+.cl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.cl-fic{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.cl-fic .tt{font-weight:700;font-size:14px;display:flex;gap:6px;flex-wrap:wrap;align-items:baseline}
+.cl-fic .meta{color:var(--ink3);font-size:11.5px}
+.cl-fic .sub{font-size:12.5px;color:var(--ink2)}
+.cl-fic .sub b{color:var(--ink)}
+.cl-fic svg,.opdetail svg{width:100%;height:auto;display:block;background:var(--bg);border-radius:6px;max-width:520px}
+.cl-ver{font-weight:800;font-size:14px;text-align:center;padding:7px 8px;border-radius:6px;border:1px solid var(--border);letter-spacing:.3px}
+.cl-ver.ok{color:var(--win);border-color:var(--win);background:#12261a}
+.cl-ver.bad{color:var(--loss);border-color:var(--loss);background:#2a1415}
+.cl-ver.gray{color:var(--ink2);background:var(--bg)}
+.cl-copia{font-size:12.5px;background:#12261a;border:1px solid var(--win);border-radius:6px;padding:6px 8px;line-height:1.6}
+.cl-razon .full{display:none}.cl-razon.open .full{display:inline}.cl-razon.open .short{display:none}
+.cl-more{color:var(--accent);cursor:pointer;font-size:11.5px;margin-left:4px;background:none;border:0;padding:0}
+.cl-link{color:var(--accent);font-size:12px;text-decoration:none;border:1px solid var(--border);border-radius:6px;padding:3px 9px;display:inline-block;align-self:flex-start}
+.cl-link:hover{border-color:var(--accent)}
+.cl-badge{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;font-weight:700;border:1px solid var(--border);color:var(--ink2)}
+.cl-badge.ok{color:var(--win);border-color:var(--win)}.cl-badge.bad{color:var(--loss);border-color:var(--loss)}
+.cl-aviso{font-size:12px;color:var(--warn);background:#1c2128;border:1px solid var(--warn);border-radius:6px;padding:6px 10px;margin:6px 0}
 </style>
 </head>
 <body>
@@ -124,6 +155,7 @@ details.pm summary{cursor:pointer;font-size:13px;color:var(--ink2);padding:2px 0
 </div>
 
 <div class="panel" id="p-lob">
+  <div id="lob-cartera"></div>
   <div class="tiles" id="lob-tiles"></div>
   <div class="card"><h3>Prueba virtual: copiar al Lobo 1 semana (solo papel)</h3><div id="lob-prueba"></div></div>
   <div class="card"><h3>Videos del live de BITLOBO</h3><div id="lob-videos"></div></div>
@@ -702,7 +734,169 @@ function renderLobPrueba(p){
   $('#lob-prueba').innerHTML=reglas+tiles+(filas.length?tablaW(['LB','Anuncio','Origen','Activo','Entrada','Stop','Objetivos','Ahora','%','R','Estado','¿Entrar?'],filas):'<p class="note">todavia no mostro ninguna operativa en la semana de prueba</p>')+
     (p.actualizado?`<p class="note">precios OKX 1H, actualizado ${esc(p.actualizado.replace('T',' '))}</p>`:'');
 }
+/* ---- Cartera del Lobo hoy (data.lobo.cartera) ---- */
+function clPx(n){ return n==null?'—':fmtP(n).slice(1); }
+function clDir(d){ return d==='LONG'?'<span class="w">LARGO</span>':(d==='SHORT'?'<span class="l">CORTO</span>':esc(d||'')); }
+function clMiniChart(f){
+  const v=f&&f.velas; if(!v||!v.t||!v.t.length) return '<p class="note">sin velas</p>';
+  const n=v.t.length, W=380, H=190, P={l:6,r:96,t:14,b:16};
+  const hmax=Math.max(...v.h), hmin=Math.min(...v.l), rng=(hmax-hmin)||hmax*0.01||1;
+  const lv=(f.niveles||[]).filter(x=>x&&x.valor!=null);
+  let lo=hmin, hi=hmax;
+  lv.forEach(x=>{ if(x.valor>=hmin-rng*0.6&&x.valor<=hmax+rng*0.6){ lo=Math.min(lo,x.valor); hi=Math.max(hi,x.valor); } });
+  const pad=(hi-lo)*0.05||1; lo-=pad; hi+=pad;
+  const X=i=>P.l+(W-P.l-P.r)*((i+0.5)/n), Y=p=>P.t+(H-P.t-P.b)*(1-(p-lo)/(hi-lo));
+  const cw=Math.max(1.5,(W-P.l-P.r)/n*0.62);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="velas ${esc(f.activo)}">`;
+  for(let i=0;i<n;i++){
+    const up=v.c[i]>=v.o[i], col=up?'#3fb950':'#f85149', x=X(i);
+    const yb=Y(Math.max(v.o[i],v.c[i])), yt=Y(Math.min(v.o[i],v.c[i]));
+    s+=`<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${Y(v.h[i]).toFixed(1)}" y2="${Y(v.l[i]).toFixed(1)}" stroke="${col}" stroke-width="1"/>`
+      +`<rect x="${(x-cw/2).toFixed(1)}" y="${yb.toFixed(1)}" width="${cw.toFixed(1)}" height="${Math.max(1,yt-yb).toFixed(1)}" fill="${col}"/>`;
+  }
+  (f.marcas||[]).forEach(m=>{
+    if(m.i==null||m.i<0||m.i>=n) return; const x=X(m.i);
+    s+=`<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${P.t-2}" y2="${H-P.b}" stroke="#d29922" stroke-width="1" stroke-dasharray="3 3"/>`
+      +`<text x="${Math.min(x+3,W-P.r-26).toFixed(1)}" y="${P.t+8}" fill="#d29922" style="font-size:10px">${esc(m.txt||'')}</text>`;
+  });
+  // niveles: color por nombre; los fuera de rango se pegan al borde con flecha
+  const cfg=nm=>{ const u=String(nm).toUpperCase();
+    if(u.startsWith('ENTRADA')) return ['#6ea8fe','']; if(u.startsWith('SL REF')) return ['#f0883e','5 4'];
+    if(u.startsWith('SL')) return ['#f85149','']; if(u.startsWith('OBJ')) return ['#3fb950',''];
+    if(u.startsWith('AHORA')) return ['#9198a1','2 3']; if(u.startsWith('CIERRE')) return ['#d29922','']; return ['#9198a1','2 3']; };
+  const items=lv.map(x=>{ let y=Y(x.valor), arrow=''; const ymin=P.t+4, ymax=H-P.b-2;
+    if(y<ymin){y=ymin;arrow='▲ ';} else if(y>ymax){y=ymax;arrow='▼ ';}
+    return {nm:x.nombre,val:x.valor,y,arrow,c:cfg(x.nombre)}; }).sort((a,b)=>a.y-b.y);
+  const ly=items.map(i=>i.y); for(let k=1;k<ly.length;k++) if(ly[k]-ly[k-1]<11) ly[k]=ly[k-1]+11;
+  items.forEach((it,k)=>{
+    const col=it.c[0], dash=it.c[1];
+    s+=`<line x1="${P.l}" x2="${W-P.r}" y1="${it.y.toFixed(1)}" y2="${it.y.toFixed(1)}" stroke="${col}" stroke-width="1" ${dash?`stroke-dasharray="${dash}"`:''}/>`
+      +`<text x="${W-P.r+4}" y="${(ly[k]+3.5).toFixed(1)}" fill="${col}" style="font-size:10px">${esc(it.arrow+String(it.nm).replace('SL ref (nuestro)','SL ref')+' '+clPx(it.val))}</text>`;
+  });
+  s+=`<text x="${P.l}" y="${H-3}" fill="#6e7681" style="font-size:9.5px">${n} velas ${f.tf==='1Dutc'?'diarias':esc(f.tf||'')}</text></svg>`;
+  return s;
+}
+function clRazon(t){
+  t=String(t||''); if(t.length<=220) return `<div class="sub"><b>Qué hizo:</b> ${esc(t||'—')}</div>`;
+  return `<div class="sub cl-razon"><b>Qué hizo:</b> <span class="short">${esc(t.slice(0,220))}…</span><span class="full">${esc(t)}</span><button class="cl-more" type="button">ver más</button></div>`;
+}
+function clVeredicto(f){
+  const a=f.copia;
+  switch(f.veredicto){
+    case 'AUN_HAY_TIEMPO':
+      return `<div class="cl-ver ok">AÚN HAY TIEMPO</div>`+(a?`<div class="cl-copia"><b>Copia (papel):</b> entrada ${fmtP(a.entrada)}<br>SL ${fmtP(a.sl)}${a.sl_es_ref?' <span class="p">(ref nuestro)</span>':''} · TP ${fmtP(a.tp)}${a.tp_es_ref?' <span class="p">(1R ref)</span>':''}</div>`:'');
+    case 'YA_SE_FUE': return `<div class="cl-ver gray">YA SE FUE</div>`;
+    case 'EN_CONTRA': return `<div class="cl-ver bad">VA EN CONTRA — no copiar</div>`;
+    case 'STOP_TOCADO': return `<div class="cl-ver bad">TOCÓ SU STOP</div>`;
+    case 'SIN_PRECIO': return `<div class="cl-ver gray">sin precio OKX</div>`;
+    default: return `<div class="cl-ver gray">${esc(f.veredicto||'—')}</div>`;
+  }
+}
+function clFichaViva(f){
+  const objs=(f.objetivos&&f.objetivos.length)?f.objetivos.map(clPx).join(' · '):'no los dio';
+  const mov=f.mov_pct==null?'':` <span class="${f.mov_pct>=0?'w':'l'}">(${signed(f.mov_pct,2)}%${f.r_mov!=null?' · '+signed(f.r_mov,2)+'R ref':''})</span>`;
+  return `<div class="cl-fic">
+    <div class="tt"><span>${esc(f.id)} · ${esc(f.activo)} ${clDir(f.direccion)}</span></div>
+    <div class="meta">${esc(f.mercado||'')} · ${esc(f.estado||'')} · ${f.dias_sin_noticias==null?'':(f.dias_sin_noticias===0?'noticia hoy':'hace '+f.dias_sin_noticias+'d')} · abrió ${esc((f.fecha_apertura||'').replace('T',' '))}</div>
+    ${clMiniChart(f)}
+    ${clRazon(f.razon)}
+    <div class="sub"><b>Entrada:</b> ${f.entrada_aprox?'~':''}${clPx(f.entrada)} · <b>${esc(f.stop_txt||'stop: —')}</b> · <b>Obj:</b> ${objs}</div>
+    <div class="sub"><b>Cómo va (OKX real):</b> ${f.precio==null?'<span class="p">sin precio</span>':fmtP(f.precio)}${mov}</div>
+    ${clVeredicto(f)}
+    ${f.link?`<a class="cl-link" href="${esc(f.link)}" target="_blank" rel="noopener">▶ Ver en el video</a>`:''}
+  </div>`;
+}
+function clVerifBadge(t){
+  if(!t) return '<span class="cl-badge">sin verificar</span>';
+  const u=String(t).toUpperCase();
+  if(u.startsWith('NO COINCIDE')) return `<span class="cl-badge bad" title="${esc(t)}">NO COINCIDE</span>`;
+  if(u.startsWith('COINCIDE')) return `<span class="cl-badge ok" title="${esc(t)}">COINCIDE</span>`;
+  if(u.startsWith('SIN DATO')) return `<span class="cl-badge" title="${esc(t)}">SIN DATO</span>`;
+  return `<span class="cl-badge" title="${esc(t)}">${esc(String(t).slice(0,14))}</span>`;
+}
+function clCerrada(f){
+  const r=f.resultado_pct;
+  return `<details class="exprow"><summary style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <b>${esc(f.id)}</b><span>${esc(f.activo)}</span>${clDir(f.direccion)}
+    <span class="p num">${f.entrada_aprox?'~':''}${clPx(f.entrada)} → ${clPx(f.cierre)}</span>
+    <span class="${r==null?'p':(r>=0?'w':'l')}">${r==null?'sin medir':signed(r,2)+'%'}</span>
+    ${clVerifBadge(f.verificacion)}<span class="p">${esc((f.fecha_cierre||'').replace('T',' '))}</span>
+    ${f.link?`<a class="cl-link" href="${esc(f.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">▶ video</a>`:''}
+  </summary><div class="opdetail">${clMiniChart(f)}
+    ${f.verificacion?`<div><b>Video vs realidad:</b> ${esc(f.verificacion)}</div>`:''}
+    ${f.razon?`<div><b>Qué hizo:</b> ${esc(f.razon)}</div>`:''}
+    ${f.ultimo&&f.ultimo.cita?`<div><b>Cierre:</b> "${esc(f.ultimo.cita)}"</div>`:''}
+  </div></details>`;
+}
+function clPlanBtc(c){
+  const n=c.niveles_btc; if(!n||isErr(n)) return '<p class="note">sin plan de BTC</p>';
+  const px=c.precio_btc;
+  const z=[
+    {t:'Invalidación (sobre esto se cae el plan)',lo:n.invalidacion,hi:n.invalidacion,k:'key'},
+    {t:'Ventas (re-entrada corto – rebote)',lo:n.zona_reentrada_short,hi:n.target_rebote,k:'sell'},
+    {t:'Cierre diario clave',lo:n.zona_baja,hi:n.zona_baja,k:'key'},
+    {t:'Largos (piso – zona dorada)',lo:n.zona_largos_piso,hi:n.zona_dorada,k:'buy'},
+    {t:'Objetivo control diario',lo:n.control_diario,hi:n.control_diario,k:'key'},
+    {t:'Fondo (objetivo masa)',lo:n.objetivo_masa,hi:n.objetivo_masa_techo,k:'buy'}
+  ].filter(x=>x.lo!=null||x.hi!=null).map(x=>({t:x.t,k:x.k,lo:Math.min(x.lo??x.hi,x.hi??x.lo),hi:Math.max(x.lo??x.hi,x.hi??x.lo)})).sort((a,b)=>b.hi-a.hi||b.lo-a.lo);
+  const dentro=z.filter(x=>px!=null&&px>=x.lo&&px<=x.hi);
+  const nom=x=>x.t.split(' (')[0];
+  let dice;
+  if(px==null) dice='sin precio de BTC';
+  else if(dentro.length) dice='dentro de: '+dentro.map(nom).join(' / ');
+  else{
+    const arr=z.filter(x=>x.lo>px).pop(), aba=z.find(x=>x.hi<px);
+    dice='entre '+(aba?nom(aba)+' ('+clPx(aba.hi)+')':'—')+' (abajo) y '+(arr?nom(arr)+' ('+clPx(arr.lo)+')':'—')+' (arriba)';
+  }
+  const rows=[]; let puesto=px==null;
+  const pxRow=`<div class="r px"><span>● BTC ahora</span><span class="num">${fmtP(px)}</span></div>`;
+  z.forEach(x=>{
+    if(!puesto&&px>x.hi){ rows.push(pxRow); puesto=true; }
+    const hit=px!=null&&px>=x.lo&&px<=x.hi;
+    rows.push(`<div class="r ${x.k}${hit?' hit':''}"><span>${esc(x.t)}${hit?' ← precio acá':''}</span><span class="num">${x.lo===x.hi?fmtP(x.lo):fmtP(x.lo)+' – '+fmtP(x.hi)}</span></div>`);
+  });
+  if(!puesto) rows.push(pxRow);
+  return `<div class="sub" style="font-size:13px;color:var(--ink)"><b>Sesgo:</b> <span class="${n.sesgo==='BAJISTA'?'l':(n.sesgo==='ALCISTA'?'w':'warn')}">${esc(n.sesgo||'—')}</span> · live del ${esc(n.fecha_live||'—')} · BTC ${fmtP(px)} — ${esc(dice)}</div><div class="cl-ladder">${rows.join('')}</div>`;
+}
+function renderCarteraLobo(c){
+  const box=$('#lob-cartera'); if(!box) return;
+  if(!c||typeof c!=='object'||isErr(c)){ box.innerHTML=`<p class="errnote">⚠ Cartera del Lobo: ${esc(c&&c.error?c.error:'sin datos')}</p>`; return; }
+  const ml=c.marcador_lobo||{}, mc=c.marcador_copias||{};
+  const t1=tile('Sus operativas cerradas (OKX real)',`${ml.ganadas??0}G / ${ml.perdidas??0}P`,
+    `de ${ml.medidas??0} medidas (${ml.cerradas??0} cerradas) · media ${signed(ml.media_pct,2)}%<br>video vs realidad: ${ml.coincide??0} coinciden · ${ml.no_coincide??0} no · ${ml.sin_dato??0} sin dato · ${ml.sin_verificar??0} sin verificar`);
+  const t2=tile('Si las copiabas (nuestras sugerencias)',`${mc.ganadas??0}G / ${mc.perdidas??0}P`,
+    `${mc.n??0} sugeridas · ${mc.abiertas??0} abiertas · R total ${signed(mc.r_total,2)} · R media ${mc.r_media==null?'—':signed(mc.r_media,2)} (con fees)<br><span class="p">Solo papel. Una copia se resuelve en su TP, su SL, cuando el Lobo cierra o a los 14 días.</span>`);
+  const vivas=c.vivas||[], cerr=(c.cerradas||[]).slice().sort((a,b)=>(b.fecha_cierre||'').localeCompare(a.fecha_cierre||''));
+  const copias=c.copias||[], dorm=c.dormidas||[];
+  const pend=(c.lives_pendientes||[]).map(x=>`<div class="cl-aviso">⏳ ${esc(x)}</div>`).join('');
+  const copRows=copias.map(x=>{
+    const r=x.estado==='cerrada';
+    return [esc(x.id),esc(x.lb),esc(x.activo),clDir(x.direccion),esc((x.fecha||'').replace('T',' ')),clPx(x.entrada),
+      clPx(x.sl)+(x.sl_es_ref?' <span class="p">(ref)</span>':''),clPx(x.tp)+(x.tp_es_ref?' <span class="p">(1R)</span>':''),
+      r?'cerrada':'abierta',
+      r?esc(x.motivo||'—'):'<span class="p">en curso</span>',
+      r?(x.r==null?'—':`<span class="${x.r>=0?'w':'l'}">${signed(x.r,2)}R</span>`):(x.r_ahora==null?'—':`<span class="${x.r_ahora>=0?'w':'l'}">${signed(x.r_ahora,2)}R ahora</span>`),
+      r?(x.pct==null?'—':`<span class="${x.pct>=0?'w':'l'}">${signed(x.pct,2)}%</span>`):'—'];
+  });
+  box.innerHTML=`<div class="cl-sec"><h2>🐺 Cartera del Lobo hoy</h2>
+    <div class="cl-marc">${t1}${t2}</div>
+    <h4>Plan de BTC del último live</h4>${clPlanBtc(c)}${pend}
+    <h4>Operativas vivas (${vivas.length})</h4>
+    <div class="cl-grid">${vivas.map(f=>{ try{ return clFichaViva(f); }catch(e){ return `<div class="cl-fic">${errHtml(String(f&&f.id)+': '+e.message)}</div>`; } }).join('')||'<p class="note">ninguna</p>'}</div>
+    <h4>Cómo salieron sus cierres (${cerr.length})</h4>
+    <p class="note">Tocá una fila para ver el gráfico. Badge = lo que dijo en el video contra lo que midió OKX.</p>
+    <div class="card" style="padding:4px 8px">${cerr.map(f=>{ try{ return clCerrada(f); }catch(e){ return errHtml(String(f&&f.id)+': '+e.message); } }).join('')||'<p class="note">ninguna</p>'}</div>
+    <h4>Copias sugeridas</h4>
+    <div class="card">${copRows.length?tabla(['ID','LB','Activo','Dir','Fecha','Entrada','SL','TP','Estado','Motivo','R','%'],copRows):'<p class="note">todavía no se sugirió ninguna copia</p>'}</div>
+    ${dorm.length?`<p class="note"><b>Dormidas</b> (sin noticias hace mucho, probablemente cerradas): ${dorm.map(d=>`${esc(d.id)} ${esc(d.activo)} ${d.direccion==='LONG'?'L':'C'} ${d.dias}d`).join(' · ')}</p>`:''}
+    <p class="note">Actualizado: ${esc((c.actualizado||'—').replace('T',' '))}. No es una señal nuestra: lo del Lobo es solo papel; si lo copias, SL dentro de la orden, riesgo 1%, máx 5X.</p>
+  </div>`;
+  if(!box.dataset.bound){ box.dataset.bound='1';
+    box.addEventListener('click',ev=>{ const b=ev.target.closest&&ev.target.closest('.cl-more'); if(b){ const p=b.closest('.cl-razon'); p.classList.toggle('open'); b.textContent=p.classList.contains('open')?'ver menos':'ver más'; } });
+  }
+}
 function renderLobo(l){
+  try{ renderCarteraLobo(l.cartera); }catch(e){ const bx=$('#lob-cartera'); if(bx) bx.innerHTML=errHtml('cartera: '+e.message); }
   try{ renderLobPrueba(l.prueba); }catch(e){ $('#lob-prueba').innerHTML=errHtml('prueba: '+e.message); }
   try{ renderLobTiles(l); }catch(e){ $('#lob-tiles').insertAdjacentHTML('beforeend',errHtml('tiles: '+e.message)); }
   try{ renderLobVideos(l.videos); }catch(e){ $('#lob-videos').innerHTML=errHtml('videos: '+e.message); }
