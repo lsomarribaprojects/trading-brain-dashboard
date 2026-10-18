@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18 04:28",
+ "actualizado": "2026-10-18 04:43",
  "reversion": {
   "abiertas": 0,
   "resueltas": 89,
@@ -1103,7 +1103,7 @@
  },
  "hourly": {
   "emitidas": 742,
-  "abiertas": 6,
+  "abiertas": 5,
   "por_grado": {
    "A": {
     "emitidas": 35,
@@ -1129,11 +1129,11 @@
    },
    "C": {
     "emitidas": 527,
-    "resueltas": 521,
-    "win": 244,
+    "resueltas": 522,
+    "win": 245,
     "loss": 256,
-    "hit": 46.8,
-    "r_trade": -0.085,
+    "hit": 46.9,
+    "r_trade": -0.083,
     "pf": 0.84,
     "tp2_pct": 6,
     "riesgo_paper": 0.0
@@ -1171,9 +1171,9 @@
     "tp2": 0.12952,
     "tp3": 0.13118,
     "sl_pct": 1.649,
-    "outcome": "abierta",
-    "r": null,
-    "tp_max": null,
+    "outcome": "win",
+    "r": 0.927,
+    "tp_max": "tp1",
     "fallos": "cierre dentro de Bollinger; RSI 35 no extremo"
    },
    {
@@ -4217,15 +4217,15 @@
   ],
   "dias_nota": "El contexto macro NO predice al motor (estudios 22 y 23-sep: ningun factor macro/OKX anticipo sus periodos malos; solo la amplitud diaria sobrevivio, y ya esta dentro del filtro de regimen). Se muestra para entender el dia, no para decidir.",
   "post_mortem": {
-   "n": 736,
+   "n": 737,
    "BE": 54.5,
    "grado": [
     {
      "bucket": "C",
-     "n": 521,
-     "win": 244,
-     "hit": 46.8,
-     "r_sum": -44.129
+     "n": 522,
+     "win": 245,
+     "hit": 46.9,
+     "r_sum": -43.202
     },
     {
      "bucket": "B",
@@ -4245,10 +4245,10 @@
    "extremo": [
     {
      "bucket": "sin extremo",
-     "n": 521,
-     "win": 244,
-     "hit": 46.8,
-     "r_sum": -44.129
+     "n": 522,
+     "win": 245,
+     "hit": 46.9,
+     "r_sum": -43.202
     },
     {
      "bucket": "extremo real",
@@ -4268,10 +4268,10 @@
     },
     {
      "bucket": "LONG",
-     "n": 279,
-     "win": 137,
-     "hit": 49.1,
-     "r_sum": -8.912
+     "n": 280,
+     "win": 138,
+     "hit": 49.3,
+     "r_sum": -7.985
     }
    ],
    "z": [
@@ -4291,10 +4291,10 @@
     },
     {
      "bucket": "|z|<1.5",
-     "n": 153,
-     "win": 74,
-     "hit": 48.4,
-     "r_sum": -7.118
+     "n": 154,
+     "win": 75,
+     "hit": 48.7,
+     "r_sum": -6.191
     }
    ],
    "rsi": [
@@ -4307,10 +4307,10 @@
     },
     {
      "bucket": "RSI 60-70/30-40",
-     "n": 314,
-     "win": 138,
-     "hit": 43.9,
-     "r_sum": -41.007
+     "n": 315,
+     "win": 139,
+     "hit": 44.1,
+     "r_sum": -40.08
     },
     {
      "bucket": "RSI 40-60",
@@ -4337,19 +4337,19 @@
     },
     {
      "bucket": "<2%",
-     "n": 188,
-     "win": 86,
-     "hit": 45.7,
-     "r_sum": -31.144
+     "n": 189,
+     "win": 87,
+     "hit": 46.0,
+     "r_sum": -30.217
     }
    ],
    "hora": [
     {
      "bucket": "noche 22-07",
-     "n": 295,
-     "win": 137,
-     "hit": 46.4,
-     "r_sum": -29.051
+     "n": 296,
+     "win": 138,
+     "hit": 46.6,
+     "r_sum": -28.124
     },
     {
      "bucket": "tarde 14-21",
@@ -4376,10 +4376,10 @@
     },
     {
      "bucket": "0.06-0.10R",
-     "n": 190,
-     "win": 94,
-     "hit": 49.5,
-     "r_sum": -13.901
+     "n": 191,
+     "win": 95,
+     "hit": 49.7,
+     "r_sum": -12.974
     },
     {
      "bucket": "fee>=0.10R",
@@ -4411,12 +4411,12 @@
    },
    "HR_C": {
     "emitidas": 527,
-    "resueltas": 521,
-    "win": 244,
+    "resueltas": 522,
+    "win": 245,
     "loss": 256,
     "expirada": 21,
-    "hit": 46.8,
-    "r_op": -0.0847
+    "hit": 46.9,
+    "r_op": -0.0828
    },
    "RV": {
     "emitidas": 89,
@@ -5326,7 +5326,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-19T12:59:00",
     "estado": "en_plazo",
-    "horas_restantes": 32.5,
+    "horas_restantes": 32.3,
     "precio_actual": 81999.9,
     "distancia_pct": 9.04,
     "max_alcanzado": null,
@@ -5344,7 +5344,7 @@
     "plazo_h": 48.0,
     "vence": "2026-10-14T12:59:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -87.5,
+    "horas_restantes": -87.7,
     "precio_actual": 81999.9,
     "distancia_pct": 0.61,
     "max_alcanzado": null,
@@ -5362,7 +5362,7 @@
     "plazo_h": 504.0,
     "vence": "2026-11-02T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 367.2,
+    "horas_restantes": 366.9,
     "precio_actual": 81999.9,
     "distancia_pct": 12.33,
     "max_alcanzado": null,
@@ -5380,7 +5380,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-19T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 31.2,
+    "horas_restantes": 30.9,
     "precio_actual": 81999.9,
     "distancia_pct": 0.61,
     "max_alcanzado": null,
@@ -5398,7 +5398,7 @@
     "plazo_h": 48.0,
     "vence": "2026-10-14T11:39:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -88.8,
+    "horas_restantes": -89.1,
     "precio_actual": 81999.9,
     "distancia_pct": 1.86,
     "max_alcanzado": null,
@@ -5416,7 +5416,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-17T17:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -11.1,
+    "horas_restantes": -11.4,
     "precio_actual": 2421.25,
     "distancia_pct": -5.05,
     "max_alcanzado": null,
@@ -5434,7 +5434,7 @@
     "plazo_h": 96.0,
     "vence": "2026-10-14T17:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -83.1,
+    "horas_restantes": -83.4,
     "precio_actual": 81990.8,
     "distancia_pct": -3.08,
     "max_alcanzado": null,
@@ -5452,7 +5452,7 @@
     "plazo_h": 504.0,
     "vence": "2026-10-31T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 324.9,
+    "horas_restantes": 324.6,
     "precio_actual": 81990.8,
     "distancia_pct": 12.32,
     "max_alcanzado": null,
@@ -5470,7 +5470,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-24T17:20:00",
     "estado": "en_plazo",
-    "horas_restantes": 156.9,
+    "horas_restantes": 156.6,
     "precio_actual": 81990.8,
     "distancia_pct": 5.12,
     "max_alcanzado": null,
@@ -5488,7 +5488,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-15T17:17:00.071089",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -59.2,
+    "horas_restantes": -59.4,
     "precio_actual": 81990.8,
     "distancia_pct": 3.39,
     "max_alcanzado": null,
@@ -5506,7 +5506,7 @@
     "plazo_h": 48.0,
     "vence": "2026-10-10T17:16:19.575683",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -179.2,
+    "horas_restantes": -179.5,
     "precio_actual": 81990.8,
     "distancia_pct": -1.2,
     "max_alcanzado": null,
@@ -5524,7 +5524,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-14T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -79.7,
+    "horas_restantes": -80.0,
     "precio_actual": 4.984,
     "distancia_pct": -15.24,
     "max_alcanzado": null,
@@ -5542,7 +5542,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-14T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -79.7,
+    "horas_restantes": -80.0,
     "precio_actual": 2421.2,
     "distancia_pct": 2.16,
     "max_alcanzado": null,
@@ -5560,7 +5560,7 @@
     "plazo_h": 72.0,
     "vence": "2026-10-10T20:46:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -175.7,
+    "horas_restantes": -176.0,
     "precio_actual": 81999.9,
     "distancia_pct": -6.07,
     "max_alcanzado": null,
@@ -5578,7 +5578,7 @@
     "plazo_h": 48,
     "vence": "2026-10-10T15:05:18.276290",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -181.4,
+    "horas_restantes": -181.6,
     "precio_actual": 81999.9,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -5596,7 +5596,7 @@
     "plazo_h": 504.0,
     "vence": "2026-10-24T11:47:00",
     "estado": "en_plazo",
-    "horas_restantes": 151.3,
+    "horas_restantes": 151.1,
     "precio_actual": 0.18905,
     "distancia_pct": -51.53,
     "max_alcanzado": null,
@@ -5614,7 +5614,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-17T11:47:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -16.7,
+    "horas_restantes": -16.9,
     "precio_actual": 81999.9,
     "distancia_pct": -3.53,
     "max_alcanzado": null,
@@ -5632,7 +5632,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-14T12:59:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -87.5,
+    "horas_restantes": -87.7,
     "precio_actual": 81999.9,
     "distancia_pct": -3.53,
     "max_alcanzado": null,
@@ -5650,7 +5650,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-15T12:55:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -63.6,
+    "horas_restantes": -63.8,
     "precio_actual": 81999.9,
     "distancia_pct": -8.89,
     "max_alcanzado": null,
@@ -5668,7 +5668,7 @@
     "plazo_h": 192.0,
     "vence": "2026-10-09T12:55:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -207.6,
+    "horas_restantes": -207.8,
     "precio_actual": 81999.9,
     "distancia_pct": -2.38,
     "max_alcanzado": null,
@@ -5686,7 +5686,7 @@
     "plazo_h": 480.0,
     "vence": "2026-10-20T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 55.2,
+    "horas_restantes": 54.9,
     "precio_actual": 2421.2,
     "distancia_pct": 0.88,
     "max_alcanzado": null,
@@ -5704,7 +5704,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-30T11:39:00",
     "estado": "en_plazo",
-    "horas_restantes": 295.2,
+    "horas_restantes": 294.9,
     "precio_actual": 81999.9,
     "distancia_pct": 0.61,
     "max_alcanzado": null,
@@ -5722,7 +5722,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-13T12:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -112.3,
+    "horas_restantes": -112.5,
     "precio_actual": 2421.2,
     "distancia_pct": 5.27,
     "max_alcanzado": null,
@@ -5740,7 +5740,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-13T12:01:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -112.5,
+    "horas_restantes": -112.7,
     "precio_actual": 81999.9,
     "distancia_pct": 10.07,
     "max_alcanzado": null,
@@ -5758,7 +5758,7 @@
     "plazo_h": 72.0,
     "vence": "2026-10-02T12:10:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -376.3,
+    "horas_restantes": -376.6,
     "precio_actual": 81999.9,
     "distancia_pct": 1.86,
     "max_alcanzado": null,
@@ -5776,7 +5776,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-28T11:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 247.2,
+    "horas_restantes": 246.9,
     "precio_actual": 1.111,
     "distancia_pct": -30.56,
     "max_alcanzado": null,
@@ -5794,7 +5794,7 @@
     "plazo_h": 504.0,
     "vence": "2026-10-19T11:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 31.2,
+    "horas_restantes": 30.9,
     "precio_actual": 81999.9,
     "distancia_pct": 10.01,
     "max_alcanzado": null,
@@ -5812,7 +5812,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-25T17:50:00",
     "estado": "en_plazo",
-    "horas_restantes": 181.4,
+    "horas_restantes": 181.1,
     "precio_actual": 0.2197,
     "distancia_pct": -63.38,
     "max_alcanzado": null,
@@ -5830,7 +5830,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-09T17:50:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -202.6,
+    "horas_restantes": -202.9,
     "precio_actual": 2421.2,
     "distancia_pct": 0.88,
     "max_alcanzado": null,
@@ -5848,7 +5848,7 @@
     "plazo_h": 480.0,
     "vence": "2026-10-15T17:50:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -58.6,
+    "horas_restantes": -58.9,
     "precio_actual": 81999.9,
     "distancia_pct": 9.48,
     "max_alcanzado": null,
@@ -5866,7 +5866,7 @@
     "plazo_h": 168.0,
     "vence": "2026-10-01T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -399.5,
+    "horas_restantes": -399.8,
     "precio_actual": 103.89,
     "distancia_pct": -18.2,
     "max_alcanzado": null,
@@ -5884,7 +5884,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-08T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -231.5,
+    "horas_restantes": -231.8,
     "precio_actual": 2421.2,
     "distancia_pct": 0.88,
     "max_alcanzado": null,
@@ -5902,7 +5902,7 @@
     "plazo_h": 48,
     "vence": "2026-09-26T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -519.5,
+    "horas_restantes": -519.8,
     "precio_actual": 81999.9,
     "distancia_pct": 0.61,
     "max_alcanzado": null,
@@ -5920,7 +5920,7 @@
     "plazo_h": 480.0,
     "vence": "2026-10-14T12:58:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -87.5,
+    "horas_restantes": -87.8,
     "precio_actual": 81999.9,
     "distancia_pct": 10.36,
     "max_alcanzado": null,
@@ -5938,7 +5938,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-30T18:49:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -417.7,
+    "horas_restantes": -417.9,
     "precio_actual": 0.07939,
     "distancia_pct": -33.84,
     "max_alcanzado": null,
@@ -5956,7 +5956,7 @@
     "plazo_h": 48.0,
     "vence": "2026-09-25T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -545.0,
+    "horas_restantes": -545.2,
     "precio_actual": 2421.2,
     "distancia_pct": -4.86,
     "max_alcanzado": null,
@@ -5974,7 +5974,7 @@
     "plazo_h": 120.0,
     "vence": "2026-09-28T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -473.0,
+    "horas_restantes": -473.2,
     "precio_actual": 81999.9,
     "distancia_pct": 3.4,
     "max_alcanzado": null,
@@ -5992,7 +5992,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-26T11:30:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -521.0,
+    "horas_restantes": -521.2,
     "precio_actual": 81999.9,
     "distancia_pct": 1.23,
     "max_alcanzado": null,
@@ -6010,7 +6010,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-29T12:54:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -447.6,
+    "horas_restantes": -447.8,
     "precio_actual": null,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -6028,7 +6028,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-29T12:15:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -448.2,
+    "horas_restantes": -448.5,
     "precio_actual": 2421.2,
     "distancia_pct": -1.18,
     "max_alcanzado": null,
@@ -6046,7 +6046,7 @@
     "plazo_h": 336.0,
     "vence": "2026-10-06T11:51:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -280.6,
+    "horas_restantes": -280.9,
     "precio_actual": 81999.9,
     "distancia_pct": 0.61,
     "max_alcanzado": null,
@@ -6064,7 +6064,7 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T13:19:00",
     "estado": "en_plazo",
-    "horas_restantes": 752.8,
+    "horas_restantes": 752.6,
     "precio_actual": 0.9862,
     "distancia_pct": -60.55,
     "max_alcanzado": null,
@@ -6082,7 +6082,7 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T12:42:00",
     "estado": "en_plazo",
-    "horas_restantes": 752.2,
+    "horas_restantes": 752.0,
     "precio_actual": 2421.2,
     "distancia_pct": -19.29,
     "max_alcanzado": null,
@@ -6100,7 +6100,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-19T12:42:00",
     "estado": "en_plazo",
-    "horas_restantes": 32.2,
+    "horas_restantes": 32.0,
     "precio_actual": 2421.2,
     "distancia_pct": -13.53,
     "max_alcanzado": null,
@@ -6118,7 +6118,7 @@
     "plazo_h": 1440.0,
     "vence": "2026-11-18T12:09:00",
     "estado": "en_plazo",
-    "horas_restantes": 751.7,
+    "horas_restantes": 751.4,
     "precio_actual": 81999.9,
     "distancia_pct": -11.73,
     "max_alcanzado": null,
@@ -6136,7 +6136,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-09T16:41:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -203.8,
+    "horas_restantes": -204.0,
     "precio_actual": 81999.9,
     "distancia_pct": 8.47,
     "max_alcanzado": null,
@@ -6154,7 +6154,7 @@
     "plazo_h": 336.0,
     "vence": "2026-09-23T16:41:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -587.8,
+    "horas_restantes": -588.0,
     "precio_actual": 81999.9,
     "distancia_pct": 7.05,
     "max_alcanzado": null,
@@ -6172,7 +6172,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-10T11:44:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -184.7,
+    "horas_restantes": -185.0,
     "precio_actual": 81999.9,
     "distancia_pct": 6.49,
     "max_alcanzado": null,
@@ -6190,7 +6190,7 @@
     "plazo_h": 336.0,
     "vence": "2026-09-25T12:44:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -543.7,
+    "horas_restantes": -544.0,
     "precio_actual": 1.111,
     "distancia_pct": -5.85,
     "max_alcanzado": null,
@@ -6208,7 +6208,7 @@
     "plazo_h": 1092.0,
     "vence": "2026-10-26T23:40:00",
     "estado": "en_plazo",
-    "horas_restantes": 211.2,
+    "horas_restantes": 210.9,
     "precio_actual": 81999.9,
     "distancia_pct": 20.59,
     "max_alcanzado": null,
@@ -6226,7 +6226,7 @@
     "plazo_h": 336.0,
     "vence": "2026-09-26T17:06:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -515.4,
+    "horas_restantes": -515.6,
     "precio_actual": 81999.9,
     "distancia_pct": -2.38,
     "max_alcanzado": null,
@@ -6244,7 +6244,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-19T17:08:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -683.3,
+    "horas_restantes": -683.6,
     "precio_actual": 81999.9,
     "distancia_pct": 10.81,
     "max_alcanzado": null,
@@ -6262,7 +6262,7 @@
     "plazo_h": 48.0,
     "vence": "2026-09-14T17:38:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -802.8,
+    "horas_restantes": -803.1,
     "precio_actual": 81999.9,
     "distancia_pct": 4.46,
     "max_alcanzado": null,
@@ -6280,7 +6280,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-18T11:38:00",
     "estado": "en_plazo",
-    "horas_restantes": 7.2,
+    "horas_restantes": 6.9,
     "precio_actual": 2421.25,
     "distancia_pct": 4.36,
     "max_alcanzado": null,
@@ -6298,7 +6298,7 @@
     "plazo_h": 1008.0,
     "vence": "2026-10-30T11:38:00",
     "estado": "en_plazo",
-    "horas_restantes": 295.2,
+    "horas_restantes": 294.9,
     "precio_actual": 0.7983,
     "distancia_pct": -20.17,
     "max_alcanzado": null,
@@ -6316,7 +6316,7 @@
     "plazo_h": 24.0,
     "vence": "2026-09-18T11:42:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -712.8,
+    "horas_restantes": -713.0,
     "precio_actual": 81999.9,
     "distancia_pct": 9.33,
     "max_alcanzado": null,
@@ -6334,7 +6334,7 @@
     "plazo_h": 120.0,
     "vence": "2026-09-20T14:24:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -662.1,
+    "horas_restantes": -662.3,
     "precio_actual": 81999.9,
     "distancia_pct": 13.42,
     "max_alcanzado": null,
@@ -6352,7 +6352,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-18T14:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -710.3,
+    "horas_restantes": -710.5,
     "precio_actual": 81999.9,
     "distancia_pct": 8.61,
     "max_alcanzado": null,
@@ -6370,7 +6370,7 @@
     "plazo_h": 240.0,
     "vence": "2026-09-26T14:25:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -518.1,
+    "horas_restantes": -518.3,
     "precio_actual": 2421.2,
     "distancia_pct": 21.06,
     "max_alcanzado": null,
@@ -6388,7 +6388,7 @@
     "plazo_h": 120.0,
     "vence": "2026-09-21T14:25:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -638.1,
+    "horas_restantes": -638.3,
     "precio_actual": 2421.2,
     "distancia_pct": 4.27,
     "max_alcanzado": null,
@@ -6406,7 +6406,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-19T13:31:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -687.0,
+    "horas_restantes": -687.2,
     "precio_actual": 81999.9,
     "distancia_pct": 11.87,
     "max_alcanzado": null,
@@ -6424,7 +6424,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-21T14:45:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -637.7,
+    "horas_restantes": -638.0,
     "precio_actual": 2421.2,
     "distancia_pct": -10.33,
     "max_alcanzado": null,
@@ -6442,7 +6442,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-14T14:13:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -86.3,
+    "horas_restantes": -86.5,
     "precio_actual": 81999.9,
     "distancia_pct": 20.59,
     "max_alcanzado": null,
@@ -6460,7 +6460,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-17T14:12:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -734.3,
+    "horas_restantes": -734.5,
     "precio_actual": 81999.9,
     "distancia_pct": -0.49,
     "max_alcanzado": null,
@@ -6478,7 +6478,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -235.1,
+    "horas_restantes": -235.4,
     "precio_actual": 0.07939,
     "distancia_pct": -33.84,
     "max_alcanzado": null,
@@ -6496,7 +6496,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -235.1,
+    "horas_restantes": -235.4,
     "precio_actual": null,
     "distancia_pct": null,
     "max_alcanzado": null,
@@ -6514,7 +6514,7 @@
     "plazo_h": 720.0,
     "vence": "2026-10-08T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -235.1,
+    "horas_restantes": -235.4,
     "precio_actual": 0.18905,
     "distancia_pct": -21.23,
     "max_alcanzado": null,
@@ -6532,7 +6532,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-15T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -787.1,
+    "horas_restantes": -787.4,
     "precio_actual": 0.18905,
     "distancia_pct": 35.04,
     "max_alcanzado": null,
@@ -6550,7 +6550,7 @@
     "plazo_h": 168.0,
     "vence": "2026-09-15T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -787.1,
+    "horas_restantes": -787.4,
     "precio_actual": 81999.9,
     "distancia_pct": -2.61,
     "max_alcanzado": null,
@@ -6568,7 +6568,7 @@
     "plazo_h": 72.0,
     "vence": "2026-09-11T09:20:00",
     "estado": "vencida_sin_resolver",
-    "horas_restantes": -883.1,
+    "horas_restantes": -883.4,
     "precio_actual": 81999.9,
     "distancia_pct": 7.89,
     "max_alcanzado": null,
@@ -6586,7 +6586,7 @@
     "plazo_h": 48.0,
     "vence": "2026-09-05T08:22:00",
     "estado": "acierto",
-    "horas_restantes": -1028.1,
+    "horas_restantes": -1028.4,
     "precio_actual": 81999.9,
     "distancia_pct": 2.5,
     "max_alcanzado": 82285.0,
@@ -6604,7 +6604,7 @@
     "plazo_h": 240.0,
     "vence": "2026-08-30T08:00:00",
     "estado": "acierto",
-    "horas_restantes": -1172.5,
+    "horas_restantes": -1172.7,
     "precio_actual": 81999.9,
     "distancia_pct": 6.49,
     "max_alcanzado": 80000.0,
@@ -6622,7 +6622,7 @@
     "plazo_h": 120.0,
     "vence": "2026-08-18T04:19:00",
     "estado": "fallo",
-    "horas_restantes": -1464.2,
+    "horas_restantes": -1464.4,
     "precio_actual": 81999.9,
     "distancia_pct": 26.15,
     "max_alcanzado": 64630.3,
@@ -6640,7 +6640,7 @@
     "plazo_h": 120.0,
     "vence": "2026-08-17T12:00:00",
     "estado": "fallo",
-    "horas_restantes": -1480.5,
+    "horas_restantes": -1480.7,
     "precio_actual": 81999.9,
     "distancia_pct": 24.24,
     "max_alcanzado": 64427.4,
@@ -6658,7 +6658,7 @@
     "plazo_h": 336.0,
     "vence": "2026-08-25T12:00:00",
     "estado": "acierto",
-    "horas_restantes": -1288.5,
+    "horas_restantes": -1288.7,
     "precio_actual": 81999.9,
     "distancia_pct": 13.89,
     "max_alcanzado": 73111.0,
@@ -6676,7 +6676,7 @@
     "plazo_h": 48.0,
     "vence": "2026-08-13T12:00:00",
     "estado": "acierto",
-    "horas_restantes": -1576.5,
+    "horas_restantes": -1576.7,
     "precio_actual": 81999.9,
     "distancia_pct": 30.57,
     "max_alcanzado": 64496.9,
@@ -6694,7 +6694,7 @@
     "plazo_h": 48.0,
     "vence": "2026-08-01T10:37:45.900040",
     "estado": "fallo",
-    "horas_restantes": -1865.8,
+    "horas_restantes": -1866.1,
     "precio_actual": 81999.9,
     "distancia_pct": 32.26,
     "max_alcanzado": 65423.7,
@@ -6712,7 +6712,7 @@
     "plazo_h": 48.0,
     "vence": "2026-08-01T10:37:44.174535",
     "estado": "fallo",
-    "horas_restantes": -1865.8,
+    "horas_restantes": -1866.1,
     "precio_actual": 81999.9,
     "distancia_pct": 22.39,
     "max_alcanzado": 65423.7,
@@ -6730,7 +6730,7 @@
     "plazo_h": 240.0,
     "vence": "2026-07-31T05:00:00",
     "estado": "fallo",
-    "horas_restantes": -1895.5,
+    "horas_restantes": -1895.7,
     "precio_actual": 81999.9,
     "distancia_pct": 22.39,
     "max_alcanzado": 65423.7,
@@ -8511,7 +8511,7 @@
    }
   ],
   "cartera": {
-   "actualizado": "2026-10-18T03:28",
+   "actualizado": "2026-10-18T04:43",
    "vivas": [
     {
      "id": "LB-040",
@@ -8534,10 +8534,10 @@
      "dias_sin_noticias": 1,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 263.84642857142853,
-     "precio": 274.3,
-     "mov_pct": 1.0685335298452614,
-     "r_mov": 0.3839243498818012,
+     "stop_ref": 263.6321428571428,
+     "precio": 275.2,
+     "mov_pct": 1.4001473839351464,
+     "r_mov": 0.489195402298852,
      "veredicto": "YA_SE_FUE",
      "velas": {
       "t": [
@@ -8688,7 +8688,7 @@
        278.9,
        278.3,
        277.5,
-       275.2
+       275.7
       ],
       "l": [
        278.2,
@@ -8738,7 +8738,7 @@
        270.4,
        274.8,
        274.7,
-       274.3
+       272.8
       ],
       "c": [
        280.9,
@@ -8788,7 +8788,7 @@
        275.3,
        277.3,
        275.2,
-       274.3
+       275.2
       ]
      },
      "marcas": [
@@ -8804,11 +8804,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 263.846
+       "valor": 263.632
       },
       {
        "nombre": "AHORA",
-       "valor": 274.3
+       "valor": 275.2
       }
      ]
     },
@@ -8833,16 +8833,16 @@
      "dias_sin_noticias": 1,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 2456.0653571428575,
-     "precio": 2410.82,
-     "mov_pct": 0.050993967786738814,
-     "r_mov": 0.02794479199630044,
+     "stop_ref": 2457.875,
+     "precio": 2424.73,
+     "mov_pct": -0.5256939118177373,
+     "r_mov": -0.27670485542825624,
      "veredicto": "AUN_HAY_TIEMPO",
      "copia": {
-      "entrada": 2410.82,
-      "sl": 2456.0653571428575,
+      "entrada": 2424.73,
+      "sl": 2457.875,
       "sl_es_ref": true,
-      "tp": 2366.804642857143,
+      "tp": 2378.905,
       "tp_es_ref": true
      },
      "velas": {
@@ -8994,7 +8994,7 @@
        2425.14,
        2430.25,
        2426.75,
-       2412.64
+       2429.53
       ],
       "l": [
        2495.53,
@@ -9094,7 +9094,7 @@
        2402.87,
        2425.43,
        2409.13,
-       2410.82
+       2424.73
       ]
      },
      "marcas": [
@@ -9110,11 +9110,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 2456.07
+       "valor": 2457.88
       },
       {
        "nombre": "AHORA",
-       "valor": 2410.82
+       "valor": 2424.73
       }
      ]
     },
@@ -9139,10 +9139,10 @@
      "dias_sin_noticias": 1,
      "stop_txt": "su stop: break-even (en la entrada)",
      "stop": null,
-     "stop_ref": 4076.1749999999997,
-     "precio": 4165.9,
-     "mov_pct": 1.7835764372449825,
-     "r_mov": 4.364723467862393,
+     "stop_ref": 4075.8964285714283,
+     "precio": 4168.5,
+     "mov_pct": 1.8471010774756325,
+     "r_mov": 4.4461247637050265,
      "veredicto": "YA_SE_FUE",
      "velas": {
       "t": [
@@ -9293,7 +9293,7 @@
        4170.1,
        4168.6,
        4168.8,
-       4165.9
+       4168.5
       ],
       "l": [
        4194.8,
@@ -9393,7 +9393,7 @@
        4163.4,
        4167.9,
        4165.0,
-       4165.9
+       4168.5
       ]
      },
      "marcas": [
@@ -9409,11 +9409,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 4076.17
+       "valor": 4075.9
       },
       {
        "nombre": "AHORA",
-       "valor": 4165.9
+       "valor": 4168.5
       }
      ]
     },
@@ -9438,10 +9438,10 @@
      "dias_sin_noticias": 2,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 1.3390714285714287,
-     "precio": 1.2922,
-     "mov_pct": -5.2708745693131,
-     "r_mov": -2.8727168949771773,
+     "stop_ref": 1.3379464285714286,
+     "precio": 1.3009,
+     "mov_pct": -4.633091415585378,
+     "r_mov": -2.4164959715963503,
      "veredicto": "EN_CONTRA",
      "velas": {
       "t": [
@@ -9592,7 +9592,7 @@
        1.3068,
        1.3054,
        1.3039,
-       1.2942
+       1.3029
       ],
       "l": [
        1.4021,
@@ -9642,7 +9642,7 @@
        1.2703,
        1.2924,
        1.2919,
-       1.2906
+       1.2888
       ],
       "c": [
        1.4085,
@@ -9692,7 +9692,7 @@
        1.2941,
        1.3035,
        1.2929,
-       1.2922
+       1.3009
       ]
      },
      "marcas": [
@@ -9708,11 +9708,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 1.33907
+       "valor": 1.33795
       },
       {
        "nombre": "AHORA",
-       "valor": 1.2922
+       "valor": 1.3009
       }
      ]
     },
@@ -9738,9 +9738,9 @@
      "stop_txt": "stop: NO lo dio",
      "stop": null,
      "stop_ref": 0.8813714285714285,
-     "precio": 1.1037,
-     "mov_pct": 8.706786171574876,
-     "r_mov": 0.6600533333333313,
+     "precio": 1.1175,
+     "mov_pct": 10.065990347680476,
+     "r_mov": 0.7630933333333314,
      "veredicto": "YA_SE_FUE",
      "velas": {
       "t": [
@@ -9991,7 +9991,7 @@
        1.1502,
        1.1845,
        1.1157,
-       1.1037
+       1.1175
       ]
      },
      "marcas": [
@@ -10011,7 +10011,7 @@
       },
       {
        "nombre": "AHORA",
-       "valor": 1.1037
+       "valor": 1.1175
       }
      ]
     },
@@ -10066,11 +10066,18 @@
      "dias_sin_noticias": 3,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 0.17816392857142857,
-     "precio": 0.1774,
-     "mov_pct": -2.441706995160575,
-     "r_mov": -1.2078111337802413,
-     "veredicto": "EN_CONTRA",
+     "stop_ref": 0.17805678571428574,
+     "precio": 0.17827,
+     "mov_pct": -1.9632644082710038,
+     "r_mov": -0.9436420277541766,
+     "veredicto": "AUN_HAY_TIEMPO",
+     "copia": {
+      "entrada": 0.17827,
+      "sl": 0.17805678571428574,
+      "sl_es_ref": true,
+      "tp": 0.18205321428571428,
+      "tp_es_ref": true
+     },
      "velas": {
       "t": [
        1791633600000,
@@ -10220,7 +10227,7 @@
        0.17945,
        0.17883,
        0.17862,
-       0.17761
+       0.17856
       ],
       "l": [
        0.19667,
@@ -10270,7 +10277,7 @@
        0.17428,
        0.17667,
        0.17667,
-       0.17712
+       0.17707
       ],
       "c": [
        0.19806,
@@ -10320,7 +10327,7 @@
        0.1771,
        0.17859,
        0.17746,
-       0.1774
+       0.17827
       ]
      },
      "marcas": [
@@ -10336,11 +10343,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 0.178164
+       "valor": 0.178057
       },
       {
        "nombre": "AHORA",
-       "valor": 0.1774
+       "valor": 0.17827
       }
      ]
     },
@@ -10365,10 +10372,10 @@
      "dias_sin_noticias": 5,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 1.5952071428571428,
-     "precio": 1.2922,
-     "mov_pct": 14.52007673480188,
-     "r_mov": 2.6285176631596956,
+     "stop_ref": 1.5954000000000002,
+     "precio": 1.3009,
+     "mov_pct": 13.944565720711788,
+     "r_mov": 2.5185185185185195,
      "veredicto": "YA_SE_FUE",
      "velas": {
       "t": [
@@ -10569,7 +10576,7 @@
        1.2837,
        1.2893,
        1.2703,
-       1.2906
+       1.2888
       ],
       "c": [
        1.3517,
@@ -10619,7 +10626,7 @@
        1.335,
        1.3115,
        1.2941,
-       1.2922
+       1.3009
       ]
      },
      "marcas": [
@@ -10635,11 +10642,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 1.59521
+       "valor": 1.5954
       },
       {
        "nombre": "AHORA",
-       "valor": 1.2922
+       "valor": 1.3009
       }
      ]
     },
@@ -10664,10 +10671,10 @@
      "dias_sin_noticias": 7,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 4181.474999999999,
-     "precio": 4165.9,
-     "mov_pct": -0.7693773521985636,
-     "r_mov": -1.9312406576980405,
+     "stop_ref": 4181.196428571428,
+     "precio": 4168.5,
+     "mov_pct": -0.7074460483064149,
+     "r_mov": -1.7466918714555377,
      "veredicto": "EN_CONTRA",
      "velas": {
       "t": [
@@ -10818,7 +10825,7 @@
        4170.1,
        4168.6,
        4168.8,
-       4165.9
+       4168.5
       ],
       "l": [
        4194.8,
@@ -10918,7 +10925,7 @@
        4163.4,
        4167.9,
        4165.0,
-       4165.9
+       4168.5
       ]
      },
      "marcas": [],
@@ -10929,11 +10936,11 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 4181.47
+       "valor": 4181.2
       },
       {
        "nombre": "AHORA",
-       "valor": 4165.9
+       "valor": 4168.5
       }
      ]
     },
@@ -10962,10 +10969,10 @@
      "dias_sin_noticias": 7,
      "stop_txt": "stop: NO lo dio",
      "stop": null,
-     "stop_ref": 0.47422499999999995,
-     "precio": 0.7925,
-     "mov_pct": 32.08333333333333,
-     "r_mov": 1.5305108328364139,
+     "stop_ref": 0.47378571428571425,
+     "precio": 0.803,
+     "mov_pct": 33.833333333333336,
+     "r_mov": 1.6083757781550652,
      "veredicto": "YA_SE_FUE",
      "velas": {
       "t": [
@@ -11116,7 +11123,7 @@
        0.8438,
        0.89,
        0.8566,
-       0.8012
+       0.8053
       ],
       "l": [
        0.5286,
@@ -11216,7 +11223,7 @@
        0.8347,
        0.8498,
        0.7966,
-       0.7925
+       0.803
       ]
      },
      "marcas": [
@@ -11232,7 +11239,7 @@
       },
       {
        "nombre": "SL ref (nuestro)",
-       "valor": 0.474225
+       "valor": 0.473786
       },
       {
        "nombre": "OBJ1",
@@ -11248,7 +11255,7 @@
       },
       {
        "nombre": "AHORA",
-       "valor": 0.7925
+       "valor": 0.803
       }
      ]
     }
@@ -11427,7 +11434,7 @@
        2425.14,
        2430.25,
        2426.75,
-       2412.64
+       2429.53
       ],
       "l": [
        2495.53,
@@ -11527,7 +11534,7 @@
        2402.87,
        2425.43,
        2409.13,
-       2410.82
+       2424.73
       ]
      },
      "marcas": [
@@ -11724,7 +11731,7 @@
        0.08585,
        0.08693,
        0.08859,
-       0.08798
+       0.08906
       ],
       "l": [
        0.09248,
@@ -11824,7 +11831,7 @@
        0.08531,
        0.0862,
        0.0869,
-       0.08737
+       0.08831
       ]
      },
      "marcas": [
@@ -12021,7 +12028,7 @@
        2425.14,
        2430.25,
        2426.75,
-       2412.64
+       2429.53
       ],
       "l": [
        2495.53,
@@ -12121,7 +12128,7 @@
        2402.87,
        2425.43,
        2409.13,
-       2410.82
+       2424.84
       ]
      },
      "marcas": [
@@ -12318,7 +12325,7 @@
        0.9964,
        0.9954,
        0.9922,
-       0.9821
+       0.9931
       ],
       "l": [
        1.1091,
@@ -12368,7 +12375,7 @@
        0.9531,
        0.9728,
        0.9711,
-       0.9781
+       0.9764
       ],
       "c": [
        1.1239,
@@ -12418,7 +12425,7 @@
        0.9761,
        0.9917,
        0.9792,
-       0.981
+       0.989
       ]
      },
      "marcas": [
@@ -12615,7 +12622,7 @@
        81702.1,
        82072.4,
        81963.4,
-       81721.4
+       82291.1
       ],
       "l": [
        82767.4,
@@ -12715,7 +12722,7 @@
        81489.4,
        81952.5,
        81679.5,
-       81712.7
+       82188.7
       ]
      },
      "marcas": [
@@ -12915,7 +12922,7 @@
        2425.14,
        2430.25,
        2426.75,
-       2412.64
+       2429.53
       ],
       "l": [
        2495.53,
@@ -13015,7 +13022,7 @@
        2402.87,
        2425.43,
        2409.13,
-       2410.82
+       2424.73
       ]
      },
      "marcas": [
@@ -13208,7 +13215,7 @@
        81702.1,
        82072.4,
        81963.4,
-       81721.4
+       82291.1
       ],
       "l": [
        82767.4,
@@ -13308,7 +13315,7 @@
        81489.4,
        81952.5,
        81679.5,
-       81712.7
+       82184.7
       ]
      },
      "marcas": [
@@ -13501,7 +13508,7 @@
        82642.8,
        82928.5,
        81775.0,
-       82072.4
+       82291.1
       ],
       "l": [
        76416.6,
@@ -13601,7 +13608,7 @@
        82232.4,
        81617.5,
        81489.4,
-       81712.7
+       82184.7
       ]
      },
      "marcas": [
@@ -13798,7 +13805,7 @@
        82642.8,
        82928.5,
        81775.0,
-       82072.4
+       82291.1
       ],
       "l": [
        76416.6,
@@ -13898,7 +13905,7 @@
        82232.4,
        81617.5,
        81489.4,
-       81712.7
+       82165.9
       ]
      },
      "marcas": [
@@ -14195,7 +14202,7 @@
        5.264,
        5.069,
        4.863,
-       4.969
+       4.991
       ]
      },
      "marcas": [
@@ -14522,7 +14529,7 @@
        4162.7,
        4170.2,
        4163.4,
-       4165.9
+       4168.5
       ]
      },
      "marcas": [
@@ -14675,7 +14682,7 @@
     "max_pain_oct9": 84000.0,
     "put_strike_bajista": 75000.0
    },
-   "precio_btc": 81712.7,
+   "precio_btc": 82171.4,
    "lives_pendientes": [
     "Lives sin analisis automatico (claude -p sin login: correr claude y /login): K-031 (a mano), K-032"
    ]
@@ -14705,12 +14712,12 @@
     "pendientes": 1
    },
    "sin_lobo": {
-    "n": 410,
-    "win": 191,
-    "hit": 46.6,
-    "r_total": -40.481,
-    "r_op": -0.099,
-    "pendientes": 5
+    "n": 411,
+    "win": 192,
+    "hit": 46.7,
+    "r_total": -39.554,
+    "r_op": -0.096,
+    "pendientes": 4
    }
   },
   "vs": {
@@ -15568,12 +15575,12 @@
    },
    "todas": {
     "stats": {
-     "n": 601,
-     "ganadas": 288,
+     "n": 602,
+     "ganadas": 289,
      "perdidas": 313,
-     "hit": 47.9,
-     "usd_total": -117.55,
-     "usd_op": -0.196,
+     "hit": 48.0,
+     "usd_total": -116.02,
+     "usd_op": -0.193,
      "mejor": 8.59,
      "peor": -8.26
     },
@@ -17981,6 +17988,10 @@
      [
       "2026-10-18T00:57",
       -117.55
+     ],
+     [
+      "2026-10-18T04:42",
+      -116.02
      ]
     ]
    },
@@ -18013,7 +18024,7 @@
      "semana": "2026-10-12",
      "lobo": 21.56,
      "motor": 17.77,
-     "todas": 21.75
+     "todas": 23.28
     }
    ]
   },
